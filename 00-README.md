@@ -19,7 +19,7 @@ kept its existing relative order.
 
 | File | Sections | Lines |
 |---|---|---|
-| `01-foundations.md` | Core Reskin, **Core Resolution**, Magic Baseline, Overcasting, Spellcasting Procedure, Spell Names | 439 |
+| `01-foundations.md` | Setting Terminology, **Core Resolution**, Magic Baseline, Overcasting, Spellcasting Procedure, Spell Names | 441 |
 | `02-backgrounds.md` | Background Creation Procedure, all 45 Backgrounds | 94 |
 | `03-archetypes-dragonmarks-languages.md` | Archetypes, Wandslinger, Leverage, Contingency, Agent Combat Techniques, Agent Flavors, Dragonmarks, Talents & Expertise, Languages | 208 |
 | `04-character-creation.md` | Character Creation flowchart + Choice Guidance | 180 |
@@ -27,10 +27,10 @@ kept its existing relative order.
 | `05b-economy-guard-wounds-zones-initiative-armor.md` | Economy, Guard & Wounds, Healing, Zones, Combat Model Selection, Initiative, Armor & Encumbrance | 297 |
 | `06-surprise-morale-exploration.md` | Surprise & Ambushes, Morale, Reaction Check, Travel & Exploration | 90 |
 | `07a-enemy-design.md` | Enemy Design Philosophy, full Enemy Generation Procedure | 216 |
-| `07b-grit-maneuvers-worked-examples-advancement.md` | Wayfarer Grit Maneuvers, Worked Combat Example, Highwater Road Case Study, Advancement | 207 |
-| `08-glossary-open-threads.md` | Glossary, Open Threads | 136 |
+| `07b-grit-maneuvers-worked-examples-advancement.md` | Wayfarer Grit Maneuvers, Worked Combat Example, Highwater Road Case Study, Advancement (XP packages, leveling) | 235 |
+| `08-glossary-open-threads.md` | Glossary, Open Threads | 138 |
 
-Every file sits at 42KB or under.
+Every file sits at 43KB or under. Note: this split follows the master document's own internal section order, which does **not** match the live site's page order — the site was reorganized around Character Creation's own flow (Foundations → Character Creation → Backgrounds → Archetypes → Magic → Combat → Exploration → Enemy Design → Advancement → Glossary), while this split still follows the master doc's original linear sequence, since re-ordering the split would risk introducing cut-and-paste errors for no benefit — these files exist purely so the content can be read reliably, not to mirror site navigation.
 
 **Note on cross-references:** several sections reference others by name ("see Weapon Proficiency," "see Combat Model Selection") — these still work as plain-text pointers to a section title, they just no longer resolve to an anchor link within the same file. Not broken, just not clickable across file boundaries.
 

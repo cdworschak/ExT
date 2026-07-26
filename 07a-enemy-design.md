@@ -194,7 +194,7 @@ Each additional mook swings danger substantially — a GM wanting to nudge a sol
 - **Target shift** — for baseline difficulty tiers (an enemy's toughness, a scenario's inherent hardness).
 - **Advantage/Disadvantage** — for situational swings within an otherwise-normal check (partial cover, being warned by an ally, fighting while Rattled).
 
-**Full granularity — not limited to ±3.** The Weak/Standard/Strong tiers above are just three named anchor points on a continuous scale; every integer shift from −3 to +3 already has an exact, known percentage, because a target shift is mathematically identical to the stat-bonus table in Core Resolution (shifting the target down by 1 is the same math as a +1 bonus at a fixed target). Nothing new needs calculating — this was always available, just never shown as a full scale:
+**Full granularity — not limited to ±3.** The Weak/Standard/Strong tiers above are just three named anchor points on a continuous scale; every integer shift from −3 to +3 has an exact, known percentage, using the same target-shift math throughout this document (shifting the target down by 1 has the identical effect as a +1 bonus at a fixed target). This range is independent of character stat generation, which now only reaches ±2 (see Core Resolution) — Scenario Target Modifiers govern GM-adjudicated situational difficulty and enemy toughness, a separate design space from player stats, and there's no reason the two need to share the same ceiling.
 
 | Shift | Target | Success rate (vs bonus 0) | Suggested use |
 |---|---|---|---|

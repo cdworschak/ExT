@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advancement — Eberron × The Electrum Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="topbar-brand">EBERRON <span>×</span> THE ELECTRUM ARCHIVE</span>
+  <div class="topbar-links">
+    <a href="index.html">Home</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="character-creation.html">Character Creation</a>
+    <a href="backgrounds.html">Backgrounds</a>
+    <a href="archetypes.html">Archetypes</a>
+    <a href="magic.html">Magic</a>
+    <a href="combat.html">Combat</a>
+    <a href="exploration.html">Exploration</a>
+    <a href="enemy-design.html">Enemy Design</a>
+    <a href="advancement.html" class="active">Advancement</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+</nav>
+
+<main>
+  <header class="page-header">
+    <p class="page-eyebrow">10 — Advancement</p>
+    <h1 class="page-title">Advancement</h1>
+    <p class="page-intro">How the party grows — XP, leveling, and the Vertical/Lateral tracks.</p>
+  </header>
+
+  <h2 id="xp">Experience &amp; Leveling</h2>
+  <p><strong>Level up at XP = 5× current level, resetting to 0 after each level-up</strong> — level 2 needs a fresh 5 XP, level 3 a fresh 10, level 4 a fresh 15, and so on up through level 8's fresh 35. Since a single session's highest die can never exceed 8 (the biggest die is a d8), and every threshold past level 2 already exceeds 8, no single session can ever clear more than one level-up — the reset itself prevents skipping ahead. Max level 8.</p>
+
+  <h3 id="xp-packages">Themed Question Packages</h3>
+  <p>XP is awarded via end-of-session questions, each scaled by a die (d4/d6/d8) by scope — highest result is XP for everyone. The five confirmed questions work fine as a generic default, but XP questions are a campaign's actual incentive structure — they tell players what their characters should be doing. Pick a package matching the table's real focus, or mix five questions from different ones. Same mechanic throughout, only the categories change.</p>
+  <table>
+  <tr><th>Package</th><th>Questions</th></tr>
+  <tr><td><strong>Default</strong> (confirmed source)</td><td>Treasure found · goal completed · lore learned · meaningful relationship built · survived Death's Door</td></tr>
+  <tr><td><strong>Dungeon Delvers</strong></td><td>Treasure hauled back to safety · a trap or hazard cleverly solved · a dangerous area fully cleared or mapped · retreated wisely instead of pushing a losing fight · survived Death's Door</td></tr>
+  <tr><td><strong>Hex Crawlers</strong></td><td>New territory mapped or revealed · a natural hazard survived · a local secret or ruin uncovered · a resource identified or exploited · a lost/disoriented situation resolved</td></tr>
+  <tr><td><strong>War Band</strong></td><td>An objective taken · a defense or retreat held · an ally protected under fire · a named enemy defeated · survived Death's Door</td></tr>
+  <tr><td><strong>Court &amp; Faction</strong></td><td>A faction's favor gained or a rival foiled · a secret or leverage uncovered · a negotiation closed · a meaningful relationship built or repaired · a reputation risked that paid off</td></tr>
+  <tr><td><strong>The Crew</strong></td><td>The score pulled off · a complication improvised around · got away clean, no trace left · a specialist contact secured for later · a close call survived without blowing the job</td></tr>
+  <tr><td><strong>Survivors</strong></td><td>Survived Death's Door · a resource crisis narrowly managed · a genuine horror avoided rather than fought · a companion protected from a worse fate · real respite found</td></tr>
+  <tr><td><strong>Builders</strong></td><td>A holding or settlement improved · a community's trust earned · a local problem solved for the wider good · resources invested for long-term benefit · a genuine sacrifice made</td></tr>
+  <tr><td><strong>The Beat</strong> (Eberron: Sharn noir)</td><td>A clue uncovered that advances the case · a lie seen through · a dangerous informant secured · a confrontation resolved without needless bloodshed · survived Death's Door</td></tr>
+  </table>
+
+  <h3 id="leveling-example">Leveling Procedure, Worked Example</h3>
+  <p>After every session, add the highest die result to the party's current-level XP tally. If it now meets or exceeds 5× current level, everyone levels up and <strong>the tally resets to 0</strong> — the next threshold is calculated fresh from the new, higher level.</p>
+  <p><em>Dungeon Delvers package, a level-1 party starting at 0 XP toward a level-2 threshold of 5:</em></p>
+  <ul>
+  <li><strong>Session 1:</strong> a modest hoard (treasure, moderate — d6, result 4); a trap dodged cleverly (minor — d4, result 2). Highest: 4. Tally: 0→4. Doesn't clear 5 — stays level 1.</li>
+  <li><strong>Session 2:</strong> someone survives Death's Door (major — d8, result 3). Tally: 4→7. Clears 5 — <strong>levels up to 2</strong>, tally resets to 0, next threshold is 5×2=10.</li>
+  <li><strong>Session 3:</strong> the dungeon's goal is completed (major — d8, result 6). Tally: 0→6. Doesn't clear 10 — stays level 2.</li>
+  <li><strong>Session 4:</strong> another trap solved (minor — d4, result 3). Tally: 6→9. Still doesn't clear 10 — stays level 2.</li>
+  <li><strong>Session 5:</strong> a decent haul (moderate — d6, result 5). Tally: 9→14. Clears 10 — <strong>levels up to 3</strong>, tally resets to 0, next threshold is 5×3=15.</li>
+  </ul>
+  <p>The reset is doing real work: even a strong single roll can never clear a threshold alone once past level 2, since the biggest possible session result (8) is always less than what's needed — every level past 2 genuinely requires multiple sessions, and no lucky roll ever skips one outright.</p>
+
+  <h2 id="growth-tracks">Vertical &amp; Lateral Growth</h2>
+  <p>Each level-up: choose Vertical (+1 to one stat — <strong>capped at +3 overall, but +2 is the most any stat can ever be at character creation.</strong> The two ceilings are deliberately different: 3d6 stat generation only reaches +2, so no one starts at the top; +3 is reachable only through dedicated Vertical investment. A stat already at +3 can't take another +1 — plus +1 flat Guard, identical for everyone) and Lateral (archetype-specific — see <a href="archetypes.html">Archetypes</a> for the full per-level tables). Nothing is pre-selected; every choice is made fresh at the moment it's earned.</p>
+  <table>
+  <tr><th>Track</th><th>Cadence</th><th>What grows</th></tr>
+  <tr><td>Vertical</td><td>Every other level (2,4,6,8)</td><td>+1 to one stat, +1 flat Guard</td></tr>
+  <tr><td>Lateral</td><td>Every level</td><td>New options, per archetype</td></tr>
+  </table>
+  <p><strong>Second Wound slot unlocks at level 4, third at level 8.</strong></p>
+
+  <div class="page-nav">
+    <a href="enemy-design.html"><span class="dir">Previous</span>← Enemy Design</a>
+    <a href="glossary.html" class="next"><span class="dir">Next</span>Glossary →</a>
+  </div>
+</main>
+
+</body>
+</html>

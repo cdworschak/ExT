@@ -36,17 +36,17 @@ A hack for running the Eberron setting using *The Electrum Archive* (TEA) rules.
 
 **One method: roll. No standing alternative to switch to.** An earlier draft offered a free-choice fixed Array alongside rolling — dropped, because if a fixed safe option is always available *after* seeing the roll, rolling becomes strictly dominant (try for the higher ceiling, retreat to the safe option risk-free if it's bad), which quietly kills the alternative as a meaningful choice rather than preserving it as one. Worlds Without Number's approach — roll first, only a rare and narrow fix for a genuinely bad result — closes that exploit instead of creating a false choice.
 
-**Roll 2d6 per stat, look up the bonus:**
+**Roll 3d6 per stat (summed), look up the bonus** — changed from 2d6/−3-to-+3 specifically to make the extremes rarer and narrow the total spread; 3d6 keeps a genuine bell curve while giving more room in the tails to tune how rare ±2 actually is:
 
-| 2d6 | Bonus | Success vs 12 |
+| 3d6 (sum) | Bonus | Success vs 12 |
 |---|---|---|
-| 2 | −3 | 21% |
-| 3–4 | −2 | 28% |
-| 5–6 | −1 | 36% |
-| 7 | 0 | 45% |
-| 8–9 | +1 | 55% |
-| 10–11 | +2 | 64% |
-| 12 | +3 | 72% |
+| 3–6 | −2 | 28% |
+| 7–9 | −1 | 36% |
+| 10–11 | 0 | 45% |
+| 12–14 | +1 | 55% |
+| 15–18 | +2 | 64% |
+
+**±2 now sits at 9.3% per tier** (versus the old ±3's 2.8%, but also versus the old ±2 tier's 13.9% — the actual relevant comparison, since ±2 is now the ceiling rather than the second-highest step). ±1 at 28.2%, and a flat 0 at a genuine 25% — a real, well-shaped bell curve, not an over-flattened middle.
 
 Assign the six results to STR/DEX/CON/INT/WIS/CHA in any order (this is a builds game — free placement lets a lucky roll go to your concept's main stat, or reinforce a stat your Background already boosts). **This placement is a real decision every time, not a formality** — a worked example walking through stat gen "in roll order" without actually reassigning them isn't demonstrating a built character, just the raw dice mechanic.
 
@@ -109,7 +109,7 @@ The dividing line above Cantrip is clean: **Cantrip never produces a mechanical 
 | 2 | 1d4+1 |
 | 3 | 1d4+2 |
 
-**No stat bonus stacks on top of the die — shard count is the only damage scaling.** To-hit still uses the caster's normal stat bonus (accuracy stays build-dependent, per Spell Resolution's Attack-spell rule), but raw damage stays flat and cheap regardless of build. This was a deliberate check against overreach: a maxed +3 caster adding their bonus to damage as well would average 9.5 at full investment — bigger than even a Massive weapon. Capping the scaling at shard count alone keeps the top end (3 shards, avg 4.5) landing almost exactly on a **Heavy weapon's average** (1d8, avg 4.5) — a fully-invested cast matches a real weapon swing without outclassing the biggest weapons in the game.
+**No stat bonus stacks on top of the die — shard count is the only damage scaling.** To-hit still uses the caster's normal stat bonus (accuracy stays build-dependent, per Spell Resolution's Attack-spell rule), but raw damage stays flat and cheap regardless of build. This was a deliberate check against overreach: a maxed +3 caster (achievable through Vertical growth, not creation alone — see Advancement) adding their bonus to damage as well would average 7.5 at full investment — still bigger than a Heavy weapon's average. Capping the scaling at shard count alone keeps the top end (3 shards, avg 4.5) landing almost exactly on a **Heavy weapon's average** (1d8, avg 4.5) — a fully-invested cast matches a real weapon swing without outclassing the biggest weapons in the game.
 
 **Requires Spark-tier access, not automatic from owning an item — Cantrip alone is genuinely free to anyone, Spark is the real line.** Syberist and Cannith-Touched have this inherently (they're already casters); an Agent or Wayfarer needs Wandslinger specifically to unlock it. A wand or dragonshard-tipped focus item is the *tool* Shard Bolt is cast through, not a substitute for actually having Spark access — whichever stat fits the concept (INT for a proper wand, or the wielder's usual combat stat for something improvised). See Wandslinger under Archetypes for how Agent and Wayfarer specifically gain this.
 

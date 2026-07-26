@@ -184,7 +184,7 @@ All Houses now have a Least Mark defined.
 
 **Illiteracy:** INT bonus of **−2 or lower** means a character can speak known languages but cannot read or write any of them, Common included. Deliberately harsh rather than softened to −3 only — dumping INT should have a real, felt consequence, not just a smaller number on a check sheet.
 
-**Extra languages:** **+1 language per positive point of INT bonus** — INT+1 grants 1 extra, INT+2 grants 2, INT+3 grants 3. Player's choice which languages, drawn from any in the setting.
+**Extra languages:** **+1 language per positive point of INT bonus** — INT+1 grants 1 extra, INT+2 (the new max) grants 2. Player's choice which languages, drawn from any in the setting.
 
 **Non-human Backgrounds grant their ancestral language for free**, separate from the INT-based count — it represents growing up speaking it, not scholarly aptitude, so it doesn't compete with the same pool. Humans have no equivalent, since Common already functions as their default tongue.
 
