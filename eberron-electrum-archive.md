@@ -1,6 +1,6 @@
 # Eberron × The Electrum Archive — Homebrew Notes
 
-A hack for running the Eberron setting using *The Electrum Archive* (TEA) rules. Race and background/culture are fused into a single character-creation slot; D&D classes are reskinned onto TEA's three archetypes (Agent, Wayfarer, Syberist); Elder ink becomes dragonshard dust; Dragonmarks are layered in as a separate, free, narrow-but-reliable talent track; and core resolution uses a 2d10 bell-curve system with its own stat generation, advantage/disadvantage, a Guard/Wound HP model, zone-based positioning, and an enemy design philosophy built around a single shared target number.
+A hack for running the Eberron setting using *The Electrum Archive* (TEA) rules. Race and background/culture are fused into a single character-creation slot; D&D classes are reskinned onto TEA's three archetypes (Agent, Wayfarer, Syberist); dragonshard dust powers casting the way TEA's own rules describe Elder ink working; Dragonmarks are layered in as a separate, free, narrow-but-reliable talent track; and core resolution uses a 2d10 bell-curve system with its own stat generation, advantage/disadvantage, a Guard/Wound HP model, zone-based positioning, and an enemy design philosophy built around a single shared target number.
 
 **Project status, for picking this back up cold:** the core rules (Core Resolution, Combat, HP/Guard/Wounds, Encounter Level Scaling, Enemy Generation, Economy) are mature and heavily Monte Carlo-validated throughout — trust the numbers cited inline, with one flagged exception below. The four playable archetypes (Wayfarer, Agent, Syberist, Cannith-Touched) are all built and tested, Agent now has its own dedicated resource (Leverage/Contingency). A full Combat Procedure flowchart near the top of the combat rules gives the big-picture flow if you need to re-orient quickly. **Open Threads at the bottom of this doc is the authoritative "what's unfinished" list** — check it first before assuming anything is done, since design work discussed at length in conversation doesn't always make it into this document immediately (a real, recurring failure mode across this whole project — several fully-designed, fully-tested mechanics, and even a fully-built diagram, sat unwritten until specifically caught; always verify against the doc, not against memory of the conversation). **Two items worth knowing about specifically before touching anything:**
 1. A full set of gear-based Grit Maneuvers (Iron Palm, Second Strike, Guarded Strike, Shield Bash, Sunder, dual-wield options) is designed and individually tuned but **not yet added to the actual Grit Maneuvers table** — see Open Threads for the complete tested values before writing it in.
@@ -10,17 +10,73 @@ A hack for running the Eberron setting using *The Electrum Archive* (TEA) rules.
 
 ---
 
-## Core Reskin
+## Setting Terminology
 
-| TEA Concept | Eberron Equivalent |
+**Eberron is the setting being run; The Electrum Archive is the ruleset underneath it, not the other way around.** An earlier framing of this table led with TEA's own terms and labeled Eberron's concepts as the "equivalent" — backwards, since nothing here is a reskin of TEA's setting. Eberron already exists, fully realized, with its own lore; what's actually happening is TEA's abstract rules and setting concepts get mapped onto pieces of Eberron that already do the same narrative job. Led with Eberron below, TEA's term follows as the mechanic it's standing in for.
+
+| Eberron Concept | Runs on TEA's Concept of... |
 |---|---|
-| Elder ink | Dragonshard dust |
-| The Realm Beyond | Khyber / Syrania / the space between planes |
-| Merchant Houses | The Dragonmarked Houses |
-| Bone spores / Spore Wilds | The Mournland |
-| Order of Ilsaar | A Cannith/Silver Flame containment order |
-| Sunless Princedoms / the Irr | Khyber tunnels, a daelkyr-touched or Dhakaani remnant cold war |
-| The Twin-Souled Emperor | A claimed reincarnated Dhakaani king, or a warforged claiming two minds |
+| Dragonshard dust | Elder ink |
+| Khyber / Syrania / the space between planes | The Realm Beyond |
+| The Dragonmarked Houses | Merchant Houses |
+| The Mournland | Bone spores / Spore Wilds |
+| A Cannith/Silver Flame containment order | Order of Ilsaar |
+| Khyber tunnels, a daelkyr-touched or Dhakaani remnant cold war | Sunless Princedoms / the Irr |
+| A claimed reincarnated Dhakaani king, or a warforged claiming two minds | The Twin-Souled Emperor |
+
+---
+
+## Core Resolution: 2d10 vs Target 12
+
+**The aim of this system, stated plainly before anything else:** a fast, bell-curve-shaped 2d10 resolution that stays legible at a glance, and a deliberate design constraint carried through every single system below — **situational difficulty is represented by shifting the Target number or granting Advantage/Disadvantage, never by stacking small numeric modifiers.** No "+1 for high ground, +2 for flanking, -1 for poor light" pile-ups to track. A GM has exactly two levers for "this is harder/easier than normal": move the Target (see Scenario Target Modifiers, used identically for enemy difficulty, Leverage regeneration, and any ad-hoc check), or apply Advantage/Disadvantage. Every other number on a character sheet — stat bonus, weapon tier, Guard — stays fixed and knowable; only the *target* and the *dice pool* ever move. This is the shared spine every other system in this document hangs off of, which is why it needs to come first, not get buried behind Magic and Backgrounds.
+
+**Check format:** roll **2d10 + stat bonus**, succeed on **12 or higher**.
+
+### Stat Bonus Generation
+
+**One method: roll. No standing alternative to switch to.** An earlier draft offered a free-choice fixed Array alongside rolling — dropped, because if a fixed safe option is always available *after* seeing the roll, rolling becomes strictly dominant (try for the higher ceiling, retreat to the safe option risk-free if it's bad), which quietly kills the alternative as a meaningful choice rather than preserving it as one. Worlds Without Number's approach — roll first, only a rare and narrow fix for a genuinely bad result — closes that exploit instead of creating a false choice.
+
+**Roll 2d6 per stat, look up the bonus:**
+
+| 2d6 | Bonus | Success vs 12 |
+|---|---|---|
+| 2 | −3 | 21% |
+| 3–4 | −2 | 28% |
+| 5–6 | −1 | 36% |
+| 7 | 0 | 45% |
+| 8–9 | +1 | 55% |
+| 10–11 | +2 | 64% |
+| 12 | +3 | 72% |
+
+Assign the six results to STR/DEX/CON/INT/WIS/CHA in any order (this is a builds game — free placement lets a lucky roll go to your concept's main stat, or reinforce a stat your Background already boosts). **This placement is a real decision every time, not a formality** — a worked example walking through stat gen "in roll order" without actually reassigning them isn't demonstrating a built character, just the raw dice mechanic.
+
+**Mercy adjustment — narrow, and only for a genuinely bad result, not a mediocre one.** If, after rolling, **no stat is positive** (every result is 0 or negative — a real outlier, not just an unlucky-but-playable spread), the player may make **one** of the following two swaps, targeting whichever stats they choose:
+- Raise **two** stats to +1 each, or
+- Raise **one** stat to +2.
+
+This only fires on the actual worst-case outcome, is small and targeted rather than a full reroll or a fixed alternate spread, and can't be freely chosen alongside a good roll — there's no version of "roll for upside, fall back risk-free" left, since the trigger condition (zero positive stats) is something a player can't manufacture on purpose to game the system.
+
+**A separate, broader safety valve: if a player is unhappy with the whole character — not a single bad roll the mercy rule already covers, but the build overall not feeling right — player and GM can agree to start over completely.** This isn't a mechanical entitlement with a trigger condition; it's a table-level judgment call, always available by mutual agreement, no restrictions on when it applies. A legal-but-joyless roll (one great stat, a cliff after it — real, and confirmed to happen even without triggering mercy) is exactly the kind of thing this exists for. It's a game — nobody should be stuck playing a character they don't want to play because the dice technically didn't fail badly enough to invoke a rule.
+
+**Background bonuses stack freely on top**, including double-stat Backgrounds, same as before.
+
+**Why the shift to target-12:** an earlier draft centered bonuses at an average of −1 against a target of 11 — mathematically identical, but a baseline-negative number reads badly on a character sheet in a high-fantasy builds game. Shifting the target up and the bonus table with it preserves the exact odds while removing the visual negative.
+
+### Advantage / Disadvantage
+
+**Mechanic:** roll **3d10**, keep the best two dice for Advantage or the worst two for Disadvantage, then add the stat bonus.
+
+| Bonus | Normal | Advantage | Disadvantage |
+|---|---|---|---|
+| −3 | 21% | 43% | 7% |
+| −2 | 28% | 53% | 11% |
+| −1 | 36% | 62% | 15% |
+| 0 | 45% | 71% | 22% |
+| +1 | 55% | 79% | 29% |
+| +2 | 64% | 85% | 38% |
+| +3 | 72% | 89% | 47% |
+
+Chosen over "roll twice, take the better/worse total" (needs 4 dice, swings slightly harder) because it needs only one extra die, reads intuitively, and still self-compresses correctly (biggest effect near the middle of the curve).
 
 ---
 
@@ -28,7 +84,7 @@ A hack for running the Eberron setting using *The Electrum Archive* (TEA) rules.
 
 **Design goal:** keep high magic as the baseline (everlanterns, message stations, minor conveniences feel commonplace) without turning every character into a walking battery.
 
-**Confirmed from source:** TEA's real Warlock (this doc's Syberist) casts via **Name-Crafting** — spells are cast by learning the names of spell spirits that inhabit the Realm Beyond, generated via random tables (Form/Adjective/Noun combined via a Template) and costed by potency tier. Confirmed tiers, in order: **Minor** (2d6 drops) → **Moderate** (2d6×2 drops) → **Major** (3d6×5 drops) → **Mythic** (4d6×25 drops).
+**Confirmed from source:** TEA's real Warlock (this doc's Syberist) casts via **Name-Crafting** — spells are cast by learning the names of spell spirits that inhabit Khyber, Syrania, or the space between planes (TEA's own term for this is the Realm Beyond), generated via random tables (Form/Adjective/Noun combined via a Template) and costed by potency tier. Confirmed tiers, in order: **Minor** (2d6 drops) → **Moderate** (2d6×2 drops) → **Major** (3d6×5 drops) → **Mythic** (4d6×25 drops).
 
 **Homebrew addition — Spark tier, between Cantrip and Minor:**
 
@@ -483,7 +539,7 @@ TEA's three chassis (confirmed from source): **Fixer** (skill monkey, renamed **
 
 - **Fighter/Barbarian → Wayfarer: Warbred** — more HP/grit, fewer tricks.
 - **Rogue/Ranger/Bard/Diplomat → Agent** — see Agent Flavors (Cutthroat, Emissary, Raconteur) under Leverage below for how the same chassis plays distinctly depending on Skill and Leverage focus.
-- **Wizard/Sorcerer → Syberist: Shardbound** — casting sourced from raw dragonshard rather than Elder ink (mechanically identical, reflavored). **Cast stat: INT** (learned, tactical theory-craft).
+- **Wizard/Sorcerer → Syberist: Shardbound** — casting sourced from raw dragonshard, the same resource TEA's own rules describe as Elder ink (mechanically identical, reflavored). **Cast stat: INT** (learned, tactical theory-craft).
 - **Cleric/Paladin → Syberist: Flamesworn** — casting reflavored as Silver Flame or House-oath channeling; spell list themed around wards/healing. **Cast stat: CHA** (conviction/faith-driven, not WIS — mirrors D&D's Paladin/oath-caster pattern rather than a WIS-Cleric one).
 - **Druid → Syberist: Wildspoken** — casting tied to the Eldeen Reaches / Gatekeeper tradition instead of Elder ruins. **Cast stat: WIS** (intuition, attunement to the wild).
 - **Bard → Agent/Syberist hybrid: Songmark** — half skill-talents, half small spells, CHA-keyed.
@@ -494,7 +550,7 @@ TEA's three chassis (confirmed from source): **Fixer** (skill monkey, renamed **
 
 **Cast stat: INT** (already the setting's Cannith-coded stat). **Guard bonus: +1** (half Wayfarer's +2 — a real but smaller structural edge). **Cantrip/Spark cast normally**, same as any caster — possess-don't-consume, spontaneous, reactive.
 
-**Minor tier and above works differently: Infusions, not spontaneous casting.** Instead of Name-Crafting a spell in the moment, a Cannith-Touched sockets a dragonshard component into a hand/body-slot item (weapon, armor, tool), paying the tier's shard cost **once**. The infused property persists until removed, re-infused, or a Long Rest — a prepared "loadout" playstyle, trading real in-combat flexibility (can't invent a new effect mid-fight the way Name-Crafting allows) for reliability and efficiency (pay once, benefit repeatedly). **Simultaneous infusions known: 1 at level 1, +1 at level 4, +1 at level 8** (same milestone cadence as the second/third Wound slot — 3 max by level 8).
+**Minor tier and above works differently: Infusions, not spontaneous casting.** Instead of Name-Crafting a spell in the moment, a Cannith-Touched sockets a dragonshard component into a hand/body-slot item (weapon, armor, tool), paying the tier's shard cost **once**. The infused property persists until removed, re-infused, or a full day's rest — a prepared "loadout" playstyle, trading real in-combat flexibility (can't invent a new effect mid-fight the way Name-Crafting allows) for reliability and efficiency (pay once, benefit repeatedly). **Simultaneous infusions known: 1 at level 1, +1 at level 4, +1 at level 8** (same milestone cadence as the second/third Wound slot — 3 max by level 8).
 
 **The armor question, resolved thematically rather than with a flat number: a Cannith-Touched may infuse their own armor to reduce its requirement tier by one.** Personally-modified Heavy armor only needs to meet Medium's requirement. **This costs one of the Cannith-Touched's known Infusions** (only 1 at level 1) — a real trade-off, not a free bonus. Heavy armor was never meant to be integral to the archetype; a level-1 Cannith-Touched who spends their one Infusion on eased armor access has nothing left over for a combat or utility effect that Round, the same genuine opportunity cost every other build-defining choice in this doc carries. This gives a real, earned path to Heavy distinct from both Wayfarer (physical training, no ongoing cost) and a Syberist-gish (capped at Medium, no workaround at all) — the character didn't get stronger, they spent their limited crafting attention on their own gear instead of anything else.
 
@@ -1045,58 +1101,6 @@ All Houses now have a Least Mark defined.
 
 ---
 
-## Core Resolution: 2d10 vs Target 12
-
-**Check format:** roll **2d10 + stat bonus**, succeed on **12 or higher**. This is the shared spine every other system below (combat, enemy design, checks) hangs off of.
-
-### Stat Bonus Generation
-
-**One method: roll. No standing alternative to switch to.** An earlier draft offered a free-choice fixed Array alongside rolling — dropped, because if a fixed safe option is always available *after* seeing the roll, rolling becomes strictly dominant (try for the higher ceiling, retreat to the safe option risk-free if it's bad), which quietly kills the alternative as a meaningful choice rather than preserving it as one. Worlds Without Number's approach — roll first, only a rare and narrow fix for a genuinely bad result — closes that exploit instead of creating a false choice.
-
-**Roll 2d6 per stat, look up the bonus:**
-
-| 2d6 | Bonus | Success vs 12 |
-|---|---|---|
-| 2 | −3 | 21% |
-| 3–4 | −2 | 28% |
-| 5–6 | −1 | 36% |
-| 7 | 0 | 45% |
-| 8–9 | +1 | 55% |
-| 10–11 | +2 | 64% |
-| 12 | +3 | 72% |
-
-Assign the six results to STR/DEX/CON/INT/WIS/CHA in any order (this is a builds game — free placement lets a lucky roll go to your concept's main stat, or reinforce a stat your Background already boosts). **This placement is a real decision every time, not a formality** — a worked example walking through stat gen "in roll order" without actually reassigning them isn't demonstrating a built character, just the raw dice mechanic.
-
-**Mercy adjustment — narrow, and only for a genuinely bad result, not a mediocre one.** If, after rolling, **no stat is positive** (every result is 0 or negative — a real outlier, not just an unlucky-but-playable spread), the player may make **one** of the following two swaps, targeting whichever stats they choose:
-- Raise **two** stats to +1 each, or
-- Raise **one** stat to +2.
-
-This only fires on the actual worst-case outcome, is small and targeted rather than a full reroll or a fixed alternate spread, and can't be freely chosen alongside a good roll — there's no version of "roll for upside, fall back risk-free" left, since the trigger condition (zero positive stats) is something a player can't manufacture on purpose to game the system.
-
-**A separate, broader safety valve: if a player is unhappy with the whole character — not a single bad roll the mercy rule already covers, but the build overall not feeling right — player and GM can agree to start over completely.** This isn't a mechanical entitlement with a trigger condition; it's a table-level judgment call, always available by mutual agreement, no restrictions on when it applies. A legal-but-joyless roll (one great stat, a cliff after it — real, and confirmed to happen even without triggering mercy) is exactly the kind of thing this exists for. It's a game — nobody should be stuck playing a character they don't want to play because the dice technically didn't fail badly enough to invoke a rule.
-
-**Background bonuses stack freely on top**, including double-stat Backgrounds, same as before.
-
-**Why the shift to target-12:** an earlier draft centered bonuses at an average of −1 against a target of 11 — mathematically identical, but a baseline-negative number reads badly on a character sheet in a high-fantasy builds game. Shifting the target up and the bonus table with it preserves the exact odds while removing the visual negative.
-
-### Advantage / Disadvantage
-
-**Mechanic:** roll **3d10**, keep the best two dice for Advantage or the worst two for Disadvantage, then add the stat bonus.
-
-| Bonus | Normal | Advantage | Disadvantage |
-|---|---|---|---|
-| −3 | 21% | 43% | 7% |
-| −2 | 28% | 53% | 11% |
-| −1 | 36% | 62% | 15% |
-| 0 | 45% | 71% | 22% |
-| +1 | 55% | 79% | 29% |
-| +2 | 64% | 85% | 38% |
-| +3 | 72% | 89% | 47% |
-
-Chosen over "roll twice, take the better/worse total" (needs 4 dice, swings slightly harder) because it needs only one extra die, reads intuitively, and still self-compresses correctly (biggest effect near the middle of the curve).
-
----
-
 ## Weapons & Damage
 
 **Universal formula:** `Damage = weapon die + relevant stat bonus` — applies to PCs *and* monsters, no exceptions. Keeping everyone on one shared economy means a fight's outcome is legibly about stat/weapon/armor choices, not one side quietly using different math.
@@ -1207,10 +1211,10 @@ TEA's actual confirmed Rare Weapons table, reflavored and mechanically adapted (
 | **Mournland Needler** | Long range, Ammo (1d6). Paralyzes on a critical hit; constructs and undead unaffected | 90 |
 | **Deflecting Rod** | Versatile (1d6/1d8). Once per Round, reflect a projectile back at whoever fired it | 75 |
 | **Thunderclap Rod** | Short range, Blast, Recharge 4 (1d8) | 80 |
-| **Riftglass Edge** | Ignores the target's armor-derived Guard bonus (1d8); mark a use on a critical hit | 75 |
+| **Riftglass Edge** | A hit permanently reduces the target's Guard by 1 (1d8) — corrected from an earlier "ignores the target's armor-derived Guard bonus," the same undefined-against-monsters problem Focus originally had, fixed the same way | 75 |
 | **Reaper's Chorus** | Versatile (1d8/1d12), requires WIS bonus ≥ +1 (Aereni funeral-rite reaping weapon) | 85 |
 | **Silverbeam Rifle** | Long range, Two-handed (1d12). Recharge 3 by day, 6 by night | 135 |
-| **Kundarak Sunderpick** | Versatile (1d4/2d4). A critical hit destroys the target's armor entirely | 60 |
+| **Kundarak Sunderpick** | Versatile (1d4/2d4). A critical hit permanently reduces the target's Guard by 1d4 — corrected from an earlier "destroys the target's armor entirely," same fix as Cleave's crit clause | 60 |
 | **Mournland Graft** | Recharge 5, only after firing (1d10). Permanently fills a hand slot — melee blade and short-range weapon in one | 95 |
 
 ---
@@ -1283,7 +1287,7 @@ Each Scar still means something real happened — a genuine piece of a character
 - Your parries/luck/adrenaline buffer. All normal damage hits Guard first.
 - **Formula:** `Guard = 4 + CON bonus + Wayfarer bonus (+2) + armor`, **floor of 1** regardless of how negative CON is. (CON is the default — see **Guard Stat** below for choosing a different stat entirely.)
 - Base was raised from 2 to 4 so the floor rule actually matters — at base 2, a −3 CON character floored at 1 Guard was functionally identical to 0 Guard. At base 4, most characters land naturally in the 2–9 range, and even a terrible CON roll leaves a real (if thin) buffer.
-- Fully restored on any short rest (10 minutes) — deliberately generous; this is the fast-recovery layer.
+- Fully restored after a Turn (10 minutes) spent resting — deliberately generous; this is the fast-recovery layer.
 - **Guard cannot go below 0** during a fight. Overflow damage is capped, not carried into extra Wound boxes beyond the single Wound triggered by the hit that empties Guard.
 
 ### Guard Stat (chosen at character creation)
@@ -1325,7 +1329,7 @@ This extends the "reward non-primary stats" principle (already built out for Way
 - **Wounds cost Guard, not stats.** An open Wound reduces **max Guard by 2** until healed. Named-stat Wound penalties were tried and rejected — they let players route the cost onto a dump stat, turning the penalty into a formality. Guard is universal; every build needs it, so the cost can't be built around.
 - **Immediate cost:** the roll immediately following the hit that opens a Wound is made with **Disadvantage** ("Reeling"), then clears — plus roll a d6 on the **Wound Complication table** below for a one-time, non-stacking consequence.
 - **Current Guard refills to the new (reduced) max when a Wound opens — floor of 1, never lower.** Example: Guard 5 takes 6 damage — 1 point overflows, triggering a Wound; max Guard drops to 3 (5−2), and current Guard **refills to 3**, not reset to 0. **This was a real gap, not a settled rule until now** — "reset to 0" had been used consistently across every Monte Carlo test in this document, but was never actually written in prose; only "max Guard reduces by 2" was ever stated. The refill reading is the correct one. **Practical impact varies by scenario, not uniform**: against an attacker whose typical hit regularly exceeds the reduced max anyway (the 6-damage/3-max example above), refilling barely changes anything, since the very next hit folds the buffer again regardless of whether it started at 0 or 3 — the fix matters most for characters facing modest, varied damage relative to their reduced Guard, not for characters already being focused down by hits that outpace their buffer. **Flagged for recalibration**: every existing zero-death percentage in this document was tested under the harsher "reset to 0" assumption; the true numbers under the corrected rule are likely somewhat safer, especially in scenarios with smaller/varied damage sources, less so in high-lethality mob scenarios where hits often already exceed reduced Guard.
-- Wounds do **not** heal on a short rest, and **cannot be closed mid-combat by any means, magical or otherwise** — see Healing Magic below for the two-mode split that makes this work without healing becoming useless.
+- Wounds do **not** heal from resting a Turn, and **cannot be closed mid-combat by any means, magical or otherwise** — see Healing Magic below for the two-mode split that makes this work without healing becoming useless.
 
 ### Wound Complication Table (d6)
 
@@ -1349,7 +1353,7 @@ Weak, disposable enemies (bandits, guards, etc.) get **no Wound slot at all** �
 
 ### Deprivation
 
-**Confirmed source, ported directly, terms adapted from HP to Guard.** If a character is deprived of crucial needs (rest, food, water), they gain **Disadvantage on all checks** and **can no longer regain Guard by taking a short rest.** Deprived for three days straight and they fall unconscious, dying in a day if the condition isn't removed. To clear it: eat, drink, and take a long rest — that rest only restores **1d6 Guard** instead of the normal full return to max.
+**Confirmed source, ported directly, terms adapted from HP to Guard.** If a character is deprived of crucial needs (rest, food, water), they gain **Disadvantage on all checks** and **can no longer regain Guard by resting a Turn.** Deprived for three days straight and they fall unconscious, dying in a day if the condition isn't removed. To clear it: eat, drink, and rest for a full day — that rest only restores **1d6 Guard** instead of the normal full return to max.
 
 ---
 
@@ -1365,7 +1369,7 @@ Weak, disposable enemies (bandits, guards, etc.) get **no Wound slot at all** �
 **Field Dressing** (out of combat — requires a full **Exploration Turn** of safety, confirmed TEA's ~10-minute downtime unit):
 - **Closes one Wound**: restores the lost max Guard and clears the Wound slot.
 - Requires genuine safety (no active threat) and the healer's full dedicated attention for the Turn — they can't do this while also exploring, standing watch, etc. A Jorasco Least Mark, a real spell slot, or a mundane Healing Toolkit + an Archive-equivalent check can all accomplish this; magic is the fastest route, not the only one.
-- A long rest (a full day) also closes all Wounds automatically, per the existing confirmed rest rules.
+- Resting for a full day also closes all Wounds automatically, per the existing confirmed rest rules.
 
 **Why this works:** making Guard-refill freely usable *before* someone's in danger — not gated by how close to death they are — turns healing into a proactive support tool (recharge the party's buffer mid-fight) instead of a reactive one (wait until someone's dying). Wounds staying uncloseable in combat, no matter what, keeps them genuinely consequential: a Wounded character is worse off for the rest of *this* fight and probably the next one, which is what makes Wounds feel like real injuries instead of a second Guard bar with extra steps.
 
@@ -1418,7 +1422,7 @@ Setup: Rivet (Guard 4/10, already carrying one Wound) is fighting two Blade-band
 
 **The key thing this confirms: failing the check doesn't trap the character — it only costs a parting shot.** Rivet successfully left the Ditch in every attempt, including both failures; the DEX check gates whether the melee hostile gets one free swing on the way out, not whether the retreat itself succeeds. That's the right shape — it makes leaving an active melee genuinely risky without ever locking a player into "you literally cannot leave," which would feel far worse at the table than a chance of taking a hit.
 
-**Honest note on how this was actually tested:** the full Highwater Road Ambush squad re-run (5 PCs vs 8 mooks + Kolt) with this rule live did *not* organically trigger it even once — the scripted AI only ever moves characters when they have no valid target in their current zone, which by construction means no melee hostile could be sharing that zone in the first place. The rule only matters when someone deliberately retreats from a fight they could still participate in, which no automated test character has been scripted to do. The dedicated scenario above was built specifically to force that situation. This is flagged in Open Threads as a test-methodology gap, not a rule gap — the mechanic itself works exactly as intended once it's actually invoked.
+**Honest note on how this was actually tested:** the full Highwater Road Ambush squad re-run (5 PCs vs 6 mooks + Kolt) with this rule live did *not* organically trigger it even once — the scripted AI only ever moves characters when they have no valid target in their current zone, which by construction means no melee hostile could be sharing that zone in the first place. The rule only matters when someone deliberately retreats from a fight they could still participate in, which no automated test character has been scripted to do. The dedicated scenario above was built specifically to force that situation. This is flagged in Open Threads as a test-methodology gap, not a rule gap — the mechanic itself works exactly as intended once it's actually invoked.
 
 ---
 
@@ -1591,7 +1595,7 @@ A character with a relevant wilderness talent (hunting, tracking, navigation), o
 
 ### Exploration Roll
 
-While exploring a site or taking a short rest there, the GM **rolls a d6 every Turn** (~10 minutes) and consults:
+While exploring a site or resting a Turn there, the GM **rolls a d6 every Turn** (~10 minutes) and consults:
 
 | d6 | Exploration Event |
 |---|---|
@@ -1820,7 +1824,7 @@ Example: a densely-covered ambush shifts the spot-check target from 12 to 15 (sc
 
 ## Wayfarer Grit Maneuvers
 
-**Problem this solves:** a "tank" that's just a stick with more Guard isn't actually tanking, it's just soaking damage worse than dying — no real battlefield control. Wayfarers need active tools, and there's no reason those tools should only key off STR. Grit is TEA's existing confirmed Wayfarer resource (starts at 2, +1 at even levels, some regained on short rest).
+**Problem this solves:** a "tank" that's just a stick with more Guard isn't actually tanking, it's just soaking damage worse than dying — no real battlefield control. Wayfarers need active tools, and there's no reason those tools should only key off STR. Grit is TEA's existing confirmed Wayfarer resource (starts at 2, +1 at even levels, some regained after resting a Turn).
 
 **All maneuvers are available from level 1 — gated by Grit cost, not character level.** TEA's real source structure splits maneuvers into a Level-1 base set (Focus, Not on my watch!, Shake it off) and Advanced Maneuvers unlocked one at a time at levels 2, 5, and 7 (Command, Payback, Shield, Split Fire, Taunt, Rally, Cleave). Playtesting exposed a real gap in that structure: a level-1 tank has no way to actually protect an ally (Shield and Taunt are both Advanced, locked away until level 2+), which is exactly the tool a squishy caster needs from turn one. Rather than keep the level gate, **every maneuver is available at any level — the stronger ones just cost more Grit.** **Payback has since been removed from the table below** (see its own note) — a genuine confirmed-source maneuver, cut rather than kept, because "immediately attack" implies an interrupt this system's fixed, roll-once Initiative order has no mechanism to support.
 
@@ -1895,7 +1899,7 @@ Example: a densely-covered ambush shifts the spot-check target from 12 to 15 (sc
 
 With a starting Grit pool of 2 (confirmed), a level-1 Wayfarer can already spend it all on **one** Advanced maneuver — enough to Shield or Taunt for an endangered ally in their very first fight, rather than needing three levels to earn the tool. Higher levels don't unlock new options under this model; they just mean more total Grit (already confirmed to scale +1/level) to spend more often. That's a smoother curve than gating specific tools behind specific levels, and it directly fixes a real gap the ambush scenario surfaced: Rivet had no way to protect Aeshaan at level 1 under the old level-gated structure, even standing in the same zone, simply because Shield/Taunt didn't exist yet for him.
 
-**Why this matters beyond one character:** it means a Wayfarer's build determines what *kind* of tank/controller they are — CHA-invested plays like a battlefield-controlling bodyguard, WIS/INT-invested plays like a squad tactician who barely swings a weapon, a pure-STR build plays like a straightforward damage soak. Same chassis, genuinely different characters. This principle now also covers Syberist (CON rewarded via the casting-mishap reduction in Magic Baseline, rather than a parallel fixed-ability list — see the note there on why freeform casters shouldn't get feature-shaped duplicate spells) and Agent — resolved twice over, first via Talents & Expertise's cross-Background access (any stat, via whichever Talent list a player reaches into), and now more directly via Leverage and Contingency, which is fiction-gated rather than any single stat at all.
+**Why this matters beyond one character:** it means a Wayfarer's build determines what *kind* of tank/controller they are — CHA-invested plays like a battlefield-controlling bodyguard, WIS/INT-invested plays like a squad tactician who barely swings a weapon, a pure-STR build plays like a straightforward damage soak. Same chassis, genuinely different characters. This principle now also covers Syberist (CON rewarded via the Overcast Backlash Pool's rerolls in Overcasting, rather than a parallel fixed-ability list — see the note there on why freeform casters shouldn't get feature-shaped duplicate spells) and Agent — resolved twice over, first via Talents & Expertise's cross-Background access (any stat, via whichever Talent list a player reaches into), and now more directly via Leverage and Contingency, which is fiction-gated rather than any single stat at all.
 
 ---
 
@@ -1933,7 +1937,7 @@ Four PCs vs. 4 bandits + a boss, simulated with real dice across several iterati
 
 A full scenario test combining every system above — Surprise, Scenario Target Modifiers, terrain Zone Conditions, Morale, a healer archetype, a named boss, the flexible Guard Stat, and the tiered Grit Maneuver costs — against one specific, recurring question: **can the party's tools actually save its most fragile member under sustained pressure?**
 
-**The scenario:** the party is ambushed on a forested road by **Kolt's Raiders** (8 mook bandits + Kolt, a Standard-tier Captain with 2 Wound slots) from dense treeline cover. Three terrain zones: **Road** (open, no cover), **Ditch** (+2 target for ranged attacks — partial cover), **Treeline** (Disadvantage on ranged attacks into it — thick cover, why the Raiders ambush from here). Surprise target: 12 base +3 (Scenario Target Modifier for a well-laid ambush) = **15**, checked per-character with cascading Advantage.
+**The scenario:** the party is ambushed on a forested road by **Kolt's Raiders** (6 mook bandits — 3 Blade + 3 Bow, matching the corrected Encounter Level Scaling calibration — plus Kolt, a Standard-tier Captain with 2 Wound slots — corrected from an earlier "8 mook bandits," a number picked before that calibration existed and never updated once it landed on 6 as the actual right size for this move+act rule set) from dense treeline cover. Three terrain zones: **Road** (open, no cover), **Ditch** (+2 target for ranged attacks — partial cover), **Treeline** (Disadvantage on ranged attacks into it — thick cover, why the Raiders ambush from here). Surprise target: 12 base +3 (Scenario Target Modifier for a well-laid ambush) = **15**, checked per-character with cascading Advantage.
 
 **The squad:** Rivet (Warforged Warbred, Guard Stat CON), Nix (Gnome Agent, Guard Stat DEX), **Aeshaan** (Elf Shardbound Syberist, Guard Stat INT — deliberately built INT/DEX-forward with CON dumped), Rowan (Shifter Wildspoken Syberist, Guard Stat WIS), Kessia (Human Flamesworn healer, Guard Stat WIS).
 
@@ -2021,13 +2025,15 @@ Applied to the recurring glass-cannon case study, choosing INT (her Guard Stat) 
 |---|---|---|---|---|
 | 1 | 6 | — | — | 1 |
 | 4 | 10 | +2 (INT+1 twice) | +2 | 2 |
-| 8 | 12 | +2 (INT+1, CON+1) | +4 | 2 |
+| 8 | 12 | +2 (INT+1, CON+1) | +4 | 3 |
 
 **Finding, and why this calibration was chosen over the first draft:** an earlier pass granted flat Guard *every* level (not every-other) — by level 8 that produced Guard 15, of which +7 was pure automatic growth and only +2 came from Aeshaan's actual stat choices, which let leveling-up matter more than building well. Tying flat Guard to the *same* cadence as stat growth fixes that: a player who commits every Vertical point to their Guard Stat can match or exceed the automatic growth, while one who diversifies (as Aeshaan does here, splitting into CON for the Medium-armor requirement) gets a real, felt tradeoff instead of the flat bonus just dominating regardless of choice. By level 8 Aeshaan's CON is high enough to newly qualify for Medium armor if the player wants it — a second layer of lateral choice opening up from a vertical investment, which is exactly the kind of build interplay this system should keep producing at every level, not just level 1.
 
 ## Glossary
 
 **One canonical definition per term, alphabetical. Built after this document accumulated real drift more than once** — "Wound cycle" existed for a long stretch before ever getting a real definition, "Mastery" got referenced as a live mechanic in the Advancement table while never being built out anywhere, and "flat bonus" appeared in three separate abilities with no actual number attached to any of them. This section exists to stop that from happening quietly again — if a term matters enough to use twice, it belongs here once, and every other use should mean exactly this and nothing looser.
+
+**Aberrant Mark** — mentioned once (Dragonmarks → Mark Tiers) as a real tier open to any Background, bigger than a Least Mark but with backlash risk. **Never actually built out** — no specific example, no real mishap table, same shape as the old "Mastery" gap. Flagged here rather than silently treated as a working feature.
 
 **Advantage / Disadvantage** — roll 3d10 instead of 2d10, keep the best two (Advantage) or worst two (Disadvantage). Disadvantage rolls never crit.
 
@@ -2051,21 +2057,21 @@ Applied to the recurring glass-cannon case study, choosing INT (her Guard Stat) 
 
 **Effect Spell** — a spell that isn't an attack (wards, buffs, heals, utility). No caster roll; works automatically on a willing target, resistance check on an unwilling one. Contrast **Attack Spell**.
 
-**Grit** — Wayfarer's resource. Starts at 2, +1 at even levels, some regained on a short rest. Spent on Grit Maneuvers.
+**Grit** — Wayfarer's resource. Starts at 2, +1 at even levels, some regained after resting a Turn. Spent on Grit Maneuvers.
 
-**Guard** — the damage buffer every character has. = 4 + Guard Stat bonus + archetype bonus + armor + shield, floor 1. Restores fully on a short rest.
+**Guard** — the damage buffer every character has. = 4 + Guard Stat bonus + archetype bonus + armor + shield, floor 1. Restores fully after a Turn of rest.
 
 **Guard Stat** — the stat chosen at character creation to calculate Guard. Must differ from weapon stat, cast stat, and Wandslinger stat — locked together at creation, never re-checked against later gear changes.
 
-**Infusion** — a Cannith-Touched's persistent magic effect, socketed into a hand/body-slot item. Persists until removed, re-infused, or a Long Rest — distinct from a Syberist's in-the-moment cast.
+**Infusion** — a Cannith-Touched's persistent magic effect, socketed into a hand/body-slot item. Persists until removed, re-infused, or a full day's rest — distinct from a Syberist's in-the-moment cast.
 
 **Initiative** — 2d10 + DEX + weapon modifier − armor penalty, rolled once per fight. Fixed order for the whole encounter.
-
-**Leverage** — Agent's resource. Starts at 2, +1 per level. Regenerates during downtime via a GM-adjudicated check (see Archetypes), not a short rest.
 
 **Lateral (Advancement track)** — the archetype-specific options gained every level, no exceptions. Contrast **Vertical**.
 
 **Legendary Resistance** — a true solo boss auto-succeeds its first 3 failed resistance checks per encounter.
+
+**Leverage** — Agent's resource. Starts at 2, +1 per level. Regenerates during downtime via a GM-adjudicated check (see Archetypes), not from resting a Turn.
 
 **Milestone** — the encounter-scaling checkpoint, tied to party level (roughly every 2 levels). Drives Encounter Level Scaling for mooks, bosses, and Base Target.
 
@@ -2081,7 +2087,7 @@ Applied to the recurring glass-cannon case study, choosing INT (her Guard Stat) 
 
 **Reeling** — Disadvantage on the next roll after a Wound opens.
 
-**Round** — one full cycle through the fixed Initiative order. Contrast **Turn**.
+**Round** — one full cycle through the fixed Initiative order, the unit combat is measured in. Not to be confused with **Turn** below, which is a completely different, much longer exploration-pacing unit — an earlier draft used "Turn" for both, importing 5e's vocabulary (where Turn means an individual's combat action) into a document that also needed the real OSE meaning (a 10-minute exploration unit) for the same word. Fixed by dropping the combat meaning of Turn entirely; Round covers combat on its own.
 
 **Scar Table** — the d10 table rolled when a character faints at Death's Door (result of 4+).
 
@@ -2101,7 +2107,7 @@ Applied to the recurring glass-cannon case study, choosing INT (her Guard Stat) 
 
 **Tier (magic)** — Cantrip, Spark, Minor, Moderate, Major, Mythic — the six potency levels of a cast, each with its own shard cost and damage output.
 
-**Turn** — a single combatant's action within a Round. Contrast **Round**.
+**Turn** — a 10-minute unit of exploration/downtime pacing (OSE/B-X convention) — wandering monster checks, resource use, and resting are all measured in Turns. **This document does not use "Turn" for an individual's action in combat** — that's covered entirely by Round above. An earlier draft conflated the two, importing 5e's combat-Turn meaning alongside the real OSE exploration-Turn meaning for the same word; fixed by keeping only the OSE meaning, matching this system's actual OSR lineage. This document also has no formal "short rest / long rest" mechanic — an earlier draft used that 5e-style language for what were really just a Turn of rest (10 minutes, restores Guard) and a full day's rest (closes Wounds), both already real units this system tracks natively.
 
 **Vertical (Advancement track)** — the universal stat/Guard growth every archetype shares, every other level (2, 4, 6, 8). Contrast **Lateral**.
 
@@ -2119,7 +2125,7 @@ Applied to the recurring glass-cannon case study, choosing INT (her Guard Stat) 
 
 
 
-- **A reusable combat Monte Carlo benchmark now exists as a standalone file (`combat_benchmark.py`), not something to rebuild from scratch each session.** Built after several rounds of test-quality problems in one session — missing Initiative, no defensive AI, mismatched party sizes vs. the encounter being tested, a `guard_max` bug — that produced misleadingly harsh results until caught and fixed. This file models real interleaved Initiative (not "PCs then enemies"), per-character Surprise, a priority-ordered decision tree per PC (emergency defense first, signature plays second, standard attacks as fallback), the corrected Wound-refill rule, and genuinely rolled shard costs rather than flat averages. Current validated baseline: the Highwater Road squad vs. 8 mooks + Kolt produces a 32.8% zero-death rate, with Aeshaan (the deliberate glass-cannon build) dying in 55.7% of trials — consistent with, not contradicting, the Case Study's own finding that she dies in every one of its four narrated playthroughs. Extend this file for future ability/rule testing rather than writing a fresh script each time.
+- **A reusable combat Monte Carlo benchmark now exists as a standalone file (`combat_benchmark.py`), not something to rebuild from scratch each session.** Built after several rounds of test-quality problems in one session — missing Initiative, no defensive AI, mismatched party sizes vs. the encounter being tested, a `guard_max` bug — that produced misleadingly harsh results until caught and fixed. This file models real interleaved Initiative (not "PCs then enemies"), per-character Surprise, a priority-ordered decision tree per PC (emergency defense first, signature plays second, standard attacks as fallback), the corrected Wound-refill rule, and genuinely rolled shard costs rather than flat averages. **Needs an update, not yet done:** its default enemy count is 8 mooks + Kolt, inherited from the Case Study's number before that was found arbitrary and corrected to 6 (3 Blade + 3 Bow) elsewhere in this document. The cited baseline (32.8% zero-death, Aeshaan dying in 55.7% of trials) was generated against the old 8-mook count and can't just be relabeled — it needs an actual rerun at 6 mooks to produce a number that's still true. Extend this file for future ability/rule testing rather than writing a fresh script each time, but fix the mook count first.
 
 - ~~Three Agent Skills remain genuinely unquantified: Network, Supplies, Many Pockets~~ — **resolved.** Many Pockets: +1 backpack slot per pick, repeatable (the orphaned "Mastery" clause, a TEA-source concept never actually built out in this doc, cut entirely — along with every other "Skill or Mastery" reference in Advancement, which is now just "Skill"). Supplies: removed outright, redundant with what Leverage/Contingency already covers more flexibly. Network: reframed around its own real niche — once per downtime scene, a CHA check to call in a favor immediately regenerates 1 Leverage, distinct from Contingency's spend-side rather than duplicating its "have a contact" flavor.
 
