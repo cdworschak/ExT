@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archetypes — Eberron × The Electrum Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="topbar-brand">EBERRON <span>×</span> THE ELECTRUM ARCHIVE</span>
+  <div class="topbar-links">
+    <a href="index.html">Home</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="backgrounds.html">Backgrounds</a>
+    <a href="archetypes.html" class="active">Archetypes</a>
+    <a href="character-creation.html">Character Creation</a>
+    <a href="combat.html">Combat</a>
+    <a href="exploration.html">Exploration</a>
+    <a href="enemies-advancement.html">Enemies &amp; Advancement</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+</nav>
+
+<main>
+  <header class="page-header">
+    <p class="page-eyebrow">03 — Archetypes</p>
+    <h1 class="page-title">Archetypes</h1>
+    <p class="page-intro">Four chassis: Wayfarer (martial), Agent (skills/utility), Syberist (spellcaster), Cannith-Touched (artificer). Full kits, resources, and every option each one can take.</p>
+  </header>
+
+  <div class="confirmed">
+  <span class="confirmed-label">Universal — all four archetypes</span>
+  Every archetype also grows on a slower <strong>Vertical</strong> track regardless of chassis: at levels 2, 4, 6, and 8, +1 to one stat (player's choice) and +1 flat Guard. Total by level 8: +4 stat, +4 flat Guard. The tables below cover the <strong>Lateral</strong> track — the archetype-specific options layered on top, every level.
+  </div>
+
+  <h2 id="wayfarer">Wayfarer</h2>
+  <p>Fighter/Barbarian chassis — Grit resource, a Guard bonus of +2, and a full martial toolkit through Grit Maneuvers. Grit starts at 2, +1 at even levels, some regained on a short rest.</p>
+
+  <h3 id="grit-maneuvers">Grit Maneuvers</h3>
+  <p><strong>All maneuvers are available from level 1 — gated by Grit cost, not character level.</strong> The stronger ones just cost more Grit.</p>
+
+  <h4>Universal — Basic (1 Grit)</h4>
+  <ul>
+  <li><strong>Focus</strong> — a hit permanently reduces the target's Guard by 1.</li>
+  <li><strong>Not on my watch!</strong> — reroll your Initiative roll.</li>
+  <li><strong>Shake it off</strong> — spent on your turn, bracing for what's coming: the next hit you take before your next turn is reduced by 1d6.</li>
+  <li><strong>Guardian's Challenge</strong> — CHA check; success forces up to 2 enemies in your zone to target you or fight at Disadvantage, lasting this Round.</li>
+  </ul>
+
+  <h4>Universal — Advanced (2 Grit)</h4>
+  <ul>
+  <li><strong>Command</strong> — an ally makes a genuinely extra attack this Round (not their normal turn) for +1d6 damage, instead of you acting.</li>
+  <li><strong>Shield</strong> — a same-zone ally's incoming attacks are made at Disadvantage until your next turn.</li>
+  <li><strong>Split Fire</strong> — a ranged attack hits two separate targets.</li>
+  <li><strong>Taunt</strong> — all enemies in your zone must attack you this Round, no check, guaranteed.</li>
+  <li><strong>Rally</strong> — you and allies in your zone gain +1 damage until end of Round.</li>
+  <li><strong>Cleave</strong> — a single attack hits up to four same-zone enemies at one-third damage each; a critical hit permanently reduces that target's Guard by 1d4.</li>
+  <li><strong>Hold the Line</strong> — STR/CON; an enemy in your zone can't leave it without beating your bonus first, lasting until your next turn.</li>
+  <li><strong>Read the Fight</strong> — no check; all allies in your zone gain Advantage on their next attack this Round.</li>
+  <li><strong>Guard Stance</strong> — no attack, no check; Disadvantage on all incoming attacks against you until your next turn.</li>
+  <li><strong>Second Wind</strong> — CON; once per scene; regain Guard equal to 1d6 + CON bonus. No longer requires a Wound to have already opened.</li>
+  <li><strong>Rally Cry</strong> — CHA/WIS; clear Reeling from an ally in your zone, or grant them +1 on their next roll.</li>
+  </ul>
+
+  <h4>Gear-Specific Maneuvers</h4>
+  <p>Layered on top of the universal table — every Wayfarer has both, gated by whichever gear is equipped.</p>
+  <table>
+  <tr><th>Gear</th><th>Basic (1 Grit)</th><th>Advanced (2 Grit)</th></tr>
+  <tr><td>Unarmed</td><td>Redirect — reposition one zone after a hit, no Disengage check</td><td>Iron Palm — boosts an unarmed strike to Heavy tier (1d8+STR)</td></tr>
+  <tr><td>Light</td><td>Fleet Strike — move to an adjacent zone after attacking</td><td>Second Strike — on a hit, a bonus attack at Disadvantage</td></tr>
+  <tr><td>Medium</td><td>Steady Guard — forgo your attack; impose Disadvantage on one attack against you</td><td>Guarded Strike — on a hit, the target has Disadvantage on their next attack against you</td></tr>
+  <tr><td>Heavy</td><td>Momentum — if your last attack this fight hit, this attack deals +2 damage</td><td>Sunder — a hit permanently reduces the target's Guard by 2</td></tr>
+  <tr><td>Shield</td><td>Shield Bash — Light-tier damage (1d4+STR), plus +2 to the target's next attack roll against you</td><td>Shield (the universal-table maneuver above)</td></tr>
+  <tr><td>Ranged</td><td>Steady Aim — ignore range Disadvantage or a cover penalty for this shot</td><td>Split Fire (the universal-table maneuver above)</td></tr>
+  </table>
+
+  <h3 id="dual-wield">Dual-wield</h3>
+  <p><strong>One attack roll, roll both weapons' damage dice, take the higher.</strong> Main-hand Light or Medium, off-hand must be Light, both sharing the same governing stat. Applies identically to unarmed strikes (main fist Medium via Iron Palm, off-hand fist Light).</p>
+  <table>
+  <tr><th>Tier</th><th>Cost</th><th>Maneuver</th></tr>
+  <tr><td>—</td><td>Free</td><td>Baseline (roll both, take higher)</td></tr>
+  <tr><td>Basic</td><td>1 Grit</td><td>Feint — this attack rolls with Advantage</td></tr>
+  <tr><td>Advanced</td><td>2 Grit</td><td>Blade Dance — two attacks this Round, first normal, second at −4</td></tr>
+  </table>
+
+  <h3 id="trophies">Trophies (level 3)</h3>
+  <p>After defeating a creature in combat, take a trophy (1 item slot). Spend Grit when facing a creature you hold a trophy of for +1d6 damage against it, or Advantage on a check involving that creature's abilities. Mock Trophies can be built by scouting a lair or a week of dedicated research — destroyed after one use.</p>
+
+  <h3 id="wayfarer-levels">Wayfarer, Level by Level</h3>
+  <table>
+  <tr><th>Level</th><th>Vertical (universal)</th><th>Lateral (Wayfarer)</th></tr>
+  <tr><td>1</td><td>—</td><td>2 Grit. All Maneuvers available immediately, gated by Grit cost, not level. May trade access to one Advanced Maneuver for Wandslinger (Spark-tier casting) instead, at creation only.</td></tr>
+  <tr><td>2</td><td>+1 stat, +1 Guard</td><td>+1 Grit</td></tr>
+  <tr><td>3</td><td>—</td><td><strong>Trophies</strong> — after defeating a creature, take a trophy; spend Grit facing it again for +1d6 damage or Advantage on a relevant check</td></tr>
+  <tr><td>4</td><td>+1 stat, +1 Guard</td><td>+1 Grit</td></tr>
+  <tr><td>5</td><td>—</td><td>+1 Grit</td></tr>
+  <tr><td>6</td><td>+1 stat, +1 Guard</td><td>+1 Grit</td></tr>
+  <tr><td>7</td><td>—</td><td>+1 Grit</td></tr>
+  <tr><td>8</td><td>+1 stat, +1 Guard</td><td>+1 Grit</td></tr>
+  </table>
+
+  <hr>
+
+  <h2 id="agent">Agent</h2>
+  <p>Rogue/Ranger/Bard/Diplomat chassis — Leverage resource, Skills, and Contingency declarations. Width instead of raw power.</p>
+
+  <h3 id="leverage">Leverage &amp; Contingency</h3>
+  <p><strong>Leverage starts at 2, +1 per level.</strong> Regenerates during downtime, once per lull in the action — not a short rest, and deliberately not locked to any one setting. The player describes how they're using the downtime to prepare; the GM decides which mental stat (CHA/WIS/INT) actually fits that description, then rolls 2d10 + that stat vs Target 12. Success regenerates 1 Leverage. The GM may shift the Target based on how favorable the environment is — a barren cave with WIS chosen might push the Target up; Sharn with CHA chosen might pull it down. Can be spent on an ally's behalf, not just your own declarations.</p>
+  <p><strong>Contingency</strong> is what Leverage buys: retroactively "already having prepared" for a specific moment. Cost scales with the size of the ask, GM-adjudicated the same way potency tiers are priced.</p>
+  <ul>
+  <li><strong>1 Leverage</strong> — a small, plausible flashback ("I have rope," "I've been to this district before")</li>
+  <li><strong>2 Leverage</strong> — a medium one ("I've dealt with this NPC before," "I bribed a guard on the way in")</li>
+  <li><strong>3+ Leverage</strong> — something that reshapes the scene ("I already turned this guard captain")</li>
+  </ul>
+
+  <h3 id="skills">Skills</h3>
+  <p>Choose freely at creation and on level-up: <strong>Swift</strong> (no Disengage check needed, Advantage on movement-related checks), <strong>Many Pockets</strong> (+1 backpack slot per pick — repeatable, same shape as Expertise below).</p>
+  <p><strong>Network</strong> — a real, named contact tied to a specific domain (a fence, a guard captain, a dockworkers' foreman). Using that relationship for the Leverage-regeneration check above grants Advantage on the roll — naturally CHA-flavored, most available wherever that contact could plausibly be found, but never the only path to Leverage. A Contingency drawing on your contact's domain also costs 1 less Leverage (minimum 1).</p>
+  <p><strong>Expertise</strong> — choose a narrow field of specific expertise, same granularity as a Background Talent ("forgery and false documents," "appraising valuables," "reading a crowd's mood"). Gain Advantage on checks within that field, at will. Can be taken multiple times, each pick adding a new distinct field — player-invented, not drawn from the Background Talent pool. No separate cap needed: taking it repeatedly means forgoing the other Skills, the same opportunity cost every other choice here carries.</p>
+
+  <h3 id="agent-combat">Agent Combat Techniques</h3>
+  <p>A real menu, chosen in the moment like a Grit Maneuver — not a passive pick-once Skill. Resourced entirely by action economy and trigger rarity, no new currency.</p>
+  <ul>
+  <li><strong>Precision Strike</strong> — this attack has Disadvantage, but deals +2 flat damage if it hits.</li>
+  <li><strong>Exploit the Opening</strong> — once per Wound that opens on a target (yours or an ally's), your next hit against them with a Light or Medium weapon automatically counts as a critical.</li>
+  <li><strong>Take Aim</strong> — spend your action aiming (no attack this turn); your next attack this fight against that target, with a Light or Medium weapon, gets Advantage, and rolls a second weapon damage die on top of the normal hit — that second die's result also permanently reduces their Guard, surviving even a Wound refill.</li>
+  </ul>
+
+  <h3 id="agent-flavors">Agent Flavors</h3>
+  <p>Three concept archetypes on the same chassis, differing only in what kind of Contingency each leans into and what regenerates Leverage.</p>
+  <p><strong>Rogue / "Cutthroat"</strong> — physical, logistical Contingencies. Leverage regenerates by casing a location before the job. Pairs with Exploit the Opening/Take Aim and Many Pockets.</p>
+  <p><strong>Diplomat / "Emissary"</strong> — relational, informational Contingencies. Leverage regenerates through successful Network use and political downtime. Pairs with cross-Background Talent access.</p>
+  <p><strong>Bard / "Raconteur"</strong> — social, reputational Contingencies. Leverage regenerates through performance checks. The team-facing Leverage spend is the whole point here — handing an ally a Contingency is the direct mechanical cousin of Bardic Inspiration.</p>
+
+  <h3 id="wandslinger">Wandslinger</h3>
+  <p>Agent and Wayfarer may trade into minor casting access — hard-capped at Cantrip/Spark, never Minor or above. Not available to Syberist/Cannith-Touched, who already have inherent casting that exceeds it.</p>
+  <ul>
+  <li><strong>Agent:</strong> trades one Skill choice for Spark-tier access. Shard Bolt counts as an eligible attack for Exploit the Opening and Take Aim, treated as a Light weapon.</li>
+  <li><strong>Wayfarer:</strong> permanently forgoes access to one Advanced Maneuver of their choice, in exchange for Spark-tier access.</li>
+  </ul>
+
+  <h3 id="agent-levels">Agent, Level by Level</h3>
+  <table>
+  <tr><th>Level</th><th>Vertical (universal)</th><th>Lateral (Agent)</th></tr>
+  <tr><td>1</td><td>—</td><td>Choose a Skill (or Wandslinger instead, at creation only)</td></tr>
+  <tr><td>2</td><td>+1 stat, +1 Guard</td><td>Choose a Skill</td></tr>
+  <tr><td>3</td><td>—</td><td>Choose a Skill</td></tr>
+  <tr><td>4</td><td>+1 stat, +1 Guard</td><td>Choose a Skill</td></tr>
+  <tr><td>5</td><td>—</td><td>Choose a Skill</td></tr>
+  <tr><td>6</td><td>+1 stat, +1 Guard</td><td>Choose a Skill</td></tr>
+  <tr><td>7</td><td>—</td><td>Choose a Skill</td></tr>
+  <tr><td>8</td><td>+1 stat, +1 Guard</td><td>Choose a Skill</td></tr>
+  </table>
+  <p>Every level is a genuine choice among Swift, Network, Expertise, or Many Pockets. Expertise and Many Pockets can both be taken repeatedly.</p>
+
+  <hr>
+
+  <h2 id="syberist">Syberist</h2>
+  <p>Wizard/Sorcerer/Cleric/Druid chassis — real spellcasting, three traditions differing only in cast stat and Spell Names flavor.</p>
+  <ul>
+  <li><strong>Shardbound</strong> (Wizard/Sorcerer) — cast stat INT. Arcane, raw dragonshard/planar power.</li>
+  <li><strong>Flamesworn</strong> (Cleric/Paladin) — cast stat CHA. Silver Flame or House-oath channeling.</li>
+  <li><strong>Wildspoken</strong> (Druid) — cast stat WIS. Eldeen Reaches / Gatekeeper tradition.</li>
+  </ul>
+
+  <h3 id="tradition-options">Tradition-Specific Options</h3>
+  <p>Available in place of the universal Advancement option at levels 2, 4, 5, 6, 7, or 8.</p>
+
+  <h4>Shardbound</h4>
+  <ul>
+  <li><strong>Aberrant Sense</strong> — at will, free. Detect aberrations, planar instability, or Daelkyr-touched corruption in the zone.</li>
+  <li><strong>Fractal Ward</strong> — once per scene, automatic, no action required. When hit, the attacker has Disadvantage on their next attack against you.</li>
+  <li><strong>Shard-Split</strong> — shard cost as the spell it's attached to. A single-target cast also strikes one other creature in the same zone at half effect.</li>
+  <li><strong>Riftglass Barrier</strong> — once per scene, automatic, no action required. Reduce the next hit against you this Round by a flat 3.</li>
+  </ul>
+
+  <h4>Flamesworn</h4>
+  <ul>
+  <li><strong>Radiant Ward</strong> — Spark/Minor shard cost. Allies in your zone gain +1 Guard until your next turn.</li>
+  <li><strong>Undying Witness</strong> — Major-tier shard cost. An ally in your zone who would hit Death's Door before your next turn faints instead — the death roll never happens.</li>
+  <li><strong>Sacred Flame Burst</strong> — 2 shards, flat 1d4, Blast-tier (hits every creature in the zone).</li>
+  <li><strong>Zealous Rebuke</strong> — always-on, no shard cost. When an ally is hit, mark the attacker: your next hit against them deals +1d6.</li>
+  </ul>
+
+  <h4>Wildspoken</h4>
+  <ul>
+  <li><strong>Beast Shape</strong> — Major-tier shard cost, up to 10 minutes. Transform into a natural predator, borrowing a Mook-tier stat block. WIS governs both the beast's attack (1d6+WIS) and Guard, replacing STR/DEX and your normal Guard Stat for the duration.</li>
+  <li><strong>Thorned Ground</strong> — once per scene. For the rest of the encounter, any enemy that leaves your zone automatically takes 1d4 damage, no roll to avoid.</li>
+  <li><strong>Bloodscent</strong> — Spark-tier shard cost. Mark a Wounded enemy: you and allies gain Advantage against them until they're down.</li>
+  <li><strong>Wild Empathy</strong> — at will, free. Calm or briefly command a natural, non-magical beast.</li>
+  </ul>
+
+  <h3 id="syberist-levels">Syberist, Level by Level</h3>
+  <table>
+  <tr><th>Level</th><th>Vertical (universal)</th><th>Lateral (Syberist)</th><th>Tradition Option instead?</th></tr>
+  <tr><td>1</td><td>—</td><td>1 spell name, Cantrip tier unlocked</td><td>No</td></tr>
+  <tr><td>2</td><td>+1 stat, +1 Guard</td><td><strong>Resonance Sense</strong> — at will, sense the presence and rough strength of active magic, unspent shards, or a recently-cast effect nearby</td><td>Yes</td></tr>
+  <tr><td>3</td><td>—</td><td><strong>Name-Crafting</strong> — combine parts of known names into a new one, player-directed</td><td>No</td></tr>
+  <tr><td>4</td><td>+1 stat, +1 Guard</td><td>New spell name, free</td><td>Yes</td></tr>
+  <tr><td>5</td><td>—</td><td><strong>Focused Inhalation</strong> — once per day, reroll a cast's shard-cost die</td><td>Yes</td></tr>
+  <tr><td>6</td><td>+1 stat, +1 Guard</td><td>New spell name, free</td><td>Yes</td></tr>
+  <tr><td>7</td><td>—</td><td><strong>Whispers of the Prophecy</strong> — once per day, Advantage on one check or a free Minor-tier cast</td><td>Yes</td></tr>
+  <tr><td>8</td><td>+1 stat, +1 Guard</td><td>New spell name, free</td><td>Yes</td></tr>
+  </table>
+  <p>Resonance Sense, Focused Inhalation, and Whispers of the Prophecy are confirmed names from source; their mechanical definitions here are reconstructed, not source-verified.</p>
+
+  <hr>
+
+  <h2 id="cannith-touched">Cannith-Touched</h2>
+  <p>A fourth archetype built from scratch. Instead of casting a spell in the moment, sockets a dragonshard component into a hand/body-slot item, paying the tier's shard cost once. The infused property persists until removed, re-infused, or a Long Rest.</p>
+  <ul>
+  <li><strong>Cast stat:</strong> INT. <strong>Guard bonus:</strong> +1 (half Wayfarer's +2).</li>
+  <li>Cantrip/Spark cast normally — possess-don't-consume, same as any caster.</li>
+  <li><strong>Simultaneous Infusions known:</strong> 1 at level 1, +1 at level 4, +1 at level 8 (3 max).</li>
+  <li><strong>Armor-easing:</strong> may infuse their own armor to reduce its requirement tier by one — Heavy only needs to meet Medium's requirement. Costs one of their known Infusions, a real trade-off.</li>
+  </ul>
+
+  <h3>Lateral growth</h3>
+  <ul>
+  <li>L2 <strong>Component Sense</strong> — detect dragonshard components or infused items nearby</li>
+  <li>L3 <strong>Efficient Crafting</strong> — swap an infusion's host item as a quick action instead of a full re-prep</li>
+  <li>L5 <strong>Steady Hands</strong> — reroll an infusion's cost die once per day</li>
+  <li>L7 <strong>Masterwork Instinct</strong> — once per day, a bonus temporary infusion for free</li>
+  </ul>
+
+  <h3 id="cannith-levels">Cannith-Touched, Level by Level</h3>
+  <p>Cast stat INT, Guard bonus +1 from level 1 onward.</p>
+  <table>
+  <tr><th>Level</th><th>Vertical (universal)</th><th>Lateral (Cannith-Touched)</th></tr>
+  <tr><td>1</td><td>—</td><td>1 simultaneous Infusion known</td></tr>
+  <tr><td>2</td><td>+1 stat, +1 Guard</td><td><strong>Component Sense</strong> — detect dragonshard components or infused items nearby</td></tr>
+  <tr><td>3</td><td>—</td><td><strong>Efficient Crafting</strong> — swap an infusion's host item as a quick action instead of a full re-prep</td></tr>
+  <tr><td>4</td><td>+1 stat, +1 Guard</td><td>+1 simultaneous Infusion known (2 total)</td></tr>
+  <tr><td>5</td><td>—</td><td><strong>Steady Hands</strong> — reroll an infusion's cost die once per day</td></tr>
+  <tr><td>6</td><td>+1 stat, +1 Guard</td><td>—</td></tr>
+  <tr><td>7</td><td>—</td><td><strong>Masterwork Instinct</strong> — once per day, a bonus temporary infusion for free</td></tr>
+  <tr><td>8</td><td>+1 stat, +1 Guard</td><td>+1 simultaneous Infusion known (3 total, max)</td></tr>
+  </table>
+
+  <hr>
+
+  <h2 id="dragonmarks">Dragonmarks</h2>
+  <p>Only House-lineage Backgrounds can take a mark. Free — no shard cost, narrow and reliable.</p>
+  <table>
+  <tr><th>Level</th><th>Tier</th></tr>
+  <tr><td>1</td><td>Least — available at creation</td></tr>
+  <tr><td>4</td><td>Lesser — the trick strengthens or gains a second use</td></tr>
+  <tr><td>8</td><td>Greater — rare, GM's call</td></tr>
+  <tr><td>—</td><td>Siberys — never on this track, unique, GM-placed</td></tr>
+  </table>
+
+  <h3>Least Marks (all 12 Houses)</h3>
+  <ul>
+  <li><strong>Mark of Making (Cannith)</strong> — repair or jury-rig a broken item, 1/session</li>
+  <li><strong>Mark of Storm (Lyrandar)</strong> — calm or stir local weather, 1/session</li>
+  <li><strong>Mark of Warding (Kundarak)</strong> — at will, sense any lock/trap/ward's presence and rough strength</li>
+  <li><strong>Mark of Finding (Tharashk)</strong> — 1/session, know the general direction of a known person/creature/item</li>
+  <li><strong>Mark of Healing (Jorasco)</strong> — stabilize a dying creature or mend a minor injury, 1–2/session</li>
+  <li><strong>Mark of Scribing (Sivis)</strong> — 1/session, a message sent through House Sivis channels arrives without distortion or loss</li>
+  <li><strong>Mark of Handling (Vadalis)</strong> — at will sense an animal's mood; 1/session calm or command one</li>
+  <li><strong>Mark of Sentinel (Deneith)</strong> — 1/session, interpose as the target of an attack meant for a same-zone ally</li>
+  <li><strong>Mark of Hospitality (Ghallanda)</strong> — at will sense tainted food/drink; 1/session conjure a simple meal or safe rest</li>
+  <li><strong>Mark of Passage (Orien)</strong> — 1/session, instantly know the safest/fastest route to a known destination</li>
+  <li><strong>Mark of Detection (Medani)</strong> — at will, sense danger, poison, or an active lie nearby</li>
+  <li><strong>Mark of Shadow (Phiarlan/Thuranni)</strong> — 1/session, become very difficult to notice or recall briefly</li>
+  </ul>
+
+  <hr>
+
+  <h2 id="talents">Talents &amp; Expertise</h2>
+  <p>Talents grant <strong>Advantage on relevant checks</strong>. This is the universal expertise system every archetype has access to, tied to Background rather than class — every Background grants 2-3 named Talents already spanning every stat.</p>
+  <p><strong>Agent's extra reach:</strong> at character creation, an Agent may take one additional Talent from any other Background's list.</p>
+
+  <div class="page-nav">
+    <a href="backgrounds.html"><span class="dir">Previous</span>← Backgrounds</a>
+    <a href="character-creation.html" class="next"><span class="dir">Next</span>Character Creation →</a>
+  </div>
+</main>
+
+</body>
+</html>
