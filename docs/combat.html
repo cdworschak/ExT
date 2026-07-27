@@ -110,6 +110,15 @@
   <p><strong>Critical hit:</strong> doubles on the to-hit roll (both counted dice match) on a successful hit = maximum weapon damage, no damage roll.</p>
   <p><strong>Damage floor:</strong> any successful hit deals a minimum of 1 damage, regardless of die result or negative stat bonus — universal, not specific to any one weapon, spell, or interaction.</p>
 
+  <h3 id="weapon-keywords">Weapon Keywords</h3>
+  <ul>
+  <li><strong>Recharge X</strong> — needs time to recharge after use. At the start of each Round, roll a d10; on a result ≤X, it's recharged.</li>
+  <li><strong>Two-handed</strong> — takes up both hand slots.</li>
+  <li><strong>Versatile</strong> — has two damage entries; deals the first one-handed, the second two-handed.</li>
+  <li><strong>Thrown</strong> — can be thrown at a target in an adjacent zone even if otherwise melee-only.</li>
+  <li><strong>Blast</strong> — deals its damage to every creature in a zone at once, rather than a single target.</li>
+  </ul>
+
   <h3 id="shield">Shield &amp; Armor</h3>
   <table>
   <tr><th>Item</th><th>Guard</th><th>Initiative</th><th>Price</th></tr>
@@ -125,13 +134,58 @@
   <h2 id="magic-items">Magic Items</h2>
   <p>Charged/consumables priced at the tier's casting cost. Permanent items priced at 10–20× the tier's average casting cost — Cantrip/Spark in raw shards, Minor and above in refined shards.</p>
 
+  <h3 id="rare-weapons">Rare Weapons</h3>
+  <p>Confirmed source, reflavored for Eberron and priced in refined shards. Not the only permanent items possible — anything at any tier can be built using the pricing above; these nine are what the source material specifies, not a ceiling.</p>
+  <table>
+  <tr><th>Weapon</th><th>Mechanic</th><th>Cost</th></tr>
+  <tr><td><strong>The Devourer's Fang</strong></td><td>A Cannith-forged dagger (1d4) that drinks dragonshard dust — infuse 10 shards to grow it to a person-sized blade for 1 Turn</td><td>95</td></tr>
+  <tr><td><strong>Mournland Needler</strong></td><td>Long range, Ammo (1d6). Paralyzes on a critical hit; constructs and undead unaffected</td><td>90</td></tr>
+  <tr><td><strong>Deflecting Rod</strong></td><td>Versatile (1d6/1d8). Once per Round, reflect a projectile back at whoever fired it</td><td>75</td></tr>
+  <tr><td><strong>Thunderclap Rod</strong></td><td>Short range, Blast, Recharge 4 (1d8)</td><td>80</td></tr>
+  <tr><td><strong>Riftglass Edge</strong></td><td>A hit permanently reduces the target's Guard by 1 (1d8)</td><td>75</td></tr>
+  <tr><td><strong>Reaper's Chorus</strong></td><td>Versatile (1d8/1d12), requires WIS bonus ≥ +1 (Aereni funeral-rite reaping weapon)</td><td>85</td></tr>
+  <tr><td><strong>Silverbeam Rifle</strong></td><td>Long range, Two-handed (1d12). Recharge 3 by day, 6 by night</td><td>135</td></tr>
+  <tr><td><strong>Kundarak Sunderpick</strong></td><td>Versatile (1d4/2d4). A critical hit permanently reduces the target's Guard by 1d4</td><td>60</td></tr>
+  <tr><td><strong>Mournland Graft</strong></td><td>Recharge 5, only after firing (1d10). Permanently fills a hand slot — melee blade and short-range weapon in one</td><td>95</td></tr>
+  </table>
+
   <h2 id="economy">Economy</h2>
   <p><strong>Raw shards:</strong> 5cp each (= 1 arrow), power Cantrip/Spark. <strong>Refined shards:</strong> 10gp each, power Minor+ and permanent magic items. <strong>Starting wealth: 200gp, flexible</strong> — spend on refined shards, gear, or both.</p>
 
   <h2 id="guard-wounds">Guard &amp; Wounds</h2>
   <p><strong>Guard</strong> = 4 + Guard Stat bonus + archetype bonus + armor + shield, floor 1. Restores fully after a Turn of rest. <strong>1 Wound slot at creation, second at level 4, third at level 8.</strong></p>
   <p>An open Wound reduces max Guard by 2; <strong>current Guard refills to the new max</strong>, floor 1. The next roll is made with Disadvantage ("Reeling"), plus a Wound Complication (d6). Wounds don't heal from resting a Turn and can't close mid-combat.</p>
-  <p>At 0 Guard with all Wound slots full: roll d6 — 1–3 dies, 4+ faints and rolls on the Scar table.</p>
+
+  <h3 id="wound-complication">Wound Complication Table (d6)</h3>
+  <p>Rolled once, when a Wound opens. One-time effects only — nothing compounds with a second Wound.</p>
+  <table>
+  <tr><th>d6</th><th>Complication</th></tr>
+  <tr><td>1</td><td><strong>Staggered Back</strong> — the blow throws you into an adjacent zone</td></tr>
+  <tr><td>2</td><td><strong>Grip Torn Loose</strong> — your weapon or dragonshard focus is knocked from your hand-slot; costs an action to retrieve</td></tr>
+  <tr><td>3</td><td><strong>Gear Scattered</strong> — a carried item (GM or player's choice, something non-essential) breaks, is lost, or spills its contents</td></tr>
+  <tr><td>4</td><td><strong>Reeling Hard</strong> — your Initiative order drops to last for the rest of the fight</td></tr>
+  <tr><td>5</td><td><strong>Off-Balance</strong> — your next zone move this fight requires a DEX-equivalent check or fails</td></tr>
+  <tr><td>6</td><td><strong>Rattled to the Bone</strong> — Disadvantage on your next two rolls instead of one</td></tr>
+  </table>
+  <p><strong>No stacking:</strong> if a Disadvantage effect is already pending when a new Wound opens, the new one doesn't extend it — resolve whichever is already active.</p>
+
+  <p>At 0 Guard with all Wound slots full: roll d6 — 1–3 dies, 4+ faints and rolls on the Scar Table below.</p>
+
+  <h3 id="scar-table">Scar Table (d10)</h3>
+  <p>A permanent-injury table, rare by design — most fights never reach a single Death's Door check. Effect is a target shift on the relevant check (+1 broad/minor, +2 severe), not Disadvantage, reusing the same granular scale as everywhere else. Removable through real effort — a Major-tier magical working or a significant in-fiction quest resolving the underlying trauma.</p>
+  <table>
+  <tr><th>d10</th><th>Scar</th><th>Shift</th></tr>
+  <tr><td>1</td><td><strong>Shattered Leg</strong> — Agility/DEX-based movement checks</td><td>+1</td></tr>
+  <tr><td>2</td><td><strong>Sickly</strong> — CON-based endurance/resistance checks</td><td>+1</td></tr>
+  <tr><td>3</td><td><strong>Chronic Wound</strong> — permanent −1 to max Guard</td><td>—</td></tr>
+  <tr><td>4</td><td><strong>Spirit-Marked</strong> — WIS-based fear/willpower checks</td><td>+2</td></tr>
+  <tr><td>5</td><td><strong>Scarred</strong> — CHA-based first-impression checks</td><td>+1</td></tr>
+  <tr><td>6</td><td><strong>Ringing Ears</strong> — Perception/hearing-based checks</td><td>+1</td></tr>
+  <tr><td>7</td><td><strong>Trembling Hands</strong> — fine-motor/precision checks</td><td>+2</td></tr>
+  <tr><td>8</td><td><strong>Haunted</strong> — resisting fear or despair tied to the event that caused it</td><td>+2</td></tr>
+  <tr><td>9</td><td><strong>Weakened Grip</strong> — STR-based grip checks</td><td>+1</td></tr>
+  <tr><td>10</td><td><strong>Old Wound Aches</strong> — a check type of the player's choice, tied to weather/exertion</td><td>+1</td></tr>
+  </table>
 
   <h2 id="healing">Healing Magic</h2>
   <p><strong>Combat Mending</strong> (in combat): restores Guard to current max, can't close a Wound. <strong>Field Dressing</strong> (out of combat, a full Exploration Turn): closes one Wound.</p>

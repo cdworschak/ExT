@@ -6,17 +6,21 @@
 
 **Advantage / Disadvantage** — roll 3d10 instead of 2d10, keep the best two (Advantage) or worst two (Disadvantage). Disadvantage rolls never crit.
 
-**Archetype** — the four character chassis: Wayfarer, Agent, Syberist, Cannith-Touched. Determines resource type, Lateral Advancement track, and Guard bonus.
+**Archetype** — the three character chassis: Wayfarer, Agent, Syberist (the latter with four traditions — Shardbound, Flamesworn, Wildspoken, Artificer). Determines resource type, Lateral Advancement track, and Guard bonus.
 
 **Background** — race and culture fused into one character-creation choice. Grants a stat bonus, two Talents, and narrative-only gear.
 
 **Base Target** — the single number an enemy uses for attacking, defending, and resisting Effect spells, before Encounter Level Scaling is applied. Weak 9, Standard 12, Strong 15.
 
-**Cast Stat** — the stat a Syberist or Cannith-Touched uses for spellcasting (INT for Shardbound/Cannith-Touched, CHA for Flamesworn, WIS for Wildspoken). Always distinct from Guard Stat and weapon stat — never merged, even when it's a character's defining stat.
+**Cast Stat** — the stat a Syberist uses for spellcasting (INT for Shardbound/Artificer, CHA for Flamesworn, WIS for Wildspoken). Always distinct from Guard Stat and weapon stat — never merged, even when it's a character's defining stat.
 
 **Contingency** — what Leverage buys: retroactively declaring you already prepared for a specific moment. Cost scales with the size of the ask (1/2/3+ Leverage).
 
+**Contraption** — an Artificer Syberist's built-ahead device, sealed with a Name-Crafted effect via Quick Rig. Triggered later as a single action by whoever holds it, using their own INT bonus for the roll — not the crafter's.
+
 **Critical Hit** — doubles on the to-hit roll (both counted dice match a success). Deals maximum weapon damage, no damage roll.
+
+**Damage Floor** — any successful hit deals a minimum of 1 damage, regardless of die result or negative stat bonus. Universal, not specific to any one weapon, spell, or interaction.
 
 **Death's Door** — triggered at 0 Guard with no Wound slots remaining. Roll d6: 1–3 dies, 4+ faints and rolls on the Scar Table.
 
@@ -31,8 +35,6 @@
 **Guard** — the damage buffer every character has. = 4 + Guard Stat bonus + archetype bonus + armor + shield, floor 1. Restores fully after a Turn of rest.
 
 **Guard Stat** — the stat chosen at character creation to calculate Guard. Must differ from weapon stat, cast stat, and Wandslinger stat — locked together at creation, never re-checked against later gear changes.
-
-**Infusion** — a Cannith-Touched's persistent magic effect, socketed into a hand/body-slot item. Persists until removed, re-infused, or a full day's rest — distinct from a Syberist's in-the-moment cast.
 
 **Initiative** — 2d10 + DEX + weapon modifier − armor penalty, rolled once per fight. Fixed order for the whole encounter.
 
@@ -53,6 +55,8 @@
 **Overcast Backlash Pool** — the dice-pool mechanic resolving what happens when a caster attempts a Minor+ tier cast without enough shards. See Overcasting.
 
 **Overcasting** — attempting a Minor, Moderate, Major, or Mythic cast without enough shards on hand. Never applies to Cantrip or Spark, which have flat, known costs.
+
+**Quick Rig** — an Artificer Syberist's baseline casting method: Name-Craft a spell during downtime, seal it into a Contraption instead of firing it immediately. Takes 1 Turn per Contraption, cannot happen mid-combat.
 
 **Reeling** — Disadvantage on the next roll after a Wound opens.
 
@@ -100,7 +104,7 @@
 
 - **A trap-option audit of the Tradition-Specific Options (Advancement) found several real issues, not yet fixed:** Shard-Split is a *conditional* trap — excellent value against groups, completely wasted (same shard cost, zero benefit) against any solo target, including most bosses. Zealous Rebuke looks undercosted for a free, always-on passive (its bonus damage matches a whole 2-shard Shard Bolt cast, for zero cost). Bloodscent needs the same "target-dependent value" caveat Feint already has — Advantage barely moves the needle at typical stat levels against a Standard-tier target, tested at only +0.3 percentage points in one check, meaning it reads as more reliably useful than it actually is. Thorned Ground has a narrower real-world trigger than its Wound-cycle-gated sibling Fractal Ward (enemies must actually retreat, which many fights never call for). None of these are fixed yet.
 
-- **Orphaned terminology sweep found and fixed six real gaps across the whole document.** Three Talents named but never mechanically defined (Wildsense, Speak with the Undying, Whisper Network — all in Backgrounds) and, more significantly, three core Syberist Advancement features tagged "(confirmed)" but never actually defined anywhere despite being referenced multiple times as design-parallels for Cannith-Touched's own features (Resonance Sense, Focused Inhalation, Whispers of the Prophecy — see Advancement). All six now have working definitions; the three Syberist features are honestly flagged as reconstructed-from-name-and-context rather than source-verified, same treatment as the Scar Table.
+- **Orphaned terminology sweep found and fixed six real gaps across the whole document.** Three Talents named but never mechanically defined (Wildsense, Speak with the Undying, Whisper Network — all in Backgrounds) and, more significantly, three core Syberist Advancement features tagged "(confirmed)" but never actually defined anywhere despite being referenced multiple times as design-parallels for Artificer's own features (Resonance Sense, Focused Inhalation, Whispers of the Prophecy — see Advancement). All six now have working definitions; the three Syberist features are honestly flagged as reconstructed-from-name-and-context rather than source-verified, same treatment as the Scar Table.
 - **Minor, lower-priority inconsistency found in the same sweep:** the "Worked Example: Combat (Design Evolution)" section describes a character's "Mending Ray" spell as closing a Wound — this reflects an early design iteration that predates the current "Wounds cannot be closed mid-combat" rule. Contained within clearly-historical narrative, not live rules text, so lower priority than the definitions above, but worth a cleanup pass if that section gets revisited.
 
 - ~~Monk-vs-Duelist PvP duel needs re-running~~ — **resolved, and expanded into a full four-way tournament.** The final roll-both-take-highest system (not just a recalibrated penalty) was validated with all four loadouts (Heavy two-handed, Versatile+Shield, Versatile+Tower Shield, Dual-attack) built off the identical stat roll with fair, comparable Grit toolkits — all four land within a tight 45–55% band against each other. See Dual-wield / Two-Weapon Fighting for the full results table.

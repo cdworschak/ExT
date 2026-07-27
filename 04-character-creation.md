@@ -15,7 +15,7 @@
                │                   → ancestral language IF non-human
                ▼
 ┌─────────────────────────────┐
-│ 2. CHOOSE ARCHETYPE            │  Wayfarer / Agent / Syberist / Cannith-Touched
+│ 2. CHOOSE ARCHETYPE            │  Wayfarer / Agent / Syberist (4 traditions)
 │    (+ tradition if Syberist)   │  Syberist only: Shardbound(INT) /
 └──────────────┬────────────────┘  Flamesworn(CHA) / Wildspoken(WIS)
                │
@@ -79,27 +79,10 @@
 │                                 │  FINAL stats + archetype bonus
 └──────────────┬────────────────┘
                │
-        ┌──────┴──────┐
-        ▼              ▼
-   Cannith-Touched   Everyone else:
-   wanting eased      requirement as
-   Heavy access?      normally stated
-        │
-        ▼
-   RESOLVED: costs one of the
-   Cannith-Touched's known
-   Infusions (only 1 at level 1).
-   Real trade-off, not integral —
-   a level-1 Cannith-Touched
-   choosing eased Heavy armor
-   has zero Infusions left for
-   anything else that Round.
-              │
-              ▼
+               ▼
 ┌─────────────────────────────┐
 │ 9. CALCULATE GUARD             │  4 + [Guard Stat bonus]
-│                                 │  + [Wayfarer +2 / Cannith-
-│                                 │    Touched +1, if applicable]
+│                                 │  + [Wayfarer +2, if applicable]
 │                                 │  + [armor bonus]
 └──────────────┬────────────────┘
                │
@@ -129,9 +112,8 @@
 │                                                     │
 │ Syberist: roll 1 starting spell name (Name-Crafting │
 │           not unlocked yet — rolled, not chosen)     │
-│                                                     │
-│ Cannith-  choose 1 Infusion known, choose its        │
-│ Touched:  host item                                 │
+│           Artificer tradition specifically also       │
+│           starts with 1 known contraption capacity   │
 └──────────────┬──────────────────────────────────────┘
                │
                ▼
@@ -154,11 +136,11 @@
 
 ### Choice Guidance (what makes each step's decision strong or weak)
 
-**Shakedown-tested against four actual builds** (Wayfarer, Agent, Syberist, Cannith-Touched, one each, real rolls) — this is what came out of actually running the flowchart, not abstract advice.
+**Shakedown-tested against real builds** (Wayfarer, Agent, and multiple Syberist traditions, real rolls) — this is what came out of actually running the flowchart, not abstract advice.
 
 **Step 1, Background:** pick one whose stat bonus lands on the stat your archetype actually wants — a Wayfarer wants a STR/CON-boosting Background, a Syberist wants one matching their tradition's cast stat. A mismatched Background (e.g. a CHA-boosting Background on a STR-focused Wayfarer) isn't illegal, just a real, felt inefficiency for no narrative payoff unless the concept specifically calls for it.
 
-**Step 2, Archetype:** Wayfarer = frontline durability, Agent = breadth and narrative leverage, Syberist = real spellcasting, Cannith-Touched = crafting-flavored hybrid with its own resource pattern. If torn between two, ask which one's *dedicated resource* (Grit / Leverage / shards+Infusions) sounds more fun to actually spend during play — that's usually the real answer.
+**Step 2, Archetype:** Wayfarer = frontline durability, Agent = breadth and narrative leverage, Syberist = real spellcasting (including Artificer, the crafting-flavored tradition — build now, unleash later, sometimes hand it to someone else). If torn between two, ask which one's *dedicated resource* (Grit / Leverage / shards) sounds more fun to actually spend during play — that's usually the real answer.
 
 **Step 3–4, Rolling and the mercy rule:** if the mercy rule fires, **raising one stat to +2 concentrates power, raising two stats to +1 spreads it** — concentration is usually the stronger pick if that stat will do double duty (see Step 6), spread is better if the build genuinely wants competence across more than one axis.
 
@@ -172,9 +154,9 @@
 
 **Step 11, Languages:** a high-INT build should pick languages that actually matter for the campaign's likely play (border nations, trade routes, factions the party expects to interact with) rather than defaulting to whatever sounds exotic. A −2-or-lower INT build's illiteracy is a real roleplay constraint worth embracing rather than working around — it's supposed to bite.
 
-**Step 12, Archetype-specific choices:** an Agent's Skill choice should match their actual sub-concept (see Agent Flavors — Exploit the Opening/Take Aim for a Rogue-leaning build's combat side, Network for a Diplomat-leaning one); a Wayfarer weighing Wandslinger should ask whether losing one Advanced Maneuver access is worth Spark-tier casting for *this specific character*, not just "is it good in general"; a Cannith-Touched's one starting Infusion is a real, singular choice — socketing it into armor (per the shakedown above) trades away any combat/utility Infusion entirely, so it should be a deliberate call, not a default.
+**Step 12, Archetype-specific choices:** an Agent's Skill choice should match their actual sub-concept (see Agent Flavors — Exploit the Opening/Take Aim for a Rogue-leaning build's combat side, Network for a Diplomat-leaning one); a Wayfarer weighing Wandslinger should ask whether losing one Advanced Maneuver access is worth Spark-tier casting for *this specific character*, not just "is it good in general"; an Artificer Syberist's one starting contraption capacity is a real, singular choice — what gets built first (and who it might get handed to) should be a deliberate call, not a default.
 
-**Step 13, Starting wealth:** a caster (Syberist, Cannith-Touched, or a Wandslinger-equipped Agent/Wayfarer) should convert a meaningful chunk of the 200gp into refined shards — 100–150gp is a reasonable starting reserve. A pure martial build with no casting at all can reasonably spend close to zero on shards and put everything into gear instead. Neither is a mistake; matching spend to what the build will actually use is the only real guidance here.
+**Step 13, Starting wealth:** a caster (Syberist, or a Wandslinger-equipped Agent/Wayfarer) should convert a meaningful chunk of the 200gp into refined shards — 100–150gp is a reasonable starting reserve. A pure martial build with no casting at all can reasonably spend close to zero on shards and put everything into gear instead. Neither is a mistake; matching spend to what the build will actually use is the only real guidance here.
 
 ---
 

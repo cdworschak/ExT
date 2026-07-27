@@ -2,7 +2,7 @@
 
 A hack for running the Eberron setting using *The Electrum Archive* (TEA) rules. Race and background/culture are fused into a single character-creation slot; D&D classes are reskinned onto TEA's three archetypes (Agent, Wayfarer, Syberist); dragonshard dust powers casting the way TEA's own rules describe Elder ink working; Dragonmarks are layered in as a separate, free, narrow-but-reliable talent track; and core resolution uses a 2d10 bell-curve system with its own stat generation, advantage/disadvantage, a Guard/Wound HP model, zone-based positioning, and an enemy design philosophy built around a single shared target number.
 
-**Project status, for picking this back up cold:** the core rules (Core Resolution, Combat, HP/Guard/Wounds, Encounter Level Scaling, Enemy Generation, Economy) are mature and heavily Monte Carlo-validated throughout — trust the numbers cited inline, with one flagged exception below. The four playable archetypes (Wayfarer, Agent, Syberist, Cannith-Touched) are all built and tested, Agent now has its own dedicated resource (Leverage/Contingency). A full Combat Procedure flowchart near the top of the combat rules gives the big-picture flow if you need to re-orient quickly. **Open Threads at the bottom of this doc is the authoritative "what's unfinished" list** — check it first before assuming anything is done, since design work discussed at length in conversation doesn't always make it into this document immediately (a real, recurring failure mode across this whole project — several fully-designed, fully-tested mechanics, and even a fully-built diagram, sat unwritten until specifically caught; always verify against the doc, not against memory of the conversation). **Two items worth knowing about specifically before touching anything:**
+**Project status, for picking this back up cold:** the core rules (Core Resolution, Combat, HP/Guard/Wounds, Encounter Level Scaling, Enemy Generation, Economy) are mature and heavily Monte Carlo-validated throughout — trust the numbers cited inline, with one flagged exception below. The three playable archetypes (Wayfarer, Agent, Syberist — the latter with four traditions, Shardbound/Flamesworn/Wildspoken/Artificer) are all built and tested, Agent now has its own dedicated resource (Leverage/Contingency). A full Combat Procedure flowchart near the top of the combat rules gives the big-picture flow if you need to re-orient quickly. **Open Threads at the bottom of this doc is the authoritative "what's unfinished" list** — check it first before assuming anything is done, since design work discussed at length in conversation doesn't always make it into this document immediately (a real, recurring failure mode across this whole project — several fully-designed, fully-tested mechanics, and even a fully-built diagram, sat unwritten until specifically caught; always verify against the doc, not against memory of the conversation). **Two items worth knowing about specifically before touching anything:**
 1. A full set of gear-based Grit Maneuvers (Iron Palm, Second Strike, Guarded Strike, Shield Bash, Sunder, dual-wield options) is designed and individually tuned but **not yet added to the actual Grit Maneuvers table** — see Open Threads for the complete tested values before writing it in.
 2. **Guard now refills to its new max (floor 1) when a Wound opens**, rather than resetting to 0 — a real gap between written rules and tested code that was only just caught and fixed. Spot-checked safe at level 1, but every Monte Carlo percentage elsewhere in this document was generated under the old, harsher assumption — treat exact numbers as directionally right but not re-verified under the current rule until a full recalibration pass is done.
 
@@ -111,11 +111,11 @@ The dividing line above Cantrip is clean: **Cantrip never produces a mechanical 
 
 **No stat bonus stacks on top of the die — shard count is the only damage scaling.** To-hit still uses the caster's normal stat bonus (accuracy stays build-dependent, per Spell Resolution's Attack-spell rule), but raw damage stays flat and cheap regardless of build. This was a deliberate check against overreach: a maxed +3 caster (achievable through Vertical growth, not creation alone — see Advancement) adding their bonus to damage as well would average 7.5 at full investment — still bigger than a Heavy weapon's average. Capping the scaling at shard count alone keeps the top end (3 shards, avg 4.5) landing almost exactly on a **Heavy weapon's average** (1d8, avg 4.5) — a fully-invested cast matches a real weapon swing without outclassing the biggest weapons in the game.
 
-**Requires Spark-tier access, not automatic from owning an item — Cantrip alone is genuinely free to anyone, Spark is the real line.** Syberist and Cannith-Touched have this inherently (they're already casters); an Agent or Wayfarer needs Wandslinger specifically to unlock it. A wand or dragonshard-tipped focus item is the *tool* Shard Bolt is cast through, not a substitute for actually having Spark access — whichever stat fits the concept (INT for a proper wand, or the wielder's usual combat stat for something improvised). See Wandslinger under Archetypes for how Agent and Wayfarer specifically gain this.
+**Requires Spark-tier access, not automatic from owning an item — Cantrip alone is genuinely free to anyone, Spark is the real line.** Syberist has this inherently (they're already casters); an Agent or Wayfarer needs Wandslinger specifically to unlock it. A wand or dragonshard-tipped focus item is the *tool* Shard Bolt is cast through, not a substitute for actually having Spark access — whichever stat fits the concept (INT for a proper wand, or the wielder's usual combat stat for something improvised). See Wandslinger under Archetypes for how Agent and Wayfarer specifically gain this.
 
 ### Spark Utility Spells
 
-**Same access rule as Shard Bolt — requires Spark-tier access, not free to anyone with a shard.** Inherent for Syberist and Cannith-Touched; Agent and Wayfarer need Wandslinger. Cantrip alone stays genuinely universal (zero mechanical effect, nothing to protect by gating it); Spark is the actual line.
+**Same access rule as Shard Bolt — requires Spark-tier access, not free to anyone with a shard.** Inherent for Syberist; Agent and Wayfarer need Wandslinger. Cantrip alone stays genuinely universal (zero mechanical effect, nothing to protect by gating it); Spark is the actual line.
 
 **Shard Bolt's non-combat counterpart — Spark tier isn't just "the cheap damage option."** Eleven spells to start, several adapted from D&D's cantrip list (a genuinely well-suited source, since most of those already sit at "small, real, single-purpose" — Spark's design brief exactly). **These are a starting set, not an exhaustive list** — see Generating More Spark Spells below for the procedure to build others:
 
@@ -429,9 +429,30 @@ Net effect: a support-leaning Syberist's actual casting load (heals, wards, buff
 |2.7|Marrow|4.7|Glade|6.7|Pelt|8.7|Bloomsong|
 |2.8|Frost|4.8|Thicket|6.8|Tusk|8.8|Wyldwood|
 
+**Artificer (fourth Syberist tradition — invention, mechanism, and construction, Cannith-adjacent):**
+
+| d8.d8 | Artificer Noun | d8.d8 | Artificer Noun | d8.d8 | Artificer Noun | d8.d8 | Artificer Noun |
+|---|---|---|---|---|---|---|---|
+|1.1|Cannith|3.1|Schema|5.1|Sparkgap|7.1|Plating|
+|1.2|Making|3.2|Prototype|5.2|Relay|7.2|Weld|
+|1.3|Forge|3.3|Assembly|5.3|Valve|7.3|Solder|
+|1.4|Anvil|3.4|Chassis|5.4|Gauge|7.4|Tempering|
+|1.5|Rivet|3.5|Engine|5.5|Lever|7.5|Quench|
+|1.6|Piston|3.6|Mechanism|5.6|Pulley|7.6|Hammer|
+|1.7|Gear|3.7|Contraption|5.7|Winch|7.7|Smith|
+|1.8|Cog|3.8|Apparatus|5.8|Ratchet|7.8|Wright|
+|2.1|Cogwork|4.1|Device|6.1|Cylinder|8.1|Artisan|
+|2.2|Gearwork|4.2|Mainspring|6.2|Chamber|8.2|Craft|
+|2.3|Blueprint|4.3|Flywheel|6.3|Coupling|8.3|Innovation|
+|2.4|Alloy|4.4|Bellows|6.4|Linkage|8.4|Ingenuity|
+|2.5|Foundry|4.5|Furnace|6.5|Armature|8.5|Precision|
+|2.6|Construct|4.6|Crucible|6.6|Frame|8.6|Sprocket|
+|2.7|Automaton|4.7|Mold|6.7|Housing|8.7|Escapement|
+|2.8|Clockwork|4.8|Cast|6.8|Panel|8.8|Boiler|
+
 **Corrected — these are now genuinely rollable d8.d8 tables, matching Form's actual format.** An earlier draft claimed these "matched the Form/Adjective tables" while still being plain comma-separated prose lists with no indices at all — impossible to roll 2d8 against without manually counting through the list. Fixed to the same grid structure Form already used correctly.
 
-Sample results — three of well over a million possible combinations per tradition (4 Templates × 64 Forms × 64 Adjectives × 64 Nouns), not a limited menu: a Shardbound's *"Prison of Cryptic Khyber"* reads like a binding pulled from the deep; a Flamesworn's *"Word of Terrible Syrania"* reads like a judgment invoked from on high; a Wildspoken's *"Claw of Rending Thorn"* reads like something torn straight out of the Eldeen wilds — same generation mechanism, three distinct voices.
+Sample results — four of well over a million possible combinations per tradition (4 Templates × 64 Forms × 64 Adjectives × 64 Nouns), not a limited menu: a Shardbound's *"Prison of Cryptic Khyber"* reads like a binding pulled from the deep; a Flamesworn's *"Word of Terrible Syrania"* reads like a judgment invoked from on high; a Wildspoken's *"Claw of Rending Thorn"* reads like something torn straight out of the Eldeen wilds; an Artificer caster's *"Ward of Precision Ratchet"* reads like a device schematic given a name — same generation mechanism, four distinct voices.
 
 - **Slotted Spells (the real Syberist list):** Spend shards to buy/fuel actual combat- and plot-relevant spells (confirmed cost tiers above). This remains the resource sink that competes with gear, bribes, and House favors for your gold-equivalent.
 
