@@ -2,7 +2,7 @@
 
 A hack for running the Eberron setting using *The Electrum Archive* (TEA) rules. Race and background/culture are fused into a single character-creation slot; D&D classes are reskinned onto TEA's three archetypes (Agent, Wayfarer, Syberist); dragonshard dust powers casting the way TEA's own rules describe Elder ink working; Dragonmarks are layered in as a separate, free, narrow-but-reliable talent track; and core resolution uses a 2d10 bell-curve system with its own stat generation, advantage/disadvantage, a Guard/Wound HP model, zone-based positioning, and an enemy design philosophy built around a single shared target number.
 
-**Project status, for picking this back up cold:** the core rules (Core Resolution, Combat, HP/Guard/Wounds, Encounter Level Scaling, Enemy Generation, Economy) are mature and heavily Monte Carlo-validated throughout — trust the numbers cited inline, with one flagged exception below. The four playable archetypes (Wayfarer, Agent, Syberist, Cannith-Touched) are all built and tested, Agent now has its own dedicated resource (Leverage/Contingency). A full Combat Procedure flowchart near the top of the combat rules gives the big-picture flow if you need to re-orient quickly. **Open Threads at the bottom of this doc is the authoritative "what's unfinished" list** — check it first before assuming anything is done, since design work discussed at length in conversation doesn't always make it into this document immediately (a real, recurring failure mode across this whole project — several fully-designed, fully-tested mechanics, and even a fully-built diagram, sat unwritten until specifically caught; always verify against the doc, not against memory of the conversation). **Two items worth knowing about specifically before touching anything:**
+**Project status, for picking this back up cold:** the core rules (Core Resolution, Combat, HP/Guard/Wounds, Encounter Level Scaling, Enemy Generation, Economy) are mature and heavily Monte Carlo-validated throughout — trust the numbers cited inline, with one flagged exception below. The three playable archetypes (Wayfarer, Agent, Syberist — the latter with four traditions, Shardbound/Flamesworn/Wildspoken/Artifice) are all built and tested, Agent now has its own dedicated resource (Leverage/Contingency). A full Combat Procedure flowchart near the top of the combat rules gives the big-picture flow if you need to re-orient quickly. **Open Threads at the bottom of this doc is the authoritative "what's unfinished" list** — check it first before assuming anything is done, since design work discussed at length in conversation doesn't always make it into this document immediately (a real, recurring failure mode across this whole project — several fully-designed, fully-tested mechanics, and even a fully-built diagram, sat unwritten until specifically caught; always verify against the doc, not against memory of the conversation). **Two items worth knowing about specifically before touching anything:**
 1. A full set of gear-based Grit Maneuvers (Iron Palm, Second Strike, Guarded Strike, Shield Bash, Sunder, dual-wield options) is designed and individually tuned but **not yet added to the actual Grit Maneuvers table** — see Open Threads for the complete tested values before writing it in.
 2. **Guard now refills to its new max (floor 1) when a Wound opens**, rather than resetting to 0 — a real gap between written rules and tested code that was only just caught and fixed. Spot-checked safe at level 1, but every Monte Carlo percentage elsewhere in this document was generated under the old, harsher assumption — treat exact numbers as directionally right but not re-verified under the current rule until a full recalibration pass is done.
 
@@ -111,11 +111,11 @@ The dividing line above Cantrip is clean: **Cantrip never produces a mechanical 
 
 **No stat bonus stacks on top of the die — shard count is the only damage scaling.** To-hit still uses the caster's normal stat bonus (accuracy stays build-dependent, per Spell Resolution's Attack-spell rule), but raw damage stays flat and cheap regardless of build. This was a deliberate check against overreach: a maxed +3 caster (achievable through Vertical growth, not creation alone — see Advancement) adding their bonus to damage as well would average 7.5 at full investment — still bigger than a Heavy weapon's average. Capping the scaling at shard count alone keeps the top end (3 shards, avg 4.5) landing almost exactly on a **Heavy weapon's average** (1d8, avg 4.5) — a fully-invested cast matches a real weapon swing without outclassing the biggest weapons in the game.
 
-**Requires Spark-tier access, not automatic from owning an item — Cantrip alone is genuinely free to anyone, Spark is the real line.** Syberist and Cannith-Touched have this inherently (they're already casters); an Agent or Wayfarer needs Wandslinger specifically to unlock it. A wand or dragonshard-tipped focus item is the *tool* Shard Bolt is cast through, not a substitute for actually having Spark access — whichever stat fits the concept (INT for a proper wand, or the wielder's usual combat stat for something improvised). See Wandslinger under Archetypes for how Agent and Wayfarer specifically gain this.
+**Requires Spark-tier access, not automatic from owning an item — Cantrip alone is genuinely free to anyone, Spark is the real line.** Syberist has this inherently (they're already casters); an Agent or Wayfarer needs Wandslinger specifically to unlock it. A wand or dragonshard-tipped focus item is the *tool* Shard Bolt is cast through, not a substitute for actually having Spark access — whichever stat fits the concept (INT for a proper wand, or the wielder's usual combat stat for something improvised). See Wandslinger under Archetypes for how Agent and Wayfarer specifically gain this.
 
 ### Spark Utility Spells
 
-**Same access rule as Shard Bolt — requires Spark-tier access, not free to anyone with a shard.** Inherent for Syberist and Cannith-Touched; Agent and Wayfarer need Wandslinger. Cantrip alone stays genuinely universal (zero mechanical effect, nothing to protect by gating it); Spark is the actual line.
+**Same access rule as Shard Bolt — requires Spark-tier access, not free to anyone with a shard.** Inherent for Syberist; Agent and Wayfarer need Wandslinger. Cantrip alone stays genuinely universal (zero mechanical effect, nothing to protect by gating it); Spark is the actual line.
 
 **Shard Bolt's non-combat counterpart — Spark tier isn't just "the cheap damage option."** Eleven spells to start, several adapted from D&D's cantrip list (a genuinely well-suited source, since most of those already sit at "small, real, single-purpose" — Spark's design brief exactly). **These are a starting set, not an exhaustive list** — see Generating More Spark Spells below for the procedure to build others:
 
@@ -543,30 +543,48 @@ TEA's three chassis (confirmed from source): **Fixer** (skill monkey, renamed **
 - **Cleric/Paladin → Syberist: Flamesworn** — casting reflavored as Silver Flame or House-oath channeling; spell list themed around wards/healing. **Cast stat: CHA** (conviction/faith-driven, not WIS — mirrors D&D's Paladin/oath-caster pattern rather than a WIS-Cleric one).
 - **Druid → Syberist: Wildspoken** — casting tied to the Eldeen Reaches / Gatekeeper tradition instead of Elder ruins. **Cast stat: WIS** (intuition, attunement to the wild).
 - **Bard → Agent/Syberist hybrid: Songmark** — half skill-talents, half small spells, CHA-keyed.
-- **Artificer → new archetype: Cannith-Touched** — no dust-huffing at all; "casts" by socketing components into gear. Distinct enough to warrant its own chassis rather than folding into Syberist. Full design below.
+- **Artificer → Syberist: Artifice** — **cast stat: INT.** Started as its own fourth archetype (Cannith-Touched), rebuilt into a Syberist tradition after three separate problems traced back to the same root cause: the whole Infusion subsystem was 5e's Artificer mechanic imported wholesale into a document otherwise built on OSR conventions (Turn/Round, no short/long rest split, target-shift-not-modifier-stacking) — every fix attempted (a timing rule, a corrected price on Elemental Edge, a damage floor) was patching around that mismatch rather than fixing it. Matches Wildspoken's own precedent exactly: a Druid didn't need to be its own archetype either, just a tradition with distinct Tradition-Specific Options layered onto the same shared Name-Crafting economy. Full design below.
 - **Monk → Wayfarer: Unarmed/Xen'drik Ascetic** — grit spent on martial-art tricks instead of weapon damage.
 
-### Cannith-Touched (Artificer) — validated by Monte Carlo, confirmed as its own chassis (not folded into Syberist)
+### Artifice (Syberist tradition — formerly Cannith-Touched, a separate archetype)
 
-**Cast stat: INT** (already the setting's Cannith-coded stat). **Guard bonus: +1** (half Wayfarer's +2 — a real but smaller structural edge). **Cantrip/Spark cast normally**, same as any caster — possess-don't-consume, spontaneous, reactive.
+**Cast stat: INT.** Cantrip and Spark tier cast normally, reactive, in combat — same as any Syberist. **Minor tier and above never happens reactively in combat at all.** Instead, an Artifice Syberist builds their effects ahead of time as physical devices, then unleashes them later — the mad-scientist identity: build the contraption, then use it, sometimes handed to someone else entirely.
 
-**Minor tier and above works differently: Infusions, not spontaneous casting.** Instead of Name-Crafting a spell in the moment, a Cannith-Touched sockets a dragonshard component into a hand/body-slot item (weapon, armor, tool), paying the tier's shard cost **once**. The infused property persists until removed, re-infused, or a full day's rest — a prepared "loadout" playstyle, trading real in-combat flexibility (can't invent a new effect mid-fight the way Name-Crafting allows) for reliability and efficiency (pay once, benefit repeatedly). **Simultaneous infusions known: 1 at level 1, +1 at level 4, +1 at level 8** (same milestone cadence as the second/third Wound slot — 3 max by level 8).
+**Quick Rig — the tradition's baseline casting method, granted free at level 1 (not a Tradition-Specific Option; every Artifice Syberist has this from creation).** During downtime, Name-Craft a spell exactly as any Syberist would — roll and pay the tier's shard cost — but the effect doesn't fire immediately. It gets sealed into a crafted item (a device, a charge, a rigged-up contraption) instead. That item can later be triggered as a single action, releasing the stored effect as if it had just been cast — **by the Artifice Syberist, or by whoever else is holding it.** This is what actually delivers the "team" flavor: a real physical object that changes hands, not a buff tied to the caster.
 
-**The armor question, resolved thematically rather than with a flat number: a Cannith-Touched may infuse their own armor to reduce its requirement tier by one.** Personally-modified Heavy armor only needs to meet Medium's requirement. **This costs one of the Cannith-Touched's known Infusions** (only 1 at level 1) — a real trade-off, not a free bonus. Heavy armor was never meant to be integral to the archetype; a level-1 Cannith-Touched who spends their one Infusion on eased armor access has nothing left over for a combat or utility effect that Round, the same genuine opportunity cost every other build-defining choice in this doc carries. This gives a real, earned path to Heavy distinct from both Wayfarer (physical training, no ongoing cost) and a Syberist-gish (capped at Medium, no workaround at all) — the character didn't get stronger, they spent their limited crafting attention on their own gear instead of anything else.
+**Building a contraption takes 1 Turn (10 minutes) of dedicated, uninterrupted work — cannot be rushed, cannot happen mid-combat.** This is the load-bearing rule that makes the whole trade-off real: without a genuine time cost, nothing would stop a player from building a brand-new effect mid-fight, which would erase the entire distinction between this and ordinary reactive Name-Crafting.
 
-**Validated by Monte Carlo, full picture:** a solo-vs-mooks breakpoint test confirmed Cannith-Touched sits measurably safer than a comparably-built Syberist at every mook count (10.0% vs 13.7% death at 2 mooks, 52.3% vs 55.5% at 3) — the +1 Guard/Medium-armor combo is real, not just flavor. A follow-up test isolated the personal-armor-infusion trick specifically: InfusedHeavy Cannith-Touched (50.7% death at 4 mooks) clearly outperforms both its own Medium-armor baseline (55.2%) *and* a typically-built, non-stat-concentrated Wayfarer (56.8%) — but a fully-optimized Wayfarer (Guard Stat matched to weapon stat, 40.9%) reclaims the clear tanking lead once both builds are compared apples-to-apples. That's the correct hierarchy: Wayfarer stays the strongest dedicated tank when both sides are well-built, while Cannith-Touched's signature ability does genuine, measurable work rather than being decorative. **Caveat confirmed after character creation was properly shaken down**: this test measured pure survivability and didn't account for the armor-easing trick costing the character's one known Infusion — the InfusedHeavy build's real-play version has zero Infusions left for anything else while that armor stays socketed, a genuine cost the raw percentage doesn't show.
+**Known contraption capacity: 1 at level 1, +1 at level 4, +1 at level 8** (same milestone cadence the old Infusion-count used — 3 max by level 8) — how many built-but-unused contraptions can exist at once. A consumable resource, not a permanent bonus: triggering one uses it up, and there's a constant, natural reason to keep building rather than infusing once and never touching the loadout again.
 
-**Considered and rejected: folding this into Syberist as a fourth tradition.** The existing three traditions (Shardbound/Flamesworn/Wildspoken) differ only in cast stat and Spell Names flavor — identical mechanics underneath. Cannith-Touched can't fold in that cleanly: the +1 Guard bonus, the personal-armor-infusion trick, and the prepared-vs-spontaneous resource pattern are all real mechanical differences just confirmed to matter by the testing above, not flavor. Giving them to all Syberists would be an unintended buff to the other three traditions; stripping them to fit the mold would undo exactly what the Monte Carlo just validated. Kept as its own chassis, per the original Archetypes call.
+**Whose stat governs the trigger roll: always INT, but the INT of whoever is actually holding and triggering the device — not the Artifice Syberist's own INT.** This is what makes "hand it to a teammate" a genuine gamble rather than a strictly-better play: a scheme where the Wayfarer ends up holding the fireball-equivalent device is not always a good idea. Tested: a level-1 Artifice Syberist (INT+2) triggering their own device lands 64.0% of the time; handing the same device to a STR-focused ally (INT−1) drops that to 35.7% — a real, felt risk in exchange for freeing up the Syberist's own action that round.
 
-**Lateral growth**, mirroring Syberist's confirmed-feature cadence:
-- L2 *Component Sense* — detect dragonshard components or infused items nearby (parallels Resonance Sense)
-- L3 *Efficient Crafting* — swap an infusion's host item as a quick action instead of a full re-prep (parallels Name-Crafting)
-- L5 *Steady Hands* — reroll an infusion's cost die once per day (parallels Focused Inhalation)
-- L7 *Masterwork Instinct* — once per day, a bonus temporary infusion for free (parallels Whispers of the Prophecy)
+**Their own Noun category for Spell Names: Artifice** — invention, mechanism, and construction-flavored names, fourth alongside Arcane/Holy/Nature, so a crafted device reads distinctly from a Shardbound cast even though both use the same underlying Name-Crafting economy.
+
+**Example contraptions, by tier — showing what actually gets built, not just the economy around it:**
+
+| Tier | Cost | Example |
+|---|---|---|
+| Spark | 1–3 shards | **Glowspark** — a hand-sized device sheds dim light in Near range when triggered, hands-free afterward. **Alarm Chime** — rings audibly the moment anyone crosses a marked threshold. |
+| Minor | 2d6 shards | **Shock Coil** — a thrown or handheld device deals 1d6+INT (of the holder) damage in a burst. **Grapnel Rig** — fires a line, pulling the user one zone toward a fixed anchor point. |
+| Moderate | 2d6×2 shards | **Breach Charge** — a placed device deals 2d6 damage to a structure or barrier, ignoring standard hardness. **Numbing Vapor** — releases a cloud imposing Disadvantage on all rolls made by anyone in the zone who fails a resistance check. |
+| Major | 3d6×5 shards | **Overcharged Blast** — a single-target device deals 4d6 damage, INT (of the holder) governs the attack roll. **Repair Frame** — restores Guard equal to 2d6+INT (of the holder) to whoever's wearing it when triggered. |
+
+**Permanent items** — an Artifice Syberist crafting a lasting magic item (not a one-shot contraption) uses the existing Magic Items pricing (10–20× the tier's average casting cost) with a genuine choice of where in that range to land: **roll the tier's own cost die, read the result in days instead of shards, for the baseline crafting time.** Pay the top of the range (20×) to halve that time; pay the bottom (10×) to double it. Same range already established, just a real dial on it instead of a fixed number.
+
+**Salvaging an existing magic item:** destroying it recovers shards equal to the tier's base average casting cost (not the inflated 10–20× permanent-item price) — roughly 5–10% of what the item was actually worth built. A real loss, but genuinely useful for material nobody wants to carry around, rather than a way to convert found loot into pure shard economy at a profitable rate.
+
+#### Tradition-Specific Options (Artifice)
+
+- **Overclock** — once per scene: a triggered contraption's effect is rolled twice, keep the better result.
+- **Field Diagnostic** — at will, free: analyze a device, ward, or mechanism to understand what it does.
+- **Salvage** — once per scene: recover a spent contraption's shards instead of losing them outright (distinct from salvaging a found magic item above, which has no cooldown at all since it's destroying someone else's item, not reclaiming your own spent charge).
+- **Overload Shunt** — once per scene, automatic, no action required. When hit, roll 2d6 and reduce the damage by the sum. If either die shows a 1, the reduction still applies in full — but the next roll of any kind (attack, check, anything) is reduced by the value of the other die. Tested: malfunctions on 30.6% of triggers, averaging a −3.73 penalty when it happens — a real, dramatic cost given the malfunction usually lands on the very next thing the character tries to do, often their own attack immediately following the hit that triggered it.
+
+**A Tradition-Specific Option that was drafted and discarded: Rapid Prototype** (build a contraption in one action instead of a full Turn, at a real cost). Cut outright — even with a real cost attached, letting an Artifice Syberist build a brand-new Minor+ effect mid-combat is functionally identical to reactive Name-Crafting, which is exactly what the whole tradition's downtime-only restriction exists to prevent. No version of "faster building" avoids reopening that door.
 
 ### Wandslinger (Agent/Wayfarer minor casting option)
 
-**Only available to Agent and Wayfarer — Syberist and Cannith-Touched already have inherent casting that strictly exceeds what Wandslinger grants, so it's not offered to them.** Not a broken exploit if taken (Cantrip/Spark is already covered by their real spellcasting), just a pointless spend of a Skill or Maneuver for something already fully redundant — blocked outright rather than left as a legal-but-silly option.
+**Only available to Agent and Wayfarer — Syberist already has inherent casting that strictly exceeds what Wandslinger grants, so it's not offered to them.** Not a broken exploit if taken (Cantrip/Spark is already covered by their real spellcasting), just a pointless spend of a Skill or Maneuver for something already fully redundant — blocked outright rather than left as a legal-but-silly option.
 
 **Where's the gish?** Turns out all three shapes already existed once Shard Bolt was defined — they just hadn't been named. **Hard-capped at Cantrip/Spark tier, never Minor or above** — this isn't a soft guideline, it's a structural ceiling, so there's no build path where an Agent or Wayfarer edges into real Syberist-tier spellcasting.
 
@@ -580,7 +598,7 @@ Both substitutive options (giving something up, not a free bonus) use whatever s
 
 ### Leverage (Agent's dedicated resource)
 
-**Agent was the only archetype with no resource of its own** — Wayfarer has Grit, Syberist and Cannith-Touched both draw on shards. That gap is exactly why Agent's utility always read as "a skill in a list" instead of a real pillar of the archetype. Leverage fixes it, and deliberately stays separate from shards rather than reusing them: shards are dragonshard dust, magic fuel; Leverage is explicitly *mundane* preparation — a contact, a stashed item, a favor already called in. Keeping them separate means Agent can be the one archetype whose power never touches magic at all, a real thematic anchor now that Wayfarer can dip into Wandslinger and both casters are magic-native by design.
+**Agent was the only archetype with no resource of its own** — Wayfarer has Grit, Syberist draws on shards. That gap is exactly why Agent's utility always read as "a skill in a list" instead of a real pillar of the archetype. Leverage fixes it, and deliberately stays separate from shards rather than reusing them: shards are dragonshard dust, magic fuel; Leverage is explicitly *mundane* preparation — a contact, a stashed item, a favor already called in. Keeping them separate means Agent can be the one archetype whose power never touches magic at all, a real thematic anchor now that Wayfarer can dip into Wandslinger and both casters are magic-native by design.
 
 - **Starts at 2, +1 per level** — same cadence as Grit, parity with the other resourced archetypes.
 - **Regenerates during downtime, once per lull in the action — not a short-rest refresh, and deliberately not locked to any one setting.** An earlier draft tied this to "in-fiction social action" specifically, which quietly assumed something like a dense home city always being available between jobs — Eberron isn't that; a party can spend real session-time in Khyber, the Mournland, or deep in Xen'drik with zero social access at all. The player describes how they're using the downtime to prepare; **the GM — not the player — decides which mental stat (CHA/WIS/INT) actually fits that description**, removing any incentive to game which stat gets called. **Roll 2d10 + that stat vs Target 12.** Success regenerates 1 Leverage. The GM may shift the Target using the same granular Scenario Target Modifier scale used everywhere else in this system, based on how favorable the actual environment is to that kind of preparation — a barren cave with WIS chosen might push the Target up (genuinely hard to prepare with nothing around), while Sharn with CHA chosen might pull it down (a city that dense makes working an angle easy regardless of natural charm). This gives Agent a genuine mechanical reason to engage downtime, in any environment, not just idle until the next fight in a city.
@@ -758,7 +776,7 @@ All Houses now have a Least Mark defined.
                │                   → ancestral language IF non-human
                ▼
 ┌─────────────────────────────┐
-│ 2. CHOOSE ARCHETYPE            │  Wayfarer / Agent / Syberist / Cannith-Touched
+│ 2. CHOOSE ARCHETYPE            │  Wayfarer / Agent / Syberist (4 traditions)
 │    (+ tradition if Syberist)   │  Syberist only: Shardbound(INT) /
 └──────────────┬────────────────┘  Flamesworn(CHA) / Wildspoken(WIS)
                │
@@ -822,27 +840,10 @@ All Houses now have a Least Mark defined.
 │                                 │  FINAL stats + archetype bonus
 └──────────────┬────────────────┘
                │
-        ┌──────┴──────┐
-        ▼              ▼
-   Cannith-Touched   Everyone else:
-   wanting eased      requirement as
-   Heavy access?      normally stated
-        │
-        ▼
-   RESOLVED: costs one of the
-   Cannith-Touched's known
-   Infusions (only 1 at level 1).
-   Real trade-off, not integral —
-   a level-1 Cannith-Touched
-   choosing eased Heavy armor
-   has zero Infusions left for
-   anything else that Round.
-              │
-              ▼
+               ▼
 ┌─────────────────────────────┐
 │ 9. CALCULATE GUARD             │  4 + [Guard Stat bonus]
-│                                 │  + [Wayfarer +2 / Cannith-
-│                                 │    Touched +1, if applicable]
+│                                 │  + [Wayfarer +2, if applicable]
 │                                 │  + [armor bonus]
 └──────────────┬────────────────┘
                │
@@ -872,9 +873,8 @@ All Houses now have a Least Mark defined.
 │                                                     │
 │ Syberist: roll 1 starting spell name (Name-Crafting │
 │           not unlocked yet — rolled, not chosen)     │
-│                                                     │
-│ Cannith-  choose 1 Infusion known, choose its        │
-│ Touched:  host item                                 │
+│           Artifice tradition specifically also       │
+│           starts with 1 known contraption capacity   │
 └──────────────┬──────────────────────────────────────┘
                │
                ▼
@@ -897,11 +897,11 @@ All Houses now have a Least Mark defined.
 
 ### Choice Guidance (what makes each step's decision strong or weak)
 
-**Shakedown-tested against four actual builds** (Wayfarer, Agent, Syberist, Cannith-Touched, one each, real rolls) — this is what came out of actually running the flowchart, not abstract advice.
+**Shakedown-tested against real builds** (Wayfarer, Agent, and multiple Syberist traditions, real rolls) — this is what came out of actually running the flowchart, not abstract advice.
 
 **Step 1, Background:** pick one whose stat bonus lands on the stat your archetype actually wants — a Wayfarer wants a STR/CON-boosting Background, a Syberist wants one matching their tradition's cast stat. A mismatched Background (e.g. a CHA-boosting Background on a STR-focused Wayfarer) isn't illegal, just a real, felt inefficiency for no narrative payoff unless the concept specifically calls for it.
 
-**Step 2, Archetype:** Wayfarer = frontline durability, Agent = breadth and narrative leverage, Syberist = real spellcasting, Cannith-Touched = crafting-flavored hybrid with its own resource pattern. If torn between two, ask which one's *dedicated resource* (Grit / Leverage / shards+Infusions) sounds more fun to actually spend during play — that's usually the real answer.
+**Step 2, Archetype:** Wayfarer = frontline durability, Agent = breadth and narrative leverage, Syberist = real spellcasting (including Artifice, the crafting-flavored tradition — build now, unleash later, sometimes hand it to someone else). If torn between two, ask which one's *dedicated resource* (Grit / Leverage / shards) sounds more fun to actually spend during play — that's usually the real answer.
 
 **Step 3–4, Rolling and the mercy rule:** if the mercy rule fires, **raising one stat to +2 concentrates power, raising two stats to +1 spreads it** — concentration is usually the stronger pick if that stat will do double duty (see Step 6), spread is better if the build genuinely wants competence across more than one axis.
 
@@ -915,9 +915,9 @@ All Houses now have a Least Mark defined.
 
 **Step 11, Languages:** a high-INT build should pick languages that actually matter for the campaign's likely play (border nations, trade routes, factions the party expects to interact with) rather than defaulting to whatever sounds exotic. A −2-or-lower INT build's illiteracy is a real roleplay constraint worth embracing rather than working around — it's supposed to bite.
 
-**Step 12, Archetype-specific choices:** an Agent's Skill choice should match their actual sub-concept (see Agent Flavors — Exploit the Opening/Take Aim for a Rogue-leaning build's combat side, Network for a Diplomat-leaning one); a Wayfarer weighing Wandslinger should ask whether losing one Advanced Maneuver access is worth Spark-tier casting for *this specific character*, not just "is it good in general"; a Cannith-Touched's one starting Infusion is a real, singular choice — socketing it into armor (per the shakedown above) trades away any combat/utility Infusion entirely, so it should be a deliberate call, not a default.
+**Step 12, Archetype-specific choices:** an Agent's Skill choice should match their actual sub-concept (see Agent Flavors — Exploit the Opening/Take Aim for a Rogue-leaning build's combat side, Network for a Diplomat-leaning one); a Wayfarer weighing Wandslinger should ask whether losing one Advanced Maneuver access is worth Spark-tier casting for *this specific character*, not just "is it good in general"; an Artifice Syberist's one starting contraption capacity is a real, singular choice — what gets built first (and who it might get handed to) should be a deliberate call, not a default.
 
-**Step 13, Starting wealth:** a caster (Syberist, Cannith-Touched, or a Wandslinger-equipped Agent/Wayfarer) should convert a meaningful chunk of the 200gp into refined shards — 100–150gp is a reasonable starting reserve. A pure martial build with no casting at all can reasonably spend close to zero on shards and put everything into gear instead. Neither is a mistake; matching spend to what the build will actually use is the only real guidance here.
+**Step 13, Starting wealth:** a caster (Syberist, or a Wandslinger-equipped Agent/Wayfarer) should convert a meaningful chunk of the 200gp into refined shards — 100–150gp is a reasonable starting reserve. A pure martial build with no casting at all can reasonably spend close to zero on shards and put everything into gear instead. Neither is a mistake; matching spend to what the build will actually use is the only real guidance here.
 
 ---
 
@@ -1148,13 +1148,15 @@ Weapon and armor pricing scales with tier, Heavy costing roughly 5–6× Light �
 
 **Melee vs. ranged is a separate axis from which stat governs the weapon — worked out during Character Creator tool-building, flushed back here.** DEX doesn't automatically mean "ranged." A DEX-based *melee* weapon (a finesse rapier, a dagger) is every bit as much a melee weapon as a STR-based one — it uses DEX for its attack roll and damage, but stays subject to melee's Two-handed rules (only Heavy is Two-handed) and can pair with a Shield exactly like a STR weapon can. Only genuinely *ranged* weapons (bows, crossbows — always DEX-governed) are inherently Two-handed at every tier and can never pair with a Shield. An earlier draft conflated "uses DEX" with "is ranged," which silently blocked Shields for finesse-melee builds that should have had full access to them. When building a character, decide melee-or-ranged first, then which stat governs it — not the other way around.
 
-**Casting stat and weapon stat are always separate concepts, never merged — the same tool-building session surfaced this too.** A Syberist's cast stat (INT/CHA/WIS by tradition) or a Cannith-Touched's INT are used only for spellcasting and Infusions; if that same character also carries a physical weapon, the weapon uses STR or DEX like anyone else's, chosen independently. This holds even when the casting stat is conceptually the character's "main" stat — a Wildspoken Syberist with WIS as their defining stat still rolls STR or DEX for a mace they picked up, never WIS. An earlier draft conflated the two, treating a Syberist's spell-attack formula as if it were "the weapon," which hid the fact that any caster can carry and use a real weapon as a genuinely separate option, governed by its own stat entirely.
+**Casting stat and weapon stat are always separate concepts, never merged — the same tool-building session surfaced this too.** A Syberist's cast stat (INT/CHA/WIS by tradition) is used only for spellcasting; if that same character also carries a physical weapon, the weapon uses STR or DEX like anyone else's, chosen independently. This holds even when the casting stat is conceptually the character's "main" stat — a Wildspoken Syberist with WIS as their defining stat still rolls STR or DEX for a mace they picked up, never WIS. An earlier draft conflated the two, treating a Syberist's spell-attack formula as if it were "the weapon," which hid the fact that any caster can carry and use a real weapon as a genuinely separate option, governed by its own stat entirely.
 
 This mirrors the source's actual asymmetry rather than inventing a symmetric one: melee only gates at the top tier (a Sword or Axe needs no particular strength, only a Maul does), while ranged weapons gate starting a tier earlier and tighten further at the top — matching how Shortbow and Crossbow both required Agility 4+ in the source, with Longbow alone stepping up to 6+. Same as armor's CON gate: this is a hard requirement to equip the weapon at all, not a soft penalty for using it anyway.
 
 ### Critical Hits
 
 **Confirmed source triggers a crit off rolling max damage on the weapon's damage die** — which doesn't map cleanly onto this system, since TEA's confirmed combat is Auto-Hit (no attack roll to hook a crit trigger onto). This table's Roll-to-Hit fork has an attack roll to work with, so the trigger moves there instead: **doubles on the to-hit roll** (both d10s show the same value) **on a successful hit** is a critical — **maximum weapon damage, no damage roll.** For Advantage/Disadvantage (3d10, keep the best/worst two), doubles are checked on whichever two dice are actually kept, not all three rolled.
+
+**Any successful hit deals a minimum of 1 damage, regardless of die result or negative stat bonus — a universal floor, not specific to any one weapon, spell, or interaction.** Surfaced while testing a proposed Cannith-Touched mechanic (a low die roll combined with a negative stat pushed a confirmed hit to 0 effective damage), but the gap was never actually about that one case — nothing anywhere in this document previously guaranteed a landed hit does *something*. A hit that deals zero damage reads as a miss with extra steps; this closes that regardless of where in the system it could occur.
 
 This keeps crits rare and exciting (10% of all possible 2d10 outcomes are doubles at all, further filtered by needing to hit) without needing a second die-based system layered on top of the existing to-hit roll.
 
@@ -1305,7 +1307,7 @@ Each Scar still means something real happened — a genuine piece of a character
 
 **New constraint, reversing an earlier draft: Guard Stat must differ from your weapon stat, cast stat, *and* Wandslinger stat if applicable — all locked together at character creation.** A Syberist's Guard Stat can't be the same stat as their tradition's cast stat (an INT Shardbound needs a genuinely different stat feeding Guard); a Wayfarer or Agent's Guard Stat can't match whichever stat their starting weapon uses, **and if they've taken Wandslinger, it can't match that stat either.** This last piece closes a real loophole caught during testing: Wandslinger's casting stat is chosen freely ("whatever fits the concept"), and without this explicit inclusion, a character could pick Guard Stat ≠ weapon stat (satisfying the letter of the rule) while secretly setting their Wandslinger stat *equal* to their Guard Stat — quietly re-achieving the exact concentration the rule exists to prevent, just laundered through a second casting source instead of the primary one. This directly reverses an earlier allowance — a Monte Carlo comparison confirmed that concentrating one stat into both Guard and offense/casting is mechanically stronger than splitting them, which is exactly *why* it's now disallowed rather than recommended: the finding didn't stop being true, it just became the reason to force real stat diversity instead of letting one mega-stat carry a build alone.
 
-**Why this doesn't create a mid-campaign problem:** Guard Stat is already permanent once chosen at creation (see below) — the restriction only ever checks against the weapon/cast stat that existed *at that single moment*. A character who later swaps weapons, or a Cannith-Touched who re-infuses a different item, never retroactively breaks anything; Guard Stat was never tied to "current weapon," only to the creation-time snapshot.
+**Why this doesn't create a mid-campaign problem:** Guard Stat is already permanent once chosen at creation (see below) — the restriction only ever checks against the weapon/cast stat that existed *at that single moment*. A character who later swaps weapons never retroactively breaks anything; Guard Stat was never tied to "current weapon," only to the creation-time snapshot.
 
 **Retroactive note:** the doc's own worked examples (Aeshaan throughout the Combat Model Selection tests and the Highwater Road Ambush Case Study specifically) were built with Guard Stat = cast stat, predating this rule — those specific numbers reflect the old, more concentrated build and would be somewhat more fragile if rebuilt under the current restriction, not less; her second-highest stat (CON, already a dump stat in that build) would become her forced Guard Stat instead of INT.
 
@@ -2065,17 +2067,21 @@ Applied to the recurring glass-cannon case study, choosing INT (her Guard Stat) 
 
 **Advantage / Disadvantage** — roll 3d10 instead of 2d10, keep the best two (Advantage) or worst two (Disadvantage). Disadvantage rolls never crit.
 
-**Archetype** — the four character chassis: Wayfarer, Agent, Syberist, Cannith-Touched. Determines resource type, Lateral Advancement track, and Guard bonus.
+**Archetype** — the three character chassis: Wayfarer, Agent, Syberist (the latter with four traditions — Shardbound, Flamesworn, Wildspoken, Artifice). Determines resource type, Lateral Advancement track, and Guard bonus.
 
 **Background** — race and culture fused into one character-creation choice. Grants a stat bonus, two Talents, and narrative-only gear.
 
 **Base Target** — the single number an enemy uses for attacking, defending, and resisting Effect spells, before Encounter Level Scaling is applied. Weak 9, Standard 12, Strong 15.
 
-**Cast Stat** — the stat a Syberist or Cannith-Touched uses for spellcasting (INT for Shardbound/Cannith-Touched, CHA for Flamesworn, WIS for Wildspoken). Always distinct from Guard Stat and weapon stat — never merged, even when it's a character's defining stat.
+**Cast Stat** — the stat a Syberist uses for spellcasting (INT for Shardbound/Artifice, CHA for Flamesworn, WIS for Wildspoken). Always distinct from Guard Stat and weapon stat — never merged, even when it's a character's defining stat.
 
 **Contingency** — what Leverage buys: retroactively declaring you already prepared for a specific moment. Cost scales with the size of the ask (1/2/3+ Leverage).
 
+**Contraption** — an Artifice Syberist's built-ahead device, sealed with a Name-Crafted effect via Quick Rig. Triggered later as a single action by whoever holds it, using their own INT bonus for the roll — not the crafter's.
+
 **Critical Hit** — doubles on the to-hit roll (both counted dice match a success). Deals maximum weapon damage, no damage roll.
+
+**Damage Floor** — any successful hit deals a minimum of 1 damage, regardless of die result or negative stat bonus. Universal, not specific to any one weapon, spell, or interaction.
 
 **Death's Door** — triggered at 0 Guard with no Wound slots remaining. Roll d6: 1–3 dies, 4+ faints and rolls on the Scar Table.
 
@@ -2090,8 +2096,6 @@ Applied to the recurring glass-cannon case study, choosing INT (her Guard Stat) 
 **Guard** — the damage buffer every character has. = 4 + Guard Stat bonus + archetype bonus + armor + shield, floor 1. Restores fully after a Turn of rest.
 
 **Guard Stat** — the stat chosen at character creation to calculate Guard. Must differ from weapon stat, cast stat, and Wandslinger stat — locked together at creation, never re-checked against later gear changes.
-
-**Infusion** — a Cannith-Touched's persistent magic effect, socketed into a hand/body-slot item. Persists until removed, re-infused, or a full day's rest — distinct from a Syberist's in-the-moment cast.
 
 **Initiative** — 2d10 + DEX + weapon modifier − armor penalty, rolled once per fight. Fixed order for the whole encounter.
 
@@ -2112,6 +2116,8 @@ Applied to the recurring glass-cannon case study, choosing INT (her Guard Stat) 
 **Overcast Backlash Pool** — the dice-pool mechanic resolving what happens when a caster attempts a Minor+ tier cast without enough shards. See Overcasting.
 
 **Overcasting** — attempting a Minor, Moderate, Major, or Mythic cast without enough shards on hand. Never applies to Cantrip or Spark, which have flat, known costs.
+
+**Quick Rig** — an Artifice Syberist's baseline casting method: Name-Craft a spell during downtime, seal it into a Contraption instead of firing it immediately. Takes 1 Turn per Contraption, cannot happen mid-combat.
 
 **Reeling** — Disadvantage on the next roll after a Wound opens.
 

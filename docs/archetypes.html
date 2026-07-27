@@ -31,7 +31,7 @@
   <header class="page-header">
     <p class="page-eyebrow">03 — Archetypes</p>
     <h1 class="page-title">Archetypes</h1>
-    <p class="page-intro">Four chassis: Wayfarer (martial), Agent (skills/utility), Syberist (spellcaster), Cannith-Touched (artificer). Full kits, resources, and every option each one can take.</p>
+    <p class="page-intro">Three chassis: Wayfarer (martial), Agent (skills/utility), Syberist (spellcaster, four traditions including Artifice/artificer). Full kits, resources, and every option each one can take.</p>
   </header>
 
   <div class="confirmed">
@@ -139,7 +139,7 @@
   <p><strong>Bard / "Raconteur"</strong> — social, reputational Contingencies. Leverage regenerates through performance checks. The team-facing Leverage spend is the whole point here — handing an ally a Contingency is the direct mechanical cousin of Bardic Inspiration.</p>
 
   <h3 id="wandslinger">Wandslinger</h3>
-  <p>Agent and Wayfarer may trade into minor casting access — hard-capped at Cantrip/Spark, never Minor or above. Not available to Syberist/Cannith-Touched, who already have inherent casting that exceeds it.</p>
+  <p>Agent and Wayfarer may trade into minor casting access — hard-capped at Cantrip/Spark, never Minor or above. Not available to Syberist, who already has inherent casting that exceeds it.</p>
   <ul>
   <li><strong>Agent:</strong> trades one Skill choice for Spark-tier access. Shard Bolt counts as an eligible attack for Exploit the Opening and Take Aim, treated as a Light weapon.</li>
   <li><strong>Wayfarer:</strong> permanently forgoes access to one Advanced Maneuver of their choice, in exchange for Spark-tier access.</li>
@@ -162,11 +162,12 @@
   <hr>
 
   <h2 id="syberist">Syberist</h2>
-  <p>Wizard/Sorcerer/Cleric/Druid chassis — real spellcasting, three traditions differing only in cast stat and Spell Names flavor.</p>
+  <p>Wizard/Sorcerer/Cleric/Druid/Artificer chassis — real spellcasting, four traditions differing in cast stat, Spell Names flavor, and — for Artifice specifically — how casting actually resolves.</p>
   <ul>
   <li><strong>Shardbound</strong> (Wizard/Sorcerer) — cast stat INT. Arcane, raw dragonshard/planar power.</li>
   <li><strong>Flamesworn</strong> (Cleric/Paladin) — cast stat CHA. Silver Flame or House-oath channeling.</li>
   <li><strong>Wildspoken</strong> (Druid) — cast stat WIS. Eldeen Reaches / Gatekeeper tradition.</li>
+  <li><strong>Artifice</strong> (Artificer) — cast stat INT. Build now, unleash later — see below, since this one works differently enough to need its own section.</li>
   </ul>
 
   <h3 id="tradition-options">Tradition-Specific Options</h3>
@@ -196,54 +197,49 @@
   <li><strong>Wild Empathy</strong> — at will, free. Calm or briefly command a natural, non-magical beast.</li>
   </ul>
 
+  <h4>Artifice</h4>
+  <ul>
+  <li><strong>Overclock</strong> — once per scene. A triggered Contraption's effect is rolled twice, keep the better result.</li>
+  <li><strong>Field Diagnostic</strong> — at will, free. Analyze a device, ward, or mechanism to understand what it does.</li>
+  <li><strong>Salvage</strong> — once per scene. Recover a spent Contraption's shards instead of losing them outright.</li>
+  <li><strong>Overload Shunt</strong> — once per scene, automatic, no action required. When hit, roll 2d6 and reduce the damage by the sum. If either die shows a 1, the reduction still applies in full, but the next roll of any kind (attack, check, anything) is reduced by the value of the other die. Tested: malfunctions on 30.6% of triggers, averaging a −3.73 penalty when it happens.</li>
+  </ul>
+
   <h3 id="syberist-levels">Syberist, Level by Level</h3>
   <table>
   <tr><th>Level</th><th>Vertical (universal)</th><th>Lateral (Syberist)</th><th>Tradition Option instead?</th></tr>
-  <tr><td>1</td><td>—</td><td>1 spell name, Cantrip tier unlocked</td><td>No</td></tr>
+  <tr><td>1</td><td>—</td><td>1 spell name, Cantrip tier unlocked. Artifice specifically also starts with Quick Rig and 1 known Contraption capacity.</td><td>No</td></tr>
   <tr><td>2</td><td>+1 stat, +1 Guard</td><td><strong>Resonance Sense</strong> — at will, sense the presence and rough strength of active magic, unspent shards, or a recently-cast effect nearby</td><td>Yes</td></tr>
   <tr><td>3</td><td>—</td><td><strong>Name-Crafting</strong> — combine parts of known names into a new one, player-directed</td><td>No</td></tr>
-  <tr><td>4</td><td>+1 stat, +1 Guard</td><td>New spell name, free</td><td>Yes</td></tr>
+  <tr><td>4</td><td>+1 stat, +1 Guard</td><td>New spell name, free. Artifice: +1 known Contraption capacity (2 total).</td><td>Yes</td></tr>
   <tr><td>5</td><td>—</td><td><strong>Focused Inhalation</strong> — once per day, reroll a cast's shard-cost die</td><td>Yes</td></tr>
   <tr><td>6</td><td>+1 stat, +1 Guard</td><td>New spell name, free</td><td>Yes</td></tr>
   <tr><td>7</td><td>—</td><td><strong>Whispers of the Prophecy</strong> — once per day, Advantage on one check or a free Minor-tier cast</td><td>Yes</td></tr>
-  <tr><td>8</td><td>+1 stat, +1 Guard</td><td>New spell name, free</td><td>Yes</td></tr>
+  <tr><td>8</td><td>+1 stat, +1 Guard</td><td>New spell name, free. Artifice: +1 known Contraption capacity (3 total, max).</td><td>Yes</td></tr>
   </table>
   <p>Resonance Sense, Focused Inhalation, and Whispers of the Prophecy are confirmed names from source; their mechanical definitions here are reconstructed, not source-verified.</p>
 
   <hr>
 
-  <h2 id="cannith-touched">Cannith-Touched</h2>
-  <p>A fourth archetype built from scratch. Instead of casting a spell in the moment, sockets a dragonshard component into a hand/body-slot item, paying the tier's shard cost once. The infused property persists until removed, re-infused, or a Long Rest.</p>
-  <ul>
-  <li><strong>Cast stat:</strong> INT. <strong>Guard bonus:</strong> +1 (half Wayfarer's +2).</li>
-  <li>Cantrip/Spark cast normally — possess-don't-consume, same as any caster.</li>
-  <li><strong>Simultaneous Infusions known:</strong> 1 at level 1, +1 at level 4, +1 at level 8 (3 max).</li>
-  <li><strong>Armor-easing:</strong> may infuse their own armor to reduce its requirement tier by one — Heavy only needs to meet Medium's requirement. Costs one of their known Infusions, a real trade-off.</li>
-  </ul>
+  <h2 id="artifice-detail">Artifice, in Detail</h2>
+  <p>Started as its own fourth archetype (Cannith-Touched), rebuilt into a Syberist tradition after three separate problems traced back to the same root cause: the whole Infusion subsystem was 5e's Artificer mechanic imported wholesale into a document otherwise built on OSR conventions. Every fix attempted was patching around that mismatch rather than fixing it. Matches Wildspoken's own precedent — a Druid didn't need to be its own archetype either.</p>
 
-  <h3>Lateral growth</h3>
-  <ul>
-  <li>L2 <strong>Component Sense</strong> — detect dragonshard components or infused items nearby</li>
-  <li>L3 <strong>Efficient Crafting</strong> — swap an infusion's host item as a quick action instead of a full re-prep</li>
-  <li>L5 <strong>Steady Hands</strong> — reroll an infusion's cost die once per day</li>
-  <li>L7 <strong>Masterwork Instinct</strong> — once per day, a bonus temporary infusion for free</li>
-  </ul>
+  <p><strong>Quick Rig</strong> — the tradition's baseline casting method, free from level 1. Cantrip and Spark cast normally, reactive, in combat, same as any Syberist. <strong>Minor tier and above never happens reactively in combat at all.</strong> Instead, during downtime, Name-Craft a spell exactly as any Syberist would, but seal the effect into a crafted item instead of firing it immediately. That item triggers later as a single action, releasing the effect — <strong>by the Artifice Syberist, or by whoever else is holding it.</strong></p>
 
-  <h3 id="cannith-levels">Cannith-Touched, Level by Level</h3>
-  <p>Cast stat INT, Guard bonus +1 from level 1 onward.</p>
+  <p><strong>Building a Contraption takes 1 Turn (10 minutes) of dedicated work — cannot be rushed, cannot happen mid-combat.</strong> Known capacity: 1 at level 1, +1 at level 4, +1 at level 8 (3 max) — how many built-but-unused Contraptions can exist at once. Triggering one uses it up.</p>
+
+  <p><strong>The trigger roll always uses INT — but the holder's own INT, not the crafter's.</strong> This is what makes handing one off a genuine gamble rather than a strictly-better play. Tested: a level-1 Artifice Syberist (INT+2) triggering their own device lands 64.0% of the time; handing it to a STR-focused ally (INT−1) drops that to 35.7%.</p>
+
+  <h3>Example Contraptions</h3>
   <table>
-  <tr><th>Level</th><th>Vertical (universal)</th><th>Lateral (Cannith-Touched)</th></tr>
-  <tr><td>1</td><td>—</td><td>1 simultaneous Infusion known</td></tr>
-  <tr><td>2</td><td>+1 stat, +1 Guard</td><td><strong>Component Sense</strong> — detect dragonshard components or infused items nearby</td></tr>
-  <tr><td>3</td><td>—</td><td><strong>Efficient Crafting</strong> — swap an infusion's host item as a quick action instead of a full re-prep</td></tr>
-  <tr><td>4</td><td>+1 stat, +1 Guard</td><td>+1 simultaneous Infusion known (2 total)</td></tr>
-  <tr><td>5</td><td>—</td><td><strong>Steady Hands</strong> — reroll an infusion's cost die once per day</td></tr>
-  <tr><td>6</td><td>+1 stat, +1 Guard</td><td>—</td></tr>
-  <tr><td>7</td><td>—</td><td><strong>Masterwork Instinct</strong> — once per day, a bonus temporary infusion for free</td></tr>
-  <tr><td>8</td><td>+1 stat, +1 Guard</td><td>+1 simultaneous Infusion known (3 total, max)</td></tr>
+  <tr><th>Tier</th><th>Cost</th><th>Example</th></tr>
+  <tr><td>Spark</td><td>1–3 shards</td><td>Glowspark — sheds dim light in Near range. Alarm Chime — rings when anyone crosses a marked threshold.</td></tr>
+  <tr><td>Minor</td><td>2d6 shards</td><td>Shock Coil — 1d6+INT (holder's) damage in a burst. Grapnel Rig — pulls the user one zone toward an anchor point.</td></tr>
+  <tr><td>Moderate</td><td>2d6×2 shards</td><td>Breach Charge — 2d6 to a structure or barrier, ignoring hardness. Numbing Vapor — Disadvantage on all rolls in the zone for anyone who fails to resist.</td></tr>
+  <tr><td>Major</td><td>3d6×5 shards</td><td>Overcharged Blast — 4d6 damage, holder's INT governs the attack roll. Repair Frame — restores 2d6+INT (holder's) Guard to whoever's wearing it.</td></tr>
   </table>
 
-  <hr>
+  <p><strong>Permanent items</strong> use the existing 10–20× pricing, with a real choice of where to land: roll the tier's own cost die for baseline crafting days, pay the top of the range to halve that time, pay the bottom to double it. <strong>Salvaging an existing magic item</strong> destroys it but recovers shards equal to the tier's base average casting cost — roughly 5–10% of what it was worth built, a real loss but useful for material nobody wants to carry.</p>
 
   <h2 id="dragonmarks">Dragonmarks</h2>
   <p>Only House-lineage Backgrounds can take a mark. Free — no shard cost, narrow and reliable.</p>
