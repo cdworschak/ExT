@@ -20,7 +20,3 @@ https://cdworschak.github.io/ExT/
 ## Status
 
 Master document is current on `main` — no version numbers, that file is always the latest. See its own Open Threads section for what's still unresolved.
-
-## Last Full upload
-
-27/07/26 1400

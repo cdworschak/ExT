@@ -592,6 +592,8 @@ TEA's three chassis (confirmed from source): **Fixer** (skill monkey, renamed **
 
 **Permanent items** — an Artificer Syberist crafting a lasting magic item (not a one-shot contraption) uses the existing Magic Items pricing (10–20× the tier's average casting cost) with a genuine choice of where in that range to land: **roll the tier's own cost die, read the result in days instead of shards, for the baseline crafting time.** Pay the top of the range (20×) to halve that time; pay the bottom (10×) to double it. Same range already established, just a real dial on it instead of a fixed number.
 
+**Shards and time alone are never sufficient — a real workspace and resources must actually be available, GM's discretion.** Sitting in a hole for a week with the right shard count doesn't produce a magic item; the shard cost represents the raw material, not the forge, tools, references, and stable working conditions crafting genuinely requires. A Cannith enclave, a proper workshop, or comparable field-expedient setup (a GM call, not a fixed list) is a real precondition for any permanent item creation, same tier or higher than what's being built — not a separate cost added on top, just a condition that has to be true before the shard-and-time cost even applies.
+
 **Salvaging an existing magic item:** destroying it recovers shards equal to the tier's base average casting cost (not the inflated 10–20× permanent-item price) — roughly 5–10% of what the item was actually worth built. A real loss, but genuinely useful for material nobody wants to carry around, rather than a way to convert found loot into pure shard economy at a profitable rate.
 
 #### Tradition-Specific Options (Artificer)
@@ -1224,21 +1226,60 @@ This keeps crits rare and exciting (10% of all possible 2d10 outcomes are double
 
 **Cantrip-tier permanent items are deliberately not adventuring gear** — they're the everyday-magic worldbuilding texture already established in Magic Baseline, available to basically anyone in a settlement, not loot a party needs to hunt down.
 
-### Rare Weapons (confirmed source, reskinned to Eberron)
+### Magic Items (Eberron-original, replacing an earlier TEA-copied list)
 
-TEA's actual confirmed Rare Weapons table, reflavored and mechanically adapted (AV→Guard translations follow the same rules already established for Grit Maneuvers). **Priced in refined shards** (Minor-tier permanent items, per the split above). **This is the confirmed-source set, not the only permanent items possible** — anything at any tier can be built using the pricing framework above; these nine are what TEA's source material actually specifies, not a ceiling on GM/player creativity:
+**An earlier draft of this table copied TEA's actual confirmed Rare Weapons entries directly — same damage dice, same costs, just reflavored names.** Caught as a real problem, not a style note: several entries dealt damage at or above Massive tier (1d10–1d12), directly contradicting this document's own rule that Massive is monster-scale only, N/A for PCs. The pricing was also never independently verified — it validated itself by comparing against the very numbers it had copied, not an actual check that "1 ink" and "1 refined shard" represent comparable value, and the resulting gold-value implications (600–1350gp per item) were never checked against this system's own 200gp starting-wealth economy.
 
-| Weapon | Mechanic | Cost |
-|---|---|---|
-| **The Devourer's Fang** | A Cannith-forged dagger (1d4) that drinks dragonshard dust — infuse 10 shards to grow it to a person-sized blade for 1 Turn | 95 |
-| **Mournland Needler** | Long range, Ammo (1d6). Paralyzes on a critical hit; constructs and undead unaffected | 90 |
-| **Deflecting Rod** | Versatile (1d6/1d8). Once per Round, reflect a projectile back at whoever fired it | 75 |
-| **Thunderclap Rod** | Short range, Blast, Recharge 4 (1d8) | 80 |
-| **Riftglass Edge** | A hit permanently reduces the target's Guard by 1 (1d8) — corrected from an earlier "ignores the target's armor-derived Guard bonus," the same undefined-against-monsters problem Focus originally had, fixed the same way | 75 |
-| **Reaper's Chorus** | Versatile (1d8/1d12), requires WIS bonus ≥ +1 (Aereni funeral-rite reaping weapon) | 85 |
-| **Silverbeam Rifle** | Long range, Two-handed (1d12). Recharge 3 by day, 6 by night | 135 |
-| **Kundarak Sunderpick** | Versatile (1d4/2d4). A critical hit permanently reduces the target's Guard by 1d4 — corrected from an earlier "destroys the target's armor entirely," same fix as Cleave's crit clause | 60 |
-| **Mournland Graft** | Recharge 5, only after firing (1d10). Permanently fills a hand slot — melee blade and short-range weapon in one | 95 |
+**A deeper problem than either of those: several entries implicitly worked like flat stat bonuses (a "+X to hit" or "+X damage" effect sitting permanently on an item) — a direct D&D d20 holdover.** In a d20 system a flat +1 is exactly 5%, clean and uniform. This system's 2d10 bell curve has no such uniform conversion, and more importantly, this document's own Core Resolution explicitly states its central design constraint: situational difficulty is represented by shifting the Target or granting Advantage/Disadvantage, **never by stacking modifiers.** A permanent flat bonus sitting on a magic item is precisely the pattern that principle exists to rule out — it just hadn't been checked against magic items specifically until now.
+
+**Redesigned from scratch, Eberron-original rather than TEA-derived, using the existing Magic Items pricing framework (10–20× tier's average cost) applied fresh rather than reverse-engineered from copied numbers.** Every entry uses only the same four levers everything else in this document uses: Advantage/Disadvantage, a Target shift, a new capability, or a resource effect — never a flat roll bonus. Deliberately spans the full range Eberron's own worldbuilding implies: Cantrip-tier items are genuine everyday infrastructure (lit streets, self-cleaning laundry), not adventuring gear; Mythic-tier items are unique, one-of-a-kind, GM-placed artifacts, never something with a shop price at all.
+
+**Magic item creation also requires more than shards and time — see the Artificer crafting rules above for the real workspace/resources precondition.**
+
+**Cantrip tier (1–5 raw shards — passive only, no adventuring utility, available to basically anyone):**
+
+| Item | Effect |
+|---|---|
+| **Everbright Lantern** | Permanent magical light, no fuel needed |
+| **Warmhearth Coal** | Never cools, needs no fuel |
+| **Cleaning Rune Cloth** | A garment that never needs washing |
+
+**Spark tier (20–40 raw shards — a real but narrow trinket):**
+
+| Item | Effect |
+|---|---|
+| **Sivis Message Chime** | A paired trinket; speak to one, the other repeats it once, anywhere |
+| **Silversheen Ward Token** (Thrane/Silver Flame) | Once per scene, Advantage on a resistance check against an Effect spell |
+| **Orien Waystone Chip** | Once per scene, know the safest route to a destination you can currently see |
+
+**Minor tier (70–140 refined shards):**
+
+| Item | Effect |
+|---|---|
+| **Riftglass Focus** (Shardbound) | Once per scene, reroll a cast's shard-cost die once |
+| **Silver Flame Brand** | Once per scene, Advantage on your next attack against a creature that's harmed an ally this fight |
+| **Kalashtar Dreaming Coil** | Once per scene, reroll a failed WIS-based check once |
+
+**Moderate tier (140–280 refined shards — a serious combat item):**
+
+| Item | Effect |
+|---|---|
+| **Cannith Prototype Gauntlet** | Once per scene, your next attack automatically counts as a critical if the target already has an open Wound |
+| **Blademarked Warblade** (Valenar) | Once per scene, mark an enemy: you and allies have Advantage against them until the encounter ends |
+
+**Major tier (525–1050 refined shards — rare, quest-reward):**
+
+| Item | Effect |
+|---|---|
+| **Mournland Reliquary Shard** | Once per scene, trigger a specific Major-tier Effect spell, pre-loaded at creation |
+| **Dhakaani Warmask** | Once per scene, force up to 3 enemies in your zone to target you this Round |
+
+**Mythic tier (3500–7000 refined shards — unique, GM-placed only, never purchased):**
+
+| Item | Effect |
+|---|---|
+| **The Progenitor's Cog** | Permanently +1 Contraption capacity; once per scene, trigger a stored Contraption without spending it |
+| **Shard of the Twelve** | Once per campaign arc (GM's call), manifest any House's Least Mark for one scene, regardless of the wielder's own Background |
 
 ---
 

@@ -36,6 +36,8 @@ TEA's three chassis (confirmed from source): **Fixer** (skill monkey, renamed **
 
 **Permanent items** — an Artificer Syberist crafting a lasting magic item (not a one-shot contraption) uses the existing Magic Items pricing (10–20× the tier's average casting cost) with a genuine choice of where in that range to land: **roll the tier's own cost die, read the result in days instead of shards, for the baseline crafting time.** Pay the top of the range (20×) to halve that time; pay the bottom (10×) to double it. Same range already established, just a real dial on it instead of a fixed number.
 
+**Shards and time alone are never sufficient — a real workspace and resources must actually be available, GM's discretion.** Sitting in a hole for a week with the right shard count doesn't produce a magic item; the shard cost represents the raw material, not the forge, tools, references, and stable working conditions crafting genuinely requires. A Cannith enclave, a proper workshop, or comparable field-expedient setup (a GM call, not a fixed list) is a real precondition for any permanent item creation, same tier or higher than what's being built — not a separate cost added on top, just a condition that has to be true before the shard-and-time cost even applies.
+
 **Salvaging an existing magic item:** destroying it recovers shards equal to the tier's base average casting cost (not the inflated 10–20× permanent-item price) — roughly 5–10% of what the item was actually worth built. A real loss, but genuinely useful for material nobody wants to carry around, rather than a way to convert found loot into pure shard economy at a profitable rate.
 
 #### Tradition-Specific Options (Artificer)
