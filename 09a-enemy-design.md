@@ -16,7 +16,7 @@
 
 **Restructured around a fractal model** — attack bonus was dropped entirely as a monster stat. The reason PCs need a *bonus* rather than a target is that their target is fixed at 12 and the bonus is the changeable part across a whole sheet of different checks; a monster is the opposite — its target is the changeable part per-monster, with nothing else on its sheet that needs to stay consistent with a bonus. Since `2d10+bonus ≥ 12` and `2d10 ≥ 12−bonus` are the exact same math, this is a pure notation simplification, not a rules change — every number below still produces identical results to the original attack-bonus formulas, just with one fewer derived value to track.
 
-**Every monster gets one Base Target**, used by default for three separate purposes — being hit, attacking, and resisting Effect spells — shifted individually only when a specific monster's concept calls for an exception (see Enemy Generation Procedure). Damage is now a flat stated number, no longer derived from an accuracy bonus doing double duty (that dual-role was specifically a PC design choice — see Weapons & Damage — with no reason to import it onto monsters).
+**Every monster gets one Base Target**, used by default for three separate purposes — being hit, attacking, and resisting Effect spells — shifted individually only when a specific monster's concept calls for an exception (see Enemy Generation Procedure). Damage is now a flat stated number, no longer derived from an accuracy bonus doing double duty (that dual-role was specifically a PC design choice — see Inventory & Items — with no reason to import it onto monsters).
 
 | | Formula | Cadence |
 |---|---|---|
@@ -69,7 +69,7 @@ A start-to-finish checklist for building any new enemy, from a disposable mook t
 | Named, mid-tier threat | 8–12 |
 | Named, real boss | 12–20+ |
 
-**4. Pick a weapon tier** — Light/Medium/Heavy/Massive. Same damage-die table as PCs (Weapons & Damage), but **Massive is monster-exclusive** — Weapon Proficiency explicitly locks PCs out of it, so this fourth rung only ever applies here, not to anything a PC could pick up.
+**4. Pick a weapon tier** — Light/Medium/Heavy/Massive. Same damage-die table as PCs (Inventory & Items), but **Massive is monster-exclusive** — Weapon Proficiency explicitly locks PCs out of it, so this fourth rung only ever applies here, not to anything a PC could pick up.
 
 **5. Pick a flat damage bonus** — no longer tied to accuracy the way a PC's stat bonus is. Mooks: +0 to +1. Mid-tier named threats: +2 to +3. Real bosses: +4 (Rustmaw's benchmark).
 

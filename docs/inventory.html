@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory &amp; Items — Eberron × The Electrum Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="topbar-brand">EBERRON <span>×</span> THE ELECTRUM ARCHIVE</span>
+  <div class="topbar-links">
+    <a href="index.html">Home</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="character-creation.html">Character Creation</a>
+    <a href="backgrounds.html">Backgrounds</a>
+    <a href="archetypes.html">Archetypes</a>
+    <a href="magic.html">Magic</a>
+    <a href="combat.html">Combat</a>
+    <a href="inventory.html" class="active">Inventory &amp; Items</a>
+    <a href="exploration.html">Exploration</a>
+    <a href="enemy-design.html">Enemy Design</a>
+    <a href="advancement.html">Advancement</a>
+    <a href="glossary.html">Glossary</a>
+  </div>
+</nav>
+
+<main>
+  <header class="page-header">
+    <p class="page-eyebrow">07 — Inventory &amp; Items</p>
+    <h1 class="page-title">Inventory &amp; Items</h1>
+    <p class="page-intro">Item slots, weapons, armor, mundane gear, and magic items — everything a character can carry, in one place.</p>
+  </header>
+
+  <h2 id="item-slots">Item Slots</h2>
+  <p><strong>Ten item slots total: 2 hand, 2 body, 6 backpack.</strong> Hand slots hold what's actively wielded; body slots hold worn gear for easy access in combat; backpack slots hold everything else. Retrieving a backpack item during combat costs an action.</p>
+  <ul>
+  <li><strong>Shards and coin are abstracted resources, not slot items</strong> — tracked as numbers, never occupying a slot regardless of quantity.</li>
+  <li><strong>A slot holds one distinct item, or a reasonable stack of a single consumable type</strong> (a quiver of arrows, several days of rations, a handful of torches).</li>
+  <li><strong>At capacity, picking up something new means dropping or stowing something else first.</strong></li>
+  <li>Shield/Tower Shield sit in a hand slot, same category as a weapon.</li>
+  </ul>
+
+  <h2 id="weapons">Weapons</h2>
+  <table>
+  <tr><th>Tier</th><th>Die</th><th>Avg</th><th>Melee req.</th><th>Ranged req.</th><th>Price</th></tr>
+  <tr><td>Light</td><td>1d4</td><td>2.5</td><td>none</td><td>none</td><td>10gp</td></tr>
+  <tr><td>Medium</td><td>1d6</td><td>3.5</td><td>STR ≥ 0</td><td>DEX ≥ 0</td><td>25gp</td></tr>
+  <tr><td>Heavy</td><td>1d8</td><td>4.5</td><td>STR ≥ +1</td><td>DEX ≥ +1</td><td>60gp</td></tr>
+  <tr><td>Massive (monsters only)</td><td>1d10</td><td>5.5</td><td>—</td><td>—</td><td>—</td></tr>
+  </table>
+
+  <h3 id="named-weapons">Named Weapons</h3>
+  <table>
+  <tr><th>Tier</th><th>Weapon</th><th>Notes</th></tr>
+  <tr><td>Light</td><td>Dagger</td><td>Thrown</td></tr>
+  <tr><td>Medium</td><td>Club</td><td>—</td></tr>
+  <tr><td>Medium</td><td>Spear</td><td>Versatile, Thrown</td></tr>
+  <tr><td>Medium</td><td>Staff</td><td>Versatile</td></tr>
+  <tr><td>Heavy</td><td>Sword</td><td>Two-handed</td></tr>
+  <tr><td>Heavy</td><td>Axe</td><td>Thrown, Two-handed</td></tr>
+  <tr><td>Heavy</td><td>Mace</td><td>Two-handed</td></tr>
+  <tr><td>Heavy</td><td>Glaive</td><td>Two-handed</td></tr>
+  <tr><td>Light (ranged)</td><td>Sling</td><td>Ammo</td></tr>
+  <tr><td>Medium (ranged)</td><td>Shortbow</td><td>Ammo</td></tr>
+  <tr><td>Heavy (ranged)</td><td>Crossbow</td><td>Ammo</td></tr>
+  </table>
+  <p>Every named weapon shares its tier's exact die, price, and rules — the name is flavor and a hook for keywords, not a separate mechanical identity.</p>
+  <p><strong>Heavy weapons are always Two-handed. All ranged weapons are Two-handed too, at any tier</strong> — reloading needs both hands regardless of size. Only Light/Medium melee can pair with a Shield.</p>
+  <p><strong>Melee vs. ranged is a separate axis from which stat governs the weapon.</strong> A DEX-based finesse weapon (rapier, dagger) is still melee. Only genuinely ranged weapons are always Two-handed, regardless of which stat governs them.</p>
+  <p><strong>Casting stat and weapon stat are always separate.</strong> A caster's cast stat is never used for weapon damage, even if it's their defining stat.</p>
+  <p><strong>Ranged weapons of every type are capped at the same zone or one adjacent zone, full stop</strong> — no weapon reaches further than that.</p>
+
+  <h3 id="weapon-keywords">Weapon Keywords</h3>
+  <ul>
+  <li><strong>Ammo</strong> — requires ammunition carried in a body slot.</li>
+  <li><strong>Blast</strong> — deals its damage to every creature in a zone at once.</li>
+  <li><strong>Recharge X</strong> — at the start of each Round, roll a d10; on a result ≤X, it's recharged.</li>
+  <li><strong>Thrown</strong> — can be thrown at a target in an adjacent zone even if otherwise melee-only.</li>
+  <li><strong>Two-handed</strong> — takes up both hand slots.</li>
+  <li><strong>Versatile</strong> — has two damage entries; deals the first one-handed, the second two-handed.</li>
+  </ul>
+
+  <h3 id="critical-hits">Critical Hits</h3>
+  <p><strong>Critical hit:</strong> doubles on the to-hit roll (both counted dice match) on a successful hit = maximum weapon damage, no damage roll.</p>
+  <p><strong>Damage floor:</strong> any successful hit deals a minimum of 1 damage, regardless of die result or negative stat bonus.</p>
+
+  <h2 id="armor">Armor</h2>
+  <table>
+  <tr><th>Item</th><th>Guard</th><th>Initiative</th><th>Price</th></tr>
+  <tr><td>Light armor</td><td>+1</td><td>—</td><td>15gp</td></tr>
+  <tr><td>Medium armor</td><td>+2</td><td>−1</td><td>50gp</td></tr>
+  <tr><td>Heavy armor</td><td>+3</td><td>−2 + moving costs whole action</td><td>120gp</td></tr>
+  <tr><td>Shield</td><td>+1</td><td>−1</td><td>10gp</td></tr>
+  <tr><td>Tower Shield</td><td>+2</td><td>−3</td><td>60gp</td></tr>
+  </table>
+  <p>Heavy armor requires CON ≥ +1 <strong>and</strong> Wayfarer's own +2 Guard bonus, and takes 2 body slots instead of 1. Shield and Tower Shield are priced at the Light and Heavy <em>weapon</em> price points respectively — they're hand-slot items, not body-slot ones.</p>
+  <p><em>Wayfarer's full Grit Maneuvers table and Dual-wield rules live on the <a href="archetypes.html">Archetypes</a> page, alongside every other archetype's complete kit.</em></p>
+
+  <h2 id="toolkits">Toolkits &amp; Usage</h2>
+  <p><strong>Every item — weapons, armor, toolkits, torches, rations — has three usage dots. When all three are filled, it's depleted or destroyed.</strong> What fills a dot differs by item type, but the shared shape means only one rule to learn:</p>
+  <ul>
+  <li><strong>Weapons/Armor/Ammo</strong> — roll a d6 after combat for each item used; on a 1–3, mark a dot.</li>
+  <li><strong>Torches/Light sources</strong> — mark a dot whenever a relevant exploration roll calls for it.</li>
+  <li><strong>Rations</strong> — mark a dot when taking a long rest without first taking the time to hunt or forage.</li>
+  <li><strong>Toolkits</strong> — mark a dot every time it's actually used for its purpose.</li>
+  <li><strong>Everything else</strong> — GM's call.</li>
+  </ul>
+  <p><strong>Weapons and armor can be fully repaired for a quarter of their original price.</strong> Depleted toolkits and consumables need outright replacing. <strong>Selling:</strong> items generally sell for half their listed price, better with a CHA-based check or real rapport with the buyer.</p>
+  <p><strong>Toolkits are bundles of similarly-themed items that share one item slot.</strong></p>
+  <table>
+  <tr><th>Kit</th><th>Contents</th><th>Cost</th></tr>
+  <tr><td><strong>Rations</strong></td><td>Three days of food and water</td><td>3gp</td></tr>
+  <tr><td><strong>Torches</strong></td><td>Lights your zone; must be held in a hand slot</td><td>1gp</td></tr>
+  <tr><td><strong>Glowmoss Pod</strong></td><td>Squeezed plant pod, teal bioluminescent light, unaffected by wind/water; body slot</td><td>5gp</td></tr>
+  <tr><td><strong>Ward Mask</strong></td><td>Filters hazardous spores, mist, or dust — Mournland fringe, Droaam's Bloodmarsh</td><td>25gp</td></tr>
+  <tr><td><strong>Healing Toolkit</strong></td><td>Bandages, needle and thread, alcohol, a bone-setting splint</td><td>15gp</td></tr>
+  <tr><td><strong>Dungeoneering Toolkit</strong></td><td>Rope, crowbar, hammer, spikes, lockpicks</td><td>20gp</td></tr>
+  <tr><td><strong>Scribing Toolkit</strong></td><td>Writing board, ink, pen, parchment, sealing wax</td><td>10gp</td></tr>
+  <tr><td><strong>Navigation Toolkit</strong></td><td>Compass, regional maps, a small collapsible spyglass</td><td>25gp</td></tr>
+  <tr><td><strong>Cooking Toolkit</strong></td><td>Salt and spices, cutlery, a cast-iron pot, cooking oil</td><td>8gp</td></tr>
+  <tr><td><strong>Disguise Toolkit</strong></td><td>Make-up, a wig, a spare set of clothes at a different social tier, minor prosthetics</td><td>15gp</td></tr>
+  </table>
+
+  <h2 id="magic-items">Magic Items</h2>
+  <p>Charged/consumables priced at the tier's casting cost. Permanent items priced at 10–20× the tier's average casting cost — Cantrip/Spark in raw shards, Minor and above in refined shards.</p>
+
+  <h3 id="magic-item-examples">Magic Items, Eberron-Original</h3>
+  <p>Every item below uses only the same four levers everything else in this document uses — Advantage/Disadvantage, a Target shift, a new capability, or a resource effect — never a flat roll bonus. No "+1 sword" style items; that's a d20 holdover this system's own design constraint rules out. Magic item creation also requires a real workspace and resources, GM's discretion — see Archetypes → Artificer.</p>
+
+  <p><strong>Cantrip tier (1–5 raw shards, passive infrastructure):</strong></p>
+  <table>
+  <tr><th>Item</th><th>Effect</th></tr>
+  <tr><td><strong>Everbright Lantern</strong></td><td>Permanent magical light, no fuel needed</td></tr>
+  <tr><td><strong>Warmhearth Coal</strong></td><td>Never cools, needs no fuel</td></tr>
+  <tr><td><strong>Cleaning Rune Cloth</strong></td><td>A garment that never needs washing</td></tr>
+  </table>
+
+  <p><strong>Spark tier (20–40 raw shards):</strong></p>
+  <table>
+  <tr><th>Item</th><th>Effect</th></tr>
+  <tr><td><strong>Sivis Message Chime</strong></td><td>A paired trinket; speak to one, the other repeats it once, anywhere</td></tr>
+  <tr><td><strong>Silversheen Ward Token</strong> (Thrane)</td><td>Once per scene, Advantage on a resistance check against an Effect spell</td></tr>
+  <tr><td><strong>Orien Waystone Chip</strong></td><td>Once per scene, know the safest route to a destination you can currently see</td></tr>
+  </table>
+
+  <p><strong>Minor tier (70–140 refined shards):</strong></p>
+  <table>
+  <tr><th>Item</th><th>Effect</th></tr>
+  <tr><td><strong>Riftglass Focus</strong> (Shardbound)</td><td>Once per scene, reroll a cast's shard-cost die once</td></tr>
+  <tr><td><strong>Silver Flame Brand</strong></td><td>Once per scene, Advantage on your next attack against a creature that's harmed an ally this fight</td></tr>
+  <tr><td><strong>Kalashtar Dreaming Coil</strong></td><td>Once per scene, reroll a failed WIS-based check once</td></tr>
+  </table>
+
+  <p><strong>Moderate tier (140–280 refined shards):</strong></p>
+  <table>
+  <tr><th>Item</th><th>Effect</th></tr>
+  <tr><td><strong>Cannith Prototype Gauntlet</strong></td><td>Once per scene, your next attack automatically counts as a critical if the target already has an open Wound</td></tr>
+  <tr><td><strong>Blademarked Warblade</strong> (Valenar)</td><td>Once per scene, mark an enemy: you and allies have Advantage against them until the encounter ends</td></tr>
+  </table>
+
+  <p><strong>Major tier (525–1050 refined shards):</strong></p>
+  <table>
+  <tr><th>Item</th><th>Effect</th></tr>
+  <tr><td><strong>Mournland Reliquary Shard</strong></td><td>Once per scene, trigger a specific Major-tier Effect spell, pre-loaded at creation</td></tr>
+  <tr><td><strong>Dhakaani Warmask</strong></td><td>Once per scene, force up to 3 enemies in your zone to target you this Round</td></tr>
+  </table>
+
+  <p><strong>Mythic tier (3500–7000 refined shards, unique, GM-placed only):</strong></p>
+  <table>
+  <tr><th>Item</th><th>Effect</th></tr>
+  <tr><td><strong>The Progenitor's Cog</strong></td><td>Permanently +1 Contraption capacity; once per scene, trigger a stored Contraption without spending it</td></tr>
+  <tr><td><strong>Shard of the Twelve</strong></td><td>Once per campaign arc (GM's call), manifest any House's Least Mark for one scene, regardless of the wielder's own Background</td></tr>
+  </table>
+
+  <div class="page-nav">
+    <a href="combat.html"><span class="dir">Previous</span>← Combat</a>
+    <a href="exploration.html" class="next"><span class="dir">Next</span>Exploration →</a>
+  </div>
+</main>
+
+</body>
+</html>

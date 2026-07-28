@@ -98,7 +98,7 @@ Each Scar still means something real happened — a genuine piece of a character
 | CHA — Presence | Force of personality throws off an attacker's aim and timing. |
 
 **One remaining constraint:**
-- **The Heavy/Medium armor CON requirement (Armor & Encumbrance, Lever 1) stays tied to actual CON specifically**, regardless of Guard Stat choice — that requirement is about physically bearing the weight, a different question from what a character's Guard represents. A DEX-Guard character with poor CON is still locked out of Heavy armor.
+- **The Heavy/Medium armor CON requirement (Inventory & Items, Armor) stays tied to actual CON specifically**, regardless of Guard Stat choice — that requirement is about physically bearing the weight, a different question from what a character's Guard represents. A DEX-Guard character with poor CON is still locked out of Heavy armor.
 
 This extends the "reward non-primary stats" principle (already built out for Wayfarer Grit Maneuvers) straight into the core HP mechanic — a CHA-Guard Wayfarer leaning into Guardian's Challenge plays like a battlefield commander; a WIS-Guard Syberist plays like a wary, hard-to-catch-off-guard caster; an INT-Guard Agent plays like a tactician who's always a half-step ahead. Same archetype, meaningfully different feel, purely from this one choice plus stat placement.
 
@@ -272,26 +272,4 @@ This is the sharpest possible test of "OSR stakes, but can the player change the
 A Heavy-armored Wayfarer wielding a Heavy weapon and a Tower Shield rolls 2d10 −1 (weapon) −2 (armor) −3 (Tower Shield) = 2d10−6 — reliably near the bottom of the order. Same intended trade-off as before (heavy = slow), just expressed as one clean sorted list instead of a Fast/Slow bucket split.
 
 ---
-
-## Armor & Encumbrance
-
-**The question this section answers: what actually stops every character from just wearing the biggest armor available?** Nothing does, by default — Guard scales cleanly with armor value with no downside, so the min-max answer is always "wear Heavy." Five independent levers fix that, stacked so no single one is a hard wall, but together they make Heavy armor the *correct* choice only for a character actually built to carry it.
-
-| Lever | Light | Medium | Heavy |
-|---|---|---|---|
-| **Guard bonus** | +1 | +2 | +3 |
-| **1. Requirement** | none | CON bonus ≥ 0 | CON bonus ≥ +1 **and** Wayfarer's +2 Guard bonus |
-| **2. Slot cost** | 1 body slot | 1 body slot | **2 body slots** |
-| **3. Mobility tax** | none | −1 on Agility-type checks | −1 Agility checks **+** moving to an adjacent zone costs your whole action (no move-then-act) |
-| **4. Availability** | buyable anywhere | buyable anywhere | requires a **House Cannith commission or military contact** — a Background/relationship, not just shards |
-| **5. Usage/maintenance** | d6 after combat, 1–3 marks a use (confirmed) | same, but repair cost scales with the higher purchase price | same, and the shards-sink is largest given Heavy's higher base cost |
-
-**Why this works as a whole system instead of one blunt rule:**
-- **Lever 1** means a squishy build literally can't equip Heavy without investing in CON first — it's build-gated, not archetype-locked, so a dedicated tank Syberist could theoretically qualify, but it costs them a stat point they'd rather spend elsewhere.
-- **Lever 2** means even a character who *can* wear Heavy is trading away a body slot that could hold a dragonmark focus, a secondary weapon, or a talisman — the survivability isn't free even once you qualify.
-- **Lever 3** directly punishes the zone-based skirmishing this table's combat system is built around (see Zones & Range) — Heavy armor turns off "move and attack in the same round," which is a real tactical cost, not just a flavor penalty. It also now taxes **Initiative** (above), so Heavy-armored characters consistently act later in turn order on top of being unable to reposition freely.
-- **Lever 4** ties the choice into the setting rather than just the character sheet — getting Heavy armor becomes a plot hook or a Background payoff (a Karrnathi Line Soldier or Kundarak Vault-Warden background likely already has the contact; everyone else has to go earn one).
-- **Lever 5** is the ongoing tax: real TEA's confirmed usage-dot system already makes gear wear down and need repair, and Heavy's higher price tag means that slow shards-bleed is proportionally worse for Heavy than Light, even though the wear odds are identical.
-
-**Net result:** a dedicated frontline Wayfarer who's invested CON, accepted the mobility tax, spent the slot, found the House contact, and can afford upkeep is the only build for whom Heavy armor's Guard bonus is actually worth its total cost. Anyone else paying all five costs for +3 Guard they can barely use (can't reposition, acts last, gave up a slot) is making a build mistake — which means the system discourages "everyone wears Heavy" through cost math, not through a rule forbidding it.
 

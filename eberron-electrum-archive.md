@@ -558,7 +558,7 @@ A guide for building new Backgrounds beyond what's listed below, so the list can
 - **Khorvaire-Settled Halfling** — +1 CHA. Talents: *City Charm* (Advantage on first impressions with strangers — a Talenta halfling's reputation for straightforwardness works in their favor off the Plains), *Small and Overlooked* (Advantage avoiding notice in a crowd or being underestimated in a negotiation). Gear: forged city residency papers, no riding gear — deliberately settled, not just visiting.
 
 ### Shifters, Kalashtar, Changelings, Warforged
-- **Eldeen Shifter** — +1 DEX/STR. Talents: *Flex* (once per encounter, choose one: Advantage on a single melee attack as claws briefly extend, or move one extra zone this Round as a speed burst), *Wildsense* (Advantage noticing natural dangers, tracking prey, or sensing a change in weather before it arrives). Gear: trap kit, a woven charm from the Towering Wood.
+- **Eldeen Shifter** — +1 DEX/STR. Talents: *Flex* (once per encounter, choose one: Advantage on a single melee attack as claws briefly extend, or move one extra zone this Round as a speed burst), *Wildsense* (Advantage noticing natural dangers, tracking prey, or sensing a change in weather before it arrives). Gear: Dungeoneering Toolkit, a woven charm from the Towering Wood.
 - **Gatekeeper Shifter** — +1 WIS. Talents: *Ward the Threshold* (Advantage detecting aberrant or planar-touched creatures and influence, tied to the Gatekeeper druidic tradition's original purpose), *Old Oath* (real standing with Gatekeeper circles in the Eldeen Reaches). Gear: a warding totem, dried herbs used in Gatekeeper rites.
 - **Droaam Shifter** — +1 CON. Talents: *Hard Ground* (Advantage resisting intimidation or coercion — survival in Droaam selects for this), *Known to the Daughters* (a real, if wary, reputation within Droaam's power structure under the Daughters of Sora Kell). Gear: a token marking safe passage through a specific Droaam territory, a scavenged trophy.
 - **Kalashtar Dreamwarden** — +1 WIS. Talents: *Dreamward* (sense psychic intrusion), immune to normal shard-touch (their power doesn't come from dust). Gear: meditation focus.
@@ -1153,28 +1153,51 @@ All Houses now have a Least Mark defined.
 
 ---
 
-## Weapons & Damage
+## Inventory & Items
 
-**Universal formula:** `Damage = weapon die + relevant stat bonus` — applies to PCs *and* monsters, no exceptions. Keeping everyone on one shared economy means a fight's outcome is legibly about stat/weapon/armor choices, not one side quietly using different math.
+### Item Slots
 
-| Weapon tier | Die | Avg | Examples |
-|---|---|---|---|
-| Light | 1d4 | 2.5 | dagger, shortsword, hand crossbow |
-| Medium | 1d6 | 3.5 | sword, axe, shortbow |
-| Heavy | 1d8 | 4.5 | maul, greatsword, a heavy crossbow or greatbow (ranged), a Syberist's primary attack spell |
-| Massive (monster-scale only) | 1d10 | 5.5 | natural weapons on large creatures |
+Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slots hold what's actively wielded (weapons, shields); body slots hold worn gear for easy access in combat (armor, secondary weapons, focuses); backpack slots hold everything else. To carry more, hire someone, or buy a cart or pack animal. **Retrieving an item from a backpack slot during combat costs an action** — an Agent's Many Pockets removes this cost.
 
-A Light weapon's damage roughly doubles on a maxed stat vs. bottoming out near 1 on a poor one — real weight per point of bonus. A Massive weapon feels proportionally less stat-dependent — appropriately "just hits hard" regardless of the wielder's build.
+- **Shards and coin are abstracted resources, not slot items** — tracked as numbers on the character sheet, never occupying a slot regardless of quantity.
+- **A slot holds one distinct item, or a reasonable stack of a single consumable type** — a quiver of arrows, several days of rations, a handful of torches.
+- **At capacity, picking up something new means dropping or stowing something else first.**
+- **Shield/Tower Shield sit in a hand slot**, same category as a weapon.
 
-**Heavy weapons are inherently Two-handed — closing a real gap.** An earlier draft left this unstated, which meant a Heavy weapon could theoretically be paired with a Shield (both damage *and* a Guard bonus), while Dual-attack builds (Dual-wield/unarmed) can never do that. Once caught, this directly undermined the justification for pricing Dual-attack's baseline above Heavy-weapon parity — if a single-Heavy-weapon build could optionally keep a shield anyway, it wasn't actually making the same "no shield, both hands committed" sacrifice a genuine two-weapon build makes. Stating Heavy as always Two-handed closes the loophole and makes the sacrifice symmetric between the two playstyles, which is what the Dual-attack calibration below now assumes.
+### Weapons
 
-**All ranged weapons are Two-handed too, regardless of tier — no Light/Medium exception.** An earlier draft assumed a Light ranged weapon (a hand crossbow) could stay one-handed and pair with a Shield, on the logic that firing a single already-loaded shot only takes one hand. That doesn't hold up: reloading — drawing the string back — needs both hands at every tier, and a weapon you can't reload one-handed isn't actually a one-handed weapon in any way that matters at the table. Rather than model a separate "one-handed to fire, two-handed to reload" timing subsystem this doc has no other machinery for, the clean rule is simpler: **any ranged weapon, any tier, requires both hands.** Weapon-and-shield becomes a genuinely melee-exclusive identity (Light/Medium melee only); ranged trades the shield's protection for range and precision instead — a real, clean tradeoff between playstyles rather than a tier-dependent patchwork with a realism gap hiding in it.
+**Universal formula:** `Damage = weapon die + relevant stat bonus` — applies to PCs and monsters, no exceptions.
 
-**Shield: +1 Guard, occupies a hand slot, −1 Initiative. Tower Shield: +2 Guard, occupies a hand slot, −3 Initiative** — matches Medium armor's Guard value rather than Heavy's, since it's a bigger, harder-to-maneuver shield but still "just a shield," not full-body armor; the steep Initiative penalty already carries most of its real cost. Both referenced multiple times elsewhere in this doc (Initiative, Shield Bash) without ever stating their own Guard contribution — filled in here, confirmed and closed.
+| Weapon tier | Die | Avg |
+|---|---|---|
+| Light | 1d4 | 2.5 |
+| Medium | 1d6 | 3.5 |
+| Heavy | 1d8 | 4.5 |
+| Massive (monster-scale only) | 1d10 | 5.5 |
+
+| Tier | Weapon | Notes |
+|---|---|---|
+| Light | Dagger | Thrown |
+| Medium | Club | — |
+| Medium | Spear | Versatile, Thrown (Heavy die two-handed) |
+| Medium | Staff | Versatile |
+| Heavy | Sword | Two-handed |
+| Heavy | Axe | Thrown, Two-handed |
+| Heavy | Mace | Two-handed |
+| Heavy | Glaive | Two-handed |
+| Light (ranged) | Sling | Ammo |
+| Medium (ranged) | Shortbow | Ammo |
+| Heavy (ranged) | Crossbow | Ammo |
+
+**Heavy weapons are inherently Two-handed. All ranged weapons are Two-handed too, regardless of tier.** Weapon-and-shield is a melee-exclusive combination (Light/Medium melee only); ranged trades a shield's protection for range and precision.
+
+**Shield: +1 Guard, occupies a hand slot, −1 Initiative. Tower Shield: +2 Guard, occupies a hand slot, −3 Initiative.**
+
+**Melee vs. ranged is a separate axis from which stat governs the weapon.** A DEX-based melee weapon (a finesse rapier, a dagger) is every bit as much a melee weapon as a STR-based one — it stays subject to melee's Two-handed rules and can pair with a Shield. Only genuinely ranged weapons (bows, crossbows) are inherently Two-handed and can never pair with a Shield.
+
+**Casting stat and weapon stat are always separate, never merged.** A Syberist's cast stat is used only for spellcasting; a physical weapon they also carry uses STR or DEX independently, chosen on its own merits, even when the casting stat is the character's defining stat.
 
 ### Weapon Proficiency
-
-**A real gap, not a design choice: confirmed source explicitly gates weapons by attribute** (Maul requires Body 4+, Great Sword requires Body 6+, Shortbow/Crossbow require Agility 4+, Longbow requires Agility 6+), the same way Armor & Encumbrance's Medium/Heavy tiers require CON — but that requirement was never carried over to weapons in this doc's reskin. **The source's actual structure gives each weapon type two distinct thresholds** (a lower one and a higher one) — an earlier draft only carried that two-threshold pattern over for ranged weapons (Medium/Heavy) and gave melee a single flat gate at Heavy only, an incomplete, asymmetric translation rather than a deliberate choice. Corrected below so melee mirrors ranged's structure exactly, mapped onto this table's four tiers and translated to the −3..+3 bonus scale:
 
 | Tier | Melee requirement | Ranged requirement |
 |---|---|---|
@@ -1183,7 +1206,29 @@ A Light weapon's damage roughly doubles on a maxed stat vs. bottoming out near 1
 | Heavy | STR bonus ≥ +1 | DEX bonus ≥ +1 |
 | Massive | monster-scale only, N/A for PCs | monster-scale only, N/A for PCs |
 
-**Mundane gold pricing — decided during Character Creator tool-building, flushed back here since it never made it into the actual rules text.** A player reading only this document had no way to know what a sword costs; this closes that gap.
+### Weapon Keywords
+
+- **Ammo** — requires ammunition carried in a body slot.
+- **Blast** — deals its damage to every creature in a zone at once. Uses the existing potency-tier "multiple targets" damage line.
+- **Recharge X** — needs time to recharge after use. At the start of each Round, roll a d10; on a result ≤X, it's recharged.
+- **Thrown** — can be thrown at a target in an adjacent zone even if otherwise melee-only.
+- **Two-handed** — takes up both hand slots.
+- **Versatile** — has two damage entries; deals the first one-handed, the second two-handed.
+
+**Ranged weapons of every type are capped at the same zone or one adjacent zone, full stop — no weapon reaches further than that.**
+
+### Armor
+
+| Lever | Light | Medium | Heavy |
+|---|---|---|---|
+| **Guard bonus** | +1 | +2 | +3 |
+| **Requirement** | none | CON bonus ≥ 0 | CON bonus ≥ +1 **and** Wayfarer's +2 Guard bonus |
+| **Slot cost** | 1 body slot | 1 body slot | **2 body slots** |
+| **Mobility tax** | none | −1 on Agility-type checks | −1 Agility checks **+** moving to an adjacent zone costs your whole action |
+| **Availability** | buyable anywhere | buyable anywhere | requires a **House Cannith commission or military contact** |
+| **Usage/maintenance** | d6 after combat, 1–3 marks a use | same, repair cost scales with purchase price | same, largest shards-sink given Heavy's higher base cost |
+
+### Pricing
 
 | Item | Price |
 |---|---|
@@ -1196,76 +1241,59 @@ A Light weapon's damage roughly doubles on a maxed stat vs. bottoming out near 1
 | Shield | 10gp |
 | Tower Shield | 60gp |
 
-Weapon and armor pricing scales with tier, Heavy costing roughly 5–6× Light — proportionate to the real mechanical gap between tiers, without needing its own derivation the way shard/magic-item pricing does (see Economy and Magic Items for that side of the economy). Shield and Tower Shield are priced at the Light and Heavy *weapon* price points respectively, not armor — they're hand-slot items, not body-slot ones.
-
-**Melee vs. ranged is a separate axis from which stat governs the weapon — worked out during Character Creator tool-building, flushed back here.** DEX doesn't automatically mean "ranged." A DEX-based *melee* weapon (a finesse rapier, a dagger) is every bit as much a melee weapon as a STR-based one — it uses DEX for its attack roll and damage, but stays subject to melee's Two-handed rules (only Heavy is Two-handed) and can pair with a Shield exactly like a STR weapon can. Only genuinely *ranged* weapons (bows, crossbows — always DEX-governed) are inherently Two-handed at every tier and can never pair with a Shield. An earlier draft conflated "uses DEX" with "is ranged," which silently blocked Shields for finesse-melee builds that should have had full access to them. When building a character, decide melee-or-ranged first, then which stat governs it — not the other way around.
-
-**Casting stat and weapon stat are always separate concepts, never merged — the same tool-building session surfaced this too.** A Syberist's cast stat (INT/CHA/WIS by tradition) is used only for spellcasting; if that same character also carries a physical weapon, the weapon uses STR or DEX like anyone else's, chosen independently. This holds even when the casting stat is conceptually the character's "main" stat — a Wildspoken Syberist with WIS as their defining stat still rolls STR or DEX for a mace they picked up, never WIS. An earlier draft conflated the two, treating a Syberist's spell-attack formula as if it were "the weapon," which hid the fact that any caster can carry and use a real weapon as a genuinely separate option, governed by its own stat entirely.
-
-This mirrors the source's actual asymmetry rather than inventing a symmetric one: melee only gates at the top tier (a Sword or Axe needs no particular strength, only a Maul does), while ranged weapons gate starting a tier earlier and tighten further at the top — matching how Shortbow and Crossbow both required Agility 4+ in the source, with Longbow alone stepping up to 6+. Same as armor's CON gate: this is a hard requirement to equip the weapon at all, not a soft penalty for using it anyway.
-
 ### Critical Hits
 
-**Confirmed source triggers a crit off rolling max damage on the weapon's damage die** — which doesn't map cleanly onto this system, since TEA's confirmed combat is Auto-Hit (no attack roll to hook a crit trigger onto). This table's Roll-to-Hit fork has an attack roll to work with, so the trigger moves there instead: **doubles on the to-hit roll** (both d10s show the same value) **on a successful hit** is a critical — **maximum weapon damage, no damage roll.** For Advantage/Disadvantage (3d10, keep the best/worst two), doubles are checked on whichever two dice are actually kept, not all three rolled.
+**Doubles on the to-hit roll** (both d10s show the same value) **on a successful hit** is a critical — **maximum weapon damage, no damage roll.** For Advantage/Disadvantage (3d10, keep the best/worst two), doubles are checked on whichever two dice are actually kept.
 
-**Any successful hit deals a minimum of 1 damage, regardless of die result or negative stat bonus — a universal floor, not specific to any one weapon, spell, or interaction.** Surfaced while testing a proposed Artificer mechanic (a low die roll combined with a negative stat pushed a confirmed hit to 0 effective damage), but the gap was never actually about that one case — nothing anywhere in this document previously guaranteed a landed hit does *something*. A hit that deals zero damage reads as a miss with extra steps; this closes that regardless of where in the system it could occur.
+**Any successful hit deals a minimum of 1 damage, regardless of die result or negative stat bonus** — a universal floor.
 
-This keeps crits rare and exciting (10% of all possible 2d10 outcomes are doubles at all, further filtered by needing to hit) without needing a second die-based system layered on top of the existing to-hit roll.
+### Toolkits & Usage
 
-### Item Slots
+**Every item — weapons, armor, toolkits, torches, rations — has three usage dots. When all three are filled, it's depleted or destroyed.**
 
-**Confirmed from source, ported directly — previously only referenced piecemeal (e.g. "Heavy armor takes 2 body slots") without ever stating the container it counts against.** Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slots hold what's actively wielded (weapons, shields); body slots hold worn gear for easy access in combat (armor, secondary weapons, focuses); backpack slots hold everything else. To carry more, hire someone, or buy a cart or pack animal. **Retrieving an item from a backpack slot during combat costs an action** — an Agent's Many Pockets removes this cost.
+- **Weapons/Armor/Ammo** — roll a d6 after combat for each item used; on a 1–3, mark a dot.
+- **Torches/Light sources** — mark a dot whenever a relevant exploration roll calls for it.
+- **Rations** — mark a dot when taking a long rest without first taking the time to hunt or forage.
+- **Toolkits** — mark a dot every time it's actually used for its purpose.
+- **Everything else** — GM's call.
 
-**Four things the container definition above never actually stated, previously left to inference:**
-- **Shards and coin are abstracted resources, not slot items.** Tracked as numbers on the character sheet, never occupying a slot regardless of quantity — a caster carrying a Major-tier cast's worth of refined shards doesn't need 50+ slots for it, same as 200 starting gold was never meant to occupy 200 slots.
-- **A slot holds one distinct item, or a reasonable stack of a single consumable type** — a quiver of arrows, several days of rations, a handful of torches. Not weight-tracked, not itemized down to the individual arrow; "reasonable for its category" is the same abstraction this whole system already uses everywhere else (Guard instead of hit locations, zones instead of grid squares).
-- **At capacity, picking up something new means dropping or stowing something else first** — no slot magically appears; a full inventory is a real constraint, not just a number that stops mattering once reached.
-- **Shield/Tower Shield sit in a hand slot**, same category as a weapon (see Weapons & Damage).
+**Weapons and armor can be fully repaired for a quarter of their original price.** Depleted toolkits and consumables need outright replacing.
 
-### Weapon Keywords
+**Selling:** items generally sell for half their listed price. A better price can be bargained via a CHA-based check, or by first establishing real rapport with the buyer.
 
-**Confirmed source keywords, collapsed into this table's simplified tiers but never individually restated.** Reintroduced here since they add real texture the tier system alone doesn't capture:
+**Toolkits are bundles of similarly-themed items that share one item slot.**
 
-- **Recharge X** — needs time to recharge after use. At the start of each Round, roll a d10; on a result ≤X, it's recharged.
-- **Two-handed** — takes up both hand slots.
-- **Versatile** — has two damage entries; deals the first one-handed, the second two-handed.
-- **Thrown** — can be thrown at a target in an adjacent zone even if otherwise melee-only.
-- **Blast** — deals its damage to every creature in a zone at once, rather than a single target. Mechanically, this is already covered by the existing potency-tier damage split (Moderate/Major/Mythic each state a lower "multiple targets" damage figure alongside the single-target one) — a Blast-form spell just means using that multiple-target line by default rather than needing a separate area-effect subsystem.
+| Kit | Contents | Cost |
+|---|---|---|
+| **Rations** | Three days of food and water | 3gp |
+| **Torches** | Lights your zone; must be held in a hand slot | 1gp |
+| **Glowmoss Pod** | A squeezed plant pod, teal bioluminescent light, unaffected by wind or water; uses a body slot instead of a hand slot | 5gp |
+| **Ward Mask** | Filters hazardous airborne spores, mist, or dust — Mournland fringe, Droaam's Bloodmarsh, similar hazard zones | 25gp |
+| **Healing Toolkit** | Bandages, needle and thread, alcohol, a bone-setting splint | 15gp |
+| **Dungeoneering Toolkit** | Rope, crowbar, hammer, spikes, lockpicks | 20gp |
+| **Scribing Toolkit** | Writing board, ink, pen, parchment, sealing wax | 10gp |
+| **Navigation Toolkit** | Compass, regional maps, a small collapsible spyglass | 25gp |
+| **Cooking Toolkit** | Salt and spices, cutlery, a cast-iron pot, cooking oil | 8gp |
+| **Disguise Toolkit** | Make-up, a wig, a spare set of clothes at a different social tier, minor prosthetics | 15gp |
 
----
+### Magic Items
 
-## Magic Items
+**Two categories, both reusing the existing spell potency cost logic.**
 
-**Two categories, both reusing the existing spell potency cost logic — no new pricing system needed.**
+**1. Charged/Consumable items** (potions, scrolls, one-use charms) — priced at the normal spell potency casting cost for the tier they replicate.
 
-**1. Charged/Consumable items** (potions, scrolls, one-use charms) — priced at the **normal spell potency casting cost for the tier they replicate**, direct reuse, zero new logic. A Minor-tier healing potion costs what a Minor cast costs (2d6 shards). It's literally "a spell someone already paid for, bottled."
-
-**2. Permanent items** (weapons, wondrous items, worn magic) — priced at roughly **10–20× the equivalent tier's average casting cost**, representing pre-paying for unlimited future uses instead of paying per cast. **Uses whichever shard economy powers that tier's casting** (see Economy) — Cantrip and Spark permanent items are priced in **raw** shards, Minor and above in **refined** shards. An earlier draft of this table priced every tier in the same unit, which silently contradicted itself once the raw/refined split existed: "near-free" Cantrip items and "minor trinket" Spark items, read in the refined-shard economy the Minor+ rows are validated against, would actually cost 10–50gp and 200–400gp — a real tradesman's wage, not pocket change. Fixed below.
-
-**Validation, not an arbitrary multiplier:** applying 10–20× to Minor tier's average cost (2d6 ≈ 7 refined shards) gives 70–140 refined shards — and TEA's actual confirmed Rare Weapons table already prices its items at **60–135 shards.** That's close enough to validate the multiplier rather than needing independent justification — the confirmed source was already pricing permanent magic weapons roughly like "10–20× a Minor cast," it just never stated the logic. This makes it explicit and extends it to every tier.
+**2. Permanent items** (weapons, wondrous items, worn magic) — priced at roughly **10–20× the equivalent tier's average casting cost.** Cantrip and Spark permanent items are priced in raw shards, Minor and above in refined shards.
 
 | Tier | Casting avg | Permanent item price (10–20×) | Shard economy | What it looks like |
 |---|---|---|---|---|
-| Cantrip | 0 (free) | Near-free, 1–5 shards | Raw (≈5cp each) — truly pocket change | Everbright lanterns, minor household charms — Eberron's "magic as infrastructure" flavor, not adventuring gear |
-| Spark | ~2 | 20–40 shards | Raw (≈1–2gp total) | A minor but real trinket — self-igniting torch, Advantage on one narrow check type |
-| Minor | ~7 | **70–140 shards** | Refined (≈700–1,400gp) | The reskinned Rare Weapons table below — matches confirmed pricing almost exactly |
-| Moderate | ~14 | 140–280 shards | Refined (≈1,400–2,800gp) | A serious combat item with real ongoing spell-tier power |
-| Major | ~52.5 | 525–1050 shards | Refined (≈5,250–10,500gp) | Rare, quest-reward tier, not something sitting on a shelf |
-| Mythic | ~350 | 3500–7000 shards | Refined (≈35,000–70,000gp) | Artifact-tier — essentially never purchased, only found or GM-placed, same design philosophy as Siberys Marks |
+| Cantrip | 0 (free) | Near-free, 1–5 shards | Raw (≈5cp each) | Everbright lanterns, minor household charms |
+| Spark | ~2 | 20–40 shards | Raw (≈1–2gp total) | A minor but real trinket |
+| Minor | ~7 | 70–140 shards | Refined (≈700–1,400gp) | See table below |
+| Moderate | ~14 | 140–280 shards | Refined (≈1,400–2,800gp) | A serious combat item |
+| Major | ~52.5 | 525–1050 shards | Refined (≈5,250–10,500gp) | Rare, quest-reward tier |
+| Mythic | ~350 | 3500–7000 shards | Refined (≈35,000–70,000gp) | Artifact-tier, GM-placed only |
 
-**Cantrip-tier permanent items are deliberately not adventuring gear** — they're the everyday-magic worldbuilding texture already established in Magic Baseline, available to basically anyone in a settlement, not loot a party needs to hunt down.
-
-### Magic Items (Eberron-original, replacing an earlier TEA-copied list)
-
-**An earlier draft of this table copied TEA's actual confirmed Rare Weapons entries directly — same damage dice, same costs, just reflavored names.** Caught as a real problem, not a style note: several entries dealt damage at or above Massive tier (1d10–1d12), directly contradicting this document's own rule that Massive is monster-scale only, N/A for PCs. The pricing was also never independently verified — it validated itself by comparing against the very numbers it had copied, not an actual check that "1 ink" and "1 refined shard" represent comparable value, and the resulting gold-value implications (600–1350gp per item) were never checked against this system's own 200gp starting-wealth economy.
-
-**A deeper problem than either of those: several entries implicitly worked like flat stat bonuses (a "+X to hit" or "+X damage" effect sitting permanently on an item) — a direct D&D d20 holdover.** In a d20 system a flat +1 is exactly 5%, clean and uniform. This system's 2d10 bell curve has no such uniform conversion, and more importantly, this document's own Core Resolution explicitly states its central design constraint: situational difficulty is represented by shifting the Target or granting Advantage/Disadvantage, **never by stacking modifiers.** A permanent flat bonus sitting on a magic item is precisely the pattern that principle exists to rule out — it just hadn't been checked against magic items specifically until now.
-
-**Redesigned from scratch, Eberron-original rather than TEA-derived, using the existing Magic Items pricing framework (10–20× tier's average cost) applied fresh rather than reverse-engineered from copied numbers.** Every entry uses only the same four levers everything else in this document uses: Advantage/Disadvantage, a Target shift, a new capability, or a resource effect — never a flat roll bonus. Deliberately spans the full range Eberron's own worldbuilding implies: Cantrip-tier items are genuine everyday infrastructure (lit streets, self-cleaning laundry), not adventuring gear; Mythic-tier items are unique, one-of-a-kind, GM-placed artifacts, never something with a shop price at all.
-
-**Magic item creation also requires more than shards and time — see the Artificer crafting rules above for the real workspace/resources precondition.**
-
-**Cantrip tier (1–5 raw shards — passive only, no adventuring utility, available to basically anyone):**
+**Cantrip tier (1–5 raw shards):**
 
 | Item | Effect |
 |---|---|
@@ -1273,7 +1301,7 @@ This keeps crits rare and exciting (10% of all possible 2d10 outcomes are double
 | **Warmhearth Coal** | Never cools, needs no fuel |
 | **Cleaning Rune Cloth** | A garment that never needs washing |
 
-**Spark tier (20–40 raw shards — a real but narrow trinket):**
+**Spark tier (20–40 raw shards):**
 
 | Item | Effect |
 |---|---|
@@ -1289,26 +1317,60 @@ This keeps crits rare and exciting (10% of all possible 2d10 outcomes are double
 | **Silver Flame Brand** | Once per scene, Advantage on your next attack against a creature that's harmed an ally this fight |
 | **Kalashtar Dreaming Coil** | Once per scene, reroll a failed WIS-based check once |
 
-**Moderate tier (140–280 refined shards — a serious combat item):**
+**Moderate tier (140–280 refined shards):**
 
 | Item | Effect |
 |---|---|
 | **Cannith Prototype Gauntlet** | Once per scene, your next attack automatically counts as a critical if the target already has an open Wound |
 | **Blademarked Warblade** (Valenar) | Once per scene, mark an enemy: you and allies have Advantage against them until the encounter ends |
 
-**Major tier (525–1050 refined shards — rare, quest-reward):**
+**Major tier (525–1050 refined shards):**
 
 | Item | Effect |
 |---|---|
 | **Mournland Reliquary Shard** | Once per scene, trigger a specific Major-tier Effect spell, pre-loaded at creation |
 | **Dhakaani Warmask** | Once per scene, force up to 3 enemies in your zone to target you this Round |
 
-**Mythic tier (3500–7000 refined shards — unique, GM-placed only, never purchased):**
+**Mythic tier (3500–7000 refined shards, unique, GM-placed only):**
 
 | Item | Effect |
 |---|---|
 | **The Progenitor's Cog** | Permanently +1 Contraption capacity; once per scene, trigger a stored Contraption without spending it |
 | **Shard of the Twelve** | Once per campaign arc (GM's call), manifest any House's Least Mark for one scene, regardless of the wielder's own Background |
+
+---
+
+### Design Notes: Inventory & Items
+
+**Weapons — Heavy is inherently Two-handed.** An earlier draft left this unstated, which meant a Heavy weapon could theoretically pair with a Shield (both damage and a Guard bonus), while Dual-attack builds never can. This directly undermined the justification for pricing Dual-attack above Heavy-weapon parity. Stating Heavy as always Two-handed closes the loophole.
+
+**Weapons — all ranged weapons are Two-handed at every tier, no exception.** An earlier draft assumed a Light ranged weapon could stay one-handed on the logic that firing an already-loaded shot only takes one hand. Reloading needs both hands at every tier regardless, so the clean rule is simpler: any ranged weapon, any tier, requires both hands.
+
+**Weapons — Shield/Tower Shield's own Guard values.** Referenced multiple times elsewhere (Initiative, Shield Bash) without ever stating their own Guard contribution until this pass. Matches Medium armor's Guard value rather than Heavy's — a bigger, harder-to-maneuver shield, but still "just a shield."
+
+**Weapons — named list added.** TEA's actual confirmed weapon list (Dagger, Club, Spear, Staff, Sword, Axe, Mace, Glaive, Sling, Shortbow, Crossbow) was sorted into this table's four tiers by matching damage die. TEA's own Maul (d10), Great Sword (2d6), and Longbow (d10) all exceed this document's PC-accessible Heavy cap and are excluded, the same already-established rule that makes Massive tier monster-scale only.
+
+**Weapon Proficiency — a real gap, not a design choice.** Confirmed source explicitly gates weapons by attribute (Maul requires Body 4+, Great Sword requires Body 6+, Shortbow/Crossbow require Agility 4+, Longbow requires Agility 6+), the same way armor's Medium/Heavy tiers require CON — but this was never carried over to weapons in an earlier draft, which only applied the two-threshold pattern to ranged and gave melee a single flat gate. Corrected so melee mirrors ranged's structure exactly, matching the source's actual asymmetry (melee only gates at the top tier; ranged gates a tier earlier and tightens further at the top).
+
+**Weapons — melee/ranged as a separate axis from stat.** An earlier draft conflated "uses DEX" with "is ranged," which silently blocked Shields for finesse-melee builds that should have had full access. Decide melee-or-ranged first, then which stat governs it, not the other way around.
+
+**Weapons — casting stat vs. weapon stat.** An earlier draft treated a Syberist's spell-attack formula as if it were "the weapon," which hid the fact that any caster can carry and use a real weapon as a genuinely separate option, governed by its own stat entirely — even a Wildspoken Syberist with WIS as their defining stat still rolls STR or DEX for a mace they picked up.
+
+**Pricing — mundane gold values.** Decided during Character Creator tool-building, flushed back here since it never made it into the actual rules text. A player reading only this document had no way to know what a sword costs.
+
+**Critical Hits — the trigger had to move.** Confirmed source triggers a crit off rolling max damage on the weapon's die, which doesn't map here since TEA's confirmed combat is Auto-Hit (no attack roll to hook a crit trigger onto). This document's Roll-to-Hit fork has an attack roll to work with, so the trigger moved there: doubles on the to-hit roll.
+
+**Critical Hits — the damage floor.** Surfaced while testing a proposed Artificer mechanic (a low die roll combined with a negative stat pushed a confirmed hit to 0 effective damage), but the gap was never actually about that one case — nothing anywhere previously guaranteed a landed hit does *something*.
+
+**Toolkits & Usage — a real gap, not a design choice.** This system referenced specific kits incidentally throughout Backgrounds gear (a Healing Toolkit, a Scribing Toolkit) and even mechanically, but never actually defined what a kit costs, how it's used up, or what the full list even is. TEA's real answer is elegant and uniform — one system for every item type, not two.
+
+**Toolkits & Usage — pricing, corrected twice before landing right.** First pass converted via a labor-wage anchor (TEA's "1 drop/day" vs this doc's "2sp/day"), ~10× too cheap once checked. Second pass tried deriving a "gp per TEA drop" rate from matching named weapons by name (Dagger→Light, Sword→Medium), which looked clean but wasn't — matched by actual damage die instead, the rate scattered from 2 to over 8gp per drop, meaning no single clean conversion factor exists in the source data. Abandoned the TEA-drop conversion entirely; priced instead by genre-standard relative value against this document's own fixed weapon/armor anchors, the same category of judgment call used to price those tables originally. The magic-side economy (1 refined shard = 10gp, 1 raw shard = 5cp) stays completely separate — mundane gear priced against mundane gear, casting priced against casting.
+
+**Magic Items — pricing validation.** Applying 10–20× to Minor tier's average cost (2d6 ≈ 7 refined shards) gives 70–140 refined shards, and TEA's actual confirmed Rare Weapons table already priced its items at 60–135 shards — close enough to validate the multiplier.
+
+**Magic Items — the Eberron-original replacement.** An earlier draft copied TEA's actual confirmed Rare Weapons entries directly. Caught as a real problem, not a style note: several entries dealt damage at or above Massive tier, directly contradicting this document's own rule. The pricing also validated itself against the very numbers it had copied, never an independent check. A deeper problem: several entries implicitly worked like flat stat bonuses — a direct D&D d20 holdover, and precisely the pattern this document's own "shift the Target or grant Advantage, never stack modifiers" principle exists to rule out. Redesigned from scratch, Eberron-original rather than TEA-derived, using only the same four levers everything else in this document uses: Advantage/Disadvantage, a Target shift, a new capability, or a resource effect — never a flat roll bonus.
+
+**Armor — the five-lever design.** The question this section answers: what actually stops every character from just wearing the biggest armor available? Nothing does by default — Guard scales cleanly with armor value with no downside, so the min-max answer is always "wear Heavy." Five independent levers fix that, stacked so no single one is a hard wall, but together they make Heavy armor the correct choice only for a character actually built to carry it: Requirement (CON-gated, so a squishy build can't equip it without investing a stat point elsewhere), Slot cost (Heavy eats a second body slot, trading away a dragonmark focus or talisman even once qualified), Mobility tax (directly punishes the zone-based skirmishing this system is built around — no move-then-act, and it now taxes Initiative too), Availability (ties the choice into the setting — a House Cannith commission or military contact is a Background payoff, not just shards), and Usage/maintenance (Heavy's higher price tag makes the ongoing repair tax proportionally worse than Light's, even at identical wear odds). Net result: a dedicated frontline Wayfarer who's paid all five costs is the only build for whom Heavy's Guard bonus is actually worth it — the system discourages "everyone wears Heavy" through cost math, not a forbidding rule.
 
 ---
 
@@ -1412,7 +1474,7 @@ Each Scar still means something real happened — a genuine piece of a character
 | CHA — Presence | Force of personality throws off an attacker's aim and timing. |
 
 **One remaining constraint:**
-- **The Heavy/Medium armor CON requirement (Armor & Encumbrance, Lever 1) stays tied to actual CON specifically**, regardless of Guard Stat choice — that requirement is about physically bearing the weight, a different question from what a character's Guard represents. A DEX-Guard character with poor CON is still locked out of Heavy armor.
+- **The Heavy/Medium armor CON requirement (Inventory & Items, Armor) stays tied to actual CON specifically**, regardless of Guard Stat choice — that requirement is about physically bearing the weight, a different question from what a character's Guard represents. A DEX-Guard character with poor CON is still locked out of Heavy armor.
 
 This extends the "reward non-primary stats" principle (already built out for Wayfarer Grit Maneuvers) straight into the core HP mechanic — a CHA-Guard Wayfarer leaning into Guardian's Challenge plays like a battlefield commander; a WIS-Guard Syberist plays like a wary, hard-to-catch-off-guard caster; an INT-Guard Agent plays like a tactician who's always a half-step ahead. Same archetype, meaningfully different feel, purely from this one choice plus stat placement.
 
@@ -1587,28 +1649,6 @@ A Heavy-armored Wayfarer wielding a Heavy weapon and a Tower Shield rolls 2d10 �
 
 ---
 
-## Armor & Encumbrance
-
-**The question this section answers: what actually stops every character from just wearing the biggest armor available?** Nothing does, by default — Guard scales cleanly with armor value with no downside, so the min-max answer is always "wear Heavy." Five independent levers fix that, stacked so no single one is a hard wall, but together they make Heavy armor the *correct* choice only for a character actually built to carry it.
-
-| Lever | Light | Medium | Heavy |
-|---|---|---|---|
-| **Guard bonus** | +1 | +2 | +3 |
-| **1. Requirement** | none | CON bonus ≥ 0 | CON bonus ≥ +1 **and** Wayfarer's +2 Guard bonus |
-| **2. Slot cost** | 1 body slot | 1 body slot | **2 body slots** |
-| **3. Mobility tax** | none | −1 on Agility-type checks | −1 Agility checks **+** moving to an adjacent zone costs your whole action (no move-then-act) |
-| **4. Availability** | buyable anywhere | buyable anywhere | requires a **House Cannith commission or military contact** — a Background/relationship, not just shards |
-| **5. Usage/maintenance** | d6 after combat, 1–3 marks a use (confirmed) | same, but repair cost scales with the higher purchase price | same, and the shards-sink is largest given Heavy's higher base cost |
-
-**Why this works as a whole system instead of one blunt rule:**
-- **Lever 1** means a squishy build literally can't equip Heavy without investing in CON first — it's build-gated, not archetype-locked, so a dedicated tank Syberist could theoretically qualify, but it costs them a stat point they'd rather spend elsewhere.
-- **Lever 2** means even a character who *can* wear Heavy is trading away a body slot that could hold a dragonmark focus, a secondary weapon, or a talisman — the survivability isn't free even once you qualify.
-- **Lever 3** directly punishes the zone-based skirmishing this table's combat system is built around (see Zones & Range) — Heavy armor turns off "move and attack in the same round," which is a real tactical cost, not just a flavor penalty. It also now taxes **Initiative** (above), so Heavy-armored characters consistently act later in turn order on top of being unable to reposition freely.
-- **Lever 4** ties the choice into the setting rather than just the character sheet — getting Heavy armor becomes a plot hook or a Background payoff (a Karrnathi Line Soldier or Kundarak Vault-Warden background likely already has the contact; everyone else has to go earn one).
-- **Lever 5** is the ongoing tax: real TEA's confirmed usage-dot system already makes gear wear down and need repair, and Heavy's higher price tag means that slow shards-bleed is proportionally worse for Heavy than Light, even though the wear odds are identical.
-
-**Net result:** a dedicated frontline Wayfarer who's invested CON, accepted the mobility tax, spent the slot, found the House contact, and can afford upkeep is the only build for whom Heavy armor's Guard bonus is actually worth its total cost. Anyone else paying all five costs for +3 Guard they can barely use (can't reposition, acts last, gave up a slot) is making a build mistake — which means the system discourages "everyone wears Heavy" through cost math, not through a rule forbidding it.
-
 ## Surprise & Ambushes
 
 **Confirmed from source:** before combat starts, the Seer determines if a side is surprised. If so, that side does not act in the first Round of combat.
@@ -1717,7 +1757,7 @@ While exploring a site or resting a Turn there, the GM **rolls a d6 every Turn**
 
 **Restructured around a fractal model** — attack bonus was dropped entirely as a monster stat. The reason PCs need a *bonus* rather than a target is that their target is fixed at 12 and the bonus is the changeable part across a whole sheet of different checks; a monster is the opposite — its target is the changeable part per-monster, with nothing else on its sheet that needs to stay consistent with a bonus. Since `2d10+bonus ≥ 12` and `2d10 ≥ 12−bonus` are the exact same math, this is a pure notation simplification, not a rules change — every number below still produces identical results to the original attack-bonus formulas, just with one fewer derived value to track.
 
-**Every monster gets one Base Target**, used by default for three separate purposes — being hit, attacking, and resisting Effect spells — shifted individually only when a specific monster's concept calls for an exception (see Enemy Generation Procedure). Damage is now a flat stated number, no longer derived from an accuracy bonus doing double duty (that dual-role was specifically a PC design choice — see Weapons & Damage — with no reason to import it onto monsters).
+**Every monster gets one Base Target**, used by default for three separate purposes — being hit, attacking, and resisting Effect spells — shifted individually only when a specific monster's concept calls for an exception (see Enemy Generation Procedure). Damage is now a flat stated number, no longer derived from an accuracy bonus doing double duty (that dual-role was specifically a PC design choice — see Inventory & Items — with no reason to import it onto monsters).
 
 | | Formula | Cadence |
 |---|---|---|
@@ -1770,7 +1810,7 @@ A start-to-finish checklist for building any new enemy, from a disposable mook t
 | Named, mid-tier threat | 8–12 |
 | Named, real boss | 12–20+ |
 
-**4. Pick a weapon tier** — Light/Medium/Heavy/Massive. Same damage-die table as PCs (Weapons & Damage), but **Massive is monster-exclusive** — Weapon Proficiency explicitly locks PCs out of it, so this fourth rung only ever applies here, not to anything a PC could pick up.
+**4. Pick a weapon tier** — Light/Medium/Heavy/Massive. Same damage-die table as PCs (Inventory & Items), but **Massive is monster-exclusive** — Weapon Proficiency explicitly locks PCs out of it, so this fourth rung only ever applies here, not to anything a PC could pick up.
 
 **5. Pick a flat damage bonus** — no longer tied to accuracy the way a PC's stat bonus is. Mooks: +0 to +1. Mid-tier named threats: +2 to +3. Real bosses: +4 (Rustmaw's benchmark).
 
@@ -2264,7 +2304,7 @@ Applied to the recurring glass-cannon case study, choosing INT (her Guard Stat) 
 - **Minor, lower-priority inconsistency found in the same sweep:** the "Worked Example: Combat (Design Evolution)" section describes a character's "Mending Ray" spell as closing a Wound — this reflects an early design iteration that predates the current "Wounds cannot be closed mid-combat" rule. Contained within clearly-historical narrative, not live rules text, so lower priority than the definitions above, but worth a cleanup pass if that section gets revisited.
 
 - ~~Monk-vs-Duelist PvP duel needs re-running~~ — **resolved, and expanded into a full four-way tournament.** The final roll-both-take-highest system (not just a recalibrated penalty) was validated with all four loadouts (Heavy two-handed, Versatile+Shield, Versatile+Tower Shield, Dual-attack) built off the identical stat roll with fair, comparable Grit toolkits — all four land within a tight 45–55% band against each other. See Dual-wield / Two-Weapon Fighting for the full results table.
-- ~~Tower Shield's Guard value~~ — **resolved: +2 Guard**, matching Medium armor's value (see Weapons & Damage).
+- ~~Tower Shield's Guard value~~ — **resolved: +2 Guard**, matching Medium armor's value (see Inventory & Items).
 
 - ~~Guard-refill-on-Wound recalibration still needed~~ — **done, full level 1–8 sweep run via `combat_benchmark.py`, and it surfaced something bigger than "confirmed safe."** A real gap was found and closed: "current Guard resets to 0 when a Wound opens" was used in every Monte Carlo test in this document but was never actually written as a rule — only "max Guard reduces by 2" was ever stated. Corrected to "current Guard refills to the new max, floor of 1" (see HP: Guard + Wounds). The benchmark tool now genuinely supports level-scaling (Vertical growth on the party, full Encounter Level Scaling on enemies, matching the doc's own formulas exactly) rather than testing level 1 only. **First pass used the wrong enemy baseline** (the tool's own Kolt/Highwater Road defaults rather than this table's actual Guard-7/atk+1 baseline) and produced numbers that looked right but weren't actually comparable — caught before being locked in, rerun against the correct matching stats. **Real result: 76.5–82.0% zero-death across levels 1, 2, 4, 6, and 8 — a tight, consistent band**, replacing the old cited 52.7–84.3%, which had a 32-point spread. The old spread wasn't just imprecise, it was hiding a real problem: the harsher reset-to-0 rule made *later* levels dramatically safer than early ones, invisible behind the wide old band. The corrected refill rule flattened the whole curve into something far more consistent across a career — level 1 specifically jumped from 52.7% to 76.5%, since refilling Guard instead of zeroing it matters most exactly when Guard pools are thin. Same specific squad (Highwater Road) used for every other benchmark validation in this document.
 - **Scar Table needs source verification.** Written in as a reconstruction from the general recalled shape (permanent disadvantage, d10, narrative results), not a re-verified transcription — the source PDF wasn't actively accessible when it was written. Worth a direct check against the actual source text in a future session if exact fidelity matters.
@@ -2294,5 +2334,5 @@ Applied to the recurring glass-cannon case study, choosing INT (her Guard Stat) 
 - **Aeshaan-style extreme glass cannons:** the Case Study confirms the system is consistent (not swingy) in killing a maximally fragile build under sustained focus fire even with perfect play. Worth an explicit table-level conversation about whether that's the intended stakes level for this campaign, or whether a soft minimum (e.g. no stat below −2 after placement, or a mandatory minimum Guard regardless of Guard Stat choice) should be house-ruled in for lower-lethality tables.
 - ~~Monster/encounter level scaling~~ — **resolved.** Three enemy-side levers (Guard, attack bonus, to-hit target) plus a matching third PC Wound slot at level 8 close the loop, further recalibrated after the Movement rule correction and again after the Guard-refill-on-Wound fix; the full level 1–8 curve now sits in a 76.5–82.0% zero-death band with no remaining cliff. See Enemy Design Philosophy → Encounter Level Scaling and Advancement.
 - ~~Agent and Syberist Wound-cycle interplay~~ — **both now tested.** Trophies validated by Monte Carlo (proportionate to a Basic-tier Grit Maneuver, see Advancement). Free spell names validated qualitatively (a narrative-fit test, not a combat-math one, since potency is negotiated at cast time regardless of which name is used) — a level-8 Syberist with 4 known names had a naturally-fitting option for every one of 3 tested challenge types (combat, defense, utility), while a level-1 Syberist with 1 name was boxed in for 2 of 3. This also surfaced a real gap now fixed: **Spell Name Acquisition** (Spell Names section) adds Diegetic Discovery as a third, shards-free method alongside the confirmed Ritual and Name-Crafting, plus lets starting/free names be chosen instead of rolled once Name-Crafting unlocks.
-- ~~Confirmed-source subsystems never touched by this doc~~ — **all resolved.** Item Slots (Weapons & Damage), Deprivation (HP: Guard + Wounds), Reaction Check (adapted to a real CHA check on the same target/Adv-Disadv as the rest of the system, not a flat d10), Travel & Exploration (full new section), Weapon Keywords and Blast-form spells (both clarified — Blast just means "use the potency tier's existing multi-target damage line," no separate subsystem needed) are all now written in.
+- ~~Confirmed-source subsystems never touched by this doc~~ — **all resolved.** Item Slots (Inventory & Items), Deprivation (HP: Guard + Wounds), Reaction Check (adapted to a real CHA check on the same target/Adv-Disadv as the rest of the system, not a flat d10), Travel & Exploration (full new section), Weapon Keywords and Blast-form spells (both clarified — Blast just means "use the potency tier's existing multi-target damage line," no separate subsystem needed) are all now written in.
 - **Death's Door rescue clock** (confirmed: a character who survives the 0-HP check still dies if not treated within a Turn by another character) — deliberately kept out of this doc's Guard/Wound "faints, rolls a Scar" resolution per an explicit design call, not an oversight, but worth noting the urgency this drops if a table wants it back.
