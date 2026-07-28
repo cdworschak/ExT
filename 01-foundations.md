@@ -32,6 +32,12 @@ A hack for running the Eberron setting using *The Electrum Archive* (TEA) rules.
 
 **Check format:** roll **2d10 + stat bonus**, succeed on **12 or higher**.
 
+**Advantage and Disadvantage never stack within a single roll, from any combination of sources — a genuinely universal rule that was only ever stated for one narrow case (Wound-based Disadvantage, see HP: Guard + Wounds) until now, despite applying everywhere.** A given roll has Advantage, Disadvantage, or neither — never "double Advantage" from two sources feeding the same roll, never a longer or deeper Disadvantage from two sources feeding the same roll. **If one specific roll would have both Advantage and Disadvantage from different origins at the same time, they cancel — roll normally, 2d10.**
+
+**This is strictly per-roll, not per-character — a distinction worth being explicit about, since the two are easy to conflate.** A character's *outgoing* attack roll (them attacking something) and an *incoming* attack roll against that same character (something else attacking them) are two entirely separate rolls made at different moments, even in the same round — they never interact, regardless of what's active on either side. A PC with Advantage on their own next attack (from Take Aim, say) and an enemy attacking that same PC with Disadvantage imposed on *that* roll (from Shield) are two unrelated instances — nothing cancels, because nothing is happening on the same roll. Cancellation only ever applies when a single specific roll would independently qualify for both at once, which is a narrower, rarer case than "this character has stuff active on them right now."
+
+This follows directly from the same design constraint stated above: situational modifiers are binary levers on a *roll*, never something that compounds with more sources or bleeds across separate rolls, the same way this document never lets flat numeric bonuses pile up either.
+
 ### Stat Bonus Generation
 
 **One method: roll. No standing alternative to switch to.** An earlier draft offered a free-choice fixed Array alongside rolling — dropped, because if a fixed safe option is always available *after* seeing the roll, rolling becomes strictly dominant (try for the higher ceiling, retreat to the safe option risk-free if it's bad), which quietly kills the alternative as a meaningful choice rather than preserving it as one. Worlds Without Number's approach — roll first, only a rare and narrow fix for a genuinely bad result — closes that exploit instead of creating a false choice.
@@ -94,10 +100,12 @@ Chosen over "roll twice, take the better/worse total" (needs 4 dice, swings slig
 | **Spark** (homebrew) | Flat 1–3 shards (GM sets exact cost by scope) | ~2 | Small, real, single-purpose mechanical effects — mitigate one hit, a brief minor buff, a tiny utility trick. **This is the rung that was missing**: previously any real mechanical effect had to either overreach into a supposedly-cosmetic Cantrip or overpay at Minor's 2d6-shard average. Spark closes that gap with its own honest price. |
 | Minor (confirmed) | 2d6 shards | 7 | Could be done without magic, but magic makes it reliable/fast — actually unlocking a door, real sustained light, scaling a sheer wall. **Attack spells: 1d6 + caster's stat bonus, single-target only** (matches a Medium weapon's exact formula) — corrected from an earlier "no damage" draft that broke the tier ladder once Spark was added below it: a higher, pricier tier can't be strictly worse for combat than a cheaper one below it. No multi-target option at this tier — Blast/AoE stays a Moderate+ privilege. |
 | Moderate (confirmed) | 2d6×2 shards | 14 | Beyond mundane possibility — lightning bolts, rapid healing, invisibility. 2d6 dmg single / d6 multiple. |
-| Major (confirmed) | 3d6×5 shards | 52.5 | Breaks the laws of nature — teleport, animate the dead. 4d6 dmg single / 2d6 multiple. |
-| Mythic (confirmed) | 4d6×25 shards | 350 | Alters the world — resurrection, natural disasters. 8d6 dmg single / 4d6 multiple. |
+| Major (confirmed) | 3d6×5 shards | 52.5 | Breaks the laws of nature — teleport, animate the dead. **Attack spells (single-target): automatically opens a Wound on a hit, bypassing Guard entirely, plus 2d6 secondary damage that still applies to whatever Guard remains.** Multi-target still uses pure damage (2d6 multiple, no auto-Wound) — the same concentrated-vs-spread trade-off every multi-target option in this doc already makes. |
+| Mythic (confirmed) | 4d6×25 shards | 350 | Alters the world — resurrection, natural disasters. **Attack spells (single-target): automatically opens two Wounds at once on a hit, bypassing Guard entirely, plus 4d6 secondary damage.** Against even a maximum 3-Wound-slot boss, one successful hit puts them on their last slot immediately. Multi-target still uses pure damage (4d6 multiple, no auto-Wound). |
 
 The dividing line above Cantrip is clean: **Cantrip never produces a mechanical effect, only color.** The moment a player wants an actual door unlocked (not just "light so I can see the lock"), that's at minimum Spark and costs shards. This keeps the "high magic as ambient baseline" feel without letting free casting substitute for a real spell — and now there's a proportionate price for small-but-real effects instead of forcing them to either not count or cost 3–4× too much.
+
+**Major and Mythic tier single-target damage, corrected — the raw numbers were being wasted, not overpowered.** Checked directly against the recalibrated boss Guard baseline (see Encounter Level Scaling): the old Major tier (4d6, avg 14) dealt **477–750% of a typical boss's entire Guard pool in one hit**, across every level tested. That sounds broken, but it wasn't actually doing anything extra — opening a Wound is a binary event (any overflow beyond the first point that exceeds Guard just opens one Wound and refills to the new max), so a hit at 750% of Guard has the *exact same mechanical result* as a hit that overflows by a single point. All that excess damage was pure waste, discarded the moment Guard hit zero. **Fixed by spending that power on something that isn't capped, instead of a bigger number that gets thrown away:** Major tier now automatically opens a Wound on any successful hit, bypassing Guard entirely, with a smaller secondary damage number (2d6) that still meaningfully interacts with whatever Guard remains. Mythic tier opens two Wounds at once — against even a maximum 3-Wound-slot boss, one successful cast puts them on their last slot immediately, genuinely matching "alters the world" instead of just being a larger version of the same wasted overkill. Multi-target use at both tiers keeps its existing pure-damage line unchanged, preserving the concentrated-single-target-vs-spread-multi-target trade-off already established everywhere else Blast-form effects appear.
 
 ### Shard Bolt (Spark-tier attack cantrip)
 
@@ -450,9 +458,30 @@ Net effect: a support-leaning Syberist's actual casting load (heals, wards, buff
 |2.7|Automaton|4.7|Mold|6.7|Housing|8.7|Escapement|
 |2.8|Clockwork|4.8|Cast|6.8|Panel|8.8|Boiler|
 
+**Aberrant (Aberrant Mark casters — corruption, mutation, instability, House Tarkanan-adjacent):**
+
+| d8.d8 | Aberrant Noun | d8.d8 | Aberrant Noun | d8.d8 | Aberrant Noun | d8.d8 | Aberrant Noun |
+|---|---|---|---|---|---|---|---|
+|1.1|Tarkanan|3.1|Feedback|5.1|Vessel|7.1|Crease|
+|1.2|Corruption|3.2|Backlash|5.2|Cavity|7.2|Ripple|
+|1.3|Mutation|3.3|Flicker|5.3|Shell|7.3|Throb|
+|1.4|Scale|3.4|Tremor|5.4|Carapace|7.4|Ache|
+|1.5|Vein|3.5|Convulsion|5.5|Chitin|7.5|Sting|
+|1.6|Tumor|3.6|Spasm|5.6|Barb|7.6|Burn|
+|1.7|Splinter|3.7|Twitch|5.7|Spine|7.7|Itch|
+|1.8|Bleed|3.8|Shudder|5.8|Quill|7.8|Chafe|
+|2.1|Gristle|4.1|Writhe|6.1|Hook|8.1|Wrongness|
+|2.2|Sinew|4.2|Coil|6.2|Tendril|8.2|Otherness|
+|2.3|Membrane|4.3|Tangle|6.3|Feeler|8.3|Deviation|
+|2.4|Cyst|4.4|Knot|6.4|Antenna|8.4|Anomaly|
+|2.5|Excess|4.5|Snarl|6.5|Socket|8.5|Reversion|
+|2.6|Overflow|4.6|Thread|6.6|Joint|8.6|Regression|
+|2.7|Surge|4.7|Strand|6.7|Hinge|8.7|Taint|
+|2.8|Discharge|4.8|Filament|6.8|Fold|8.8|Stain|
+
 **Corrected — these are now genuinely rollable d8.d8 tables, matching Form's actual format.** An earlier draft claimed these "matched the Form/Adjective tables" while still being plain comma-separated prose lists with no indices at all — impossible to roll 2d8 against without manually counting through the list. Fixed to the same grid structure Form already used correctly.
 
-Sample results — four of well over a million possible combinations per tradition (4 Templates × 64 Forms × 64 Adjectives × 64 Nouns), not a limited menu: a Shardbound's *"Prison of Cryptic Khyber"* reads like a binding pulled from the deep; a Flamesworn's *"Word of Terrible Syrania"* reads like a judgment invoked from on high; a Wildspoken's *"Claw of Rending Thorn"* reads like something torn straight out of the Eldeen wilds; an Artificer caster's *"Ward of Precision Ratchet"* reads like a device schematic given a name — same generation mechanism, four distinct voices.
+Sample results — five of well over a million possible combinations per tradition (4 Templates × 64 Forms × 64 Adjectives × 64 Nouns), not a limited menu: a Shardbound's *"Prison of Cryptic Khyber"* reads like a binding pulled from the deep; a Flamesworn's *"Word of Terrible Syrania"* reads like a judgment invoked from on high; a Wildspoken's *"Claw of Rending Thorn"* reads like something torn straight out of the Eldeen wilds; an Artificer caster's *"Ward of Precision Ratchet"* reads like a device schematic given a name; an Aberrant Mark's *"Blast of Erratic Corruption"* reads like power that was never meant to be steady — same generation mechanism, five distinct voices.
 
 - **Slotted Spells (the real Syberist list):** Spend shards to buy/fuel actual combat- and plot-relevant spells (confirmed cost tiers above). This remains the resource sink that competes with gear, bribes, and House favors for your gold-equivalent.
 

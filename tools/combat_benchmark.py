@@ -149,10 +149,50 @@ def in_real_danger(pc):
     return pc["wounds"] >= 1 and pc["guard"] <= 4 and not pc["down"]
 
 
-def run_fight(seed, n_mooks=8, mook_guard=5, boss=None, verbose=False):
+def apply_vertical_growth(party, level):
+    """+1 Guard per Vertical milestone (levels 2,4,6,8), plus Wound slot increases
+    at 4 and 8, matching Advancement exactly. Stat bonus increases aren't modeled
+    here since they don't change hit-chance math this benchmark tracks separately
+    per-PC already -- only the Guard/Wound-slot side matters for survivability."""
+    vertical_ups = level // 2
+    for pc in party:
+        pc["guard"] += vertical_ups
+        pc["guard_max"] += vertical_ups
+        if level >= 4:
+            pc["wmax"] = 2
+        if level >= 8:
+            pc["wmax"] = 3
+        if "shards" in pc:
+            pc["shards"] += 5 * vertical_ups
+        if "grit" in pc:
+            pc["grit"] += vertical_ups
+    return party
+
+
+def scale_enemies_for_level(level, base_mook_guard=5, base_boss_guard=12, base_boss_atk=3):
+    """Matches Encounter Level Scaling exactly: milestone = level // 2.
+    Mook Guard +1/milestone, mook damage +1 per 4 milestones, Base Target +1 per
+    2 milestones (capped at milestone 3), boss Guard +1/milestone, boss damage
+    +1 per 2 milestones, boss Wound slots +1 (to 3) once milestone 3+ reached."""
+    ms = level // 2
+    mook_guard = base_mook_guard + ms
+    mook_atk_bonus = 1 if ms >= 4 else 0
+    boss_guard = base_boss_guard + ms
+    boss_atk = base_boss_atk + (ms // 2)
+    boss_wmax = 3 if ms >= 3 else 2
+    return mook_guard, mook_atk_bonus, boss_guard, boss_atk, boss_wmax
+
+
+def run_fight(seed, n_mooks=6, mook_guard=5, boss=None, level=1, verbose=False):
     """Run one full fight to completion. Returns the final party state list.
     Pass verbose=True for a full round-by-round narration (useful for spot-checking
     a specific seed rather than trusting aggregate Monte Carlo numbers alone).
+
+    level (default 1): applies Vertical growth to the party and Encounter Level
+    Scaling to enemies together, matching how the doc's own zero-death bands were
+    generated. Passing a custom boss/mook_guard overrides the level-scaled values
+    for that side specifically -- level=1 with defaults reproduces the original
+    unscaled benchmark exactly.
 
     IMPORTANT: boss is defensively copied each call. Passing the same pre-built
     boss dict into thousands of Monte Carlo trials without this would silently
@@ -161,9 +201,19 @@ def run_fight(seed, n_mooks=8, mook_guard=5, boss=None, verbose=False):
     monsters, producing an impossible 100% zero-death + 0.00 kills result."""
     random.seed(seed)
     party = build_party()
+    if level > 1:
+        party = apply_vertical_growth(party, level)
+
+    scaled_mook_guard, mook_atk_bonus, scaled_boss_guard, scaled_boss_atk, scaled_boss_wmax = \
+        scale_enemies_for_level(level, base_mook_guard=mook_guard)
+    if mook_guard == 5 and level > 1:
+        mook_guard = scaled_mook_guard
     mooks = build_mooks(n_mooks, guard=mook_guard)
     if boss is None:
-        boss = build_boss()
+        if level > 1:
+            boss = build_boss(guard=scaled_boss_guard, wmax=scaled_boss_wmax, atk_bonus=scaled_boss_atk)
+        else:
+            boss = build_boss()
     else:
         boss = dict(boss)  # defensive copy -- never mutate the caller's original
 
@@ -198,7 +248,7 @@ def run_fight(seed, n_mooks=8, mook_guard=5, boss=None, verbose=False):
                         break
                     weights = [1.0 / (p["guard"] + 1) for p in living]
                     tgt = random.choices(living, weights=weights, k=1)[0]
-                    atk_bonus = c.get("atk_bonus", 0) if c["role"] == "boss" else 0
+                    atk_bonus = c.get("atk_bonus", 0) if c["role"] == "boss" else mook_atk_bonus
                     disadv = tgt.get("shielded_by") is not None
                     hit, crit = roll_check(atk_bonus, STD, disadv=disadv)
                     if hit:

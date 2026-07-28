@@ -45,9 +45,11 @@
   <tr><td>Spark</td><td>Flat 1–3 shards</td><td>Raw (dust)</td><td>~2</td><td>Small, real, single-purpose effects. <strong>Requires Spark-tier access</strong> — inherent for Syberist, granted to Agent/Wayfarer via Wandslinger. Cantrip alone is free to anyone.</td></tr>
   <tr><td>Minor</td><td>2d6 shards</td><td>Refined</td><td>7</td><td>Real utility. <strong>Attack spells: 1d6 + caster's stat bonus, single-target only.</strong></td></tr>
   <tr><td>Moderate</td><td>2d6×2 shards</td><td>Refined</td><td>14</td><td>Beyond mundane possibility. 2d6 dmg single / d6 multiple.</td></tr>
-  <tr><td>Major</td><td>3d6×5 shards</td><td>Refined</td><td>52.5</td><td>Breaks the laws of nature. 4d6 dmg single / 2d6 multiple.</td></tr>
-  <tr><td>Mythic</td><td>4d6×25 shards</td><td>Refined</td><td>350</td><td>Alters the world. 8d6 dmg single / 4d6 multiple.</td></tr>
+  <tr><td>Major</td><td>3d6×5 shards</td><td>Refined</td><td>52.5</td><td>Breaks the laws of nature. Single-target: automatically opens a Wound on a hit, bypassing Guard, plus 2d6 secondary damage. Multi-target: pure damage (2d6), no auto-Wound.</td></tr>
+  <tr><td>Mythic</td><td>4d6×25 shards</td><td>Refined</td><td>350</td><td>Alters the world. Single-target: automatically opens two Wounds at once on a hit, bypassing Guard, plus 4d6 secondary damage. Multi-target: pure damage (4d6), no auto-Wound.</td></tr>
   </table>
+
+  <p><strong>Major/Mythic single-target damage was redesigned around guaranteed Wounds instead of raw numbers, since the raw numbers were being wasted, not overpowered.</strong> Checked against boss Guard: the old Major tier dealt 477–750% of a typical boss's entire Guard pool in one hit — but opening a Wound is a binary event, so a 750%-overkill hit has the exact same mechanical result as a hit that overflows by one point. All that excess was pure waste. Now that power goes toward something that isn't capped.</p>
 
   <div class="confirmed">
   <span class="confirmed-label">Confirmed Source</span>
@@ -306,6 +308,26 @@
   <tr><td>2.8</td><td>Clockwork</td><td>4.8</td><td>Cast</td><td>6.8</td><td>Panel</td><td>8.8</td><td>Boiler</td></tr>
   </table>
 
+  <h3>Noun — Aberrant (Aberrant Mark casters: corruption, mutation, instability, House Tarkanan-adjacent)</h3>
+  <table>
+  <tr><th>d8.d8</th><th>Aberrant Noun</th><th>d8.d8</th><th>Aberrant Noun</th><th>d8.d8</th><th>Aberrant Noun</th><th>d8.d8</th><th>Aberrant Noun</th></tr>
+  <tr><td>1.1</td><td>Tarkanan</td><td>3.1</td><td>Feedback</td><td>5.1</td><td>Vessel</td><td>7.1</td><td>Crease</td></tr>
+  <tr><td>1.2</td><td>Corruption</td><td>3.2</td><td>Backlash</td><td>5.2</td><td>Cavity</td><td>7.2</td><td>Ripple</td></tr>
+  <tr><td>1.3</td><td>Mutation</td><td>3.3</td><td>Flicker</td><td>5.3</td><td>Shell</td><td>7.3</td><td>Throb</td></tr>
+  <tr><td>1.4</td><td>Scale</td><td>3.4</td><td>Tremor</td><td>5.4</td><td>Carapace</td><td>7.4</td><td>Ache</td></tr>
+  <tr><td>1.5</td><td>Vein</td><td>3.5</td><td>Convulsion</td><td>5.5</td><td>Chitin</td><td>7.5</td><td>Sting</td></tr>
+  <tr><td>1.6</td><td>Tumor</td><td>3.6</td><td>Spasm</td><td>5.6</td><td>Barb</td><td>7.6</td><td>Burn</td></tr>
+  <tr><td>1.7</td><td>Splinter</td><td>3.7</td><td>Twitch</td><td>5.7</td><td>Spine</td><td>7.7</td><td>Itch</td></tr>
+  <tr><td>1.8</td><td>Bleed</td><td>3.8</td><td>Shudder</td><td>5.8</td><td>Quill</td><td>7.8</td><td>Chafe</td></tr>
+  <tr><td>2.1</td><td>Gristle</td><td>4.1</td><td>Writhe</td><td>6.1</td><td>Hook</td><td>8.1</td><td>Wrongness</td></tr>
+  <tr><td>2.2</td><td>Sinew</td><td>4.2</td><td>Coil</td><td>6.2</td><td>Tendril</td><td>8.2</td><td>Otherness</td></tr>
+  <tr><td>2.3</td><td>Membrane</td><td>4.3</td><td>Tangle</td><td>6.3</td><td>Feeler</td><td>8.3</td><td>Deviation</td></tr>
+  <tr><td>2.4</td><td>Cyst</td><td>4.4</td><td>Knot</td><td>6.4</td><td>Antenna</td><td>8.4</td><td>Anomaly</td></tr>
+  <tr><td>2.5</td><td>Excess</td><td>4.5</td><td>Snarl</td><td>6.5</td><td>Socket</td><td>8.5</td><td>Reversion</td></tr>
+  <tr><td>2.6</td><td>Overflow</td><td>4.6</td><td>Thread</td><td>6.6</td><td>Joint</td><td>8.6</td><td>Regression</td></tr>
+  <tr><td>2.7</td><td>Surge</td><td>4.7</td><td>Strand</td><td>6.7</td><td>Hinge</td><td>8.7</td><td>Taint</td></tr>
+  <tr><td>2.8</td><td>Discharge</td><td>4.8</td><td>Filament</td><td>6.8</td><td>Fold</td><td>8.8</td><td>Stain</td></tr>
+  </table>
 
   <h3 id="spell-acquisition">Spell Name Acquisition</h3>
   <ol>

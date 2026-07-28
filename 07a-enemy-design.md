@@ -31,15 +31,17 @@
 
 **The calibration journey, condensed:** getting here took three rounds of tuning. Guard+attack scaling alone (per the table above) landed close but left level 8 as a genuine outlier (crashing to 55.7–71% depending on how the target-shift lever was capped). The actual cause turned out to be structural, not a tuning problem: named enemies gain a third Wound slot at milestone 3+ (level 6), but PCs capped at two Wound slots forever — so bosses got more persistent from level 6 onward while PC survivability depth stood still. **Giving PCs a matching third Wound slot at level 8** (see Advancement) fixed it directly rather than papering over the symptom. That calibration then had to be redone a second time after the Movement rule was corrected (see Zones & Range → Movement) — move+act made enemies symmetrically more dangerous too, and the original 8-mook encounter size proved structurally too large under the corrected rule. **Reducing to 6 mooks (3 Blade + 3 Bow) plus modestly softened boss base stats** (Guard 7 instead of 12, attack +1 instead of +2, before scaling) closed the gap.
 
-**Current final numbers** (6 mooks, move+act, third Wound slot at level 8, all three enemy-side levers active):
+**Current final numbers** (6 mooks, move+act, third Wound slot at level 8, all three enemy-side levers active, **recalibrated under the corrected Guard-refill-on-Wound rule** — current Guard refills to the new max rather than resetting to 0, see HP: Guard + Wounds):
 
 | Level | 0-Death Rate |
 |---|---|
-| 1 | 52.7% (no scaling applies yet, consistent across every version of this test) |
-| 2–3 | 69.0% |
-| 4–5 | 83.7% |
-| 6–7 | 84.3% |
-| 8 | **74.0%** — the level-8 fix still holds under the corrected movement rule |
+| 1 | 76.5% — up sharply from the pre-fix 52.7%; refilling Guard instead of zeroing it matters most exactly when pools are thin |
+| 2 | 78.3% |
+| 4 | 78.5% |
+| 6 | 82.0% |
+| 8 | 79.7% |
+
+**A genuinely tighter, flatter band than the pre-fix 52.7–84.3%.** That old 32-point spread wasn't just imprecise — it was hiding a real problem: the harsher reset-to-0 rule made later levels dramatically safer than early ones, an invisible power-creep the wide band never made visible. The corrected refill rule didn't just avoid regressing anything when it was finally fully recalibrated; it flattened the whole difficulty curve into something far more consistent across a character's entire career.
 
 **Enemy count is now a real, confirmed design lever in its own right** — not just enemy stats. Reducing from 8 to 6 mooks did more to fix the move+act lethality spike than any amount of individual-enemy stat tuning could have, which sets up directly into the Multi-Action findings below: how many independent actors an encounter has matters as much as, or more than, how strong any one of them is.
 

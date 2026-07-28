@@ -32,7 +32,7 @@ TEA's three chassis (confirmed from source): **Fixer** (skill monkey, renamed **
 | Spark | 1–3 shards | **Glowspark** — a hand-sized device sheds dim light in Near range when triggered, hands-free afterward. **Alarm Chime** — rings audibly the moment anyone crosses a marked threshold. |
 | Minor | 2d6 shards | **Shock Coil** — a thrown or handheld device deals 1d6+INT (of the holder) damage in a burst. **Grapnel Rig** — fires a line, pulling the user one zone toward a fixed anchor point. |
 | Moderate | 2d6×2 shards | **Breach Charge** — a placed device deals 2d6 damage to a structure or barrier, ignoring standard hardness. **Numbing Vapor** — releases a cloud imposing Disadvantage on all rolls made by anyone in the zone who fails a resistance check. |
-| Major | 3d6×5 shards | **Overcharged Blast** — a single-target device deals 4d6 damage, INT (of the holder) governs the attack roll. **Repair Frame** — restores Guard equal to 2d6+INT (of the holder) to whoever's wearing it when triggered. |
+| Major | 3d6×5 shards | **Overcharged Blast** — a single-target device automatically opens a Wound on a hit (bypassing Guard entirely), plus 2d6 secondary damage, INT (of the holder) governs the attack roll — same formula as any Major-tier Attack spell, see Magic Baseline. **Repair Frame** — restores Guard equal to 2d6+INT (of the holder) to whoever's wearing it when triggered. |
 
 **Permanent items** — an Artificer Syberist crafting a lasting magic item (not a one-shot contraption) uses the existing Magic Items pricing (10–20× the tier's average casting cost) with a genuine choice of where in that range to land: **roll the tier's own cost die, read the result in days instead of shards, for the baseline crafting time.** Pay the top of the range (20×) to halve that time; pay the bottom (10×) to double it. Same range already established, just a real dial on it instead of a fixed number.
 
@@ -143,7 +143,7 @@ Three concept archetypes built on the same Agent chassis, differentiated by *wha
 - **Lesser Mark** — the trick strengthens or gains a second narrow use, still 1–2/session.
 - **Greater Mark** — a genuinely strong effect; rare, likely Background-exclusive or a mid-campaign unlock rather than starting-character material.
 - **Siberys Mark** — campaign-defining, essentially unique per game, GM-placed rather than player-chosen.
-- **Aberrant Mark** — open to *any* Background (mark-touched by accident, not House-blooded); bigger effect than a Least Mark, but carries real backlash risk each use (e.g. a d6 mishap table instead of a clean success).
+- **Aberrant Mark** — open to *any* Background (mark-touched by accident, not House-blooded). **Grants the ability to attempt a Minor-tier cast (Attack or Effect, same categories any caster uses), with zero shards ever possessed.** Every attempt is a genuine Overcast: roll 2d6 for what the cast would have cost, then resolve entirely through the existing Overcast Backlash Pool — always reduced to 3d6, since 0 shards is always more than half short of any possible Minor-tier cost. CON bonus adds rerolls exactly as normal. No new dice mechanic, no separate effect menu, no bespoke risk table — reuses the casting and Overcasting systems directly rather than building parallel infrastructure. Own Noun category for Spell Names: Aberrant (see Spell Names).
 
 ### Least Marks (all 12 Houses)
 
