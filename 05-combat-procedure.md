@@ -1,10 +1,8 @@
 ## Combat Procedure (Quick Reference)
 
-**Traced directly from the written rules below, built as a full-system audit — no contradictions found in the flow itself.** Useful as a big-picture map before diving into each individual system's detail.
-
 ```
 ═══════════════════════════════════════════════════════════════════
-  COMBAT PROCEDURE — traced directly from the written rules
+  COMBAT PROCEDURE
 ═══════════════════════════════════════════════════════════════════
 
 ┌─────────────────────────────────────────────────────────────────┐
@@ -48,9 +46,9 @@
                ▼
      ┌─────────────────────┐
      │ MOVE (0-1 zone)       │
-     │ + ACT — same turn,    │  ← confirmed rule: move AND act,
-     │ both always available │     never move-OR-act (except Heavy
-     └──────────┬─────────────┘    armor's stated exception)
+     │ + ACT — same turn,    │  Move AND act, never move-OR-act
+     │ both always available │  (except Heavy armor's stated exception)
+     └──────────┬─────────────┘
                 │
         ┌───────┴────────┐
         ▼                 ▼

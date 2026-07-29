@@ -1,10 +1,8 @@
 ## Character Creation (Quick Reference)
 
-**Reconstructed as one sequence, not previously stated anywhere as such — built specifically to shake down the procedure, and it surfaced two real gaps now resolved.** Useful as a big-picture map before diving into each individual system's detail.
-
 ```
 ═══════════════════════════════════════════════════════════════════
-  CHARACTER CREATION — reconstructed, not previously stated as one sequence
+  CHARACTER CREATION
 ═══════════════════════════════════════════════════════════════════
 
 ┌─────────────────────────────┐
@@ -25,11 +23,9 @@
 └──────────────┬────────────────┘
                │
                ▼
-        RESOLVED: mercy rule checks
+        Mercy rule checks
         the RAW roll, BEFORE step 1's
-        Background bonus stacks —
-        the rule exists to catch bad
-        DICE, not a bad final total.
+        Background bonus stacks.
                │
                ▼
      ┌─────────────────┐
@@ -53,8 +49,8 @@
 ┌─────────────────────────────┐
 │ 6. CHOOSE GUARD STAT           │  Default CON, any allowed EXCEPT
 │    (must differ from weapon/    │  weapon/cast/Wandslinger stat —
-│    cast/Wandslinger stat)       │  all locked together at creation,
-└──────────────┬────────────────┘  never re-checked later
+│    cast/Wandslinger stat)       │  all locked together at creation
+└──────────────┬────────────────┘
                │
                ▼
 ┌─────────────────────────────┐
@@ -64,14 +60,12 @@
         ┌──────┴──────┐
         ▼              ▼
    Requirement met?  Requirement failed
-        │              │ (e.g. STR too low
-        ▼              │  for Heavy melee)
-   Weapon confirmed     ▼
-        │         Fall back to the
-        │         highest tier actually
-        │         qualified for, or go
-        │         ranged instead — loop
-        │         back to this step
+        │              │
+        ▼              ▼
+   Weapon confirmed  Fall back to the
+        │            highest tier actually
+        │            qualified for, or go
+        │            ranged instead
         └──────┬───────┘
                ▼
 ┌─────────────────────────────┐
@@ -88,7 +82,7 @@
                │
                ▼
 ┌─────────────────────────────┐
-│ 10. WOUND SLOTS = 1             │  Fixed at level 1, not a choice
+│ 10. WOUND SLOTS = 1             │  Fixed at level 1
 └──────────────┬────────────────┘
                │
                ▼
@@ -134,29 +128,25 @@
         CHARACTER COMPLETE
 ```
 
-### Choice Guidance (what makes each step's decision strong or weak)
+### Choice Guidance
 
-**Shakedown-tested against real builds** (Wayfarer, Agent, and multiple Syberist traditions, real rolls) — this is what came out of actually running the flowchart, not abstract advice.
+**Background:** pick one whose stat bonus lands on the stat your archetype actually wants — a Wayfarer wants a STR/CON-boosting Background, a Syberist wants one matching their tradition's cast stat.
 
-**Step 1, Background:** pick one whose stat bonus lands on the stat your archetype actually wants — a Wayfarer wants a STR/CON-boosting Background, a Syberist wants one matching their tradition's cast stat. A mismatched Background (e.g. a CHA-boosting Background on a STR-focused Wayfarer) isn't illegal, just a real, felt inefficiency for no narrative payoff unless the concept specifically calls for it.
+**Archetype:** Wayfarer = frontline durability, Agent = breadth and narrative leverage, Syberist = real spellcasting. If torn between two, ask which one's dedicated resource (Grit / Leverage / shards) sounds more fun to actually spend during play.
 
-**Step 2, Archetype:** Wayfarer = frontline durability, Agent = breadth and narrative leverage, Syberist = real spellcasting (including Artificer, the crafting-flavored tradition — build now, unleash later, sometimes hand it to someone else). If torn between two, ask which one's *dedicated resource* (Grit / Leverage / shards) sounds more fun to actually spend during play — that's usually the real answer.
+**Rolling and the mercy rule:** raising one stat to +2 concentrates power, raising two stats to +1 spreads it — concentration is usually the stronger pick if that stat will do double duty, spread is better if the build wants competence across more than one axis.
 
-**Step 3–4, Rolling and the mercy rule:** if the mercy rule fires, **raising one stat to +2 concentrates power, raising two stats to +1 spreads it** — concentration is usually the stronger pick if that stat will do double duty (see Step 6), spread is better if the build genuinely wants competence across more than one axis.
+**Assigning rolled bonuses:** Guard Stat must differ from your weapon stat, cast stat, and Wandslinger stat if applicable, so put your highest roll into whichever stat matters most for offense, and your second-highest into a genuinely different stat you're comfortable feeding Guard.
 
-**Step 5, Assigning rolled bonuses:** **Guard Stat must differ from your weapon stat, cast stat, and Wandslinger stat if applicable** (see Guard Stat below), so put your highest roll into whichever stat matters most for offense, and your *second*-highest into a genuinely different stat you're comfortable feeding Guard — a real two-stat investment, not one mega-stat covering both jobs. This is a deliberate reversal of the more "efficient" concentrated build a Monte Carlo comparison found earlier in this project's testing: concentration measurably outsurvives a split build, which is exactly why it's now disallowed rather than encouraged.
+**Guard Stat:** default is CON, but nothing requires it — the one hard rule is it can't be the same stat as your weapon or cast stat, locked in together at creation and never re-checked against later gear changes.
 
-**Step 6, Guard Stat:** default is CON, but nothing requires it — the one hard rule is it **can't be the same stat as your weapon or cast stat**, locked in together at creation and never re-checked against later gear changes. Picking a stat that's meaningfully different from your main offensive stat (a CHA-Guard Wayfarer, a WIS-Guard Shardbound) is the whole point — a genuine second identity for the character, not just a number.
+**Weapon and armor:** check the relevant stat against Weapon Proficiency and Armor's requirement tables before committing narratively to a weapon/armor concept.
 
-**Step 7–8, Weapon and armor:** check the relevant stat against Weapon Proficiency and Armor's requirement tables *before* committing narratively to a weapon/armor concept — a STR-dumped Syberist wanting a greatsword will fail the Heavy melee requirement and need to fall back (loop back and pick again, or go ranged). Better to check requirements against final stats first, then pick flavor, than to get attached to a concept the rolled stats can't support.
+**Languages:** a high-INT build should pick languages that actually matter for the campaign's likely play. A −2-or-lower INT build's illiteracy is a real roleplay constraint.
 
-**Step 9, Guard calculation:** no choice, but worth sanity-checking against the archetype breakpoint data — a Guard in the high single digits at level 1 is normal and expected, not a sign something went wrong.
+**Archetype-specific choices:** an Agent's Skill choice should match their actual sub-concept; a Wayfarer weighing Wandslinger should ask whether losing one Advanced Maneuver access is worth Spark-tier casting for this specific character; an Artificer Syberist's one starting contraption capacity is a deliberate call — what gets built first (and who it might get handed to).
 
-**Step 11, Languages:** a high-INT build should pick languages that actually matter for the campaign's likely play (border nations, trade routes, factions the party expects to interact with) rather than defaulting to whatever sounds exotic. A −2-or-lower INT build's illiteracy is a real roleplay constraint worth embracing rather than working around — it's supposed to bite.
-
-**Step 12, Archetype-specific choices:** an Agent's Skill choice should match their actual sub-concept (see Agent Flavors — Exploit the Opening/Take Aim for a Rogue-leaning build's combat side, Network for a Diplomat-leaning one); a Wayfarer weighing Wandslinger should ask whether losing one Advanced Maneuver access is worth Spark-tier casting for *this specific character*, not just "is it good in general"; an Artificer Syberist's one starting contraption capacity is a real, singular choice — what gets built first (and who it might get handed to) should be a deliberate call, not a default.
-
-**Step 13, Starting wealth:** a caster (Syberist, or a Wandslinger-equipped Agent/Wayfarer) should convert a meaningful chunk of the 200gp into refined shards — 100–150gp is a reasonable starting reserve. A pure martial build with no casting at all can reasonably spend close to zero on shards and put everything into gear instead. Neither is a mistake; matching spend to what the build will actually use is the only real guidance here.
+**Starting wealth:** a caster should convert a meaningful chunk of the 200gp into refined shards — 100–150gp is a reasonable starting reserve. A pure martial build can reasonably spend close to zero on shards and put everything into gear instead.
 
 ---
 
