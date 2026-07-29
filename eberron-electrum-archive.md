@@ -1722,7 +1722,7 @@ Layered on top of the universal table above — every Wayfarer has both, gated b
 
 ## Advancement
 
-XP awarded via end-of-session questions, each scaled by a die (d4/d6/d8) by scope; highest die result is XP for everyone. **Level up at XP = 5× current level, resetting to 0 after each level-up** — level 2 needs 5 fresh XP from 0, level 3 needs a fresh 10 from 0 again, level 4 a fresh 15, and so on up through level 8 needing a fresh 35. Max level 8, attribute hard cap 8 (9 during a check with bonuses).
+XP awarded via end-of-session questions, each scaled by a die (d4/d6/d8) by scope; highest die result is XP for everyone. **Level up at XP = 5× current level, resetting to 0 after each level-up** — level 2 needs 5 fresh XP from 0, level 3 needs a fresh 10 from 0 again, level 4 a fresh 15, and so on up through level 8 needing a fresh 35. Max level 8. Stat bonus cap: see Vertical growth below.
 
 **Themed question packages** — pick one matching the campaign's actual focus, or mix five questions from different packages:
 
@@ -1752,7 +1752,7 @@ XP awarded via end-of-session questions, each scaled by a die (d4/d6/d8) by scop
 
 | Track | Cadence | What grows |
 |---|---|---|
-| **Vertical** (universal, slow) | Every other level (2, 4, 6, 8) | +1 to one stat, player's choice, capped at +3 overall — +2 is the most any stat can be at character creation, +3 is reachable only through Vertical investment. Same levels also grant +1 flat Guard. Total cap by level 8: +4 stat, +4 flat Guard. |
+| **Vertical** (universal, slow) | Every other level (2, 4, 6, 8) | +1 to one stat, player's choice, **hard capped at +3 — no stat can ever exceed +3, under any circumstance.** A maxed 3d6 roll alone caps at +2; stacking a same-stat Background bonus on top of a maxed roll can already reach +3 at character creation, before any Vertical growth at all. **A stat already at +3 simply isn't a legal target for a further Vertical pick — the player picks a different stat instead, same as any other level-up.** The point is only ever truly wasted in the practically-impossible case where every stat is already at +3; there's no case in ordinary play where a pick goes nowhere. Same levels also grant +1 flat Guard, uncapped. Total by level 8: max +3 on any single stat, up to +4 more spread across others, +4 flat Guard. |
 | **Lateral** (archetype-specific, every level) | Every level, no exceptions | New options, not bigger numbers — see table below. |
 
 | Level | Agent | Wayfarer | Syberist |
