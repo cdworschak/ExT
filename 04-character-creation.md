@@ -148,5 +148,19 @@
 
 **Starting wealth:** a caster should convert a meaningful chunk of the 200gp into refined shards — 100–150gp is a reasonable starting reserve. A pure martial build can reasonably spend close to zero on shards and put everything into gear instead.
 
+**Worked example — building Tavin:**
+
+1. **Background.** Jorasco-Marked Healer — +1 WIS, the Least Mark of Healing, Bedside Manner.
+2. **Archetype.** Syberist, Flamesworn tradition (CHA cast stat).
+3. **Roll stats.** 3d6 ×6, six independent rolls: 14, 11, 10, 9, 8, 13. Looked up: +1, 0, 0, −1, −1, +1. At least one is positive, so no Mercy needed.
+4. **Assign freely.** These six bonuses can go to any stat, in any order. CHA is Tavin's cast stat, so the highest roll (+1) goes there. DEX gets the other +1, since it governs the weapon. The two 0s go to WIS and INT; the two −1s land on CON and STR.
+5. **Apply Background.** Jorasco-Marked Healer's +1 WIS lands on top of the just-assigned WIS 0, making it +1.
+6. **Guard Stat** — must differ from CHA (cast stat). Tavin picks WIS: danger sense, flinching away before the worst lands, fitting a healer watching the whole fight.
+7–8. **Weapon & Armor.** DEX +1 qualifies for Medium. A warded rod (Medium) and Light armor.
+9–10. **Guard & Wounds.** Guard = 4 + WIS(+1) + Light armor(+1) = 6. One Wound slot, as every character starts with.
+11. **Starting wealth.** 120gp into refined shards (12 shards), the rest into a Healing Toolkit and basics.
+
+Tavin: CHA +1 (cast), WIS +1 (Guard Stat), Guard 6, one Wound slot, a warded rod, Light armor, 12 refined shards, the Least Mark of Healing free from Background.
+
 ---
 

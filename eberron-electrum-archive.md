@@ -65,6 +65,10 @@ Roll 3d10, keep the best two dice for Advantage or the worst two for Disadvantag
 | +2 | 64% | 85% | 38% |
 | +3 | 72% | 89% | 47% |
 
+**Critical Hit.** If both counted dice on a successful roll show the same value, it's a critical — maximum damage, no damage roll at all. Applies identically to weapon attacks and Attack spells, since both roll to-hit the same way. **Advantage** (3d10, keep the best two) can still crit if those two kept dice match. **Disadvantage never crits, under any circumstance** — even if the two worst dice happen to match each other, it's just a hit, not a critical.
+
+**Damage Floor.** Any successful hit deals a minimum of 1 damage, regardless of die result or negative stat bonus.
+
 ---
 
 ## Magic Baseline: Possession, Not Consumption
@@ -899,6 +903,20 @@ Common is free to everyone, no cost.
 
 **Starting wealth:** a caster should convert a meaningful chunk of the 200gp into refined shards — 100–150gp is a reasonable starting reserve. A pure martial build can reasonably spend close to zero on shards and put everything into gear instead.
 
+**Worked example — building Tavin:**
+
+1. **Background.** Jorasco-Marked Healer — +1 WIS, the Least Mark of Healing, Bedside Manner.
+2. **Archetype.** Syberist, Flamesworn tradition (CHA cast stat).
+3. **Roll stats.** 3d6 ×6, six independent rolls: 14, 11, 10, 9, 8, 13. Looked up: +1, 0, 0, −1, −1, +1. At least one is positive, so no Mercy needed.
+4. **Assign freely.** These six bonuses can go to any stat, in any order. CHA is Tavin's cast stat, so the highest roll (+1) goes there. DEX gets the other +1, since it governs the weapon. The two 0s go to WIS and INT; the two −1s land on CON and STR.
+5. **Apply Background.** Jorasco-Marked Healer's +1 WIS lands on top of the just-assigned WIS 0, making it +1.
+6. **Guard Stat** — must differ from CHA (cast stat). Tavin picks WIS: danger sense, flinching away before the worst lands, fitting a healer watching the whole fight.
+7–8. **Weapon & Armor.** DEX +1 qualifies for Medium. A warded rod (Medium) and Light armor.
+9–10. **Guard & Wounds.** Guard = 4 + WIS(+1) + Light armor(+1) = 6. One Wound slot, as every character starts with.
+11. **Starting wealth.** 120gp into refined shards (12 shards), the rest into a Healing Toolkit and basics.
+
+Tavin: CHA +1 (cast), WIS +1 (Guard Stat), Guard 6, one Wound slot, a warded rod, Light armor, 12 refined shards, the Least Mark of Healing free from Background.
+
 ---
 
 ## Combat Procedure (Quick Reference)
@@ -1169,9 +1187,7 @@ Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slo
 
 ### Critical Hits
 
-**Doubles on the to-hit roll on a successful hit is a critical** — maximum weapon damage, no damage roll. For Advantage/Disadvantage, doubles are checked on whichever two dice are kept.
-
-**Any successful hit deals a minimum of 1 damage** — a universal floor.
+**Critical Hit and Damage Floor:** see Core Resolution. Applies identically to weapon attacks and Attack spells.
 
 ### Toolkits & Usage
 
@@ -1323,6 +1339,19 @@ At creation, pick any one of the six stats to plug into the Guard formula in pla
 
 **One remaining constraint:** the Heavy/Medium armor CON requirement stays tied to actual CON specifically, regardless of Guard Stat choice. A DEX-Guard character with poor CON is still locked out of Heavy armor.
 
+### Status Effects
+
+Four named, temporary states appear throughout this document. Stated once here, referenced by name everywhere else instead of redefined each time.
+
+| Status | Effect | Clears when |
+|---|---|---|
+| **Reeling** | Disadvantage on your next roll | That roll happens (win or lose), or an ally clears it early (Rally Cry, Combat Mending Moderate+) |
+| **Rattled** | Disadvantage on your next two rolls | Both rolls happen, or an ally clears it early (same sources as Reeling — clears the whole thing, not one roll at a time) |
+| **Deprived** | Disadvantage on all checks; can't regain Guard from resting a Turn | Eating, drinking, and a full day's rest |
+| **Surprised** | Skip your action entirely for Round 1 of a fight | Automatically, after Round 1 ends |
+
+**No stacking, universally** — a second source of Reeling or Rattled while one is already pending never extends or adds to it; whichever is already active resolves first. This applies to every source of these statuses, not just Wounds.
+
 ### Wounds
 
 **Only 1 Wound slot exists at character creation. A second slot unlocks at level 4, a third at level 8.**
@@ -1348,7 +1377,7 @@ Rolled once, when a Wound opens.
 | 5 | **Off-Balance** — your next zone move this fight requires a DEX-equivalent check or fails |
 | 6 | **Rattled to the Bone** — Disadvantage on your next two rolls instead of one |
 
-**No stacking.** If a character already has an active Reeling or Rattled effect pending when a new Wound opens, the new Wound's automatic Disadvantage does not add to or extend the existing count — resolve whichever is already active.
+**No stacking** — see Status Effects above; a Wound opening while Reeling or Rattled is already pending doesn't add to it.
 
 ### Mook Rule (for disposable enemies)
 
@@ -1362,9 +1391,10 @@ If a character is deprived of crucial needs (rest, food, water), they gain Disad
 
 ## Healing Magic
 
-**Combat Mending** (in combat — costs an action + shards per normal potency tier):
-- Restores Guard up to its current max. A Wound's max-Guard reduction stays in place.
-- Cast on an ally who's about to make (or would otherwise fail) a 0-Guard check: they auto-stabilize instead of rolling.
+**Combat Mending** (in combat — costs an action + shards per normal potency tier): restores Guard, up to current max — Minor 1d8+stat, Moderate 2d8+stat, Major 2d8+stat, Mythic 4d8+stat, same dice as damage at each tier.
+- **Moderate tier and above also clears Reeling or Rattled from the target**, in addition to the Guard restored — a real capability step, not just a bigger number.
+- A Wound's max-Guard reduction stays in place regardless of tier.
+- Cast on an ally who's about to make (or would otherwise fail) a 0-Guard check: they auto-stabilize instead of rolling, at any tier.
 - Cannot close a Wound under any circumstances, mid-combat.
 
 **Field Dressing** (out of combat — requires a full Exploration Turn of safety):
@@ -1866,7 +1896,7 @@ One canonical definition per term, alphabetical.
 
 **Aberrant Mark** — grants a Minor-tier cast attempt with zero shards ever possessed, meaning every use is a genuine Overcast, resolved entirely through the existing Overcast Backlash Pool (always 3d6, since 0 shards is always more than half short). No separate mechanic — reuses casting and Overcasting directly.
 
-**Advantage / Disadvantage** — roll 3d10 instead of 2d10, keep the best two (Advantage) or worst two (Disadvantage). Disadvantage rolls never crit. Never stacks within a single roll. Strictly per-roll, not per-character.
+**Advantage / Disadvantage** — roll 3d10 instead of 2d10, keep the best two (Advantage) or worst two (Disadvantage). See Critical Hit for how this affects crits. Never stacks within a single roll. Strictly per-roll, not per-character.
 
 **Archetype** — the three character chassis: Wayfarer, Agent, Syberist (the latter with four traditions — Shardbound, Flamesworn, Wildspoken, Artificer). Determines resource type, Lateral Advancement track, and Guard bonus.
 
@@ -1880,7 +1910,7 @@ One canonical definition per term, alphabetical.
 
 **Contraption** — an Artificer Syberist's built-ahead device, sealed with a Name-Crafted effect via Quick Rig. Triggered later as a single action by whoever holds it, using their own INT bonus for the roll.
 
-**Critical Hit** — doubles on the to-hit roll (both counted dice match a success). Deals maximum weapon damage, no damage roll.
+**Critical Hit** — doubles on the to-hit roll (both counted dice match a success). Deals maximum damage, no damage roll. Advantage can still crit if the kept two dice match; Disadvantage never crits, under any circumstance.
 
 **Damage Floor** — any successful hit deals a minimum of 1 damage.
 
@@ -1888,7 +1918,7 @@ One canonical definition per term, alphabetical.
 
 **Death's Door** — triggered at 0 Guard with no Wound slots remaining. Roll d6: 1–3 dies, 4+ faints and rolls on the Scar Table. A fainted character still dies if not treated within a Turn by another character.
 
-**Deprivation** — the penalty state from failing to gather food/rest during travel.
+**Deprivation** — see Status Effects. Disadvantage on all checks and no Guard recovery from resting a Turn, from failing to gather food/rest during travel.
 
 **Disengage Check** — a DEX check (2d10+DEX vs 12) required to leave a zone containing a live melee hostile. Failure grants them a free attack first.
 
@@ -1924,7 +1954,9 @@ One canonical definition per term, alphabetical.
 
 **Quick Rig** — an Artificer Syberist's baseline casting method: Name-Craft a spell during downtime, seal it into a Contraption instead of firing it immediately. Takes 1 Turn per Contraption.
 
-**Reeling** — Disadvantage on the next roll after a Wound opens.
+**Rattled** — see Status Effects. Disadvantage on your next two rolls, from a Wound Complication or another source.
+
+**Reeling** — see Status Effects. Disadvantage on your next roll, from a Wound opening or another source.
 
 **Round** — one full cycle through the fixed Initiative order, the unit combat is measured in.
 
@@ -1943,6 +1975,10 @@ One canonical definition per term, alphabetical.
 **Shock** — a monster-specific trait: minimum chip damage on a miss with melee attacks, gated by the target's armor tier.
 
 **Skill** — an Agent's chosen ability, picked freely at creation and every level-up.
+
+**Status Effects** — the four named temporary states used throughout this document: Reeling, Rattled, Deprived, Surprised. Full table under HP: Guard + Wounds.
+
+**Surprised** — see Status Effects. Skip your action entirely for Round 1 of a fight; clears automatically after.
 
 **Talent** — a Background-granted ability that gives Advantage on a narrow, named category of checks.
 

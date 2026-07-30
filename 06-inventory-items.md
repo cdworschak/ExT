@@ -88,9 +88,7 @@ Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slo
 
 ### Critical Hits
 
-**Doubles on the to-hit roll on a successful hit is a critical** — maximum weapon damage, no damage roll. For Advantage/Disadvantage, doubles are checked on whichever two dice are kept.
-
-**Any successful hit deals a minimum of 1 damage** — a universal floor.
+**Critical Hit and Damage Floor:** see Core Resolution. Applies identically to weapon attacks and Attack spells.
 
 ### Toolkits & Usage
 

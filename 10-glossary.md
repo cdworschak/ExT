@@ -4,7 +4,7 @@ One canonical definition per term, alphabetical.
 
 **Aberrant Mark** — grants a Minor-tier cast attempt with zero shards ever possessed, meaning every use is a genuine Overcast, resolved entirely through the existing Overcast Backlash Pool (always 3d6, since 0 shards is always more than half short). No separate mechanic — reuses casting and Overcasting directly.
 
-**Advantage / Disadvantage** — roll 3d10 instead of 2d10, keep the best two (Advantage) or worst two (Disadvantage). Disadvantage rolls never crit. Never stacks within a single roll. Strictly per-roll, not per-character.
+**Advantage / Disadvantage** — roll 3d10 instead of 2d10, keep the best two (Advantage) or worst two (Disadvantage). See Critical Hit for how this affects crits. Never stacks within a single roll. Strictly per-roll, not per-character.
 
 **Archetype** — the three character chassis: Wayfarer, Agent, Syberist (the latter with four traditions — Shardbound, Flamesworn, Wildspoken, Artificer). Determines resource type, Lateral Advancement track, and Guard bonus.
 
@@ -18,7 +18,7 @@ One canonical definition per term, alphabetical.
 
 **Contraption** — an Artificer Syberist's built-ahead device, sealed with a Name-Crafted effect via Quick Rig. Triggered later as a single action by whoever holds it, using their own INT bonus for the roll.
 
-**Critical Hit** — doubles on the to-hit roll (both counted dice match a success). Deals maximum weapon damage, no damage roll.
+**Critical Hit** — doubles on the to-hit roll (both counted dice match a success). Deals maximum damage, no damage roll. Advantage can still crit if the kept two dice match; Disadvantage never crits, under any circumstance.
 
 **Damage Floor** — any successful hit deals a minimum of 1 damage.
 
@@ -26,7 +26,7 @@ One canonical definition per term, alphabetical.
 
 **Death's Door** — triggered at 0 Guard with no Wound slots remaining. Roll d6: 1–3 dies, 4+ faints and rolls on the Scar Table. A fainted character still dies if not treated within a Turn by another character.
 
-**Deprivation** — the penalty state from failing to gather food/rest during travel.
+**Deprivation** — see Status Effects. Disadvantage on all checks and no Guard recovery from resting a Turn, from failing to gather food/rest during travel.
 
 **Disengage Check** — a DEX check (2d10+DEX vs 12) required to leave a zone containing a live melee hostile. Failure grants them a free attack first.
 
@@ -62,7 +62,9 @@ One canonical definition per term, alphabetical.
 
 **Quick Rig** — an Artificer Syberist's baseline casting method: Name-Craft a spell during downtime, seal it into a Contraption instead of firing it immediately. Takes 1 Turn per Contraption.
 
-**Reeling** — Disadvantage on the next roll after a Wound opens.
+**Rattled** — see Status Effects. Disadvantage on your next two rolls, from a Wound Complication or another source.
+
+**Reeling** — see Status Effects. Disadvantage on your next roll, from a Wound opening or another source.
 
 **Round** — one full cycle through the fixed Initiative order, the unit combat is measured in.
 
@@ -81,6 +83,10 @@ One canonical definition per term, alphabetical.
 **Shock** — a monster-specific trait: minimum chip damage on a miss with melee attacks, gated by the target's armor tier.
 
 **Skill** — an Agent's chosen ability, picked freely at creation and every level-up.
+
+**Status Effects** — the four named temporary states used throughout this document: Reeling, Rattled, Deprived, Surprised. Full table under HP: Guard + Wounds.
+
+**Surprised** — see Status Effects. Skip your action entirely for Round 1 of a fight; clears automatically after.
 
 **Talent** — a Background-granted ability that gives Advantage on a narrow, named category of checks.
 

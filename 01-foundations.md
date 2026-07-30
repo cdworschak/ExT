@@ -65,6 +65,10 @@ Roll 3d10, keep the best two dice for Advantage or the worst two for Disadvantag
 | +2 | 64% | 85% | 38% |
 | +3 | 72% | 89% | 47% |
 
+**Critical Hit.** If both counted dice on a successful roll show the same value, it's a critical — maximum damage, no damage roll at all. Applies identically to weapon attacks and Attack spells, since both roll to-hit the same way. **Advantage** (3d10, keep the best two) can still crit if those two kept dice match. **Disadvantage never crits, under any circumstance** — even if the two worst dice happen to match each other, it's just a hit, not a critical.
+
+**Damage Floor.** Any successful hit deals a minimum of 1 damage, regardless of die result or negative stat bonus.
+
 ---
 
 ## Magic Baseline: Possession, Not Consumption

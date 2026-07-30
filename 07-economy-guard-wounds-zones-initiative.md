@@ -59,6 +59,19 @@ At creation, pick any one of the six stats to plug into the Guard formula in pla
 
 **One remaining constraint:** the Heavy/Medium armor CON requirement stays tied to actual CON specifically, regardless of Guard Stat choice. A DEX-Guard character with poor CON is still locked out of Heavy armor.
 
+### Status Effects
+
+Four named, temporary states appear throughout this document. Stated once here, referenced by name everywhere else instead of redefined each time.
+
+| Status | Effect | Clears when |
+|---|---|---|
+| **Reeling** | Disadvantage on your next roll | That roll happens (win or lose), or an ally clears it early (Rally Cry, Combat Mending Moderate+) |
+| **Rattled** | Disadvantage on your next two rolls | Both rolls happen, or an ally clears it early (same sources as Reeling — clears the whole thing, not one roll at a time) |
+| **Deprived** | Disadvantage on all checks; can't regain Guard from resting a Turn | Eating, drinking, and a full day's rest |
+| **Surprised** | Skip your action entirely for Round 1 of a fight | Automatically, after Round 1 ends |
+
+**No stacking, universally** — a second source of Reeling or Rattled while one is already pending never extends or adds to it; whichever is already active resolves first. This applies to every source of these statuses, not just Wounds.
+
 ### Wounds
 
 **Only 1 Wound slot exists at character creation. A second slot unlocks at level 4, a third at level 8.**
@@ -84,7 +97,7 @@ Rolled once, when a Wound opens.
 | 5 | **Off-Balance** — your next zone move this fight requires a DEX-equivalent check or fails |
 | 6 | **Rattled to the Bone** — Disadvantage on your next two rolls instead of one |
 
-**No stacking.** If a character already has an active Reeling or Rattled effect pending when a new Wound opens, the new Wound's automatic Disadvantage does not add to or extend the existing count — resolve whichever is already active.
+**No stacking** — see Status Effects above; a Wound opening while Reeling or Rattled is already pending doesn't add to it.
 
 ### Mook Rule (for disposable enemies)
 
@@ -98,9 +111,10 @@ If a character is deprived of crucial needs (rest, food, water), they gain Disad
 
 ## Healing Magic
 
-**Combat Mending** (in combat — costs an action + shards per normal potency tier):
-- Restores Guard up to its current max. A Wound's max-Guard reduction stays in place.
-- Cast on an ally who's about to make (or would otherwise fail) a 0-Guard check: they auto-stabilize instead of rolling.
+**Combat Mending** (in combat — costs an action + shards per normal potency tier): restores Guard, up to current max — Minor 1d8+stat, Moderate 2d8+stat, Major 2d8+stat, Mythic 4d8+stat, same dice as damage at each tier.
+- **Moderate tier and above also clears Reeling or Rattled from the target**, in addition to the Guard restored — a real capability step, not just a bigger number.
+- A Wound's max-Guard reduction stays in place regardless of tier.
+- Cast on an ally who's about to make (or would otherwise fail) a 0-Guard check: they auto-stabilize instead of rolling, at any tier.
 - Cannot close a Wound under any circumstances, mid-combat.
 
 **Field Dressing** (out of combat — requires a full Exploration Turn of safety):
