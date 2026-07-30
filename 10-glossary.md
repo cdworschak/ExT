@@ -22,6 +22,8 @@ One canonical definition per term, alphabetical.
 
 **Damage Floor** — any successful hit deals a minimum of 1 damage.
 
+**Day** — a real-world day, no special game definition. Used for Deprivation's multi-day survival tracking, Wounds' passive recovery, and a few explicit time costs (the spell-name Ritual, Artificer permanent-item crafting).
+
 **Death's Door** — triggered at 0 Guard with no Wound slots remaining. Roll d6: 1–3 dies, 4+ faints and rolls on the Scar Table.
 
 **Deprivation** — the penalty state from failing to gather food/rest during travel.
@@ -30,7 +32,9 @@ One canonical definition per term, alphabetical.
 
 **Effect Spell** — a spell that isn't an attack (wards, buffs, heals, utility). No caster roll; works automatically on a willing target, resistance check on an unwilling one.
 
-**Grit** — Wayfarer's resource. Starts at 2, +1 at even levels, some regained after resting a Turn.
+**Encounter / Fight** — used interchangeably with Scene specifically when the context is combat. "Once per encounter" and "once per scene" draw from the same budget if a given ability could be described either way — these aren't two separate pools, just two words for the same bounded unit.
+
+**Grit** — Wayfarer's resource. Starts at 2, +1 at even levels. +1 per Turn of rest (if not Deprived), up to your max.
 
 **Guard** — the damage buffer every character has. = 4 + Guard Stat bonus + archetype bonus + armor + shield, floor 1. Restores fully after a Turn of rest.
 
@@ -65,6 +69,10 @@ One canonical definition per term, alphabetical.
 **Scar Table** — the d10 table rolled when a character faints at Death's Door.
 
 **Scenario Target Modifier** — the GM's tool for shifting a Target up or down based on circumstance.
+
+**Scene** — a bounded dramatic sequence: a fight, a chase, a tense negotiation, a leg of a journey. GM calls when one starts and ends. "Once per scene" abilities reset at that boundary, not on a fixed real-world clock. Broader than combat specifically — see Encounter/Fight for the combat-context synonym.
+
+**Session** — one full sitting at the table. The coarsest tracked unit; a single session can contain many scenes. Used for XP questions and any Talent or Mark explicitly limited "per session," a genuinely larger budget than "per scene."
 
 **Shards, Raw (Dust)** — loose, unrefined, 5cp each. Powers Cantrip and Spark tier only.
 
