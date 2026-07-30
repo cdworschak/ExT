@@ -52,6 +52,8 @@ The GM determines how many days a journey takes, then rolls a d6 — the result 
 
 A character with a relevant wilderness talent (hunting, tracking, navigation), or who marks a use on a relevant toolkit, lets the GM roll a d8 instead of a d6 for that check. In particularly treacherous or hostile terrain, subtract 1 from the Travel Event roll.
 
+**The d8 upgrade isn't the only lever.** A relevant Skill, Contingency, Talent, or other resource a player can plausibly justify may also improve travel odds or let the party bypass a rolled event entirely — GM's discretion, same judgment call used everywhere else in this system. A Network contact who knows the route, an Agent's Contingency declaring the party already scouted a safer path, or a Ranger-flavored Background's relevant Talent are all reasonable levers, not just the wilderness-talent d8 specifically.
+
 **Travel Times** (all defaults assume travel on foot, gathering food along the way):
 
 | Transport | Adjustment |
@@ -60,6 +62,55 @@ A character with a relevant wilderness talent (hunting, tracking, navigation), o
 | Mount or cart | Half travel time; animals also consume rations on a Travel Event 4–5 |
 | Riverboat, glider, or airship | Two-thirds reduction |
 | Forced march | One-third reduction; each character marks a ration use daily or becomes Deprived |
+
+### Encounter Tables
+
+**Every "roll on the region's encounter table" reference in this document assumes one exists — build it before the party travels there, not during.** A good regional encounter table is 8 entries (roll a d8), mixing genuine danger with texture that isn't combat at all — a table that's only monsters gets old fast.
+
+**How to build one:**
+1. **4–5 entries of real danger** — something that can genuinely hurt the party if handled badly. Use Enemy Design Philosophy to build these on the spot if nothing existing fits.
+2. **2–3 entries of texture, not combat** — a sign of danger already passed, a strange landmark, an NPC traveling the same road, weather worth describing. These make the region feel real without adding a fight to every roll.
+3. **1 entry that's genuinely good news** — a shortcut, a safe camp, something useful found. Not every roll should be a complication.
+4. **Reuse Reaction Check for anything with a mind of its own** — an encounter entry that's a creature or NPC doesn't need its own disposition baked in; roll Reaction Check when the party actually meets them.
+
+**Sharn (urban, dense, House-controlled):**
+
+| d8 | Encounter |
+|---|---|
+| 1 | A House Deneith enforcer patrol, checking papers — real if minor legal risk if anything's amiss |
+| 2 | A pickpocket attempt, Sharn Cutpurse-flavored — a DEX or Perception-type check to notice |
+| 3 | A skybridge collapse or malfunction nearby — no direct danger, but a detour and a scene of chaos |
+| 4 | A House Sivis message runner with a delivery for someone in the party, or news of note |
+| 5 | A minor gang dispute spilling into the street — avoidable, or an opening to intervene |
+| 6 | A genuinely helpful contact recognizes someone in the party — a Network-flavored break |
+| 7 | Excoriate Heir-adjacent trouble — someone with a grudge against a Dragonmarked House notices party members wearing House colors or signets |
+| 8 | A Cannith-built construct malfunctioning in public — property damage risk, a chance to help or profit |
+
+**Eldeen Reaches (wilderness, Gatekeeper-warded, genuinely old):**
+
+| d8 | Encounter |
+|---|---|
+| 1 | A pack of natural predators, territorial — Rockclaw-equivalent, build with Enemy Design Philosophy |
+| 2 | Signs of a Gatekeeper ward nearby — safe if respected, a real problem if disturbed |
+| 3 | A shifting weather front rolling in — no combat, but a real complication for the next Travel Roll |
+| 4 | A Towering Wood elder-tree landmark, genuinely ancient — pure texture, a good rest site |
+| 5 | Aberrant corruption, faint but real — something Daelkyr-touched nearby, not yet hostile |
+| 6 | A Wildspoken hermit or hunter, wary but not unfriendly — roll Reaction Check |
+| 7 | A natural hazard — unstable ground, a flooded crossing, something environmental rather than a creature |
+| 8 | A clean, safe clearing — good news, a real chance to rest without complication |
+
+**The Mournland (post-apocalyptic, actively hostile terrain):**
+
+| d8 | Encounter |
+|---|---|
+| 1 | A warped, corrupted creature — build as Named with a damage-taken exception, Enemy Design Philosophy |
+| 2 | Grey mist rolling in, genuinely disorienting — no direct damage, but real risk of the party splitting up |
+| 3 | The wreck of something from the Last War — a landmark, a scavenging opportunity, real texture |
+| 4 | A patch of the Mournland behaving normally, briefly — an eerie, welcome moment of calm |
+| 5 | A rogue construct, still following an order given before the Mourning fell — dangerous, but not malicious |
+| 6 | Another traveler, clearly marked by long exposure — wary, possibly useful, roll Reaction Check |
+| 7 | Ambient magical instability — Scenario Target Modifier shift on the next relevant check, GM's call which one |
+| 8 | A stable, unaffected pocket — rare good news in a region that offers little |
 
 ### Exploration Roll
 

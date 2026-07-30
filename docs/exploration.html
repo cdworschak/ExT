@@ -30,7 +30,7 @@
 
 <main>
   <header class="page-header">
-    <p class="page-eyebrow">04 — Exploration</p>
+    <p class="page-eyebrow">08 — Exploration</p>
     <h1 class="page-title">Exploration</h1>
     <p class="page-intro">What happens between fights — reading a room, and covering ground.</p>
   </header>
@@ -48,6 +48,7 @@
 
   <h2 id="travel">Travel</h2>
   <p>GM rolls a d6 for days until a Travel Event (d8 with a relevant wilderness talent or toolkit; −1 on treacherous terrain).</p>
+  <p><strong>The d8 upgrade isn't the only lever.</strong> A relevant Skill, Contingency, Talent, or other resource a player can plausibly justify may also improve travel odds or let the party bypass a rolled event entirely — GM's discretion, same judgment call used everywhere else in this system.</p>
   <table>
   <tr><th>d6</th><th>Event</th></tr>
   <tr><td>1</td><td>Mishap — add 1 day</td></tr>
@@ -55,12 +56,69 @@
   <tr><td>4–5</td><td>Failed to Gather Food — mark a ration or become Deprived</td></tr>
   <tr><td>6</td><td>Good Fortune — subtract 1 day</td></tr>
   </table>
+
+  <div class="worked-example">
+  <span class="worked-example-label">Worked Example — A Travel Roll</span>
+  <p>The party needs 5 days to reach their destination on foot. The GM rolls a d6 for how many days pass before the first Travel Event: a 3. Since 3 doesn't exceed the 5-day journey, an event happens — 3 days in, with 2 days remaining.</p>
+  <p>A separate roll determines <em>which</em> event: the GM rolls the Travel Event table itself, a fresh d6 — a 2 comes up: <strong>Random Encounter</strong>, resolved using the region's encounter table.</p>
+  <p>That resolved, the whole process repeats against the new remaining length (2 days). The GM rolls the timing d6 again: a 4. Since 4 exceeds the 2 days actually left, <strong>the party arrives without any further event</strong> — the roll doesn't get looked up on the Travel Event table at all, because it never needed to be.</p>
+  <p>Two different d6 rolls doing two different jobs: one asks <em>when</em>, compared against how much journey is left; the other, rolled separately and only when the first roll says an event happens at all, asks <em>what</em>.</p>
+  </div>
+
   <table>
   <tr><th>Transport</th><th>Adjustment</th></tr>
   <tr><td>On foot</td><td>No change</td></tr>
   <tr><td>Mount/cart</td><td>Half time; animals need rations on a 4–5</td></tr>
   <tr><td>Riverboat/glider/airship</td><td>Two-thirds reduction</td></tr>
   <tr><td>Forced march</td><td>One-third reduction; daily ration or Deprived</td></tr>
+  </table>
+
+  <h2 id="encounter-tables">Encounter Tables</h2>
+  <p><strong>Every "roll on the region's encounter table" reference in this document assumes one exists — build it before the party travels there, not during.</strong> A good regional encounter table is 8 entries (roll a d8), mixing genuine danger with texture that isn't combat at all.</p>
+  <ul>
+  <li><strong>4–5 entries of real danger</strong> — something that can genuinely hurt the party if handled badly. Build these with <a href="enemy-design.html">Enemy Design Philosophy</a> if nothing existing fits.</li>
+  <li><strong>2–3 entries of texture, not combat</strong> — a sign of danger already passed, a landmark, a fellow traveler, weather worth describing.</li>
+  <li><strong>1 entry that's genuinely good news</strong> — a shortcut, a safe camp, something useful found.</li>
+  <li><strong>Reuse Reaction Check</strong> for anything with a mind of its own rather than baking disposition into the table itself.</li>
+  </ul>
+
+  <p><strong>Sharn</strong> (urban, dense, House-controlled):</p>
+  <table>
+  <tr><th>d8</th><th>Encounter</th></tr>
+  <tr><td>1</td><td>A House Deneith enforcer patrol, checking papers — real if minor legal risk if anything's amiss</td></tr>
+  <tr><td>2</td><td>A pickpocket attempt, Sharn Cutpurse-flavored — a DEX or Perception-type check to notice</td></tr>
+  <tr><td>3</td><td>A skybridge collapse or malfunction nearby — no direct danger, but a detour and a scene of chaos</td></tr>
+  <tr><td>4</td><td>A House Sivis message runner with a delivery for someone in the party, or news of note</td></tr>
+  <tr><td>5</td><td>A minor gang dispute spilling into the street — avoidable, or an opening to intervene</td></tr>
+  <tr><td>6</td><td>A genuinely helpful contact recognizes someone in the party — a Network-flavored break</td></tr>
+  <tr><td>7</td><td>Someone with a grudge against a Dragonmarked House notices party members wearing House colors or signets</td></tr>
+  <tr><td>8</td><td>A Cannith-built construct malfunctioning in public — property damage risk, a chance to help or profit</td></tr>
+  </table>
+
+  <p><strong>Eldeen Reaches</strong> (wilderness, Gatekeeper-warded, genuinely old):</p>
+  <table>
+  <tr><th>d8</th><th>Encounter</th></tr>
+  <tr><td>1</td><td>A pack of natural predators, territorial — build with Enemy Design Philosophy</td></tr>
+  <tr><td>2</td><td>Signs of a Gatekeeper ward nearby — safe if respected, a real problem if disturbed</td></tr>
+  <tr><td>3</td><td>A shifting weather front rolling in — no combat, but a real complication for the next Travel Roll</td></tr>
+  <tr><td>4</td><td>A Towering Wood elder-tree landmark, genuinely ancient — pure texture, a good rest site</td></tr>
+  <tr><td>5</td><td>Aberrant corruption, faint but real — something Daelkyr-touched nearby, not yet hostile</td></tr>
+  <tr><td>6</td><td>A Wildspoken hermit or hunter, wary but not unfriendly — roll Reaction Check</td></tr>
+  <tr><td>7</td><td>A natural hazard — unstable ground, a flooded crossing, environmental rather than a creature</td></tr>
+  <tr><td>8</td><td>A clean, safe clearing — good news, a real chance to rest without complication</td></tr>
+  </table>
+
+  <p><strong>The Mournland</strong> (post-apocalyptic, actively hostile terrain):</p>
+  <table>
+  <tr><th>d8</th><th>Encounter</th></tr>
+  <tr><td>1</td><td>A warped, corrupted creature — build as Named with a damage-taken exception</td></tr>
+  <tr><td>2</td><td>Grey mist rolling in, genuinely disorienting — no direct damage, but real risk of the party splitting up</td></tr>
+  <tr><td>3</td><td>The wreck of something from the Last War — a landmark, a scavenging opportunity, real texture</td></tr>
+  <tr><td>4</td><td>A patch of the Mournland behaving normally, briefly — an eerie, welcome moment of calm</td></tr>
+  <tr><td>5</td><td>A rogue construct, still following an order given before the Mourning fell — dangerous, but not malicious</td></tr>
+  <tr><td>6</td><td>Another traveler, clearly marked by long exposure — wary, possibly useful, roll Reaction Check</td></tr>
+  <tr><td>7</td><td>Ambient magical instability — Scenario Target Modifier shift on the next relevant check, GM's call which one</td></tr>
+  <tr><td>8</td><td>A stable, unaffected pocket — rare good news in a region that offers little</td></tr>
   </table>
 
   <h2 id="exploration-roll">Exploration Roll</h2>

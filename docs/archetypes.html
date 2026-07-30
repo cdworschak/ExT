@@ -30,7 +30,7 @@
 
 <main>
   <header class="page-header">
-    <p class="page-eyebrow">03 — Archetypes</p>
+    <p class="page-eyebrow">04 — Archetypes</p>
     <h1 class="page-title">Archetypes</h1>
     <p class="page-intro">Three chassis: Wayfarer (martial), Agent (skills/utility), Syberist (spellcaster, four traditions including Artificer). Full kits, resources, and every option each one can take.</p>
   </header>
@@ -79,6 +79,13 @@
   <tr><td>Ranged</td><td>Steady Aim — ignore range Disadvantage or a cover penalty for this shot</td><td>Split Fire (the universal-table maneuver above)</td></tr>
   </table>
 
+  <div class="worked-example">
+  <span class="worked-example-label">Worked Example — Spending Grit</span>
+  <p>Rivet (a Warbred Wayfarer, 4 Grit) shares a zone with Ilyara, a fragile Shardbound Syberist. Three bandits are about to act, and Rivet knows they'll all target her. On his turn, he spends 2 Grit on <strong>Shield</strong>: until his next turn, every attack against Ilyara is rolled at Disadvantage.</p>
+  <p>All three bandits attack Ilyara this Round. Standard-tier mooks with no attack exception roll a flat 2d10 vs Target 12 — 45% to hit normally. At Disadvantage, that drops to 22%. Two of the three miss; only one connects, and for a fraction of the damage a clean hit would have dealt.</p>
+  <p>Rivet has 2 Grit left. Next Round, he could spend 1 on <strong>Guard Stance</strong> to protect himself instead, or save it — Grit refills at +1 per Turn of rest, so nothing carries over stress-free mid-fight; every spend is a real trade-off between protecting now and having options later.</p>
+  </div>
+
   <h3 id="dual-wield">Dual-wield</h3>
   <p><strong>One attack roll, roll both weapons' damage dice, take the higher.</strong> Main-hand Light or Medium, off-hand must be Light, both sharing the same governing stat. Applies identically to unarmed strikes (main fist Medium via Iron Palm, off-hand fist Light).</p>
   <table>
@@ -118,6 +125,13 @@
   <li><strong>3+ Leverage</strong> — something that reshapes the scene ("I already turned this guard captain")</li>
   </ul>
 
+  <div class="worked-example">
+  <span class="worked-example-label">Worked Example — Declaring a Contingency</span>
+  <p>Vex, a Rogue-Agent, is being chased across Sharn's rooftops and hits a gap between buildings too wide to jump. She has no rope in her inventory — nothing on her sheet says she planned for this.</p>
+  <p>She spends 1 Leverage and declares: "I looped a line across this gap on the way up." No roll — Contingency is never rolled, at any cost. The GM prices the proposal by size, the player pays it, and it's simply true from that point on.</p>
+  <p>Vex is down to 1 Leverage until her next chance to regenerate it — a real Turn of downtime spent casing, networking, or otherwise preparing, with a 2d10+stat check deciding whether <em>that</em> pays off. The regeneration check rolls; the Contingency spend itself never does.</p>
+  </div>
+
   <h3 id="skills">Skills</h3>
   <p>Choose freely at creation and on level-up: <strong>Swift</strong> (no Disengage check needed, Advantage on movement-related checks), <strong>Many Pockets</strong> (+1 backpack slot per pick — repeatable, same shape as Expertise below).</p>
   <p><strong>Network</strong> — a real, named contact tied to a specific domain (a fence, a guard captain, a dockworkers' foreman). Using that relationship for the Leverage-regeneration check above grants Advantage on the roll — naturally CHA-flavored, most available wherever that contact could plausibly be found, but never the only path to Leverage. A Contingency drawing on your contact's domain also costs 1 less Leverage (minimum 1).</p>
@@ -131,6 +145,13 @@
   <tr><td><strong>Exploit the Opening</strong></td><td>Once per Wound that opens on a target (yours or an ally's), your next hit against them with a Light or Medium weapon automatically counts as a critical</td></tr>
   <tr><td><strong>Take Aim</strong></td><td>Spend your action aiming (no attack this turn); your next attack this fight against that target, with a Light or Medium weapon, gets Advantage, and rolls a second weapon damage die on top of the normal hit — that second die's result also permanently reduces their Guard, surviving even a Wound refill</td></tr>
   </table>
+
+  <div class="worked-example">
+  <span class="worked-example-label">Worked Example — Take Aim</span>
+  <p>Nix (a Gnome Agent, DEX +2, Medium crossbow) is up against Kolt, a Standard-tier Captain. Round 1: Nix spends his whole action aiming instead of attacking — no damage this Round, but Kolt is now marked.</p>
+  <p>Round 2: Nix finally lands the shot. The attack rolls at Advantage (3d10, keep the best two), and on a hit rolls a second Medium weapon die (1d6) on top of the normal damage. Say the bonus die comes up 4 — Kolt takes the normal hit as usual, <em>and</em> his max Guard drops by 4, permanently, for the rest of the fight. Even if Kolt takes a Wound later and refills to his new max, that max is now 4 lower than it would have been.</p>
+  <p>The cost was real: a full Round where Nix dealt zero damage, for one attack that hits harder and leaves a lasting mark. Against a target that dies fast anyway, that's a bad trade — Take Aim earns its keep against something built to survive a long fight.</p>
+  </div>
 
   <h3 id="agent-flavors">Agent Flavors</h3>
   <p>Three concept archetypes on the same chassis, differing only in what kind of Contingency each leans into and what regenerates Leverage.</p>
@@ -234,13 +255,20 @@
 
   <p><strong>The trigger roll always uses INT — but the holder's own INT, not the crafter's.</strong> Handing a Contraption to someone else is a genuine gamble, not a strictly-better play, since their own INT bonus governs whether it goes off.</p>
 
+  <div class="worked-example">
+  <span class="worked-example-label">Worked Example — Quick Rig</span>
+  <p>Cassa, a level-4 Artificer Syberist (INT +2, 2 known Contraption capacity), spends downtime before a raid Name-Crafting a Minor-tier attack spell into a Shock Coil (1d8+INT when triggered) instead of casting it immediately.</p>
+  <p>The plan splits the party: Cassa stays with the main group, while Rurik (a Heavy-weapon Wayfarer, INT −1) breaks off to cover a side entrance alone. She hands him the Shock Coil before they split up. If he ends up needing it, the trigger roll uses <em>his</em> INT, not hers — a real gamble, since her INT +2 would land it far more reliably than his INT −1.</p>
+  <p>That's the actual trade-off: Cassa could keep every Contraption on herself for the best odds, but then Rurik goes into a fight alone with nothing but his weapon. Accepting worse odds on the trigger roll is the price of having real coverage in two places at once — not a fallback for when something goes wrong, but a deliberate call made before it does.</p>
+  </div>
+
   <h3>Example Contraptions</h3>
   <table>
   <tr><th>Tier</th><th>Cost</th><th>Example</th></tr>
   <tr><td>Spark</td><td>1–3 shards</td><td>Glowspark — sheds dim light in Near range. Alarm Chime — rings when anyone crosses a marked threshold.</td></tr>
-  <tr><td>Minor</td><td>2d6 shards</td><td>Shock Coil — 1d6+INT (holder's) damage in a burst. Grapnel Rig — pulls the user one zone toward an anchor point.</td></tr>
-  <tr><td>Moderate</td><td>2d6×2 shards</td><td>Breach Charge — 2d6 to a structure or barrier, ignoring hardness. Numbing Vapor — Disadvantage on all rolls in the zone for anyone who fails to resist.</td></tr>
-  <tr><td>Major</td><td>3d6×5 shards</td><td>Overcharged Blast — 4d6 damage, holder's INT governs the attack roll. Repair Frame — restores 2d6+INT (holder's) Guard to whoever's wearing it.</td></tr>
+  <tr><td>Minor</td><td>2d6 shards</td><td>Shock Coil — 1d8+INT (holder's) damage in a burst. Grapnel Rig — pulls the user one zone toward an anchor point.</td></tr>
+  <tr><td>Moderate</td><td>2d6×2 shards</td><td>Breach Charge — 2d8+INT (holder's) to a structure or barrier, ignoring hardness. Numbing Vapor — Disadvantage on all rolls in the zone for anyone who fails to resist.</td></tr>
+  <tr><td>Major</td><td>3d6×5 shards</td><td>Overcharged Blast — automatically opens a Wound on a hit, plus 2d8+INT (holder's) secondary damage. Repair Frame — restores 2d6+INT (holder's) Guard to whoever's wearing it.</td></tr>
   </table>
 
   <p><strong>Permanent items</strong> use the existing 10–20× pricing, with a real choice of where to land: roll the tier's own cost die for baseline crafting days, pay the top of the range to halve that time, pay the bottom to double it. <strong>Salvaging an existing magic item</strong> destroys it but recovers shards equal to the tier's base average casting cost — roughly 5–10% of what it was worth built, a real loss but useful for material nobody wants to carry.</p>
@@ -256,6 +284,17 @@
   </table>
 
   <p><strong>Aberrant Mark</strong> — open to any Background, mark-touched by accident rather than House-blooded. Grants the ability to attempt a Minor-tier cast (Attack or Effect) with zero shards ever possessed — every attempt is a genuine Overcast, resolved entirely through the existing Overcast Backlash Pool (always reduced to 3d6, since 0 shards is always more than half short of any possible Minor cost). No new mechanic — reuses casting and Overcasting directly. Own Noun category for Spell Names: <a href="magic.html">Aberrant</a>.</p>
+
+  <h3>Mark Tier Power Baseline</h3>
+  <p>Least ≈ Spark tier (small, real, narrow), Lesser ≈ Minor tier (a real step up, reliable utility), Greater ≈ Major tier (rare, breaks the laws of nature), Siberys ≈ Mythic tier (unique, world-altering, essentially GM-placed only). Not an exact mechanical translation — a power-level anchor for what each tier should feel like when building one out.</p>
+  <table>
+  <tr><th>Tier</th><th>Cannith (Making)</th><th>Jorasco (Healing)</th></tr>
+  <tr><td>Least</td><td>Repair or jury-rig a broken item, 1/session</td><td>Stabilize a dying creature or mend a minor injury, 1–2/session</td></tr>
+  <tr><td>Lesser</td><td>The repair is now genuinely reliable and fast — no roll needed for anything short of total destruction, and a second use per session</td><td>Closes a Wound outright once per session, no Field Dressing Turn required</td></tr>
+  <tr><td>Greater</td><td>Rebuild something destroyed entirely, given a few hours and the pieces — genuinely beyond mundane possibility</td><td>Cures any non-magical affliction instantly; once per session, prevents a Death's Door roll from happening at all if reached in time</td></tr>
+  <tr><td>Siberys</td><td>A living creation — imbue something with genuine, if narrow, agency, GM-placed only</td><td>Restore the recently dead — a real resurrection, unique per campaign</td></tr>
+  </table>
+  <p><strong>Scaling principle for the other 10 Houses, built the same way:</strong> Least→Lesser mirrors Spark→Minor's jump (better reliability, a second use, still narrow). Lesser→Greater mirrors Minor→Major's jump (genuinely impossible without magic, rare, campaign-specific). Greater→Siberys mirrors Major→Mythic's jump (unique, GM-placed, never a standing player choice).</p>
 
   <h3>Least Marks (all 12 Houses)</h3>
   <table>

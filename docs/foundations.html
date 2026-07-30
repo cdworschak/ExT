@@ -32,36 +32,71 @@
   <header class="page-header">
     <p class="page-eyebrow">01 — Foundations</p>
     <h1 class="page-title">Foundations</h1>
-    <p class="page-intro">Setting terminology and core resolution — the shared foundation everything else builds on — followed by a short abstract and example of every other section in this document.</p>
+    <p class="page-intro">What this game is, the core roll, Guard Stat, and a short abstract of every other section.</p>
   </header>
 
-  <h2 id="setting-terminology">Setting Terminology</h2>
-  <p>Eberron is the setting being run; The Electrum Archive is the ruleset underneath it. TEA's abstract rules and setting concepts get mapped onto pieces of Eberron that already do the same narrative job — Eberron leads below, TEA's term follows as the mechanic it's standing in for.</p>
-  <table>
-  <tr><th>Eberron Concept</th><th>Runs on TEA's Concept of...</th></tr>
-  <tr><td>Dragonshard dust</td><td>Elder ink</td></tr>
-  <tr><td>Khyber / Syrania / the space between planes</td><td>The Realm Beyond</td></tr>
-  <tr><td>The Dragonmarked Houses</td><td>Merchant Houses</td></tr>
-  <tr><td>The Mournland</td><td>Bone spores / Spore Wilds</td></tr>
-  <tr><td>A Cannith/Silver Flame containment order</td><td>Order of Ilsaar</td></tr>
-  <tr><td>Khyber tunnels, a Dhakaani remnant cold war</td><td>Sunless Princedoms / the Irr</td></tr>
-  <tr><td>A claimed reincarnated Dhakaani king, or a warforged claiming two minds</td><td>The Twin-Souled Emperor</td></tr>
-  </table>
+  <p>Five years after the Last War ended, the world hasn't caught its breath. Everbright lanterns still light the streets of Sharn, message stations still hum with House Sivis's magic, and airships still cross the sky on Lyrandar wind — but the peace is thin, the Mournland festers where a nation used to be, and every Dragonmarked House is still quietly maneuvering for the next war nobody's called yet.</p>
+
+  <p>You're not a chosen hero. You're a warforged still figuring out what peacetime is for, an elf outcast from two traditions at once, a Cannith heir one bad decision from excoriation, a dust-runner who can price a vein of raw dragonshard at a glance. Whatever you are, you're good at a dangerous job, and Eberron has no shortage of those.</p>
+
+  <p>This is a fast, lethal, 2d10 system built on a real gamble at its core: casting means having the shards in hand, right now — reach for more power than you're actually carrying, and that's a genuine risk every time, never a rules footnote. Combat hits hard and heals slow. Guard is your luck and skill holding out under pressure, not meat — and when it runs out, the world remembers.</p>
 
   <h2 id="core-resolution">Core Resolution</h2>
-  <p><strong>This system's actual design constraint, stated plainly:</strong> situational difficulty is represented by shifting the Target number or granting Advantage/Disadvantage, never by stacking small numeric modifiers. A GM has exactly two levers for "this is harder/easier than normal" — move the Target, or apply Advantage/Disadvantage. Every other number on a character sheet stays fixed; only the target and the dice pool ever move.</p>
-  <p><strong>Check format:</strong> roll 2d10 + stat bonus, succeed on 12 or higher.</p>
+  <p><strong>Roll 2d10 + stat bonus, succeed on 12 or higher.</strong> That's every check in this system — attacks, saves, skill use, all of it.</p>
 
-  <p><strong>Advantage and Disadvantage never stack within a single roll, from any combination of sources.</strong> A given roll has Advantage, Disadvantage, or neither. If one specific roll would have both from different origins at once, they cancel — roll normally. <strong>This is strictly per-roll, not per-character</strong> — a PC's own outgoing attack and an enemy's incoming attack against that same PC are separate rolls that never interact, even in the same round. A PC with Advantage on their own next attack and an enemy attacking that PC with Disadvantage imposed on <em>that</em> roll are unrelated instances; nothing cancels, since nothing is happening on the same roll.</p>
+  <p><strong>What a stat actually represents.</strong> Every check happens because something's genuinely at stake, and the stat you roll is the part of your character being tested in that moment — acting on the world, or holding up against something acting on you.</p>
+  <table>
+  <tr><th>Stat</th><th>What it represents</th><th>You act by...</th><th>You resist...</th></tr>
+  <tr><td><strong>STR</strong></td><td>Raw physical power</td><td>Hitting hard, forcing something open, holding your ground</td><td>Being grabbed, thrown, physically overpowered</td></tr>
+  <tr><td><strong>DEX</strong></td><td>Speed and precision</td><td>Reacting fast, aiming true, getting there before the danger does</td><td>Area effects, traps, anything you can dodge or outrun</td></tr>
+  <tr><td><strong>CON</strong></td><td>Endurance</td><td>Keeping going after most people would stop</td><td>Poison, disease, exhaustion, being worn down</td></tr>
+  <tr><td><strong>INT</strong></td><td>Reasoning</td><td>Working something out under pressure — a trap, a lie, a spell</td><td>Illusions, mental tricks that only fool someone not paying attention</td></tr>
+  <tr><td><strong>WIS</strong></td><td>Awareness</td><td>Noticing what's actually happening, trusting an instinct</td><td>Fear, despair, charm, anything preying on your state of mind</td></tr>
+  <tr><td><strong>CHA</strong></td><td>Presence</td><td>Making someone believe you, fear you, or follow you</td><td>Intimidation, manipulation, being talked into something</td></tr>
+  </table>
+
+  <p><strong>Advantage / Disadvantage:</strong> roll 3d10 instead of 2d10, keep the best two (Advantage) or worst two (Disadvantage). Disadvantage rolls never crit.</p>
+  <table>
+  <tr><th>Bonus</th><th>Normal</th><th>Advantage</th><th>Disadvantage</th></tr>
+  <tr><td>−3</td><td>21%</td><td>43%</td><td>7%</td></tr>
+  <tr><td>−2</td><td>28%</td><td>53%</td><td>11%</td></tr>
+  <tr><td>−1</td><td>36%</td><td>62%</td><td>15%</td></tr>
+  <tr><td>0</td><td>45%</td><td>71%</td><td>22%</td></tr>
+  <tr><td>+1</td><td>55%</td><td>79%</td><td>29%</td></tr>
+  <tr><td>+2</td><td>64%</td><td>85%</td><td>38%</td></tr>
+  <tr><td>+3</td><td>72%</td><td>89%</td><td>47%</td></tr>
+  </table>
+
+  <p><strong>Situational difficulty works two ways only:</strong> shift the Target number, or grant Advantage/Disadvantage. A GM never stacks small numeric modifiers on top of a roll — every other number on a character sheet stays fixed; only the target and the dice pool ever move.</p>
+
+  <p><strong>Advantage and Disadvantage never stack within a single roll, from any combination of sources.</strong> A given roll has Advantage, Disadvantage, or neither. If one specific roll would qualify for both at once, they cancel — roll normally. <strong>This is strictly per-roll, not per-character</strong> — a PC's own outgoing attack and an enemy's incoming attack against that same PC are separate rolls that never interact, even in the same round.</p>
+
+  <div class="worked-example">
+  <span class="worked-example-label">Worked Example — Core Resolution</span>
+  <p>Rivet (STR +2) swings a Heavy weapon at a Standard-tier bandit (Target 12). He rolls 2d10: 6 and 9, totaling 15. Add his +2 bonus: 17, comfortably clearing 12 — a hit. Later, Rivet is Reeling (Disadvantage) from an open Wound and attacks again: he rolls three dice instead of two — 4, 8, 3 — and keeps the worst two (4 and 3), totaling 7. Add +2: 9. Short of 12 — a miss.</p>
+  </div>
+
+  <h2 id="guard-stat">Guard Stat</h2>
+  <p>Every character has a damage buffer called Guard (full explanation on <a href="combat.html">Combat</a>). At creation, you pick which of the six stats feeds it:</p>
+  <table>
+  <tr><th>Guard Stat</th><th>Concept</th></tr>
+  <tr><td>CON — Endurance</td><td>Classic tank: physically tough, shrugs off blows</td></tr>
+  <tr><td>DEX — Reflexes</td><td>Dodges and weaves; full hits become glancing ones</td></tr>
+  <tr><td>STR — Brute Force</td><td>Physically blocks and overpowers incoming attacks</td></tr>
+  <tr><td>INT — Tactics</td><td>Reads the fight, positions so blows land where they hurt least</td></tr>
+  <tr><td>WIS — Awareness</td><td>Danger sense; flinches away before the worst lands</td></tr>
+  <tr><td>CHA — Presence</td><td>Force of personality throws off an attacker's aim and timing</td></tr>
+  </table>
+  <p><strong>Guard Stat must differ from your weapon stat, cast stat, and Wandslinger stat if applicable — all locked together at character creation.</strong> This is a permanent choice; a character who later swaps weapons never retroactively breaks anything. One exception: the Heavy/Medium armor CON requirement stays tied to your actual CON regardless of Guard Stat choice — a DEX-Guard character with poor CON is still locked out of Heavy armor.</p>
 
   <h2 id="whats-in-this-document">What's in This Document</h2>
   <p>A brief abstract and one concrete example of every other section — enough to orient yourself before diving into the full page for whichever part you actually need.</p>
 
   <h3>Character Creation</h3>
-  <p>The full step-by-step build sequence, from choosing a Background through starting wealth, plus guidance on what makes each choice strong or weak. <em>Example: your Guard Stat must differ from your weapon stat and cast stat — locked in at creation, never revisited.</em> <a href="character-creation.html">Full page →</a></p>
+  <p>The full step-by-step build sequence, from choosing a Background through starting wealth, plus guidance on what makes each choice strong or weak, and a full worked example. <em>Example: your Guard Stat must differ from your weapon stat and cast stat — locked in at creation, never revisited.</em> <a href="character-creation.html">Full page →</a></p>
 
   <h3>Backgrounds</h3>
-  <p>Race and culture fused into one character-creation choice — 45 options, each granting a stat bonus, two Talents, and narrative-only gear. <em>Example: a Valenar Blademarked elf gets +1 DEX/STR, a war-spirit combat Talent, and a clan sigil — never a free weapon or mount with hidden stats.</em> <a href="backgrounds.html">Full page →</a></p>
+  <p>Race and culture fused into one character-creation choice — 45 options, each granting a stat bonus, two Talents, and narrative-only gear. Also covers Languages and Talents &amp; Expertise. <em>Example: a Valenar Blademarked elf gets +1 DEX/STR, a war-spirit combat Talent, and a clan sigil — never a free weapon or mount with hidden stats.</em> <a href="backgrounds.html">Full page →</a></p>
 
   <h3>Archetypes</h3>
   <p>Three chassis — Wayfarer (Grit, martial maneuvers), Agent (Leverage, Contingency, Skills), Syberist (real spellcasting, four traditions including Artificer). <em>Example: a Wayfarer spends 2 Grit on Shield to impose Disadvantage on every attack against an ally this round.</em> <a href="archetypes.html">Full page →</a></p>
@@ -83,12 +118,6 @@
 
   <h3>Glossary</h3>
   <p>One canonical definition per term that's ever caused confusion or drift across this whole document. <em>Example: Turn (a 10-minute exploration unit) and Round (one combat cycle) are genuinely different things that share no relationship.</em> <a href="glossary.html">Full page →</a></p>
-
-  <h2 id="languages">Languages</h2>
-  <p><strong>Common</strong> is free to everyone. <strong>INT bonus ≤ −2</strong> means illiterate — speaks known languages but can't read or write any. <strong>INT bonus &gt; 0</strong> grants +1 extra language per point. <strong>Non-human Backgrounds grant their ancestral language free</strong>, separate from the INT-based count.</p>
-
-  <h2 id="talents">Talents &amp; Expertise</h2>
-  <p>Talents grant <strong>Advantage on relevant checks</strong> — the universal expertise system every archetype has access to, tied to Background rather than class. See <a href="backgrounds.html">Backgrounds</a> for the full list, and <a href="archetypes.html">Archetypes</a> for every archetype's complete kit — Grit Maneuvers, Skills, Tradition Options, and Dragonmarks.</p>
 
   <div class="page-nav">
     <span></span>

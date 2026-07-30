@@ -77,12 +77,16 @@ Syberists cast via Name-Crafting — spells are cast by learning the names of sp
 |---|---|---|---|
 | Cantrip | Free — just possess ≥1 shard as a focus, don't spend it | 0 | Momentary, cosmetic, zero-stakes effects only. No damage, no unlocking, no real mechanical advantage. |
 | Spark | Flat 1–3 shards (GM sets exact cost by scope) | ~2 | Small, real, single-purpose mechanical effects — mitigate one hit, a brief minor buff, a tiny utility trick. |
-| Minor | 2d6 shards | 7 | Could be done without magic, but magic makes it reliable/fast. Attack spells: 1d6 + caster's stat bonus, single-target only. No multi-target option at this tier. |
-| Moderate | 2d6×2 shards | 14 | Beyond mundane possibility. 2d6 dmg single / d6 multiple. |
-| Major | 3d6×5 shards | 52.5 | Breaks the laws of nature. Attack spells (single-target): automatically opens a Wound on a hit, bypassing Guard entirely, plus 2d6 secondary damage. Multi-target still uses pure damage (2d6 multiple, no auto-Wound). |
-| Mythic | 4d6×25 shards | 350 | Alters the world. Attack spells (single-target): automatically opens two Wounds at once on a hit, bypassing Guard entirely, plus 4d6 secondary damage. Multi-target still uses pure damage (4d6 multiple, no auto-Wound). |
+| Minor | 2d6 shards | 7 | Could be done without magic, but magic makes it reliable/fast. Attack spells, single-target: 1d8 + caster's stat bonus. Multi-target: up to 2 targets in the zone, 1d4 flat each (no stat bonus) — a real capability Spark can never reach at any cost, not just a bigger number. |
+| Moderate | 2d6×2 shards | 14 | Beyond mundane possibility. Single-target: 2d8 + caster's stat bonus. Multi-target: up to 4 targets in the zone, 1d6 flat each. |
+| Major | 3d6×5 shards | 52.5 | Breaks the laws of nature. Single-target: automatically opens a Wound on a hit, bypassing Guard entirely, plus 2d8 + caster's stat bonus secondary damage. Multi-target: up to 6 targets in the zone, 2d6 flat each, no auto-Wound. |
+| Mythic | 4d6×25 shards | 350 | Alters the world. Single-target: automatically opens two Wounds at once on a hit, bypassing Guard entirely, plus 4d8 + caster's stat bonus secondary damage. Multi-target: up to 8 targets in the zone, 4d6 flat each, no auto-Wound. |
 
 Cantrip produces color only. Any mechanical outcome starts at Spark tier and costs shards.
+
+**Worked example, single-target:** Ilyara casts a Minor-tier bolt at a lone bandit. She rolls 1d8+INT(+2): the die comes up 6, total 8 damage.
+
+**Worked example, multi-target:** Two bandits share a zone. Ilyara casts the same tier, multi-target option — one to-hit roll, and on a hit, both targets take 1d4 flat each (no stat bonus, capped at 2 targets for Minor tier). She rolls a 3 and a 2: 5 damage to one bandit, 4 to the other.
 
 ### Shard Bolt (Spark-tier attack cantrip)
 
@@ -566,9 +570,9 @@ Own Noun category for Spell Names: Artificer.
 | Tier | Cost | Example |
 |---|---|---|
 | Spark | 1–3 shards | **Glowspark** — a hand-sized device sheds dim light in Near range when triggered, hands-free afterward. **Alarm Chime** — rings audibly the moment anyone crosses a marked threshold. |
-| Minor | 2d6 shards | **Shock Coil** — a thrown or handheld device deals 1d6+INT (of the holder) damage in a burst. **Grapnel Rig** — fires a line, pulling the user one zone toward a fixed anchor point. |
-| Moderate | 2d6×2 shards | **Breach Charge** — a placed device deals 2d6 damage to a structure or barrier, ignoring standard hardness. **Numbing Vapor** — releases a cloud imposing Disadvantage on all rolls made by anyone in the zone who fails a resistance check. |
-| Major | 3d6×5 shards | **Overcharged Blast** — a single-target device automatically opens a Wound on a hit (bypassing Guard entirely), plus 2d6 secondary damage, INT (of the holder) governs the attack roll. **Repair Frame** — restores Guard equal to 2d6+INT (of the holder) to whoever's wearing it when triggered. |
+| Minor | 2d6 shards | **Shock Coil** — a thrown or handheld device deals 1d8+INT (of the holder) damage in a burst. **Grapnel Rig** — fires a line, pulling the user one zone toward a fixed anchor point. |
+| Moderate | 2d6×2 shards | **Breach Charge** — a placed device deals 2d8+INT (of the holder) damage to a structure or barrier, ignoring standard hardness. **Numbing Vapor** — releases a cloud imposing Disadvantage on all rolls made by anyone in the zone who fails a resistance check. |
+| Major | 3d6×5 shards | **Overcharged Blast** — a single-target device automatically opens a Wound on a hit (bypassing Guard entirely), plus 2d8+INT (of the holder) secondary damage. **Repair Frame** — restores Guard equal to 2d6+INT (of the holder) to whoever's wearing it when triggered. |
 
 **Permanent items** — an Artificer Syberist crafting a lasting magic item uses the existing Magic Items pricing (10–20× the tier's average casting cost): roll the tier's own cost die, read the result in days instead of shards, for the baseline crafting time. Pay the top of the range (20×) to halve that time; pay the bottom (10×) to double it.
 
@@ -666,6 +670,17 @@ Only House-lineage Backgrounds can take a mark: Cannith, Lyrandar, Kundarak, Siv
 - **Greater Mark** — a genuinely strong effect; rare, likely Background-exclusive or a mid-campaign unlock.
 - **Siberys Mark** — campaign-defining, essentially unique per game, GM-placed rather than player-chosen.
 - **Aberrant Mark** — open to any Background. Grants the ability to attempt a Minor-tier cast (Attack or Effect) with zero shards ever possessed. Every attempt is a genuine Overcast: roll 2d6 for what the cast would have cost, then resolve entirely through the existing Overcast Backlash Pool — always reduced to 3d6, since 0 shards is always more than half short of any possible Minor-tier cost. CON bonus adds rerolls exactly as normal. Own Noun category for Spell Names: Aberrant.
+
+**Mark Tier Power Baseline.** Least ≈ Spark tier (small, real, narrow), Lesser ≈ Minor tier (a real step up, reliable utility), Greater ≈ Major tier (rare, breaks the laws of nature), Siberys ≈ Mythic tier (unique, world-altering, essentially GM-placed only). Not an exact mechanical translation — a power-level anchor for what each tier should feel like when building one out.
+
+| Tier | Cannith (Making) | Jorasco (Healing) |
+|---|---|---|
+| Least | Repair or jury-rig a broken item, 1/session | Stabilize a dying creature or mend a minor injury, 1–2/session |
+| Lesser | The repair is now genuinely reliable and fast — no roll needed for anything short of total destruction, and a second use per session | Closes a Wound outright once per session, no Field Dressing Turn required |
+| Greater | Rebuild something destroyed entirely, given a few hours and the pieces — genuinely beyond mundane possibility | Cures any non-magical affliction instantly; once per session, prevents a Death's Door roll from happening at all if reached in time |
+| Siberys | A living creation — imbue something with genuine, if narrow, agency, GM-placed only | Restore the recently dead — a real resurrection, unique per campaign |
+
+**Scaling principle for the other 10 Houses, built the same way:** Least→Lesser mirrors Spark→Minor's jump (better reliability, a second use, still narrow in scope). Lesser→Greater mirrors Minor→Major's jump (genuinely impossible without magic, rare, likely campaign-specific). Greater→Siberys mirrors Major→Mythic's jump (unique, GM-placed, never a standing player choice).
 
 ### Least Marks (all 12 Houses)
 
@@ -1262,7 +1277,7 @@ Shards are two separate economic goods:
 
 ## HP: Guard + Wounds
 
-At 0 Guard with Wound slots exhausted, roll a d6 — 1–3 dies, 4+ faints and rolls on the Scar table.
+At 0 Guard with Wound slots exhausted, roll a d6 — 1–3 dies, 4+ faints and rolls on the Scar table. **A fainted character isn't safe yet: if their wounds aren't treated within a Turn (10 minutes) by another character, they die anyway.** Treating them requires a check using whichever stat fits the method (INT for a real medical attempt, WIS for a more instinctive one, GM's call) — success stabilizes them for good.
 
 ### Scar Table (d10)
 
@@ -1479,6 +1494,8 @@ The GM determines how many days a journey takes, then rolls a d6 — the result 
 
 A character with a relevant wilderness talent (hunting, tracking, navigation), or who marks a use on a relevant toolkit, lets the GM roll a d8 instead of a d6 for that check. In particularly treacherous or hostile terrain, subtract 1 from the Travel Event roll.
 
+**The d8 upgrade isn't the only lever.** A relevant Skill, Contingency, Talent, or other resource a player can plausibly justify may also improve travel odds or let the party bypass a rolled event entirely — GM's discretion, same judgment call used everywhere else in this system. A Network contact who knows the route, an Agent's Contingency declaring the party already scouted a safer path, or a Ranger-flavored Background's relevant Talent are all reasonable levers, not just the wilderness-talent d8 specifically.
+
 **Travel Times** (all defaults assume travel on foot, gathering food along the way):
 
 | Transport | Adjustment |
@@ -1487,6 +1504,55 @@ A character with a relevant wilderness talent (hunting, tracking, navigation), o
 | Mount or cart | Half travel time; animals also consume rations on a Travel Event 4–5 |
 | Riverboat, glider, or airship | Two-thirds reduction |
 | Forced march | One-third reduction; each character marks a ration use daily or becomes Deprived |
+
+### Encounter Tables
+
+**Every "roll on the region's encounter table" reference in this document assumes one exists — build it before the party travels there, not during.** A good regional encounter table is 8 entries (roll a d8), mixing genuine danger with texture that isn't combat at all — a table that's only monsters gets old fast.
+
+**How to build one:**
+1. **4–5 entries of real danger** — something that can genuinely hurt the party if handled badly. Use Enemy Design Philosophy to build these on the spot if nothing existing fits.
+2. **2–3 entries of texture, not combat** — a sign of danger already passed, a strange landmark, an NPC traveling the same road, weather worth describing. These make the region feel real without adding a fight to every roll.
+3. **1 entry that's genuinely good news** — a shortcut, a safe camp, something useful found. Not every roll should be a complication.
+4. **Reuse Reaction Check for anything with a mind of its own** — an encounter entry that's a creature or NPC doesn't need its own disposition baked in; roll Reaction Check when the party actually meets them.
+
+**Sharn (urban, dense, House-controlled):**
+
+| d8 | Encounter |
+|---|---|
+| 1 | A House Deneith enforcer patrol, checking papers — real if minor legal risk if anything's amiss |
+| 2 | A pickpocket attempt, Sharn Cutpurse-flavored — a DEX or Perception-type check to notice |
+| 3 | A skybridge collapse or malfunction nearby — no direct danger, but a detour and a scene of chaos |
+| 4 | A House Sivis message runner with a delivery for someone in the party, or news of note |
+| 5 | A minor gang dispute spilling into the street — avoidable, or an opening to intervene |
+| 6 | A genuinely helpful contact recognizes someone in the party — a Network-flavored break |
+| 7 | Excoriate Heir-adjacent trouble — someone with a grudge against a Dragonmarked House notices party members wearing House colors or signets |
+| 8 | A Cannith-built construct malfunctioning in public — property damage risk, a chance to help or profit |
+
+**Eldeen Reaches (wilderness, Gatekeeper-warded, genuinely old):**
+
+| d8 | Encounter |
+|---|---|
+| 1 | A pack of natural predators, territorial — Rockclaw-equivalent, build with Enemy Design Philosophy |
+| 2 | Signs of a Gatekeeper ward nearby — safe if respected, a real problem if disturbed |
+| 3 | A shifting weather front rolling in — no combat, but a real complication for the next Travel Roll |
+| 4 | A Towering Wood elder-tree landmark, genuinely ancient — pure texture, a good rest site |
+| 5 | Aberrant corruption, faint but real — something Daelkyr-touched nearby, not yet hostile |
+| 6 | A Wildspoken hermit or hunter, wary but not unfriendly — roll Reaction Check |
+| 7 | A natural hazard — unstable ground, a flooded crossing, something environmental rather than a creature |
+| 8 | A clean, safe clearing — good news, a real chance to rest without complication |
+
+**The Mournland (post-apocalyptic, actively hostile terrain):**
+
+| d8 | Encounter |
+|---|---|
+| 1 | A warped, corrupted creature — build as Named with a damage-taken exception, Enemy Design Philosophy |
+| 2 | Grey mist rolling in, genuinely disorienting — no direct damage, but real risk of the party splitting up |
+| 3 | The wreck of something from the Last War — a landmark, a scavenging opportunity, real texture |
+| 4 | A patch of the Mournland behaving normally, briefly — an eerie, welcome moment of calm |
+| 5 | A rogue construct, still following an order given before the Mourning fell — dangerous, but not malicious |
+| 6 | Another traveler, clearly marked by long exposure — wary, possibly useful, roll Reaction Check |
+| 7 | Ambient magical instability — Scenario Target Modifier shift on the next relevant check, GM's call which one |
+| 8 | A stable, unaffected pocket — rare good news in a region that offers little |
 
 ### Exploration Roll
 
@@ -1820,7 +1886,7 @@ One canonical definition per term, alphabetical.
 
 **Day** — a real-world day, no special game definition. Used for Deprivation's multi-day survival tracking, Wounds' passive recovery, and a few explicit time costs (the spell-name Ritual, Artificer permanent-item crafting).
 
-**Death's Door** — triggered at 0 Guard with no Wound slots remaining. Roll d6: 1–3 dies, 4+ faints and rolls on the Scar Table.
+**Death's Door** — triggered at 0 Guard with no Wound slots remaining. Roll d6: 1–3 dies, 4+ faints and rolls on the Scar Table. A fainted character still dies if not treated within a Turn by another character.
 
 **Deprivation** — the penalty state from failing to gather food/rest during travel.
 

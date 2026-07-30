@@ -13,7 +13,7 @@ Shards are two separate economic goods:
 
 ## HP: Guard + Wounds
 
-At 0 Guard with Wound slots exhausted, roll a d6 — 1–3 dies, 4+ faints and rolls on the Scar table.
+At 0 Guard with Wound slots exhausted, roll a d6 — 1–3 dies, 4+ faints and rolls on the Scar table. **A fainted character isn't safe yet: if their wounds aren't treated within a Turn (10 minutes) by another character, they die anyway.** Treating them requires a check using whichever stat fits the method (INT for a real medical attempt, WIS for a more instinctive one, GM's call) — success stabilizes them for good.
 
 ### Scar Table (d10)
 

@@ -30,7 +30,7 @@
 
 <main>
   <header class="page-header">
-    <p class="page-eyebrow">03 — Combat</p>
+    <p class="page-eyebrow">06 — Combat</p>
     <h1 class="page-title">Combat</h1>
     <p class="page-intro">Resolution, weapons, maneuvers, magic items, the economy, wounds, and everything that governs a fight from surprise to the last swing.</p>
   </header>
@@ -107,7 +107,15 @@
   </table>
   <p><strong>No stacking:</strong> if a Disadvantage effect is already pending when a new Wound opens, the new one doesn't extend it — resolve whichever is already active.</p>
 
-  <p>At 0 Guard with all Wound slots full: roll d6 — 1–3 dies, 4+ faints and rolls on the Scar Table below.</p>
+  <div class="worked-example">
+  <span class="worked-example-label">Worked Example — A Wound Opens</span>
+  <p>Rivet has 5 Guard left (max Guard 9, already worn down this fight) and takes a hit for 7 damage. Guard absorbs the first 5, hitting 0 — the remaining 2 damage overflows.</p>
+  <p>Since Rivet has an open Wound slot available, a Wound opens instead of him going down. <strong>Max Guard drops by 2, from 9 to 7.</strong> Current Guard doesn't stay at 0 — it refills to the new max: <strong>Rivet is now at 7/7 Guard</strong>, worse off going forward, but not staggering at zero.</p>
+  <p>Two more things happen the same moment: Rivet's next roll is made with Disadvantage ("Reeling"), and the GM rolls a d6 on the Wound Complication table — a 4 comes up: <strong>Reeling Hard</strong>, his Initiative drops to last for the rest of the fight.</p>
+  <p>If Rivet takes a second Wound later this fight, the same thing happens again on top of a smaller pool: <strong>max Guard drops another 2, from 7 to 5</strong>, refilling current Guard to 5. Wounds never heal from resting a Turn, and nothing closes them mid-combat — Field Dressing or real magic can close one Wound at a time out of combat, but a full day's rest closes <strong>all</strong> of Rivet's open Wounds at once, restoring his max Guard back to its full 9.</p>
+  </div>
+
+  <p>At 0 Guard with all Wound slots full: roll d6 — 1–3 dies, 4+ faints and rolls on the Scar Table below. <strong>A fainted character isn't safe yet: if their wounds aren't treated within a Turn by another character, they die anyway.</strong> Treating them requires a check using whichever stat fits the method (INT for a real medical attempt, WIS for a more instinctive one) — success stabilizes them for good.</p>
 
   <h3 id="scar-table">Scar Table (d10)</h3>
   <p>A permanent-injury table, rare by design — most fights never reach a single Death's Door check. Effect is a target shift on the relevant check (+1 broad/minor, +2 severe), not Disadvantage, reusing the same granular scale as everywhere else. Removable through real effort — a Major-tier magical working or a significant in-fiction quest resolving the underlying trauma.</p>
@@ -131,6 +139,20 @@
   <h2 id="zones">Zones &amp; Range</h2>
   <p>Three zones: Melee, Near, Far. <strong>Move (0–1 zone) and Act are both available the same Round.</strong> Melee weapons hit same zone only; ranged/thrown hit same zone + 1 adjacent.</p>
   <p><strong>Disengaging:</strong> leaving a zone with a live melee hostile requires a DEX check (2d10+DEX vs 12) or they get a free attack first.</p>
+
+  <div class="worked-example">
+  <span class="worked-example-label">Worked Example — Rivet Retreats, 5 Attempts</span>
+  <p>Rivet (Guard 4/10, already carrying one Wound) is fighting two Blade-bandits in the Ditch and decides to fall back to the Road.</p>
+  <table>
+  <tr><th>Attempt</th><th>Roll</th><th>Outcome</th></tr>
+  <tr><td>1</td><td>14 vs 12</td><td>Success — clean escape, no cost</td></tr>
+  <tr><td>2</td><td>4 vs 12</td><td>Fail → free attack rolled 8 vs 12 → missed</td></tr>
+  <tr><td>3</td><td>15 vs 12</td><td>Success — clean escape</td></tr>
+  <tr><td>4</td><td>10 vs 12</td><td>Fail → free attack rolled 9 vs 12 → missed</td></tr>
+  <tr><td>5</td><td>6 vs 12</td><td>Fail → free attack rolled 14 vs 12 → hit, 2 damage to Guard</td></tr>
+  </table>
+  <p>Failing the check doesn't trap the character — it only costs a parting shot. The DEX check gates whether the melee hostile gets one free swing on the way out, not whether the retreat itself succeeds.</p>
+  </div>
 
   <h2 id="initiative">Initiative</h2>
   <p>2d10 + DEX + weapon modifier − armor penalty, once per fight, fixed order.</p>

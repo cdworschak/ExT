@@ -77,12 +77,16 @@ Syberists cast via Name-Crafting — spells are cast by learning the names of sp
 |---|---|---|---|
 | Cantrip | Free — just possess ≥1 shard as a focus, don't spend it | 0 | Momentary, cosmetic, zero-stakes effects only. No damage, no unlocking, no real mechanical advantage. |
 | Spark | Flat 1–3 shards (GM sets exact cost by scope) | ~2 | Small, real, single-purpose mechanical effects — mitigate one hit, a brief minor buff, a tiny utility trick. |
-| Minor | 2d6 shards | 7 | Could be done without magic, but magic makes it reliable/fast. Attack spells: 1d6 + caster's stat bonus, single-target only. No multi-target option at this tier. |
-| Moderate | 2d6×2 shards | 14 | Beyond mundane possibility. 2d6 dmg single / d6 multiple. |
-| Major | 3d6×5 shards | 52.5 | Breaks the laws of nature. Attack spells (single-target): automatically opens a Wound on a hit, bypassing Guard entirely, plus 2d6 secondary damage. Multi-target still uses pure damage (2d6 multiple, no auto-Wound). |
-| Mythic | 4d6×25 shards | 350 | Alters the world. Attack spells (single-target): automatically opens two Wounds at once on a hit, bypassing Guard entirely, plus 4d6 secondary damage. Multi-target still uses pure damage (4d6 multiple, no auto-Wound). |
+| Minor | 2d6 shards | 7 | Could be done without magic, but magic makes it reliable/fast. Attack spells, single-target: 1d8 + caster's stat bonus. Multi-target: up to 2 targets in the zone, 1d4 flat each (no stat bonus) — a real capability Spark can never reach at any cost, not just a bigger number. |
+| Moderate | 2d6×2 shards | 14 | Beyond mundane possibility. Single-target: 2d8 + caster's stat bonus. Multi-target: up to 4 targets in the zone, 1d6 flat each. |
+| Major | 3d6×5 shards | 52.5 | Breaks the laws of nature. Single-target: automatically opens a Wound on a hit, bypassing Guard entirely, plus 2d8 + caster's stat bonus secondary damage. Multi-target: up to 6 targets in the zone, 2d6 flat each, no auto-Wound. |
+| Mythic | 4d6×25 shards | 350 | Alters the world. Single-target: automatically opens two Wounds at once on a hit, bypassing Guard entirely, plus 4d8 + caster's stat bonus secondary damage. Multi-target: up to 8 targets in the zone, 4d6 flat each, no auto-Wound. |
 
 Cantrip produces color only. Any mechanical outcome starts at Spark tier and costs shards.
+
+**Worked example, single-target:** Ilyara casts a Minor-tier bolt at a lone bandit. She rolls 1d8+INT(+2): the die comes up 6, total 8 damage.
+
+**Worked example, multi-target:** Two bandits share a zone. Ilyara casts the same tier, multi-target option — one to-hit roll, and on a hit, both targets take 1d4 flat each (no stat bonus, capped at 2 targets for Minor tier). She rolls a 3 and a 2: 5 damage to one bandit, 4 to the other.
 
 ### Shard Bolt (Spark-tier attack cantrip)
 

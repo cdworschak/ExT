@@ -30,9 +30,9 @@ Own Noun category for Spell Names: Artificer.
 | Tier | Cost | Example |
 |---|---|---|
 | Spark | 1–3 shards | **Glowspark** — a hand-sized device sheds dim light in Near range when triggered, hands-free afterward. **Alarm Chime** — rings audibly the moment anyone crosses a marked threshold. |
-| Minor | 2d6 shards | **Shock Coil** — a thrown or handheld device deals 1d6+INT (of the holder) damage in a burst. **Grapnel Rig** — fires a line, pulling the user one zone toward a fixed anchor point. |
-| Moderate | 2d6×2 shards | **Breach Charge** — a placed device deals 2d6 damage to a structure or barrier, ignoring standard hardness. **Numbing Vapor** — releases a cloud imposing Disadvantage on all rolls made by anyone in the zone who fails a resistance check. |
-| Major | 3d6×5 shards | **Overcharged Blast** — a single-target device automatically opens a Wound on a hit (bypassing Guard entirely), plus 2d6 secondary damage, INT (of the holder) governs the attack roll. **Repair Frame** — restores Guard equal to 2d6+INT (of the holder) to whoever's wearing it when triggered. |
+| Minor | 2d6 shards | **Shock Coil** — a thrown or handheld device deals 1d8+INT (of the holder) damage in a burst. **Grapnel Rig** — fires a line, pulling the user one zone toward a fixed anchor point. |
+| Moderate | 2d6×2 shards | **Breach Charge** — a placed device deals 2d8+INT (of the holder) damage to a structure or barrier, ignoring standard hardness. **Numbing Vapor** — releases a cloud imposing Disadvantage on all rolls made by anyone in the zone who fails a resistance check. |
+| Major | 3d6×5 shards | **Overcharged Blast** — a single-target device automatically opens a Wound on a hit (bypassing Guard entirely), plus 2d8+INT (of the holder) secondary damage. **Repair Frame** — restores Guard equal to 2d6+INT (of the holder) to whoever's wearing it when triggered. |
 
 **Permanent items** — an Artificer Syberist crafting a lasting magic item uses the existing Magic Items pricing (10–20× the tier's average casting cost): roll the tier's own cost die, read the result in days instead of shards, for the baseline crafting time. Pay the top of the range (20×) to halve that time; pay the bottom (10×) to double it.
 
@@ -130,6 +130,17 @@ Only House-lineage Backgrounds can take a mark: Cannith, Lyrandar, Kundarak, Siv
 - **Greater Mark** — a genuinely strong effect; rare, likely Background-exclusive or a mid-campaign unlock.
 - **Siberys Mark** — campaign-defining, essentially unique per game, GM-placed rather than player-chosen.
 - **Aberrant Mark** — open to any Background. Grants the ability to attempt a Minor-tier cast (Attack or Effect) with zero shards ever possessed. Every attempt is a genuine Overcast: roll 2d6 for what the cast would have cost, then resolve entirely through the existing Overcast Backlash Pool — always reduced to 3d6, since 0 shards is always more than half short of any possible Minor-tier cost. CON bonus adds rerolls exactly as normal. Own Noun category for Spell Names: Aberrant.
+
+**Mark Tier Power Baseline.** Least ≈ Spark tier (small, real, narrow), Lesser ≈ Minor tier (a real step up, reliable utility), Greater ≈ Major tier (rare, breaks the laws of nature), Siberys ≈ Mythic tier (unique, world-altering, essentially GM-placed only). Not an exact mechanical translation — a power-level anchor for what each tier should feel like when building one out.
+
+| Tier | Cannith (Making) | Jorasco (Healing) |
+|---|---|---|
+| Least | Repair or jury-rig a broken item, 1/session | Stabilize a dying creature or mend a minor injury, 1–2/session |
+| Lesser | The repair is now genuinely reliable and fast — no roll needed for anything short of total destruction, and a second use per session | Closes a Wound outright once per session, no Field Dressing Turn required |
+| Greater | Rebuild something destroyed entirely, given a few hours and the pieces — genuinely beyond mundane possibility | Cures any non-magical affliction instantly; once per session, prevents a Death's Door roll from happening at all if reached in time |
+| Siberys | A living creation — imbue something with genuine, if narrow, agency, GM-placed only | Restore the recently dead — a real resurrection, unique per campaign |
+
+**Scaling principle for the other 10 Houses, built the same way:** Least→Lesser mirrors Spark→Minor's jump (better reliability, a second use, still narrow in scope). Lesser→Greater mirrors Minor→Major's jump (genuinely impossible without magic, rare, likely campaign-specific). Greater→Siberys mirrors Major→Mythic's jump (unique, GM-placed, never a standing player choice).
 
 ### Least Marks (all 12 Houses)
 

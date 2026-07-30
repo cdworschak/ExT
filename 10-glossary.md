@@ -24,7 +24,7 @@ One canonical definition per term, alphabetical.
 
 **Day** — a real-world day, no special game definition. Used for Deprivation's multi-day survival tracking, Wounds' passive recovery, and a few explicit time costs (the spell-name Ritual, Artificer permanent-item crafting).
 
-**Death's Door** — triggered at 0 Guard with no Wound slots remaining. Roll d6: 1–3 dies, 4+ faints and rolls on the Scar Table.
+**Death's Door** — triggered at 0 Guard with no Wound slots remaining. Roll d6: 1–3 dies, 4+ faints and rolls on the Scar Table. A fainted character still dies if not treated within a Turn by another character.
 
 **Deprivation** — the penalty state from failing to gather food/rest during travel.
 
