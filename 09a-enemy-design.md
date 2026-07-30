@@ -89,7 +89,7 @@ Scaled for 3 milestones: Guard 14+3=17, damage +3+1=+4, Base Target 15+1=16 (att
 
 **Named threats, Strong baseline:**
 - **Ogre** — Named — Target 15 — Guard 14, 2 Wound slots — Massive (1d10+3) — attack exception: Target 12; Shock (Massive counts as Heavy)
-- **Troll** — Named — Target 15 — Guard 16, 3 Wound slots — Massive (1d10+3) — regeneration: a closed Wound reopens at the start of its next turn unless the hit that closed it was fire or acid
+- **Troll** — Named — Target 15 — Guard 16, 3 Wound slots — Massive (1d10+3) — regeneration: unlike every other creature, a Troll's Wound closes on its own at the start of its next turn — unless the damage that opened it was fire or acid, which blocks the regeneration and leaves that Wound open normally
 
 **Multi-Action solo predators (no spellcasting):**
 - **Owlbear** — Named, Multi-Action +1 — Target 12 — Guard 16, 2 Wound slots — Heavy (1d8+3)
