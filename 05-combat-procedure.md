@@ -126,17 +126,31 @@
                     • max Guard −2   │      auto-down/     slots full:
                     • Guard refills  │      dead, no       DEATH'S DOOR
                       to new max     │      further roll   d6 roll
-                      (floor 1)      │                     1-3 dies
-                    • Reeling        │                     4+ faints +
-                      (Disadv next   │                     Scar table
-                      roll, or 2     │
-                      if "Rattled")  │
-                    • roll Wound     │
-                      Complication   │
-                      table (d6)     │
-                          │          │
-                          └────┬─────┘
-                               ▼
+                      (floor 1)      │                          │
+                    • Reeling        │              ┌───────────┴───────────┐
+                      (Disadv next   │              ▼                        ▼
+                      roll, or 2     │         1-3: DIES               4+: FAINTS
+                      if "Rattled")  │         no further roll         + rolls Scar
+                    • roll Wound     │                                 table, then:
+                      Complication   │                                       │
+                      table (d6)     │                                       ▼
+                          │          │                    ┌───────────────────────────────┐
+                          │          │                    │ RESCUE CLOCK STARTS              │
+                          │          │                    │ Treated within a Turn (10 min)   │
+                          │          │                    │ by another character?            │
+                          │          │                    └────────────────┬──────────────────┘
+                          │          │                                     │
+                          │          │                          ┌──────────┴──────────┐
+                          │          │                          ▼                       ▼
+                          │          │                        YES                       NO
+                          │          │                 Treatment check              DIES ANYWAY,
+                          │          │                 (INT or WIS,                  no matter how
+                          │          │                  GM's call) —                 the Scar roll
+                          │          │                  success stabilizes           went
+                          │          │                  for good                          │
+                          │          │                          │                         │
+                          └────┬─────┘                          ▼                         ▼
+                               ▼                        (character stable)         (character dead)
                         (combatant's turn ends)
                                │
                                ▼

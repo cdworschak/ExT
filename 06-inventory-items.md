@@ -23,6 +23,8 @@ Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slo
 | Tier | Weapon | Notes |
 |---|---|---|
 | Light | Dagger | Thrown |
+| Light | Handaxe | Thrown |
+| Light | Sickle | — |
 | Medium | Club | — |
 | Medium | Spear | Versatile, Thrown (Heavy die two-handed) |
 | Medium | Staff | Versatile |
@@ -31,7 +33,9 @@ Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slo
 | Heavy | Mace | Two-handed |
 | Heavy | Glaive | Two-handed |
 | Light (ranged) | Sling | Ammo |
+| Light (ranged) | Darts | Thrown |
 | Medium (ranged) | Shortbow | Ammo |
+| Medium (ranged) | Hand Crossbow | Ammo |
 | Heavy (ranged) | Crossbow | Ammo |
 
 **Heavy weapons are inherently Two-handed. All ranged weapons are Two-handed too, at any tier.** Weapon-and-shield is a melee-exclusive combination (Light/Medium melee only).
@@ -55,7 +59,6 @@ Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slo
 
 - **Ammo** — requires ammunition carried in a body slot.
 - **Blast** — deals its damage to every creature in a zone at once. Uses the potency-tier "multiple targets" damage line.
-- **Recharge X** — needs time to recharge after use. At the start of each Round, roll a d10; on a result ≤X, it's recharged.
 - **Thrown** — can be thrown at a target in an adjacent zone even if otherwise melee-only.
 - **Two-handed** — takes up both hand slots.
 - **Versatile** — has two damage entries; deals the first one-handed, the second two-handed.

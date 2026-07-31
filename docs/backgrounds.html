@@ -26,6 +26,10 @@
     <a href="advancement.html">Advancement</a>
     <a href="glossary.html">Glossary</a>
   </div>
+  <div class="site-search">
+    <input type="text" id="site-search-input" placeholder="Search... (press /)" autocomplete="off">
+    <div class="search-results" id="site-search-results"></div>
+  </div>
 </nav>
 
 <main>
@@ -70,7 +74,7 @@
 <p>Khoravar are a genuine third culture, not a hybrid category — most are generations removed from any elven ancestor they could name, with their own creole (Khoravar Cant) and institutional weight through two predominantly Khoravar-blooded Houses (Lyrandar, Medani). Both elven traditions explicitly reject them.</p>
 <table>
 <tr><th>Background</th><th>Stat</th><th>Talents</th><th>Gear</th></tr>
-<tr><td><strong>Khoravar Go-Between</strong></td><td>+1 CHA</td><td><em>Bridge-Born</em> (fluent in Khoravar Cant, Common, and Elvish; <strong><a href="glossary.html#advantage-disadvantage">Advantage</a></strong> building trust between distrustful communities), <em>Steady Ground</em> (Advantage resisting being rendered unconscious or dazed)</td><td>forged travel papers, a keepsake marking ties to a found community.</td></tr>
+<tr><td><strong>Khoravar Go-Between</strong></td><td>+1 CHA</td><td><em>Bridge-Born</em> (fluent in Khoravar Cant, Common, and Elvish; <strong><a href="glossary.html#advantage-disadvantage">Advantage</a></strong> building trust between distrustful communities), <em>Steady Ground</em> (if the Off-Balance Wound Complication comes up, Advantage on the DEX check it imposes; if Staggered Back comes up instead, you choose which adjacent zone you're thrown into)</td><td>forged travel papers, a keepsake marking ties to a found community.</td></tr>
 <tr><td><strong>Lyrandar Windrider</strong></td><td>+1 DEX</td><td><em>Storm Sense</em> (Advantage reading weather, navigating rough seas, keeping footing on an unstable deck), <em>House of the Sea and Sky</em> (standing credit/berth aboard any Lyrandar vessel or airship)</td><td>House signet, navigator's tools, a weathered logbook.</td></tr>
 <tr><td><strong>Medani Warder</strong></td><td>+1 WIS</td><td><em>Ward-Sense</em> (Advantage noticing an ambush, hidden threat, or a lie told to someone under your protection before it lands), <em>Sworn to a Charge</em> (once per session, act out of turn to intervene when a specific protected person is about to be harmed)</td><td>House signet, an openly-worn warding charm, a client contract.</td></tr>
 </table>
@@ -80,7 +84,7 @@
 <tr><th>Background</th><th>Stat</th><th>Talents</th><th>Gear</th></tr>
 <tr><td><strong>Mror Shard-Miner</strong></td><td>+1 CON</td><td><em>Shard-Sense</em> (detect dragonshard deposits nearby), <em>Tunnel-Steady</em> (no penalty fighting underground)</td><td>pick, dark-lantern.</td></tr>
 <tr><td><strong>Kundarak Vault-Warden</strong></td><td>+1 WIS</td><td><em>Ward-Reader</em> (spot magical locks/traps), House Kundarak reference letter</td><td>lockbreaker tools.</td></tr>
-<tr><td><strong>Mror Clan Duelist</strong></td><td>+1 STR</td><td><em>Honor-Bound</em> (<strong><a href="glossary.html#advantage-disadvantage">Advantage</a></strong> in formal duels or honor challenges), <em>Blood Feud</em> (a specific named rival — bonus when facing them directly)</td><td>clan sigil worn openly, a dueling scar earned in a formal challenge.</td></tr>
+<tr><td><strong>Mror Clan Duelist</strong></td><td>+1 STR</td><td><em>Honor-Bound</em> (<strong><a href="glossary.html#advantage-disadvantage">Advantage</a></strong> in formal duels or honor challenges), <em>Blood Feud</em> (name a specific rival clan or individual at creation; Advantage on all attacks against them and resisting their intimidation or manipulation; any Reaction Check with other members of that clan or group is made at Disadvantage — the feud's reputation precedes you)</td><td>clan sigil worn openly, a dueling scar earned in a formal challenge.</td></tr>
 <tr><td><strong>Mror Deep Delver</strong></td><td>+1 WIS</td><td><em>Ruin-Sense</em> (Advantage predicting structural collapse or safely navigating unstable ancient architecture), <em>Steady in the Dark</em> (Advantage resisting fear or panic isolated underground with no light)</td><td>rope and pitons, a fragment of unidentified pre-Dhakaani script.</td></tr>
 <tr><td><strong>Sharn-Settled Dwarf</strong></td><td>+1 CHA</td><td><em>City Trained</em> (Advantage navigating bureaucracy, permits, city guard interactions), <em>Clanless by Choice</em> (Advantage resisting social pressure tied to clan obligations)</td><td>forged Sharn residency papers, a clan token no longer worn openly.</td></tr>
 </table>
@@ -102,28 +106,53 @@
 </table>
 
 <h2 id="shifters-etc">Shifters, Kalashtar, Changelings, Warforged</h2>
+
+<h3>Shifters</h3>
 <table>
 <tr><th>Background</th><th>Stat</th><th>Talents</th><th>Gear</th></tr>
 <tr><td><strong>Eldeen Shifter</strong></td><td>+1 DEX/STR</td><td><em>Flex</em> (once per encounter: <strong><a href="glossary.html#advantage-disadvantage">Advantage</a></strong> on a melee attack as claws briefly extend, or move one extra <strong><a href="glossary.html#zone">zone</a></strong> as a speed burst), <em>Wildsense</em> (Advantage noticing natural dangers, tracking prey, or sensing weather changes)</td><td>trap kit, a woven charm from the Towering Wood.</td></tr>
 <tr><td><strong>Gatekeeper Shifter</strong></td><td>+1 WIS</td><td><em>Ward the Threshold</em> (Advantage detecting aberrant or planar-touched creatures and influence), <em>Old Oath</em> (real standing with Gatekeeper circles in the Eldeen Reaches)</td><td>a warding totem, dried herbs used in Gatekeeper rites.</td></tr>
 <tr><td><strong>Droaam Shifter</strong></td><td>+1 CON</td><td><em>Hard Ground</em> (Advantage resisting intimidation or coercion), <em>Known to the Daughters</em> (a real, wary reputation within Droaam's power structure)</td><td>a token marking safe passage through a specific Droaam territory, a scavenged trophy.</td></tr>
-<tr><td><strong>Kalashtar Dreamwarden</strong></td><td>+1 WIS</td><td><em>Dreamward</em> (sense psychic intrusion), immune to normal shard-touch</td><td>meditation focus.</td></tr>
+</table>
+
+<h3>Kalashtar</h3>
+<p><strong>Every Kalashtar shares one race-wide trait from their bonded quori spirit — two souls in one body, true for all three Backgrounds below:</strong> Advantage on WIS-based checks resisting mind-affecting effects (fear, charm, possession, anything preying on your state of mind), and at-will telepathic communication with any creature within Near range that shares a language you know — silent, can't be overheard, doesn't require line of sight, but still requires an actual common tongue.</p>
+<table>
+<tr><th>Background</th><th>Stat</th><th>Talents</th><th>Gear</th></tr>
+<tr><td><strong>Kalashtar Dreamwarden</strong></td><td>+1 WIS</td><td><em>Dreamward</em> (sense psychic intrusion)</td><td>meditation focus.</td></tr>
 <tr><td><strong>Recently-Arrived Kalashtar</strong></td><td>+1 CON</td><td><em>Survived the Crossing</em> (Advantage resisting fear or despair when pursued, hunted, or facing capture), <em>Still Listening for Riedra</em> (Advantage noticing signs of Inspired agents or Riedran influence)</td><td>forged Khorvaire papers, nothing marking Riedran origin.</td></tr>
 <tr><td><strong>Fainmalar-Born Kalashtar</strong></td><td>+1 CHA</td><td><em>Never Knew the Cage</em> (no inherited fear response tied to Riedra), <em>Community Roots</em> (real standing within a specific Khorvaire kalashtar enclave)</td><td>a community token, ordinary local dress.</td></tr>
-<tr><td><strong>Stage-Trained Changeling</strong></td><td>+1 CHA</td><td><em>Unremarkable</em> (retcon that an NPC recognized you, 1/session), <em>Second Face</em> (a prepared alternate identity, papers included). <strong>Like every changeling, can alter facial features, voice, and build to resemble another humanoid of similar size at will, no check needed</strong> — a race-wide trait every changeling <strong><a href="glossary.html#background">Background</a></strong> shares.</td><td>—</td></tr>
-<tr><td><strong>Changeling Infiltrator</strong></td><td>+1 CHA</td><td><em>Cold Read</em> (Advantage picking up a stranger's mannerisms quickly enough to convincingly mimic them), <em>Deep Cover</em> (a maintained false identity with real standing somewhere specific)</td><td>a second set of identity papers, notes on the person being impersonated. Shapeshifts at will, same race-wide trait as above.</td></tr>
-<tr><td><strong>Changeling Community-Raised</strong></td><td>+1 WIS</td><td><em>Many Faces, One Self</em> (Advantage resisting effects that would alter, erase, or impersonate your identity or memory of self), <em>Hidden Kin</em> (a real connection to a changeling enclave most outsiders don't know exists)</td><td>a token only recognizable to other Community-Raised changelings, no false papers. Shapeshifts at will, same race-wide trait as above.</td></tr>
-<tr><td><strong>Cyre-Built Warforged</strong></td><td>+1 CON/STR</td><td><em>Battle-Worn</em> (when you'd roll on the Scar table, roll twice and take the better result), doesn't eat/breathe/sleep normally</td><td>repair tools, sunrod.</td></tr>
+</table>
+
+<h3>Changelings</h3>
+<p><strong>Every changeling shares one race-wide trait, true for all three Backgrounds below:</strong> can alter facial features, voice, and build to resemble another humanoid of similar size at will, no check needed.</p>
+<table>
+<tr><th>Background</th><th>Stat</th><th>Talents</th><th>Gear</th></tr>
+<tr><td><strong>Stage-Trained Changeling</strong></td><td>+1 CHA</td><td><em>Unremarkable</em> (retcon that an NPC recognized you, 1/session), <em>Second Face</em> (a prepared alternate identity, papers included)</td><td>—</td></tr>
+<tr><td><strong>Changeling Infiltrator</strong></td><td>+1 CHA</td><td><em>Cold Read</em> (Advantage picking up a stranger's mannerisms quickly enough to convincingly mimic them), <em>Deep Cover</em> (a maintained false identity with real standing somewhere specific)</td><td>a second set of identity papers, notes on the person being impersonated.</td></tr>
+<tr><td><strong>Changeling Community-Raised</strong></td><td>+1 WIS</td><td><em>Many Faces, One Self</em> (Advantage resisting effects that would alter, erase, or impersonate your identity or memory of self), <em>Hidden Kin</em> (a real connection to a changeling enclave most outsiders don't know exists)</td><td>a token only recognizable to other Community-Raised changelings, no false papers.</td></tr>
+</table>
+
+<h3>Warforged</h3>
+<p><strong>Every Warforged shares one race-wide trait, true for all three Backgrounds below:</strong> a construct, doesn't eat, breathe, or sleep normally.</p>
+<table>
+<tr><th>Background</th><th>Stat</th><th>Talents</th><th>Gear</th></tr>
+<tr><td><strong>Cyre-Built Warforged</strong></td><td>+1 CON/STR</td><td><em>Battle-Worn</em> (when you'd roll on the Scar table, roll twice and take the better result)</td><td>repair tools, sunrod.</td></tr>
 <tr><td><strong>Post-War Wandering Warforged</strong></td><td>+1 WIS</td><td><em>No Orders Left</em> (Advantage resisting despair or purposelessness), <em>Read the Room</em> (Advantage sensing when a space or situation is genuinely hostile to warforged, and adjusting before it becomes a problem)</td><td>no unit markings — deliberately removed; a personal item picked up on the road.</td></tr>
 <tr><td><strong>House Cannith Warforged</strong></td><td>+1 INT</td><td><em>Factory-Trained</em> (Advantage operating, repairing, or diagnosing Cannith-made constructs and devices), <em>Still Property</em> (a real, uncomfortable legal tie to House Cannith — GM's call on how this surfaces)</td><td>visible Cannith unit markings, official papers of standing.</td></tr>
 </table>
 
-<h2 id="others">Others</h2>
+<h2 id="orcs">Orcs</h2>
 <table>
 <tr><th>Background</th><th>Stat</th><th>Talents</th><th>Gear</th></tr>
-<tr><td><strong>Droaam Half-Orc Mercenary</strong></td><td>+1 STR</td><td><em>Bad Reputation</em> (intimidation <strong><a href="glossary.html#advantage-disadvantage">Advantage</a></strong>), <em>Contract Killer</em> (bonus vs. a marked target)</td><td>—</td></tr>
+<tr><td><strong>Droaam Half-Orc Mercenary</strong></td><td>+1 STR</td><td><em>Bad Reputation</em> (intimidation <strong><a href="glossary.html#advantage-disadvantage">Advantage</a></strong>), <em>Contract Killer</em> (at the start of a genuine paid job, name the contract's actual target — GM confirms it's a legitimate professional engagement, not a personal grudge or a target you'd have gone after anyway. Advantage on all attack rolls against that specific creature for the duration of the contract)</td><td>—</td></tr>
 <tr><td><strong>Gatekeeper Orc</strong></td><td>+1 WIS</td><td><em>Ward Against the Deep</em> (Advantage detecting aberrant creatures or planar corruption), <em>Binding Rite</em> (once per session, a real if temporary ritual to weaken or contain an aberrant threat)</td><td>a warding stake, herbs for a binding rite, a totem marking a guarded site.</td></tr>
 <tr><td><strong>Ghaash'kala Orc</strong></td><td>+1 CON</td><td><em>Labyrinth-Sworn</em> (Advantage resisting fiendish corruption or temptation), <em>Marked by the Wastes</em> (Advantage recognizing fiendish influence or Demon Wastes-touched creatures)</td><td>ash-marked wraps, no possessions beyond what's needed for the duty.</td></tr>
+</table>
+
+<h2 id="goblinoids">Goblinoids</h2>
+<table>
+<tr><th>Background</th><th>Stat</th><th>Talents</th><th>Gear</th></tr>
 <tr><td><strong>Dhakaani Loremarked Goblin</strong></td><td>+1 STR/INT</td><td><em>Old Empire</em> (read pre-Sundering script), ancestral weapon training</td><td>—</td></tr>
 <tr><td><strong>Darguun Hobgoblin Soldier</strong></td><td>+1 STR</td><td><em>Drilled to War</em> (Advantage forming up, holding a line, or coordinating with other trained soldiers), <em>Mercenary Standing</em> (a real reputation and contact within Darguun's mercenary companies)</td><td>a mercenary company's token, service marks earned in the field.</td></tr>
 <tr><td><strong>Bugbear Outrider</strong></td><td>+1 DEX</td><td><em>Unseen Until Close</em> (Advantage remaining unnoticed despite size), <em>Sudden Reach</em> (Advantage on the first strike in an ambush specifically)</td><td>dark wraps for concealment, a trophy from a successful ambush.</td></tr>
@@ -139,5 +168,6 @@
   </div>
 </main>
 
+<script src="search.js"></script>
 </body>
 </html>

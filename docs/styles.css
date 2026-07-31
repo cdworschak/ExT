@@ -85,6 +85,85 @@ a:focus-visible, button:focus-visible{
 .topbar-links a:hover{ color: var(--eberron); border-bottom-color: var(--eberron-dim); }
 .topbar-links a.active{ color: var(--eberron); border-bottom-color: var(--eberron); }
 
+.site-search{
+  position: relative;
+  min-width: 200px;
+}
+.site-search input{
+  width: 100%;
+  background: var(--ink-3);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.85rem;
+  padding: 0.45rem 0.7rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.site-search input::placeholder{ color: var(--text-faint); }
+.site-search input:focus{ border-color: var(--eberron-dim); }
+.search-results{
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  width: 380px;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  z-index: 20;
+}
+.search-results.open{ display: block; }
+.search-result{
+  display: block;
+  padding: 0.7rem 0.9rem;
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+.search-result:last-child{ border-bottom: none; }
+.search-result:hover, .search-result.active{ background: rgba(127,212,193,0.06); }
+.search-result-title{
+  display: block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  color: var(--eberron);
+  margin-bottom: 0.15rem;
+}
+.search-result-page{
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 0.25rem;
+}
+.search-result-snippet{
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+.search-result mark{
+  background: rgba(217,184,114,0.35);
+  color: var(--text);
+  border-radius: 2px;
+  padding: 0 1px;
+}
+.search-empty{
+  padding: 0.9rem;
+  font-size: 0.82rem;
+  color: var(--text-faint);
+}
+@media (max-width: 900px){
+  .site-search{ min-width: 100%; order: 10; }
+  .search-results{ width: 100%; }
+}
+
 /* ===== Page shell ===== */
 main{
   max-width: 880px;

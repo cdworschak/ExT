@@ -96,7 +96,7 @@ Scaled for 3 milestones: Guard 14+3=17, damage +3+1=+4, Base Target 15+1=16 (att
 - **Displacer Beast** — Named, Multi-Action +1 — Target 15 — Guard 14, 2 Wound slots — Heavy (1d8) ×2, one per tentacle
 
 **Epic solo bosses (Multi-Action + Legendary Resistance):**
-- **Young Dragon** — Named, Multi-Action +2 — Target 15 — Guard 24, 3 Wound slots — Massive bite/claw (1d10+4) — resist exception: Target 18; Blast breath weapon on Recharge 4; 3 free resists/encounter
+- **Young Dragon** — Named, Multi-Action +2 — Target 15 — Guard 24, 3 Wound slots — Massive bite/claw (1d10+4) — resist exception: Target 18; Blast breath weapon, usable once then unavailable until it recharges — at the start of each Round, roll a d10, and on a result ≤4 it's ready again; 3 free resists/encounter
 - **Lich** — Named, Multi-Action +2 — Target 15 — Guard 20, 3 Wound slots — casts Attack/Effect spells (INT) instead of a weapon — resist exception: Target 18; 3 free resists/encounter; phylactery makes death non-permanent
 - **Beholder** — Named, Multi-Action +3 — Target 15 — Guard 22, 3 Wound slots — eye rays, various — central eye can suppress one enemy Effect spell per round in range
 

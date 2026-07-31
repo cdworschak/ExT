@@ -26,6 +26,10 @@
     <a href="advancement.html">Advancement</a>
     <a href="glossary.html">Glossary</a>
   </div>
+  <div class="site-search">
+    <input type="text" id="site-search-input" placeholder="Search... (press /)" autocomplete="off">
+    <div class="search-results" id="site-search-results"></div>
+  </div>
 </nav>
 
 <main>
@@ -45,7 +49,7 @@
 
   <h3 id="grit-maneuvers">Grit Maneuvers</h3>
   <p><strong>All maneuvers are available from level 1 — gated by Grit cost, not character level.</strong> The stronger ones just cost more Grit.</p>
-  <p><strong>One Maneuver per action, no stacking.</strong> Each Maneuver either <em>is</em> your action for the turn (Guard Stance, Taunt, Rally, Read the <strong><a href="glossary.html#encounter-fight">Fight</a></strong>) or <em>modifies</em> your one attack (Focus, Cleave, Guarded Strike). Since a turn only grants one attack, only one attack-modifying Maneuver can ever apply to a single attack — Focus and Cleave can't both land on the same swing. Maneuvers combine across different PCs' turns, or across different rounds for the same PC, never by stacking two modifiers onto one action.</p>
+  <p><strong>One Maneuver per action, no stacking.</strong> Each Maneuver either <em>is</em> your action for the turn (Guard Stance, Taunt, Rally, Read the Fight) or <em>modifies</em> your one attack (Focus, Cleave, Guarded Strike). Since a turn only grants one attack, only one attack-modifying Maneuver can ever apply to a single attack — Focus and Cleave can't both land on the same swing. Maneuvers combine across different PCs' turns, or across different rounds for the same PC, never by stacking two modifiers onto one action.</p>
 
   <h4>Universal Maneuvers</h4>
   <table>
@@ -325,5 +329,6 @@
   </div>
 </main>
 
+<script src="search.js"></script>
 </body>
 </html>

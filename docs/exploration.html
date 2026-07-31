@@ -26,6 +26,10 @@
     <a href="advancement.html">Advancement</a>
     <a href="glossary.html">Glossary</a>
   </div>
+  <div class="site-search">
+    <input type="text" id="site-search-input" placeholder="Search... (press /)" autocomplete="off">
+    <div class="search-results" id="site-search-results"></div>
+  </div>
 </nav>
 
 <main>
@@ -47,6 +51,77 @@
   </table>
 
   <h2 id="travel">Travel</h2>
+  <div class="diagram-wrap">
+<svg viewBox="0 0 700 740" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Travel Roll flowchart showing the timing roll, event roll, and repeat-until-arrival loop">
+<defs>
+  <marker id="arrow-t" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4d8d81"/></marker>
+  <marker id="arrow-t-purple" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#a683c4"/></marker>
+</defs>
+<rect x="50" y="20" width="600" height="56" rx="4" fill="#1d1c23" stroke="#35323f" stroke-width="1"/>
+<text x="62" y="40" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">GM Sets Journey Length</text>
+<text x="62" y="55" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">In days, on foot by default — see Travel Times for other transport.</text>
+<rect x="50" y="96" width="600" height="56" rx="4" fill="#1d1c23" stroke="#35323f" stroke-width="1"/>
+<text x="62" y="116" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Roll Timing Die</text>
+<text x="62" y="131" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">d6 normally; d8 with a relevant wilderness Talent, toolkit use, or other lever.</text>
+<rect x="30" y="224" width="260" height="56" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="42" y="244" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Arrive Without Incident</text>
+<text x="42" y="259" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Journey complete.</text>
+<rect x="410" y="224" width="260" height="56" rx="4" fill="#1d1c23" stroke="#35323f" stroke-width="1"/>
+<text x="422" y="244" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">An Event Happens</text>
+<text x="422" y="259" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Remaining length reduces</text>
+<text x="422" y="272" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">by the rolled amount.</text>
+<rect x="410" y="298" width="260" height="40" rx="4" fill="#1d1c23" stroke="#35323f" stroke-width="1"/>
+<text x="422" y="318" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Roll a Separate d6</text>
+<text x="422" y="333" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">(which event, not when)</text>
+<rect x="70" y="396" width="260" height="72" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="82" y="416" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">1 — Mishap</text>
+<text x="82" y="431" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Bad weather, getting lost, difficult</text>
+<text x="82" y="444" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">terrain, or a breakdown.</text>
+<text x="82" y="457" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Add 1 day to what's remaining.</text>
+<rect x="370" y="396" width="260" height="72" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="382" y="416" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">2–3 — Random Encounter</text>
+<text x="382" y="431" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Roll the region's encounter table.</text>
+<rect x="70" y="486" width="260" height="72" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="82" y="506" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">4–5 — Failed to Gather Food</text>
+<text x="82" y="521" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Each character marks a ration</text>
+<text x="82" y="534" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">or becomes Deprived.</text>
+<rect x="370" y="486" width="260" height="72" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="382" y="506" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">6 — Good Fortune</text>
+<text x="382" y="521" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">A shortcut or good weather.</text>
+<text x="382" y="534" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Subtract 1 day from what's</text>
+<text x="382" y="547" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">remaining.</text>
+<rect x="200" y="582" width="300" height="40" rx="4" fill="#1d1c23" stroke="#35323f" stroke-width="1"/>
+<text x="212" y="602" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Remaining Length > 0?</text>
+<rect x="30" y="660" width="300" height="60" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="42" y="680" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Loop Back</text>
+<text x="42" y="695" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Roll Timing Die again against</text>
+<text x="42" y="708" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">the new remaining length.</text>
+<rect x="400" y="660" width="270" height="60" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="412" y="680" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Arrive</text>
+<text x="412" y="695" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Last stretch resolved as part</text>
+<text x="412" y="708" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">of the event above.</text>
+<line x1="350" y1="76" x2="350" y2="96" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="350" y1="152" x2="350" y2="172" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="230" y1="196" x2="130" y2="218" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="470" y1="196" x2="570" y2="218" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="540" y1="280" x2="540" y2="298" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="540" y1="338" x2="540" y2="354" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="540" y1="374" x2="200" y2="392" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="540" y1="374" x2="500" y2="392" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="540" y1="374" x2="200" y2="482" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="540" y1="374" x2="500" y2="482" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="200" y1="576" x2="200" y2="582" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="500" y1="576" x2="500" y2="582" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="280" y1="640" x2="180" y2="640" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<line x1="420" y1="640" x2="560" y2="640" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-t)"/>
+<text x="350" y="184" font-family="Oswald, sans-serif" font-size="12" fill="#a683c4" text-anchor="middle">Does the roll EXCEED the remaining length?</text>
+<text x="130" y="212" font-family="Oswald, sans-serif" font-size="12" fill="#7fd4c1" text-anchor="middle">YES</text>
+<text x="570" y="212" font-family="Oswald, sans-serif" font-size="12" fill="#7fd4c1" text-anchor="middle">NO</text>
+<text x="540" y="366" font-family="Oswald, sans-serif" font-size="11" fill="#a683c4" text-anchor="middle">1  ·  2–3  ·  4–5  ·  6</text>
+<text x="180" y="654" font-family="Oswald, sans-serif" font-size="12" fill="#7fd4c1" text-anchor="middle">YES</text>
+<text x="560" y="654" font-family="Oswald, sans-serif" font-size="12" fill="#7fd4c1" text-anchor="middle">NO</text>
+</svg>
+  </div>
   <p>GM rolls a d6 for days until a Travel Event (d8 with a relevant wilderness talent or toolkit; −1 on treacherous terrain).</p>
   <p><strong>The d8 upgrade isn't the only lever.</strong> A relevant <strong><a href="glossary.html#skill">Skill</a></strong>, <strong><a href="glossary.html#contingency">Contingency</a></strong>, <strong><a href="glossary.html#talent">Talent</a></strong>, or other resource a player can plausibly justify may also improve travel odds or let the party bypass a rolled event entirely — GM's discretion, same judgment call used everywhere else in this system.</p>
   <table>
@@ -121,11 +196,91 @@
   <tr><td>8</td><td>A stable, unaffected pocket — rare good news in a region that offers little</td></tr>
   </table>
 
-  <h2 id="exploration-roll">Exploration Roll</h2>
-  <p>While exploring, GM rolls a d6 every <strong><a href="glossary.html#turn">Turn</a></strong> (~10 min).</p>
+  <h2 id="exploration-roll">Exploration Procedure</h2>
+  <div class="diagram-wrap">
+<svg viewBox="0 0 700 572" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Exploration Procedure flowchart showing the four default Turn actions and the Exploration Event check">
+<defs>
+  <marker id="arrow-e" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4d8d81"/></marker>
+</defs>
+<rect x="50" y="20" width="600" height="56" rx="4" fill="#1d1c23" stroke="#35323f" stroke-width="1"/>
+<text x="62" y="40" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Player Declares an Action</text>
+<text x="62" y="55" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">A specific declared action always comes first.</text>
+<rect x="20" y="148" width="260" height="56" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="32" y="168" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Resolve on Its Own Terms</text>
+<text x="32" y="183" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">GM's call on any check that applies.</text>
+<rect x="420" y="148" width="260" height="56" rx="4" fill="#1d1c23" stroke="#35323f" stroke-width="1"/>
+<text x="432" y="168" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Pick One of the 4 Defaults</text>
+<text x="432" y="183" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Move · Search · Listen · Rest</text>
+<rect x="50" y="260" width="160" height="88" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="62" y="280" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Move</text>
+<text x="62" y="295" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Travel to an</text>
+<text x="62" y="308" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">adjacent area.</text>
+<text x="62" y="321" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">No check needed.</text>
+<rect x="230" y="260" width="160" height="88" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="242" y="280" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Search</text>
+<text x="242" y="295" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Whole-party roll,</text>
+<text x="242" y="308" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">best INT, vs Target.</text>
+<text x="242" y="321" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Uses the whole Turn.</text>
+<rect x="410" y="260" width="160" height="88" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="422" y="280" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Listen at a Door</text>
+<text x="422" y="295" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">WIS check vs Target.</text>
+<text x="422" y="308" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Doesn't use up the</text>
+<text x="422" y="321" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Turn's main action.</text>
+<rect x="590" y="260" width="130" height="88" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="602" y="280" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Rest</text>
+<text x="602" y="295" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Recover Guard</text>
+<text x="602" y="308" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">or Grit. Still</text>
+<text x="602" y="321" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">rolls the check.</text>
+<rect x="200" y="372" width="300" height="40" rx="4" fill="#1d1c23" stroke="#35323f" stroke-width="1"/>
+<text x="212" y="392" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">Roll Exploration Event (d6)</text>
+<rect x="50" y="468" width="150" height="84" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="62" y="488" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">1 — Encounter</text>
+<text x="62" y="503" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Roll the location's</text>
+<text x="62" y="516" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">encounter table.</text>
+<rect x="220" y="468" width="155" height="84" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="232" y="488" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">2 — Signs</text>
+<text x="232" y="503" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Signs found; a future</text>
+<text x="232" y="516" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">1-2 roll becomes it.</text>
+<rect x="395" y="468" width="150" height="84" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="407" y="488" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">3 — Light</text>
+<text x="407" y="503" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Mark a usage dot on</text>
+<text x="407" y="516" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">the light source.</text>
+<rect x="560" y="468" width="100" height="84" rx="4" fill="#241f2c" stroke="#6b5583" stroke-width="1"/>
+<text x="572" y="488" font-family="Oswald, sans-serif" font-size="13" font-weight="600" fill="#e8e4da">4–6</text>
+<text x="572" y="503" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">Nothing</text>
+<text x="572" y="516" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#a8a2b3">happens.</text>
+<line x1="350" y1="76" x2="350" y2="96" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="230" y1="120" x2="130" y2="142" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="470" y1="120" x2="570" y2="142" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="550" y1="204" x2="550" y2="222" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="550" y1="238" x2="130" y2="256" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="550" y1="238" x2="300" y2="256" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="550" y1="238" x2="470" y2="256" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="550" y1="238" x2="640" y2="256" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="150" y1="348" x2="350" y2="372" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="530" y1="348" x2="350" y2="372" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="350" y1="446" x2="130" y2="464" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="350" y1="446" x2="300" y2="464" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="350" y1="446" x2="470" y2="464" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<line x1="350" y1="446" x2="620" y2="464" stroke="#4d8d81" stroke-width="1.5" marker-end="url(#arrow-e)"/>
+<text x="350" y="108" font-family="Oswald, sans-serif" font-size="11.5" fill="#a683c4" text-anchor="middle">Is it something specific — not one of the 4 defaults?</text>
+<text x="130" y="136" font-family="Oswald, sans-serif" font-size="12" fill="#7fd4c1" text-anchor="middle">YES</text>
+<text x="570" y="136" font-family="Oswald, sans-serif" font-size="12" fill="#7fd4c1" text-anchor="middle">NO</text>
+<text x="350" y="366" font-family="Oswald, sans-serif" font-size="10" fill="#a8a2b3" text-anchor="middle">Rolled every Turn, regardless of the action taken</text>
+<text x="350" y="438" font-family="Oswald, sans-serif" font-size="11" fill="#a683c4" text-anchor="middle">1  ·  2  ·  3  ·  4–6</text>
+</svg>
+  </div>
+  <p><strong>A player's own specific, declared action always comes first</strong> — "I check under the rug," "I run my hand along the statue's base." These get resolved on their own terms, GM's call on what check applies. The four actions below are only the default behaviors for a Turn when nothing more specific is being declared.</p>
+  <p>Each Turn (10 minutes) while exploring a site, the party takes one of the following, then the GM rolls the Exploration Event check.</p>
+  <ul>
+  <li><strong>Move</strong> — travel to an adjacent area or room. No check needed.</li>
+  <li><strong>Search</strong> — a careful, deliberate look for hidden doors, traps, or overlooked treasure. One roll for the whole party — 2d10 + the highest INT bonus among the searching characters — vs the location's <strong><a href="glossary.html#target">Target</a></strong> (12 by default, shiftable per <a href="foundations.html">Scenario Target Modifiers</a>). Ties up the whole Turn.</li>
+  <li><strong>Listen at a door</strong> — a quick check before committing to a room, doesn't use up the Turn's main action. Roll 2d10+WIS vs the location's Target.</li>
+  <li><strong>Rest</strong> — recover Guard or Grit. Still rolls the Exploration Event check like any other Turn.</li>
+  </ul>
   <table>
   <tr><th>d6</th><th>Event</th></tr>
-  <tr><td>1</td><td>Encounter</td></tr>
+  <tr><td>1</td><td>Encounter — roll on the location's encounter table</td></tr>
   <tr><td>2</td><td>Encounter Sign — a 1–2 on the next roll becomes that encounter</td></tr>
   <tr><td>3</td><td>Light — mark a usage dot</td></tr>
   <tr><td>4–6</td><td>Nothing</td></tr>
@@ -137,5 +292,6 @@
   </div>
 </main>
 
+<script src="search.js"></script>
 </body>
 </html>

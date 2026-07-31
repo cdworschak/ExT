@@ -26,6 +26,10 @@
     <a href="advancement.html">Advancement</a>
     <a href="glossary.html">Glossary</a>
   </div>
+  <div class="site-search">
+    <input type="text" id="site-search-input" placeholder="Search... (press /)" autocomplete="off">
+    <div class="search-results" id="site-search-results"></div>
+  </div>
 </nav>
 
 <main>
@@ -57,6 +61,8 @@
   <table>
   <tr><th>Tier</th><th>Weapon</th><th>Notes</th></tr>
   <tr><td>Light</td><td>Dagger</td><td>Thrown</td></tr>
+  <tr><td>Light</td><td>Handaxe</td><td>Thrown</td></tr>
+  <tr><td>Light</td><td>Sickle</td><td>—</td></tr>
   <tr><td>Medium</td><td>Club</td><td>—</td></tr>
   <tr><td>Medium</td><td>Spear</td><td>Versatile, Thrown</td></tr>
   <tr><td>Medium</td><td>Staff</td><td>Versatile</td></tr>
@@ -65,7 +71,9 @@
   <tr><td>Heavy</td><td>Mace</td><td>Two-handed</td></tr>
   <tr><td>Heavy</td><td>Glaive</td><td>Two-handed</td></tr>
   <tr><td>Light (ranged)</td><td>Sling</td><td>Ammo</td></tr>
+  <tr><td>Light (ranged)</td><td>Darts</td><td>Thrown</td></tr>
   <tr><td>Medium (ranged)</td><td>Shortbow</td><td>Ammo</td></tr>
+  <tr><td>Medium (ranged)</td><td>Hand Crossbow</td><td>Ammo</td></tr>
   <tr><td>Heavy (ranged)</td><td>Crossbow</td><td>Ammo</td></tr>
   </table>
   <p>Every named weapon shares its tier's exact die, price, and rules — the name is flavor and a hook for keywords, not a separate mechanical identity.</p>
@@ -79,7 +87,6 @@
   <tr><th>Keyword</th><th>Effect</th></tr>
   <tr><td><strong>Ammo</strong></td><td>Requires ammunition carried in a body slot</td></tr>
   <tr><td><strong>Blast</strong></td><td>Deals its damage to every creature in a <strong><a href="glossary.html#zone">zone</a></strong> at once</td></tr>
-  <tr><td><strong>Recharge X</strong></td><td>At the start of each <strong><a href="glossary.html#round">Round</a></strong>, roll a d10; on a result ≤X, it's recharged</td></tr>
   <tr><td><strong>Thrown</strong></td><td>Can be thrown at a target in an adjacent zone even if otherwise melee-only</td></tr>
   <tr><td><strong>Two-handed</strong></td><td>Takes up both hand slots</td></tr>
   <tr><td><strong>Versatile</strong></td><td>Has two damage entries; deals the first one-handed, the second two-handed</td></tr>
@@ -191,5 +198,6 @@
   </div>
 </main>
 
+<script src="search.js"></script>
 </body>
 </html>

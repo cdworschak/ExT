@@ -26,6 +26,10 @@
     <a href="advancement.html">Advancement</a>
     <a href="glossary.html">Glossary</a>
   </div>
+  <div class="site-search">
+    <input type="text" id="site-search-input" placeholder="Search... (press /)" autocomplete="off">
+    <div class="search-results" id="site-search-results"></div>
+  </div>
 </nav>
 
 <main>
@@ -109,7 +113,7 @@
   <p><strong>Epic solo bosses (Multi-Action + Legendary Resistance):</strong></p>
   <table>
   <tr><th>Monster</th><th>Multi-Action</th><th>Target</th><th>Guard</th><th>Wounds</th><th>Weapon</th><th>Notes</th></tr>
-  <tr><td><strong>Young Dragon</strong></td><td>+2</td><td>15</td><td>24</td><td>3</td><td>Massive bite/claw (1d10+4)</td><td>Resist exception: Target 18 (magic-soaked hide); Blast breath on Recharge 4; 3 free resists/encounter</td></tr>
+  <tr><td><strong>Young Dragon</strong></td><td>+2</td><td>15</td><td>24</td><td>3</td><td>Massive bite/claw (1d10+4)</td><td>Resist exception: Target 18 (magic-soaked hide); Blast breath weapon, usable once then unavailable until it recharges — at the start of each Round, roll a d10, ready again on a result ≤4; 3 free resists/encounter</td></tr>
   <tr><td><strong>Lich</strong></td><td>+2</td><td>15</td><td>20</td><td>3</td><td>Casts Attack/Effect spells (INT) instead of a weapon</td><td>Resist exception: Target 18 (undead mind); 3 free resists/encounter; phylactery makes death non-permanent (campaign-level, not a combat stat)</td></tr>
   <tr><td><strong>Beholder</strong></td><td>+3</td><td>15</td><td>22</td><td>3</td><td>Eye rays, various</td><td>Central eye can suppress one enemy Effect spell per round in range</td></tr>
   </table>
@@ -146,5 +150,6 @@
   </div>
 </main>
 
+<script src="search.js"></script>
 </body>
 </html>

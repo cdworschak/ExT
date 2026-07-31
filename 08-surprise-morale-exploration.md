@@ -43,6 +43,73 @@ Before combat starts, the GM determines if a side is surprised. If so, that side
 
 The GM determines how many days a journey takes, then rolls a d6 — the result is how many days pass before a Travel Event occurs. If that number exceeds the journey's remaining length, the party arrives without incident. If an event does occur, roll on the Travel Event table below, resolve it, then repeat until arrival.
 
+```
+═══════════════════════════════════════════════════════════════════
+  TRAVEL ROLL
+═══════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────┐
+│ GM SETS JOURNEY LENGTH         │  In days, on foot by default —
+│ (in days, remaining = total)   │  see Travel Times for other transport
+└──────────────┬────────────────┘
+               ▼
+┌─────────────────────────────┐
+│ ROLL TIMING DIE                │  d6 normally; d8 with a relevant
+│ (days until next event)        │  wilderness Talent, toolkit use,
+└──────────────┬────────────────┘  or other justified resource
+               ▼
+        ┌─────────────────┐
+        │ Does the roll      │
+        │ EXCEED the         │
+        │ remaining length?  │
+        └────────┬──────────┘
+                  │
+       ┌──────────┴──────────┐
+       ▼                      ▼
+      YES                    NO
+       │                      │
+       ▼                      ▼
+┌───────────────┐    ┌─────────────────────────────┐
+│ ARRIVE WITHOUT  │    │ AN EVENT HAPPENS               │
+│ INCIDENT        │    │ Remaining length reduces by      │
+│ Journey complete│    │ the rolled amount                │
+└───────────────┘    └──────────────┬────────────────┘
+                                     ▼
+                       ┌─────────────────────────────┐
+                       │ ROLL A SEPARATE d6              │
+                       │ (which event, not when)         │
+                       └──────────────┬────────────────┘
+                                      │
+              ┌───────────┬───────────┼───────────────┐
+              ▼           ▼           ▼                ▼
+             "1"        "2-3"       "4-5"             "6"
+              │           │           │                │
+              ▼           ▼           ▼                ▼
+          Mishap —   Random       Failed to        Good Fortune —
+          add 1 day  Encounter —  Gather Food —     subtract 1 day
+          to what's  roll the     mark a ration      from what's
+          remaining  region's     or become           remaining
+                     encounter    Deprived
+                     table
+              │           │           │                │
+              └───────────┴─────┬─────┴────────────────┘
+                                 ▼
+                    ┌─────────────────────────┐
+                    │ Remaining length > 0?      │
+                    └────────────┬────────────────┘
+                                 │
+                      ┌──────────┴──────────┐
+                      ▼                      ▼
+                     YES                    NO
+                      │                      │
+                      ▼                      ▼
+              Loop back to            ARRIVE
+              ROLL TIMING DIE         (last stretch
+              against the new         resolved as
+              remaining length        part of the
+                                      event above)
+```
+
 | d6 | Travel Event |
 |---|---|
 | 1 | **Mishap** — bad weather, getting lost, difficult terrain, or a breakdown. Add 1 day to the journey. |
@@ -112,9 +179,71 @@ A character with a relevant wilderness talent (hunting, tracking, navigation), o
 | 7 | Ambient magical instability — Scenario Target Modifier shift on the next relevant check, GM's call which one |
 | 8 | A stable, unaffected pocket — rare good news in a region that offers little |
 
-### Exploration Roll
+### Exploration Procedure
 
-While exploring a site or resting a Turn there, the GM rolls a d6 every Turn (~10 minutes) and consults:
+```
+═══════════════════════════════════════════════════════════════════
+  EXPLORATION PROCEDURE — one Turn (10 minutes)
+═══════════════════════════════════════════════════════════════════
+
+┌─────────────────────────────┐
+│ PLAYER DECLARES AN ACTION      │  A specific declared action
+└──────────────┬────────────────┘  always comes first
+               ▼
+        ┌─────────────────┐
+        │ Is it something    │
+        │ specific — not one │
+        │ of the 4 defaults? │
+        └────────┬──────────┘
+                  │
+       ┌──────────┴──────────┐
+       ▼                      ▼
+      YES                    NO
+       │                      │
+       ▼                      ▼
+┌───────────────┐    ┌─────────────────────────────┐
+│ RESOLVE ON ITS  │    │ PICK ONE OF THE 4 DEFAULTS      │
+│ OWN TERMS        │    │ Move · Search · Listen · Rest    │
+│ GM's call on any │    └──────────────┬────────────────┘
+│ check that       │                   │
+│ applies           │      ┌────────────┼────────────┬────────────┐
+└───────┬─────────┘      ▼            ▼            ▼            ▼
+        │              Move        Search        Listen         Rest
+        │            (no check)  (party roll,  (WIS check    (recover
+        │                        best INT,     vs Target,     Guard/Grit,
+        │                        vs Target,    doesn't use    still rolls
+        │                        uses the      up the Turn)   the Event
+        │                        whole Turn)                  check)
+        │                    │            │            │            │
+        └────────────────────┴────────────┴────────────┴────────────┘
+                                     ▼
+                       ┌─────────────────────────────┐
+                       │ ROLL EXPLORATION EVENT (d6)     │  Rolled every Turn,
+                       └──────────────┬────────────────┘  regardless of which
+                                      │                    action was taken
+              ┌───────────┬───────────┼───────────────┐
+              ▼           ▼           ▼                ▼
+             "1"         "2"         "3"             "4-6"
+              │           │           │                │
+              ▼           ▼           ▼                ▼
+          Encounter — Encounter    Light — mark    Nothing
+          roll the   Sign — roll  a usage dot on   happens
+          location's the table    the party's
+          encounter  for signs;   light source
+          table      a future 1-2
+                      becomes it
+```
+
+A player's own specific, declared action always comes first — "I check under the rug," "I run my hand along the statue's base," "I check if the floor tile is loose." These get resolved on their own terms, GM's call on what check (if any) applies, same judgment call used everywhere else in this system. The four actions below are only the default behaviors for a Turn when nothing more specific is being declared — a catch-all, not a replacement for genuine player description.
+
+Each Turn (10 minutes) while exploring a site, the party takes one of the following, then the GM rolls the Exploration Event check.
+
+- **Move** — travel to an adjacent area or room. No check needed.
+- **Search** — a careful, deliberate look for hidden doors, traps, or overlooked treasure in the current area. One roll for the whole party — 2d10 + the highest INT bonus among the searching characters — vs the location's Target (12 by default, shiftable like any other check per Scenario Target Modifiers). Success finds what's actually there to find. Ties up the whole Turn.
+- **Listen at a door** — a quick check before committing to a room, doesn't use up the Turn's main action. Roll 2d10+WIS vs the location's Target; success gives a general sense of what's on the other side (occupied, quiet, sounds of activity).
+- **Rest** — recover Guard (per HP: Guard + Wounds) or Grit (per Wayfarer). Still rolls the Exploration Event check like any other Turn — resting in a dungeon isn't automatically safe.
+
+**Exploration Event** (rolled once per Turn regardless of which action was taken):
 
 | d6 | Exploration Event |
 |---|---|
