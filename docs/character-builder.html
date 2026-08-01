@@ -73,7 +73,40 @@
         <option value="WIS">WIS</option>
         <option value="CHA">CHA</option>
       </select>
+      <select id="wandslinger-maneuver" class="builder-select" style="display:none;">
+        <option value="">— which Advanced Maneuver to give up? —</option>
+        <option value="Command">Command (Universal) — an ally makes an extra attack this Round for +1d6 damage</option>
+        <option value="Shield">Shield (Universal) — a same-zone ally's incoming attacks made at Disadvantage until your next turn</option>
+        <option value="Split Fire">Split Fire (Universal/Ranged) — a ranged attack hits two separate targets</option>
+        <option value="Taunt">Taunt (Universal) — all enemies in your zone must attack you this Round, guaranteed</option>
+        <option value="Rally">Rally (Universal) — you and allies in your zone gain +1 damage until end of Round</option>
+        <option value="Cleave">Cleave (Universal) — hits up to four same-zone enemies at one-third damage each</option>
+        <option value="Hold the Line">Hold the Line (Universal) — an enemy in your zone can't leave without beating your bonus</option>
+        <option value="Read the Fight">Read the Fight (Universal) — all allies in your zone gain Advantage on their next attack</option>
+        <option value="Guard Stance">Guard Stance (Universal) — Disadvantage on all incoming attacks against you until your next turn</option>
+        <option value="Second Wind">Second Wind (Universal) — once per scene, regain Guard equal to 1d6 + CON</option>
+        <option value="Rally Cry">Rally Cry (Universal) — clear Reeling from an ally, or grant them Advantage on their next roll</option>
+        <option value="Iron Palm">Iron Palm (Unarmed) — boosts an unarmed strike to Heavy tier (1d8+STR)</option>
+        <option value="Second Strike">Second Strike (Light) — on a hit, a bonus attack at Disadvantage</option>
+        <option value="Guarded Strike">Guarded Strike (Medium) — on a hit, target's next attack must beat Target +2</option>
+        <option value="Sunder">Sunder (Heavy) — a hit permanently reduces the target's Guard by 2</option>
+        <option value="Blade Dance">Blade Dance (Dual-attack) — two attacks, first normal, second at −4</option>
+      </select>
       <span id="wandslinger-note" class="builder-note"></span>
+    </div>
+    <div id="skill-row" class="builder-row" style="display:none;">
+      <select id="skill-select" class="builder-select">
+        <option value="">— choose a Skill —</option>
+        <option value="Swift">Swift (no Disengage check needed, Advantage on movement checks)</option>
+        <option value="Network">Network (a real named contact; Advantage on Leverage regen using them)</option>
+        <option value="Expertise">Expertise (a narrow field, Advantage at will, can be taken multiple times)</option>
+        <option value="Many Pockets">Many Pockets (+1 backpack slot, can be taken multiple times)</option>
+      </select>
+      <span id="skill-note" class="builder-note"></span>
+    </div>
+    <div id="spell-row" class="builder-row" style="display:none;">
+      <button id="spell-roll-btn" class="builder-btn">Roll Starting Spell Name</button>
+      <span id="spell-name-display" class="builder-note"></span>
     </div>
     <div id="arch-detail" class="builder-note"></div>
   </div>
@@ -224,6 +257,22 @@ const ARCH_INFO = {
   "Artificer": {weaponStat:null, castStat:"INT", note:"Cast stat: INT. May also carry a weapon on STR or DEX independently."},
 };
 
+const SPELL_FORMS = ['Armor','Aura','Beacon','Beam','Beast','Blade','Blast','Bolt','Bond','Bubble','Cascade','Chariot','Charm','Claw','Cloak','Crown','Sigil','Dance','Dart','Disk','Door','Eye','Fang','Feast','Field','Finger','Gaze','Grasp','Guide','Gust','Hand','Lock','Mark','Mask','Monolith','Oracle','Pillar','Pocket','Prison','Ring','Ritual','Seal','Servant','Shard','Shield','Silhouette','Song','Sphere','Steed','Strike','Swarm','Tentacle','Torrent','Trap','Veil','Voice','Vortex','Wall','Ward','Wave','Web','Whisper','Wings','Word'];
+const SPELL_ADJECTIVES = ['Avenging','Banishing','Binding','Blazing','Blinding','Bright','Charming','Concealing','Confusing','Consuming','Controlling','Creeping','Crushing','Cryptic','Delicate','Diminishing','Disintegrating','Draining','Empowering','Entangling','Enveloping','Erratic','Expanding','Fearsome','Flaming','Floating','Freezing','Glittering','Hindering','Illusory','Intoxicating','Invisible','Iridescent','Luminous','Maddening','Many-Colored','Mesmerizing','Oozing','Paralyzing','Petrifying','Piercing','Prismatic','Pulsing','Regenerating','Rending','Repelling','Revealing','Screaming','Searing','Sensitive','Shifting','Shimmering','Sickening','Silent','Sleeping','Slow','Smoking','Soothing','Terrible','Transforming','Unseen','Unbreakable','Withering','Yawning'];
+const SPELL_NOUNS = {
+  Shardbound: ['Dragonshard','Khyber','Crystal','Force','Energy','Prophecy','Negation','Stasis','Void','Rune','Shadow','Aberration','Xoriat','Riftglass','Warp','Sigil','Gloom','Echo','Fracture','Cipher','Lattice','Abyss','Distortion','Null','Fathom','Depth','Chasm','Wyrm','Ichor','Venom','Husk','Wraith','Specter','Umbra','Nether','Chaos','Madness','Secret','Deceit','Mirage','Glyph','Circuit','Charge','Static','Pulse','Resonance','Fissure','Rift','Maw','Talon','Gloomstone','Blackglass','Hollow','Cavern','Undertow','Silence','Absence','Entropy','Corrosion','Rust','Decay','Blight','Miasma','Contagion'],
+  Flamesworn: ['Syrania','Radiance','Flame','Judgment','Purity','Oath','Vow','Dawn','Silver','Halo','Sanctity','Daanvi','Absolution','Verdict','Grace','Zeal','Faith','Devotion','Piety','Mercy','Wrath','Rapture','Glory','Honor','Duty','Covenant','Chorus','Hymn','Psalm','Litany','Prayer','Blessing','Benediction','Communion','Sacrament','Relic','Shrine','Altar','Temple','Cathedral','Spire','Lantern','Torch','Ember','Cinder','Ash','Smoke','Incense','Censer','Chalice','Vestment','Banner','Scepter','Throne','Law','Decree','Edict','Mandate','Tribunal','Witness','Testimony','Confession','Solace','Redemption'],
+  Wildspoken: ['Lamannia','Thelanis','Root','Thorn','Storm','Beast','Bloom','Bark','Tide','Moss','Fang','Bramble','Fey','Grove','Marrow','Frost','Wilds','Bracken','Fern','Vine','Bough','Petal','Pollen','Nectar','Sap','Loam','Silt','Marsh','Bog','Fen','Glade','Thicket','Canopy','Undergrowth','Deadfall','Rot','Growth','Bloomtide','Wolfsbane','Nightshade','Hemlock','Antler','Hoof','Talon','Feather','Hide','Pelt','Tusk','Horn','Den','Burrow','Nest','Migration','Instinct','Hunger','Prey','Predator','Pack','Herd','Flock','Season','Harvest','Bloomsong','Wyldwood'],
+  Artificer: ['Cannith','Making','Forge','Anvil','Rivet','Piston','Gear','Cog','Cogwork','Gearwork','Blueprint','Alloy','Foundry','Construct','Automaton','Clockwork','Schema','Prototype','Assembly','Chassis','Engine','Mechanism','Contraption','Apparatus','Device','Mainspring','Flywheel','Bellows','Furnace','Crucible','Mold','Cast','Sparkgap','Relay','Valve','Gauge','Lever','Pulley','Winch','Ratchet','Cylinder','Chamber','Coupling','Linkage','Armature','Frame','Housing','Panel','Plating','Weld','Solder','Tempering','Quench','Hammer','Smith','Wright','Artisan','Craft','Innovation','Ingenuity','Precision','Sprocket','Escapement','Boiler'],
+  Aberrant: ['Tarkanan','Corruption','Mutation','Scale','Vein','Tumor','Splinter','Bleed','Gristle','Sinew','Membrane','Cyst','Excess','Overflow','Surge','Discharge','Feedback','Backlash','Flicker','Tremor','Convulsion','Spasm','Twitch','Shudder','Writhe','Coil','Tangle','Knot','Snarl','Thread','Strand','Filament','Vessel','Cavity','Shell','Carapace','Chitin','Barb','Spine','Quill','Hook','Tendril','Feeler','Antenna','Socket','Joint','Hinge','Fold','Crease','Ripple','Throb','Ache','Sting','Burn','Itch','Chafe','Wrongness','Otherness','Deviation','Anomaly','Reversion','Regression','Taint','Stain'],
+};
+const SPELL_TEMPLATES = [
+  n => `${n.noun} ${n.form}`,
+  n => `${n.adjective} ${n.noun}`,
+  n => `${n.adjective} ${n.form}`,
+  n => `${n.form} of ${n.adjective} ${n.noun}`,
+];
+
 function bonusFor(sum){
   if(sum<=6) return -2;
   if(sum<=9) return -1;
@@ -234,7 +283,7 @@ function bonusFor(sum){
 function d6(){ return Math.floor(Math.random()*6)+1; }
 function roll3d6(){ return d6()+d6()+d6(); }
 
-let state = { bg:null, arch:null, castStat:null, rolls:[], assign:{}, mercyApplied:false, guardStat:null, weaponStat:null, weapon:null, armor:null, shield:null, shards:0 };
+let state = { bg:null, arch:null, castStat:null, rolls:[], assign:{}, mercyApplied:false, guardStat:null, weaponStat:null, weapon:null, armor:null, shield:null, shards:0, skill:null, spellName:null, maneuverGivenUp:null };
 
 // Step 1: Background
 const bgSelect = document.getElementById('bg-select');
@@ -273,6 +322,23 @@ archSelect.addEventListener('change', ()=>{
     ? document.getElementById('wandslinger-stat').value
     : info.castStat;
 
+  const skillRow = document.getElementById('skill-row');
+  const isAgent = state.arch === 'Agent';
+  skillRow.style.display = isAgent ? 'flex' : 'none';
+  if(!isAgent){
+    document.getElementById('skill-select').value = '';
+    state.skill = null;
+  }
+  updateSkillAvailability();
+
+  const spellRow = document.getElementById('spell-row');
+  const isSyberist = ['Shardbound','Flamesworn','Wildspoken','Artificer'].includes(state.arch);
+  spellRow.style.display = isSyberist ? 'flex' : 'none';
+  if(!isSyberist){
+    state.spellName = null;
+    document.getElementById('spell-name-display').textContent = '';
+  }
+
   document.getElementById('step2').classList.add('done');
   document.getElementById('step3').classList.remove('locked');
   render();
@@ -280,17 +346,59 @@ archSelect.addEventListener('change', ()=>{
 
 document.getElementById('wandslinger-check').addEventListener('change', (e)=>{
   const statSel = document.getElementById('wandslinger-stat');
+  const maneuverSel = document.getElementById('wandslinger-maneuver');
   const note = document.getElementById('wandslinger-note');
   statSel.style.display = e.target.checked ? 'inline-block' : 'none';
+  const isWayfarer = state.arch === 'Wayfarer';
+  maneuverSel.style.display = (e.target.checked && isWayfarer) ? 'inline-block' : 'none';
   if(e.target.checked){
     state.castStat = statSel.value;
-    note.textContent = state.arch === 'Agent'
-      ? 'Taken instead of one Skill choice. Grants Spark-tier casting.'
-      : 'Taken in exchange for one Advanced Maneuver. Grants Spark-tier casting.';
+    note.textContent = isWayfarer
+      ? 'Choose which Advanced Maneuver you give up in exchange.'
+      : 'Taken instead of one Skill choice. Grants Spark-tier casting.';
   } else {
     state.castStat = ARCH_INFO[state.arch].castStat;
     note.textContent = '';
+    maneuverSel.value = '';
+    state.maneuverGivenUp = null;
   }
+  updateSkillAvailability();
+  render();
+});
+document.getElementById('wandslinger-maneuver').addEventListener('change', (e)=>{
+  state.maneuverGivenUp = e.target.value || null;
+  const note = document.getElementById('wandslinger-note');
+  note.textContent = e.target.value
+    ? `Gives up ${e.target.value}. Grants Spark-tier casting.`
+    : 'Choose which Advanced Maneuver you give up in exchange.';
+  render();
+});
+function updateSkillAvailability(){
+  const skillSel = document.getElementById('skill-select');
+  const note = document.getElementById('skill-note');
+  const wandslingerTaken = state.arch === 'Agent' && document.getElementById('wandslinger-check').checked;
+  skillSel.disabled = wandslingerTaken;
+  if(wandslingerTaken){
+    skillSel.value = '';
+    state.skill = null;
+    note.textContent = 'Replaced by Wandslinger.';
+  } else {
+    note.textContent = '';
+  }
+}
+document.getElementById('skill-select').addEventListener('change', (e)=>{
+  state.skill = e.target.value || null;
+  render();
+});
+document.getElementById('spell-roll-btn').addEventListener('click', ()=>{
+  const form = SPELL_FORMS[Math.floor(Math.random()*SPELL_FORMS.length)];
+  const adjective = SPELL_ADJECTIVES[Math.floor(Math.random()*SPELL_ADJECTIVES.length)];
+  const nounTable = SPELL_NOUNS[state.arch];
+  const noun = nounTable[Math.floor(Math.random()*nounTable.length)];
+  const templateIdx = Math.floor(Math.random()*4);
+  const name = SPELL_TEMPLATES[templateIdx]({form, adjective, noun});
+  state.spellName = name;
+  document.getElementById('spell-name-display').innerHTML = `<strong>${name}</strong>`;
   render();
 });
 document.getElementById('wandslinger-stat').addEventListener('change', (e)=>{
@@ -399,7 +507,8 @@ function buildWeaponOptions(){
   const asel = document.getElementById('armor-select');
   asel.innerHTML = ARMORS.map((a,i)=>`<option value="${i}">${a.name}${a.guard?' (+'+a.guard+' Guard)':''}</option>`).join('');
   const ssel = document.getElementById('shield-select');
-  ssel.innerHTML = SHIELDS.map((s,i)=>`<option value="${i}">${s.name}${s.guard?` (+${s.guard} Guard, ${s.init} Init)`:''}</option>`).join('');
+  ssel.innerHTML = '<option value="">— choose a shield —</option>' +
+    SHIELDS.map((s,i)=>`<option value="${i}">${s.name}${s.guard?` (+${s.guard} Guard, ${s.init} Init)`:''}</option>`).join('');
 }
 function checkShieldReq(){
   const serr = document.getElementById('shield-error');
@@ -523,6 +632,23 @@ document.getElementById('randomize-btn').addEventListener('click', ()=>{
       document.getElementById('wandslinger-stat').value = wandStats[Math.floor(Math.random()*wandStats.length)];
     }
     document.getElementById('wandslinger-check').dispatchEvent(new Event('change'));
+    if(takeIt && state.arch==='Wayfarer'){
+      const maneuvers = ['Command','Shield','Split Fire','Taunt','Rally','Cleave','Hold the Line','Read the Fight','Guard Stance','Second Wind','Rally Cry','Iron Palm','Second Strike','Guarded Strike','Sunder','Blade Dance'];
+      document.getElementById('wandslinger-maneuver').value = maneuvers[Math.floor(Math.random()*maneuvers.length)];
+      document.getElementById('wandslinger-maneuver').dispatchEvent(new Event('change'));
+    }
+  }
+
+  // 2c. Random Skill for Agent, if Wandslinger wasn't taken
+  if(state.arch==='Agent' && !document.getElementById('wandslinger-check').checked){
+    const skills = ['Swift','Network','Expertise','Many Pockets'];
+    document.getElementById('skill-select').value = skills[Math.floor(Math.random()*skills.length)];
+    document.getElementById('skill-select').dispatchEvent(new Event('change'));
+  }
+
+  // 2d. Roll a starting spell name for Syberist traditions
+  if(['Shardbound','Flamesworn','Wildspoken','Artificer'].includes(state.arch)){
+    document.getElementById('spell-roll-btn').click();
   }
 
   // 3. Roll stats
@@ -575,7 +701,10 @@ document.getElementById('randomize-btn').addEventListener('click', ()=>{
 
 function render(){
   const weaponErr = document.getElementById('weapon-error').textContent;
-  if(!(state.bg && state.arch && Object.keys(state.assign).length===6 && state.guardStat && state.weapon!==null && state.armor!==null && state.shield!==null && !weaponErr)) {
+  const wayfarerWandslingerIncomplete = state.arch === 'Wayfarer'
+    && document.getElementById('wandslinger-check').checked
+    && !state.maneuverGivenUp;
+  if(!(state.bg && state.arch && Object.keys(state.assign).length===6 && state.guardStat && state.weapon!==null && state.armor!==null && state.shield!==null && !weaponErr && !wayfarerWandslingerIncomplete)) {
     document.getElementById('output').innerHTML = '';
     return;
   }
@@ -603,7 +732,9 @@ function render(){
         <dt>Weapon</dt><dd>${WEAPONS[state.weapon].name} (${WEAPONS[state.weapon].tier}, ${WEAPONS[state.weapon].die}) — ${WEAPONS[state.weapon].cost}gp</dd>
         <dt>Armor</dt><dd>${armor.name}${armor.cost?` — ${armor.cost}gp`:''}</dd>
         <dt>Shield</dt><dd>${shield.name}${shield.cost?` — ${shield.cost}gp, ${shield.init} Initiative`:''}</dd>
-        ${wandslingerOn ? `<dt>Wandslinger</dt><dd>Spark-tier casting, ${state.castStat}</dd>` : ''}
+        ${wandslingerOn ? `<dt>Wandslinger</dt><dd>Spark-tier casting, ${state.castStat}${state.maneuverGivenUp?` (gave up ${state.maneuverGivenUp})`:''}</dd>` : ''}
+        ${state.skill ? `<dt>Skill</dt><dd>${state.skill}</dd>` : ''}
+        ${state.spellName ? `<dt>Starting Spell Name</dt><dd>${state.spellName}</dd>` : ''}
       </dl>
       <dl>
         <dt>Talents (from Background)</dt><dd>${state.bg.t}</dd>
@@ -624,7 +755,9 @@ function render(){
     `Weapon: ${WEAPONS[state.weapon].name} (${WEAPONS[state.weapon].tier}, ${WEAPONS[state.weapon].die}) \u2014 ${WEAPONS[state.weapon].cost}gp`,
     `Armor: ${armor.name}${armor.cost?` \u2014 ${armor.cost}gp`:''}`,
     `Shield: ${shield.name}${shield.cost?` \u2014 ${shield.cost}gp, ${shield.init} Initiative`:''}`,
-    wandslingerOn ? `Wandslinger: Spark-tier casting, ${state.castStat}` : null,
+    wandslingerOn ? `Wandslinger: Spark-tier casting, ${state.castStat}${state.maneuverGivenUp?` (gave up ${state.maneuverGivenUp})`:''}` : null,
+    state.skill ? `Skill: ${state.skill}` : null,
+    state.spellName ? `Starting Spell Name: ${state.spellName}` : null,
     ``,
     `Talents (from Background): ${state.bg.t}`,
     `Gear: ${state.bg.g}`,
