@@ -101,12 +101,15 @@
   <p>Every character has a damage buffer called <strong><a href="glossary.html#guard">Guard</a></strong> (full explanation on <a href="combat.html">Combat</a>). It's not chosen — it's calculated automatically: your highest-bonus stat, excluding your cast stat (and Wandslinger stat, if taken) and the governing stat of every weapon currently equipped in a hand slot. CON is never a cast or weapon stat, so it's always eligible.</p>
   <table>
   <tr><th>Guard Stat (if it lands there)</th><th>Concept</th></tr>
+  <tr><td>STR — Brute Force</td><td>Physically blocks and overpowers incoming attacks (only possible if STR isn't your weapon or cast stat)</td></tr>
+  <tr><td>DEX — Reflexes</td><td>Dodges and weaves; full hits become glancing ones (only possible if DEX isn't your weapon or cast stat)</td></tr>
   <tr><td>CON — Endurance</td><td>Classic tank: physically tough, shrugs off blows</td></tr>
   <tr><td>INT — Tactics</td><td>Reads the fight, positions so blows land where they hurt least</td></tr>
   <tr><td>WIS — Awareness</td><td>Danger sense; flinches away before the worst lands</td></tr>
   <tr><td>CHA — Presence</td><td>Force of personality throws off an attacker's aim and timing</td></tr>
   </table>
-  <p><strong>Locked in at the start of a fight based on your full loadout — no recalculating turn to turn.</strong> Mid-combat it only changes as a direct consequence of changing what's equipped (always a full action): freeing a stat moves it up, conflicting with a new weapon moves it down, and if it moves down, current Guard drops to match the new max immediately, floor 0. One exception: the Heavy/Medium armor CON requirement stays tied to actual CON regardless of Guard Stat — poor CON locks out Heavy armor even if CON isn't your Guard Stat.</p>
+  <p><strong>Every weapon is governed by STR or DEX, so at least one of them is always excluded by whatever's equipped</strong> — the other stays genuinely eligible unless it's also your cast stat, or you're dual-wielding across both (a melee weapon and a ranged one at once excludes both).</p>
+  <p><strong>Stable by default, not frozen — it only changes as a direct consequence of changing what's equipped.</strong> Nothing recalculates on its own turn to turn; there's no passive drift and no free re-optimizing. But producing or stowing an item is always a full action, and if that specific change alters which stats are excluded, Guard Stat recalculates immediately — mid-combat included: freeing a stat moves it up, conflicting with a new weapon moves it down, and if it moves down, current Guard drops to match the new max immediately, floor 0. One exception: the Heavy/Medium armor CON requirement stays tied to actual CON regardless of Guard Stat — poor CON locks out Heavy armor even if CON isn't your Guard Stat.</p>
 
   <h2 id="whats-in-this-document">What's in This Document</h2>
   <p>A brief abstract and one concrete example of every other section — enough to orient yourself before diving into the full page for whichever part you actually need.</p>

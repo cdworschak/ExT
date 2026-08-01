@@ -1388,12 +1388,16 @@ Guard Stat is not chosen once and locked — it's calculated automatically: **yo
 
 | Guard Stat (if it lands there) | Concept |
 |---|---|
+| STR — Brute Force | Physically blocks and overpowers incoming attacks (only possible if STR isn't your weapon or cast stat). |
+| DEX — Reflexes | Dodges and weaves; full hits become glancing ones (only possible if DEX isn't your weapon or cast stat). |
 | CON — Endurance | Classic tank: physically tough, shrugs off blows. |
 | WIS — Awareness | Danger sense; flinches away before the worst lands. |
 | INT — Tactics | Reads the fight, positions so blows land where they hurt least. |
 | CHA — Presence | Force of personality throws off an attacker's aim and timing. |
 
-**Locked in at the start of a fight, based on your full loadout at that moment — no recalculating turn to turn.** Mid-combat, it only ever changes as a direct consequence of changing what's equipped: producing or stowing an item is always a full action (see Item Slots), and if that change alters which stats are excluded, Guard Stat recalculates immediately using the new exclusions. This can move it up (freeing a stat by putting a weapon away) or down (conflicting with a newly-equipped weapon) — it's never a choice to game, since every equipment change costs a full Round regardless of which direction it moves. If it moves down, current Guard drops to match the new max immediately, floor 0.
+**Every weapon is governed by STR or DEX, so at least one of them is always excluded by whatever's equipped** — the other stays genuinely eligible unless it's also your cast stat, or you're dual-wielding across both (a melee weapon and a ranged one at once excludes both).
+
+**Stable by default, not frozen — it only changes as a direct consequence of changing what's equipped.** Nothing recalculates on its own turn to turn; there's no passive drift and no free re-optimizing. But producing or stowing an item is always a full action (see Item Slots), and if that specific change alters which stats are excluded, Guard Stat recalculates immediately using the new exclusions — mid-combat included. This can move it up (freeing a stat by putting a weapon away) or down (conflicting with a newly-equipped weapon) — it's never a choice to game, since every equipment change costs a full Round regardless of which direction it moves. If it moves down, current Guard drops to match the new max immediately, floor 0.
 
 **One remaining constraint:** the Heavy/Medium armor CON requirement stays tied to actual CON specifically, regardless of Guard Stat. A character with poor CON is still locked out of Heavy armor even if CON isn't their Guard Stat.
 
@@ -2122,7 +2126,7 @@ One canonical definition per term, alphabetical.
 
 **Guard** — the damage buffer every character has. = 4 + Guard Stat bonus + archetype bonus + armor + shield, floor 1. Restores fully after a Turn of rest.
 
-**Guard Stat** — calculated automatically: your highest-bonus stat, excluding cast stat and the governing stat of every equipped weapon. Locked for the duration of a fight; recalculates immediately if a mid-combat equipment change (always a full action) alters the exclusions.
+**Guard Stat** — calculated automatically: your highest-bonus stat, excluding cast stat and the governing stat of every equipped weapon. Stable by default, but recalculates immediately if a mid-combat equipment change (always a full action) alters the exclusions.
 
 **Initiative** — 2d10 + DEX + weapon modifier − armor penalty, rolled once per fight.
 
