@@ -163,7 +163,7 @@ Failing the check doesn't trap the character — it only costs a parting shot. T
 
 ## Initiative
 
-**Roll: 2d10 + DEX bonus + weapon modifier − armor penalty.** Rolled once per combatant at the top of combat, sorted descending; each combatant acts once, in that order, for the whole encounter.
+**Roll: 2d10 + DEX bonus + weapon modifier − armor penalty − shield penalty.** Rolled once per combatant at the top of combat, sorted descending; each combatant acts once, in that order, for the whole encounter.
 
 | Weapon tier | Modifier |
 |---|---|
@@ -172,19 +172,63 @@ Failing the check doesn't trap the character — it only costs a parting shot. T
 | Heavy | −1 |
 | Massive (monster-scale) | −3 |
 
-| Armor | Penalty |
+| Armor / Shield | Penalty |
 |---|---|
-| Light | — |
-| Medium | −1 |
-| Heavy | −2 |
+| Light armor | — |
+| Medium armor | −1 |
+| Heavy armor | −2 |
 | Shield | −1 |
 | Tower Shield | −3 |
 
 **Ties:** resolve with higher DEX bonus going first, and a quick reroll between the tied parties only if that's also equal.
 
+**Every other source that touches Initiative, consolidated here rather than scattered:**
+- **Reeling Hard** (a Wound Complication result) overrides the roll entirely — Initiative order drops to last for the rest of the fight, not a numeric penalty stacked on top of the formula above.
+- **Not on my watch!** (a Basic Grit Maneuver, 1 Grit) lets a Wayfarer reroll their own Initiative roll once, keeping the better result.
+- Nothing else in this document currently touches Initiative — no other Talent, Skill, Mark, or spell modifies it. If that changes, it belongs in this list.
+
 ---
 
 A Heavy-armored Wayfarer wielding a Heavy weapon and a Tower Shield rolls 2d10 −1 (weapon) −2 (armor) −3 (Tower Shield) = 2d10−6 — reliably near the bottom of the order.
+
+---
+
+## Surprise & Ambushes
+
+Before combat starts, the GM determines if a side is surprised. If so, that side does not act in the first Round of combat.
+
+**Surprise is checked per-character, not per-side.**
+
+- Each character individually rolls 2d10 + WIS (or the GM's chosen relevant stat) vs a target set by the scenario (12 base, shifted per Scenario Target Modifiers — e.g. +3 for a genuinely well-concealed ambush).
+- **Cascading Advantage:** the first character to succeed can shout a warning — every character who hasn't rolled yet gets Advantage on their own check that round.
+- Any character who fails is individually surprised — they personally skip their Round 1 action, while everyone else resolves normally in initiative order.
+
+---
+
+## Morale
+
+**Base Morale 7** for an average group of mooks (2d6 roll-under-or-equal to pass). **+2 while a named leader/boss is present and alive** — losing the leader removes the bonus immediately.
+
+**Checks fire once each, at these triggers:**
+- The group's first casualty.
+- The group reaching 50% losses.
+- A named leader/boss going down — checked immediately, using Morale without the leader bonus.
+
+**On a failed check:** the remaining group breaks and flees — real movement away from the fight, not an instant vanish. A GM can allow a broken group to surrender or negotiate instead.
+
+---
+
+## Reaction Check
+
+**Roll 2d10 + CHA vs target 12**, shiftable by Scenario Target Modifiers, with Advantage/Disadvantage for situational factors. Read the total against the table below:
+
+| Total | Disposition |
+|---|---|
+| ≤9 | Hostile |
+| 10–11 | Wary |
+| 12–14 | Apathetic |
+| 15–16 | Friendly |
+| ≥17 | Helpful |
 
 ---
 

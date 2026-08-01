@@ -18,6 +18,30 @@ Eberron is the setting this ruleset runs; The Electrum Archive is the mechanical
 
 Roll **2d10 + stat bonus**, succeed on **12 or higher**.
 
+**What a stat actually represents.** Every check happens because something's genuinely at stake, and the stat you roll is the part of your character being tested in that moment — acting on the world, or holding up against something acting on you.
+
+| Stat | What it represents | You act by... | You resist... |
+|---|---|---|---|
+| **STR** | Raw physical power | Hitting hard, forcing something open, holding your ground | Being grabbed, thrown, physically overpowered |
+| **DEX** | Speed and precision | Reacting fast, aiming true, getting there before the danger does | Area effects, traps, anything you can dodge or outrun |
+| **CON** | Endurance | Keeping going after most people would stop | Poison, disease, exhaustion, being worn down |
+| **INT** | Reasoning | Working something out under pressure — a trap, a lie, a spell | Illusions, mental tricks that only fool someone not paying attention |
+| **WIS** | Awareness | Noticing what's actually happening, trusting an instinct | Fear, despair, charm, anything preying on your state of mind |
+| **CHA** | Presence | Making someone believe you, fear you, or follow you | Intimidation, manipulation, being talked into something |
+
+**Where each stat also matters, beyond its own checks** — the quiet, easy-to-miss places a stat's bonus feeds into something else entirely:
+
+| Stat | Also feeds into |
+|---|---|
+| **STR** | Weapon proficiency (melee); Hold the Line Grit Maneuver |
+| **DEX** | Weapon proficiency (ranged); Initiative's base roll; Disengage Check |
+| **CON** | Heavy/Medium armor's requirement; Overcast Backlash Pool rerolls; Second Wind Grit Maneuver; Hold the Line (shared with STR) |
+| **INT** | Language count / illiteracy threshold; the party-wide Search roll (Exploration Procedure); Shardbound and Artificer cast stat |
+| **WIS** | Surprise Check (default stat); Listen at a Door (Exploration Procedure); Wildspoken cast stat; Rally Cry Grit Maneuver (shared with CHA) |
+| **CHA** | Reaction Check; Flamesworn cast stat; Rally Cry Grit Maneuver (shared with WIS) |
+
+Guard Stat isn't listed here deliberately — every stat is a *potential* Guard Stat, calculated automatically from whichever one ends up highest and eligible (see Guard Stat below), so it's not a fixed use tied to any one stat the way these are.
+
 Situational difficulty is represented by shifting the Target number or granting Advantage/Disadvantage. Stat bonus, weapon tier, and Guard stay fixed; only the target and the dice pool move.
 
 A given roll has Advantage, Disadvantage, or neither. If a roll would qualify for both from different sources, it resolves as neither — roll normally.

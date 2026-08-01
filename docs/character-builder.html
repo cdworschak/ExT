@@ -219,6 +219,8 @@ const BACKGROUNDS = [
 ];
 
 const TIER_PRICE = {Light: 10, Medium: 25, Heavy: 60};
+const WEAPON_INIT = {Light: 3, Medium: 1, Heavy: -1};
+const ARMOR_INIT = {None: 0, Light: 0, Medium: -1, Heavy: -2};
 const WEAPONS = [
   {name:"Dagger", tier:"Light", die:"1d4", ranged:false},
   {name:"Handaxe", tier:"Light", die:"1d4", ranged:false},
@@ -235,17 +237,17 @@ const WEAPONS = [
   {name:"Shortbow", tier:"Medium", die:"1d6", ranged:true},
   {name:"Hand Crossbow", tier:"Medium", die:"1d6", ranged:true},
   {name:"Crossbow", tier:"Heavy", die:"1d8", ranged:true},
-].map(w => ({...w, cost: TIER_PRICE[w.tier]}));
+].map(w => ({...w, cost: TIER_PRICE[w.tier], init: WEAPON_INIT[w.tier]}));
 const SHIELDS = [
   {name:"None", guard:0, init:0, cost:0},
   {name:"Shield", guard:1, init:-1, cost:10},
   {name:"Tower Shield", guard:2, init:-3, cost:60},
 ];
 const ARMORS = [
-  {name:"None", guard:0, req:null, slots:0, cost:0},
-  {name:"Light", guard:1, req:null, slots:1, cost:15},
-  {name:"Medium", guard:2, req:"CON >= 0", slots:1, cost:50},
-  {name:"Heavy", guard:3, req:"CON >= 1 and Wayfarer", slots:2, cost:120},
+  {name:"None", guard:0, req:null, slots:0, cost:0, init:0},
+  {name:"Light", guard:1, req:null, slots:1, cost:15, init:0},
+  {name:"Medium", guard:2, req:"CON >= 0", slots:1, cost:50, init:-1},
+  {name:"Heavy", guard:3, req:"CON >= 1 and Wayfarer", slots:2, cost:120, init:-2},
 ];
 const STATS = ["STR","DEX","CON","INT","WIS","CHA"];
 const ARCH_INFO = {
@@ -716,6 +718,7 @@ function render(){
   const gold = 200 - state.shards*10 - WEAPONS[state.weapon].cost - armor.cost - shield.cost;
   const statLines = STATS.map(s=>`${s} ${finalBonus(s)>=0?'+':''}${finalBonus(s)}`).join(' &nbsp; ');
   const wandslingerOn = (state.arch==='Wayfarer' || state.arch==='Agent') && document.getElementById('wandslinger-check').checked;
+  const initiative = finalBonus('DEX') + WEAPONS[state.weapon].init + armor.init + shield.init;
 
   document.getElementById('output').innerHTML = `
   <div class="char-sheet">
@@ -729,9 +732,10 @@ function render(){
         <dt>Stats</dt><dd>${statLines}</dd>
         <dt>Guard</dt><dd>${guard} (4 + ${state.guardStat} ${guardBonus>=0?'+':''}${guardBonus}${wayfarerBonus?' + 2 Wayfarer':''} + ${armor.guard} armor${shield.guard?` + ${shield.guard} shield`:''})</dd>
         <dt>Wound Slots</dt><dd>1</dd>
+        <dt>Initiative</dt><dd>${initiative>=0?'+':''}${initiative} (DEX ${finalBonus('DEX')>=0?'+':''}${finalBonus('DEX')} + ${WEAPONS[state.weapon].init} weapon + ${armor.init} armor + ${shield.init} shield)</dd>
         <dt>Weapon</dt><dd>${WEAPONS[state.weapon].name} (${WEAPONS[state.weapon].tier}, ${WEAPONS[state.weapon].die}) — ${WEAPONS[state.weapon].cost}gp</dd>
         <dt>Armor</dt><dd>${armor.name}${armor.cost?` — ${armor.cost}gp`:''}</dd>
-        <dt>Shield</dt><dd>${shield.name}${shield.cost?` — ${shield.cost}gp, ${shield.init} Initiative`:''}</dd>
+        <dt>Shield</dt><dd>${shield.name}${shield.cost?` — ${shield.cost}gp`:''}</dd>
         ${wandslingerOn ? `<dt>Wandslinger</dt><dd>Spark-tier casting, ${state.castStat}${state.maneuverGivenUp?` (gave up ${state.maneuverGivenUp})`:''}</dd>` : ''}
         ${state.skill ? `<dt>Skill</dt><dd>${state.skill}</dd>` : ''}
         ${state.spellName ? `<dt>Starting Spell Name</dt><dd>${state.spellName}</dd>` : ''}
@@ -752,9 +756,10 @@ function render(){
     `Stats: ${statLines.replace(/&nbsp;/g,' ')}`,
     `Guard: ${guard} (4 + ${state.guardStat} ${guardBonus>=0?'+':''}${guardBonus}${wayfarerBonus?' + 2 Wayfarer':''} + ${armor.guard} armor${shield.guard?` + ${shield.guard} shield`:''})`,
     `Wound Slots: 1`,
+    `Initiative: ${initiative>=0?'+':''}${initiative} (DEX ${finalBonus('DEX')>=0?'+':''}${finalBonus('DEX')} + ${WEAPONS[state.weapon].init} weapon + ${armor.init} armor + ${shield.init} shield)`,
     `Weapon: ${WEAPONS[state.weapon].name} (${WEAPONS[state.weapon].tier}, ${WEAPONS[state.weapon].die}) \u2014 ${WEAPONS[state.weapon].cost}gp`,
     `Armor: ${armor.name}${armor.cost?` \u2014 ${armor.cost}gp`:''}`,
-    `Shield: ${shield.name}${shield.cost?` \u2014 ${shield.cost}gp, ${shield.init} Initiative`:''}`,
+    `Shield: ${shield.name}${shield.cost?` \u2014 ${shield.cost}gp`:''}`,
     wandslingerOn ? `Wandslinger: Spark-tier casting, ${state.castStat}${state.maneuverGivenUp?` (gave up ${state.maneuverGivenUp})`:''}` : null,
     state.skill ? `Skill: ${state.skill}` : null,
     state.spellName ? `Starting Spell Name: ${state.spellName}` : null,

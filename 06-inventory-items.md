@@ -15,12 +15,12 @@ Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slo
 
 **Universal formula:** `Damage = weapon die + relevant stat bonus` — applies to PCs and monsters.
 
-| Weapon tier | Die | Avg |
-|---|---|---|
-| Light | 1d4 | 2.5 |
-| Medium | 1d6 | 3.5 |
-| Heavy | 1d8 | 4.5 |
-| Massive (monster-scale only) | 1d10 | 5.5 |
+| Weapon tier | Die | Avg | Initiative |
+|---|---|---|---|
+| Light | 1d4 | 2.5 | +3 |
+| Medium | 1d6 | 3.5 | +1 |
+| Heavy | 1d8 | 4.5 | −1 |
+| Massive (monster-scale only) | 1d10 | 5.5 | −3 |
 
 | Tier | Weapon | Notes |
 |---|---|---|
@@ -73,6 +73,7 @@ Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slo
 |---|---|---|---|
 | **Guard bonus** | +1 | +2 | +3 |
 | **Requirement** | none | CON bonus ≥ 0 | CON bonus ≥ +1 and Wayfarer's +2 Guard bonus |
+| **Initiative penalty** | — | −1 | −2 |
 | **Slot cost** | 1 body slot | 1 body slot | 2 body slots |
 | **Mobility tax** | none | −1 on Agility-type checks | −1 Agility checks, moving to an adjacent zone costs your whole action |
 | **Availability** | buyable anywhere | buyable anywhere | requires a House Cannith commission or military contact |

@@ -18,6 +18,30 @@ Eberron is the setting this ruleset runs; The Electrum Archive is the mechanical
 
 Roll **2d10 + stat bonus**, succeed on **12 or higher**.
 
+**What a stat actually represents.** Every check happens because something's genuinely at stake, and the stat you roll is the part of your character being tested in that moment — acting on the world, or holding up against something acting on you.
+
+| Stat | What it represents | You act by... | You resist... |
+|---|---|---|---|
+| **STR** | Raw physical power | Hitting hard, forcing something open, holding your ground | Being grabbed, thrown, physically overpowered |
+| **DEX** | Speed and precision | Reacting fast, aiming true, getting there before the danger does | Area effects, traps, anything you can dodge or outrun |
+| **CON** | Endurance | Keeping going after most people would stop | Poison, disease, exhaustion, being worn down |
+| **INT** | Reasoning | Working something out under pressure — a trap, a lie, a spell | Illusions, mental tricks that only fool someone not paying attention |
+| **WIS** | Awareness | Noticing what's actually happening, trusting an instinct | Fear, despair, charm, anything preying on your state of mind |
+| **CHA** | Presence | Making someone believe you, fear you, or follow you | Intimidation, manipulation, being talked into something |
+
+**Where each stat also matters, beyond its own checks** — the quiet, easy-to-miss places a stat's bonus feeds into something else entirely:
+
+| Stat | Also feeds into |
+|---|---|
+| **STR** | Weapon proficiency (melee); Hold the Line Grit Maneuver |
+| **DEX** | Weapon proficiency (ranged); Initiative's base roll; Disengage Check |
+| **CON** | Heavy/Medium armor's requirement; Overcast Backlash Pool rerolls; Second Wind Grit Maneuver; Hold the Line (shared with STR) |
+| **INT** | Language count / illiteracy threshold; the party-wide Search roll (Exploration Procedure); Shardbound and Artificer cast stat |
+| **WIS** | Surprise Check (default stat); Listen at a Door (Exploration Procedure); Wildspoken cast stat; Rally Cry Grit Maneuver (shared with CHA) |
+| **CHA** | Reaction Check; Flamesworn cast stat; Rally Cry Grit Maneuver (shared with WIS) |
+
+Guard Stat isn't listed here deliberately — every stat is a *potential* Guard Stat, calculated automatically from whichever one ends up highest and eligible (see Guard Stat below), so it's not a fixed use tied to any one stat the way these are.
+
 Situational difficulty is represented by shifting the Target number or granting Advantage/Disadvantage. Stat bonus, weapon tier, and Guard stay fixed; only the target and the dice pool move.
 
 A given roll has Advantage, Disadvantage, or neither. If a roll would qualify for both from different sources, it resolves as neither — roll normally.
@@ -1144,12 +1168,12 @@ Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slo
 
 **Universal formula:** `Damage = weapon die + relevant stat bonus` — applies to PCs and monsters.
 
-| Weapon tier | Die | Avg |
-|---|---|---|
-| Light | 1d4 | 2.5 |
-| Medium | 1d6 | 3.5 |
-| Heavy | 1d8 | 4.5 |
-| Massive (monster-scale only) | 1d10 | 5.5 |
+| Weapon tier | Die | Avg | Initiative |
+|---|---|---|---|
+| Light | 1d4 | 2.5 | +3 |
+| Medium | 1d6 | 3.5 | +1 |
+| Heavy | 1d8 | 4.5 | −1 |
+| Massive (monster-scale only) | 1d10 | 5.5 | −3 |
 
 | Tier | Weapon | Notes |
 |---|---|---|
@@ -1202,6 +1226,7 @@ Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slo
 |---|---|---|---|
 | **Guard bonus** | +1 | +2 | +3 |
 | **Requirement** | none | CON bonus ≥ 0 | CON bonus ≥ +1 and Wayfarer's +2 Guard bonus |
+| **Initiative penalty** | — | −1 | −2 |
 | **Slot cost** | 1 body slot | 1 body slot | 2 body slots |
 | **Mobility tax** | none | −1 on Agility-type checks | −1 Agility checks, moving to an adjacent zone costs your whole action |
 | **Availability** | buyable anywhere | buyable anywhere | requires a House Cannith commission or military contact |
@@ -1478,7 +1503,7 @@ Failing the check doesn't trap the character — it only costs a parting shot. T
 
 ## Initiative
 
-**Roll: 2d10 + DEX bonus + weapon modifier − armor penalty.** Rolled once per combatant at the top of combat, sorted descending; each combatant acts once, in that order, for the whole encounter.
+**Roll: 2d10 + DEX bonus + weapon modifier − armor penalty − shield penalty.** Rolled once per combatant at the top of combat, sorted descending; each combatant acts once, in that order, for the whole encounter.
 
 | Weapon tier | Modifier |
 |---|---|
@@ -1487,15 +1512,20 @@ Failing the check doesn't trap the character — it only costs a parting shot. T
 | Heavy | −1 |
 | Massive (monster-scale) | −3 |
 
-| Armor | Penalty |
+| Armor / Shield | Penalty |
 |---|---|
-| Light | — |
-| Medium | −1 |
-| Heavy | −2 |
+| Light armor | — |
+| Medium armor | −1 |
+| Heavy armor | −2 |
 | Shield | −1 |
 | Tower Shield | −3 |
 
 **Ties:** resolve with higher DEX bonus going first, and a quick reroll between the tied parties only if that's also equal.
+
+**Every other source that touches Initiative, consolidated here rather than scattered:**
+- **Reeling Hard** (a Wound Complication result) overrides the roll entirely — Initiative order drops to last for the rest of the fight, not a numeric penalty stacked on top of the formula above.
+- **Not on my watch!** (a Basic Grit Maneuver, 1 Grit) lets a Wayfarer reroll their own Initiative roll once, keeping the better result.
+- Nothing else in this document currently touches Initiative — no other Talent, Skill, Mark, or spell modifies it. If that changes, it belongs in this list.
 
 ---
 
