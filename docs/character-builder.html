@@ -99,7 +99,7 @@
   </div>
 
   <div id="step5" class="builder-step locked">
-    <h3>5. Weapon &amp; Armor</h3>
+    <h3>5. Weapon, Armor &amp; Shield</h3>
     <div class="builder-row">
       <select id="weapon-select" class="builder-select">
         <option value="">— choose a weapon —</option>
@@ -107,8 +107,12 @@
       <select id="armor-select" class="builder-select">
         <option value="">— choose armor —</option>
       </select>
+      <select id="shield-select" class="builder-select">
+        <option value="">— choose a shield —</option>
+      </select>
     </div>
     <div id="weapon-error" class="builder-error"></div>
+    <div id="shield-error" class="builder-error"></div>
   </div>
 
   <div id="step6" class="builder-step locked">
@@ -189,16 +193,21 @@ const WEAPONS = [
   {name:"Club", tier:"Medium", die:"1d6", ranged:false},
   {name:"Spear", tier:"Medium", die:"1d6", ranged:false},
   {name:"Staff", tier:"Medium", die:"1d6", ranged:false},
-  {name:"Sword", tier:"Heavy", die:"1d8", ranged:false},
-  {name:"Axe", tier:"Heavy", die:"1d8", ranged:false},
-  {name:"Mace", tier:"Heavy", die:"1d8", ranged:false},
-  {name:"Glaive", tier:"Heavy", die:"1d8", ranged:false},
+  {name:"Sword", tier:"Heavy", die:"1d8", ranged:false, twoHanded:true},
+  {name:"Axe", tier:"Heavy", die:"1d8", ranged:false, twoHanded:true},
+  {name:"Mace", tier:"Heavy", die:"1d8", ranged:false, twoHanded:true},
+  {name:"Glaive", tier:"Heavy", die:"1d8", ranged:false, twoHanded:true},
   {name:"Sling", tier:"Light", die:"1d4", ranged:true},
   {name:"Darts", tier:"Light", die:"1d4", ranged:true},
   {name:"Shortbow", tier:"Medium", die:"1d6", ranged:true},
   {name:"Hand Crossbow", tier:"Medium", die:"1d6", ranged:true},
   {name:"Crossbow", tier:"Heavy", die:"1d8", ranged:true},
 ].map(w => ({...w, cost: TIER_PRICE[w.tier]}));
+const SHIELDS = [
+  {name:"None", guard:0, init:0, cost:0},
+  {name:"Shield", guard:1, init:-1, cost:10},
+  {name:"Tower Shield", guard:2, init:-3, cost:60},
+];
 const ARMORS = [
   {name:"None", guard:0, req:null, slots:0, cost:0},
   {name:"Light", guard:1, req:null, slots:1, cost:15},
@@ -225,7 +234,7 @@ function bonusFor(sum){
 function d6(){ return Math.floor(Math.random()*6)+1; }
 function roll3d6(){ return d6()+d6()+d6(); }
 
-let state = { bg:null, arch:null, castStat:null, rolls:[], assign:{}, mercyApplied:false, guardStat:null, weaponStat:null, weapon:null, armor:null, shards:0 };
+let state = { bg:null, arch:null, castStat:null, rolls:[], assign:{}, mercyApplied:false, guardStat:null, weaponStat:null, weapon:null, armor:null, shield:null, shards:0 };
 
 // Step 1: Background
 const bgSelect = document.getElementById('bg-select');
@@ -327,13 +336,38 @@ function buildAssignGrid(){
   STATS.forEach(stat=>{
     const box = document.createElement('div');
     box.className = 'stat-box';
+    box.id = 'stat-box-' + stat;
     const sel = document.createElement('select');
-    sel.innerHTML = '<option value="">—</option>' + state.rolls.map((r,i)=>`<option value="${i}">${r} (${bonusFor(r)>=0?'+':''}${bonusFor(r)})</option>`).join('');
-    sel.addEventListener('change', ()=>{ state.assign[stat] = sel.value; checkAssignDone(); render(); });
+    sel.id = 'assign-select-' + stat;
+    sel.addEventListener('change', ()=>{ state.assign[stat] = sel.value; checkAssignDone(); updateAssignLabels(); recalculateDownstream(); render(); });
     box.innerHTML = `<div class="stat-box-label">${stat}</div>`;
     box.appendChild(sel);
     grid.appendChild(box);
   });
+  updateAssignLabels();
+}
+function updateAssignLabels(){
+  STATS.forEach(stat=>{
+    const sel = document.getElementById('assign-select-' + stat);
+    const currentVal = sel.value;
+    sel.innerHTML = '<option value="">—</option>' + state.rolls.map((r,i)=>{
+      const usedByOther = Object.entries(state.assign).find(([s,v])=> s!==stat && v===String(i));
+      const tag = usedByOther ? ` \u2014 used by ${usedByOther[0]}` : '';
+      const disabled = usedByOther ? 'disabled' : '';
+      return `<option value="${i}" ${disabled}>Roll ${i+1}: ${r} (${bonusFor(r)>=0?'+':''}${bonusFor(r)})${tag}</option>`;
+    }).join('');
+    sel.value = currentVal;
+  });
+}
+function recalculateDownstream(){
+  // Stat changes can invalidate weapon proficiency and Guard Stat, both of which
+  // depend on stat bonuses. Only touch steps already reached.
+  if(state.weapon!==null){
+    checkWeaponReq();
+  }
+  if(state.weapon!==null && state.armor!==null && state.shield!==null){
+    showGuardStat();
+  }
 }
 function checkAssignDone(){
   const used = Object.values(state.assign).filter(v=>v!=='');
@@ -364,6 +398,19 @@ function buildWeaponOptions(){
     WEAPONS.map((w,i)=>`<option value="${i}">${w.name} (${w.tier}${w.ranged?', ranged':''}, ${w.die})</option>`).join('');
   const asel = document.getElementById('armor-select');
   asel.innerHTML = ARMORS.map((a,i)=>`<option value="${i}">${a.name}${a.guard?' (+'+a.guard+' Guard)':''}</option>`).join('');
+  const ssel = document.getElementById('shield-select');
+  ssel.innerHTML = SHIELDS.map((s,i)=>`<option value="${i}">${s.name}${s.guard?` (+${s.guard} Guard, ${s.init} Init)`:''}</option>`).join('');
+}
+function checkShieldReq(){
+  const serr = document.getElementById('shield-error');
+  if(state.shield===null || state.shield===0 || state.weapon===null){ serr.textContent=''; return; }
+  if(WEAPONS[state.weapon].twoHanded){
+    serr.textContent = `${WEAPONS[state.weapon].name} is two-handed \u2014 no hand slot free for a shield.`;
+    state.shield = 0;
+    document.getElementById('shield-select').value = 0;
+  } else {
+    serr.textContent = '';
+  }
 }
 function checkWeaponReq(){
   const werr = document.getElementById('weapon-error');
@@ -387,11 +434,18 @@ function checkWeaponReq(){
 document.getElementById('weapon-select').addEventListener('change', (e)=>{
   state.weapon = e.target.value===''? null : parseInt(e.target.value);
   checkWeaponReq();
+  checkShieldReq();
   maybeAdvanceStep6();
   render();
 });
 document.getElementById('armor-select').addEventListener('change', (e)=>{
   state.armor = e.target.value===''? null : parseInt(e.target.value);
+  maybeAdvanceStep6();
+  render();
+});
+document.getElementById('shield-select').addEventListener('change', (e)=>{
+  state.shield = e.target.value===''? null : parseInt(e.target.value);
+  checkShieldReq();
   maybeAdvanceStep6();
   render();
 });
@@ -414,7 +468,7 @@ function showGuardStat(){
 }
 
 function maybeAdvanceStep6(){
-  if(state.weapon!==null && state.armor!==null){
+  if(state.weapon!==null && state.armor!==null && state.shield!==null){
     document.getElementById('step5').classList.add('done');
     document.getElementById('step6').classList.remove('locked');
     showGuardStat();
@@ -423,8 +477,8 @@ function maybeAdvanceStep6(){
 }
 
 function updateShardCap(){
-  if(state.weapon===null || state.armor===null) return;
-  const spent = WEAPONS[state.weapon].cost + ARMORS[state.armor].cost;
+  if(state.weapon===null || state.armor===null || state.shield===null) return;
+  const spent = WEAPONS[state.weapon].cost + ARMORS[state.armor].cost + SHIELDS[state.shield].cost;
   const maxAffordable = Math.max(0, Math.floor((200 - spent) / 10));
   const input = document.getElementById('shard-input');
   input.max = maxAffordable;
@@ -487,6 +541,7 @@ document.getElementById('randomize-btn').addEventListener('click', ()=>{
   // reflect the random assignment in the actual <select> elements
   const selects = document.querySelectorAll('#assign-grid select');
   selects.forEach((sel,i)=>{ sel.value = order[i]; });
+  updateAssignLabels();
   checkAssignDone();
 
   // 5. Random weapon the character actually qualifies for (Guard Stat then follows automatically)
@@ -504,6 +559,11 @@ document.getElementById('randomize-btn').addEventListener('click', ()=>{
   document.getElementById('armor-select').value = Math.floor(Math.random()*ARMORS.length);
   document.getElementById('armor-select').dispatchEvent(new Event('change'));
 
+  // 6b. Random shield, only if the weapon isn't two-handed
+  const shieldOptions = WEAPONS[pick.i].twoHanded ? [0] : [0,1,2];
+  document.getElementById('shield-select').value = shieldOptions[Math.floor(Math.random()*shieldOptions.length)];
+  document.getElementById('shield-select').dispatchEvent(new Event('change'));
+
   // 7. Reasonable shard amount depending on archetype
   const isCaster = ['Shardbound','Flamesworn','Wildspoken','Artificer'].includes(state.arch);
   document.getElementById('shard-input').value = isCaster ? (10 + Math.floor(Math.random()*6)) : Math.floor(Math.random()*5);
@@ -514,15 +574,17 @@ document.getElementById('randomize-btn').addEventListener('click', ()=>{
 
 
 function render(){
-  if(!(state.bg && state.arch && Object.keys(state.assign).length===6 && state.guardStat && state.weapon!==null && state.armor!==null)) {
+  const weaponErr = document.getElementById('weapon-error').textContent;
+  if(!(state.bg && state.arch && Object.keys(state.assign).length===6 && state.guardStat && state.weapon!==null && state.armor!==null && state.shield!==null && !weaponErr)) {
     document.getElementById('output').innerHTML = '';
     return;
   }
   const armor = ARMORS[state.armor];
+  const shield = SHIELDS[state.shield];
   const guardBonus = finalBonus(state.guardStat);
   const wayfarerBonus = state.arch==='Wayfarer' ? 2 : 0;
-  const guard = 4 + guardBonus + wayfarerBonus + armor.guard;
-  const gold = 200 - state.shards*10 - WEAPONS[state.weapon].cost - armor.cost;
+  const guard = 4 + guardBonus + wayfarerBonus + armor.guard + shield.guard;
+  const gold = 200 - state.shards*10 - WEAPONS[state.weapon].cost - armor.cost - shield.cost;
   const statLines = STATS.map(s=>`${s} ${finalBonus(s)>=0?'+':''}${finalBonus(s)}`).join(' &nbsp; ');
   const wandslingerOn = (state.arch==='Wayfarer' || state.arch==='Agent') && document.getElementById('wandslinger-check').checked;
 
@@ -536,17 +598,18 @@ function render(){
     <div class="char-sheet-grid">
       <dl>
         <dt>Stats</dt><dd>${statLines}</dd>
-        <dt>Guard</dt><dd>${guard} (4 + ${state.guardStat} ${guardBonus>=0?'+':''}${guardBonus}${wayfarerBonus?' + 2 Wayfarer':''} + ${armor.guard} armor)</dd>
+        <dt>Guard</dt><dd>${guard} (4 + ${state.guardStat} ${guardBonus>=0?'+':''}${guardBonus}${wayfarerBonus?' + 2 Wayfarer':''} + ${armor.guard} armor${shield.guard?` + ${shield.guard} shield`:''})</dd>
         <dt>Wound Slots</dt><dd>1</dd>
         <dt>Weapon</dt><dd>${WEAPONS[state.weapon].name} (${WEAPONS[state.weapon].tier}, ${WEAPONS[state.weapon].die}) — ${WEAPONS[state.weapon].cost}gp</dd>
         <dt>Armor</dt><dd>${armor.name}${armor.cost?` — ${armor.cost}gp`:''}</dd>
+        <dt>Shield</dt><dd>${shield.name}${shield.cost?` — ${shield.cost}gp, ${shield.init} Initiative`:''}</dd>
         ${wandslingerOn ? `<dt>Wandslinger</dt><dd>Spark-tier casting, ${state.castStat}</dd>` : ''}
       </dl>
       <dl>
         <dt>Talents (from Background)</dt><dd>${state.bg.t}</dd>
         <dt>Gear</dt><dd>${state.bg.g}</dd>
         <dt>Refined Shards</dt><dd>${state.shards} (${state.shards*10}gp)</dd>
-        <dt>Remaining Gold</dt><dd>${gold<0?'<span style="color:var(--khyber)">':''}${gold}gp${gold<0?' — over budget, reduce shards or gear</span>':''} (200 − ${WEAPONS[state.weapon].cost} weapon − ${armor.cost} armor − ${state.shards*10} shards)</dd>
+        <dt>Remaining Gold</dt><dd>${gold<0?'<span style="color:var(--khyber)">':''}${gold}gp${gold<0?' — over budget, reduce shards or gear</span>':''} (200 − ${WEAPONS[state.weapon].cost} weapon − ${armor.cost} armor − ${shield.cost} shield − ${state.shards*10} shards)</dd>
       </dl>
     </div>
     <textarea id="sheet-text" style="position:absolute; left:-9999px;"></textarea>
@@ -556,16 +619,17 @@ function render(){
     `${state.bg.n} — ${state.arch}`,
     ``,
     `Stats: ${statLines.replace(/&nbsp;/g,' ')}`,
-    `Guard: ${guard} (4 + ${state.guardStat} ${guardBonus>=0?'+':''}${guardBonus}${wayfarerBonus?' + 2 Wayfarer':''} + ${armor.guard} armor)`,
+    `Guard: ${guard} (4 + ${state.guardStat} ${guardBonus>=0?'+':''}${guardBonus}${wayfarerBonus?' + 2 Wayfarer':''} + ${armor.guard} armor${shield.guard?` + ${shield.guard} shield`:''})`,
     `Wound Slots: 1`,
     `Weapon: ${WEAPONS[state.weapon].name} (${WEAPONS[state.weapon].tier}, ${WEAPONS[state.weapon].die}) \u2014 ${WEAPONS[state.weapon].cost}gp`,
     `Armor: ${armor.name}${armor.cost?` \u2014 ${armor.cost}gp`:''}`,
+    `Shield: ${shield.name}${shield.cost?` \u2014 ${shield.cost}gp, ${shield.init} Initiative`:''}`,
     wandslingerOn ? `Wandslinger: Spark-tier casting, ${state.castStat}` : null,
     ``,
     `Talents (from Background): ${state.bg.t}`,
     `Gear: ${state.bg.g}`,
     `Refined Shards: ${state.shards} (${state.shards*10}gp)`,
-    `Remaining Gold: ${gold}gp (200 \u2212 ${WEAPONS[state.weapon].cost} weapon \u2212 ${armor.cost} armor \u2212 ${state.shards*10} shards)`,
+    `Remaining Gold: ${gold}gp (200 \u2212 ${WEAPONS[state.weapon].cost} weapon \u2212 ${armor.cost} armor \u2212 ${shield.cost} shield \u2212 ${state.shards*10} shards)`,
   ].filter(l=>l!==null).join('\n');
 
   document.getElementById('copy-btn').addEventListener('click', async ()=>{
