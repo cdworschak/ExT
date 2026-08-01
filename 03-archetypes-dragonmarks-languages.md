@@ -55,7 +55,7 @@ Available only to Agent and Wayfarer. Hard-capped at Cantrip/Spark tier, never M
 - **Wayfarer:** at character creation, may take Wandslinger in exchange for permanently forgoing access to one Advanced Maneuver of their choice.
 - **A full-caster gish needs no new content** — a Syberist who invests STR/DEX and carries a real weapon is already a valid build; they simply don't get Wayfarer's Guard bonus or Agent's Skills.
 
-Both options use whatever stat fits the concept — INT for a proper wand, DEX for an improvised focus, GM/player's call.
+Both options use whichever mental stat fits the concept — INT, WIS, or CHA, GM/player's call — matching how every other cast stat in this document is always a mental stat, never physical.
 
 ### Leverage (Agent's dedicated resource)
 

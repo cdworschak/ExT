@@ -611,7 +611,7 @@ Available only to Agent and Wayfarer. Hard-capped at Cantrip/Spark tier, never M
 - **Wayfarer:** at character creation, may take Wandslinger in exchange for permanently forgoing access to one Advanced Maneuver of their choice.
 - **A full-caster gish needs no new content** — a Syberist who invests STR/DEX and carries a real weapon is already a valid build; they simply don't get Wayfarer's Guard bonus or Agent's Skills.
 
-Both options use whatever stat fits the concept — INT for a proper wand, DEX for an improvised focus, GM/player's call.
+Both options use whichever mental stat fits the concept — INT, WIS, or CHA, GM/player's call — matching how every other cast stat in this document is always a mental stat, never physical.
 
 ### Leverage (Agent's dedicated resource)
 
@@ -782,7 +782,10 @@ Common is free to everyone, no cost.
 ┌─────────────────────────────┐
 │ 2. CHOOSE ARCHETYPE            │  Wayfarer / Agent / Syberist (4 traditions)
 │    (+ tradition if Syberist)   │  Syberist only: Shardbound(INT) /
-└──────────────┬────────────────┘  Flamesworn(CHA) / Wildspoken(WIS)
+│    Wayfarer/Agent only: decide  │  Flamesworn(CHA) / Wildspoken(WIS)
+│    Wandslinger here, if taking  │  Wandslinger sets a cast stat now,
+│    it — before weapon/Guard Stat │  since it excludes from Guard Stat
+└──────────────┬────────────────┘  too, same as any other cast stat
                │
                ▼
 ┌─────────────────────────────┐
@@ -814,14 +817,7 @@ Common is free to everyone, no cost.
                │
                ▼
 ┌─────────────────────────────┐
-│ 6. CHOOSE GUARD STAT           │  Default CON, any allowed EXCEPT
-│    (must differ from weapon/    │  weapon/cast/Wandslinger stat —
-│    cast/Wandslinger stat)       │  all locked together at creation
-└──────────────┬────────────────┘
-               │
-               ▼
-┌─────────────────────────────┐
-│ 7. CHOOSE WEAPON(S)            │  Check Weapon Proficiency vs
+│ 6. CHOOSE WEAPON(S)            │  Check Weapon Proficiency vs
 └──────────────┬────────────────┘  FINAL (post-Background) stats
                │
         ┌──────┴──────┐
@@ -836,8 +832,15 @@ Common is free to everyone, no cost.
         └──────┬───────┘
                ▼
 ┌─────────────────────────────┐
-│ 8. CHOOSE ARMOR                │  Check Armor requirement vs
+│ 7. CHOOSE ARMOR                │  Check Armor requirement vs
 │                                 │  FINAL stats + archetype bonus
+└──────────────┬────────────────┘
+               │
+               ▼
+┌─────────────────────────────┐
+│ 8. GUARD STAT (automatic)      │  Highest-bonus stat, excluding
+│    calculated from weapon(s)    │  cast stat and every equipped
+│    just chosen                  │  weapon's governing stat
 └──────────────┬────────────────┘
                │
                ▼
@@ -864,12 +867,13 @@ Common is free to everyone, no cost.
 ┌─────────────────────────────────────────────────┐
 │ 12. ARCHETYPE-SPECIFIC STARTING CHOICES            │
 ├─────────────────────────────────────────────────┤
-│ Agent:    choose 1 Skill (or Wandslinger instead)  │
+│ Agent:    choose 1 Skill (Wandslinger, if taken,    │
+│           was decided back in step 2)               │
 │           Leverage starts at 2                     │
 │                                                     │
 │ Wayfarer: Grit starts at 2; ALL Maneuvers already   │
-│           available (or Wandslinger removes access  │
-│           to one Advanced Maneuver)                 │
+│           available (Wandslinger, if taken, was     │
+│           decided back in step 2)                   │
 │                                                     │
 │ Syberist: roll 1 starting spell name (Name-Crafting │
 │           not unlocked yet — rolled, not chosen)     │
@@ -899,19 +903,19 @@ Common is free to everyone, no cost.
 
 **Background:** pick one whose stat bonus lands on the stat your archetype actually wants — a Wayfarer wants a STR/CON-boosting Background, a Syberist wants one matching their tradition's cast stat.
 
-**Archetype:** Wayfarer = frontline durability, Agent = breadth and narrative leverage, Syberist = real spellcasting. If torn between two, ask which one's dedicated resource (Grit / Leverage / shards) sounds more fun to actually spend during play.
+**Archetype:** Wayfarer = frontline durability, Agent = breadth and narrative leverage, Syberist = real spellcasting. If torn between two, ask which one's dedicated resource (Grit / Leverage / shards) sounds more fun to actually spend during play. **If Wayfarer or Agent, decide Wandslinger here too** — it sets a cast stat immediately, which matters for Guard Stat later: worth asking whether losing one Advanced Maneuver (Wayfarer) or one Skill (Agent) is worth Spark-tier casting for this specific character, and whether that cast stat is one they're comfortable excluding from Guard.
 
 **Rolling and the mercy rule:** raising one stat to +2 concentrates power, raising two stats to +1 spreads it — concentration is usually the stronger pick if that stat will do double duty, spread is better if the build wants competence across more than one axis.
 
-**Assigning rolled bonuses:** Guard Stat must differ from your weapon stat, cast stat, and Wandslinger stat if applicable, so put your highest roll into whichever stat matters most for offense, and your second-highest into a genuinely different stat you're comfortable feeding Guard.
+**Assigning rolled bonuses:** put your highest roll into whichever stat matters most for offense or casting — Guard Stat is calculated automatically afterward, not something to plan around at this step.
 
-**Guard Stat:** default is CON, but nothing requires it — the one hard rule is it can't be the same stat as your weapon or cast stat, locked in together at creation and never re-checked against later gear changes.
+**Guard Stat:** no longer a choice — it's automatically your highest-bonus stat, excluding your cast stat and whatever your equipped weapon(s) use. Worth knowing when picking a weapon: a Heavy weapon on your best physical stat locks that stat out of Guard, so a genuinely tanky build often wants its offensive stat and its naturally-high stat to be different from the start.
 
-**Weapon and armor:** check the relevant stat against Weapon Proficiency and Armor's requirement tables before committing narratively to a weapon/armor concept.
+**Weapon and armor:** check the relevant stat against Weapon Proficiency and Armor's requirement tables before committing narratively to a weapon/armor concept — and remember your weapon choice here directly decides your Guard Stat pool the moment you make it.
 
 **Languages:** a high-INT build should pick languages that actually matter for the campaign's likely play. A −2-or-lower INT build's illiteracy is a real roleplay constraint.
 
-**Archetype-specific choices:** an Agent's Skill choice should match their actual sub-concept; a Wayfarer weighing Wandslinger should ask whether losing one Advanced Maneuver access is worth Spark-tier casting for this specific character; an Artificer Syberist's one starting contraption capacity is a deliberate call — what gets built first (and who it might get handed to).
+**Archetype-specific choices:** an Agent's Skill choice should match their actual sub-concept (Wandslinger, if taken, was already decided back at Archetype); an Artificer Syberist's one starting contraption capacity is a deliberate call — what gets built first (and who it might get handed to).
 
 **Starting wealth:** a caster should convert a meaningful chunk of the 200gp into refined shards — 100–150gp is a reasonable starting reserve. A pure martial build can reasonably spend close to zero on shards and put everything into gear instead.
 
@@ -922,12 +926,12 @@ Common is free to everyone, no cost.
 3. **Roll stats.** 3d6 ×6, six independent rolls: 14, 11, 10, 9, 8, 13. Looked up: +1, 0, 0, −1, −1, +1. At least one is positive, so no Mercy needed.
 4. **Assign freely.** These six bonuses can go to any stat, in any order. CHA is Tavin's cast stat, so the highest roll (+1) goes there. DEX gets the other +1, since it governs the weapon. The two 0s go to WIS and INT; the two −1s land on CON and STR.
 5. **Apply Background.** Jorasco-Marked Healer's +1 WIS lands on top of the just-assigned WIS 0, making it +1.
-6. **Guard Stat** — must differ from CHA (cast stat). Tavin picks WIS: danger sense, flinching away before the worst lands, fitting a healer watching the whole fight.
-7–8. **Weapon & Armor.** DEX +1 qualifies for Medium. A warded rod (Medium) and Light armor.
+6–7. **Weapon & Armor.** DEX +1 qualifies for Medium. A warded rod (Medium, DEX) and Light armor.
+8. **Guard Stat, automatic.** Excludes CHA (cast stat) and DEX (weapon stat). Of what's left — WIS +1, INT 0, CON −1 — WIS is highest, so Guard Stat lands there on its own.
 9–10. **Guard & Wounds.** Guard = 4 + WIS(+1) + Light armor(+1) = 6. One Wound slot, as every character starts with.
 11. **Starting wealth.** 120gp into refined shards (12 shards), the rest into a Healing Toolkit and basics.
 
-Tavin: CHA +1 (cast), WIS +1 (Guard Stat), Guard 6, one Wound slot, a warded rod, Light armor, 12 refined shards, the Least Mark of Healing free from Background.
+Tavin: CHA +1 (cast), WIS +1 (Guard Stat, calculated), Guard 6, one Wound slot, a warded rod, Light armor, 12 refined shards, the Least Mark of Healing free from Background.
 
 ---
 
@@ -1127,7 +1131,9 @@ Tavin: CHA +1 (cast), WIS +1 (Guard Stat), Guard 6, one Wound slot, a warded rod
 
 ### Item Slots
 
-Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slots hold what's actively wielded (weapons, shields); body slots hold worn gear for easy access in combat (armor, secondary weapons, focuses); backpack slots hold everything else. To carry more, hire someone, or buy a cart or pack animal. **Retrieving an item from a backpack slot during combat costs an action** — an Agent's Many Pockets removes this cost.
+Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slots hold what's actively wielded (weapons, shields); body slots hold worn gear for easy access in combat (armor, secondary weapons, focuses); backpack slots hold everything else. To carry more, hire someone, or buy a cart or pack animal.
+
+**Using something already in hand costs your normal action for the turn** — attacking, drinking a held potion, activating a held gadget, all the same, no different from anything else you might do with your action. **Producing or stowing an item is also a full action, not an add-on** — drawing a new weapon, swapping what's in a hand slot, retrieving something from a body slot, or from a backpack slot (Agent's Many Pockets removes the cost for backpack retrieval specifically). Since a turn only has one action, producing something and using it both happen in the same turn only if it was already in hand; otherwise it's draw this turn, use it next.
 
 - **Shards and coin are abstracted resources, not slot items** — tracked as numbers on the character sheet, never occupying a slot regardless of quantity.
 - **A slot holds one distinct item, or a reasonable stack of a single consumable type** — a quiver of arrows, several days of rations, a handful of torches.
@@ -1347,26 +1353,24 @@ At 0 Guard with Wound slots exhausted, roll a d6 — 1–3 dies, 4+ faints and r
 
 Your parries/luck/adrenaline buffer. All normal damage hits Guard first.
 
-**Formula:** `Guard = 4 + CON bonus + Wayfarer bonus (+2) + armor`, floor of 1. (CON is the default — see Guard Stat below for choosing a different stat.)
+**Formula:** `Guard = 4 + CON bonus + Wayfarer bonus (+2) + armor`, floor of 1. (CON is the default only when nothing excludes it — see Guard Stat below for the actual automatic calculation.)
 
 Fully restored after a Turn (10 minutes) spent resting. Guard cannot go below 0 during a fight.
 
-### Guard Stat (chosen at character creation)
+### Guard Stat (calculated automatically)
 
-At creation, pick any one of the six stats to plug into the Guard formula in place of CON: `Guard = 4 + [chosen stat bonus] + Wayfarer bonus (+2) + armor`.
+Guard Stat is not chosen once and locked — it's calculated automatically: **your highest-bonus stat, excluding your cast stat (including a Wandslinger casting stat, if taken) and the governing stat of every weapon currently equipped in a hand slot.** `Guard = 4 + [Guard Stat bonus] + Wayfarer bonus (+2) + armor`. CON is never a cast stat or a weapon stat, so it's always eligible.
 
-| Guard Stat | Concept |
+| Guard Stat (if it lands there) | Concept |
 |---|---|
 | CON — Endurance | Classic tank: physically tough, shrugs off blows. |
-| DEX — Reflexes | Dodges and weaves; full hits become glancing ones. |
-| STR — Brute Force | Physically blocks and overpowers incoming attacks. |
-| INT — Tactics | Reads the fight, positions so blows land where they hurt least. |
 | WIS — Awareness | Danger sense; flinches away before the worst lands. |
+| INT — Tactics | Reads the fight, positions so blows land where they hurt least. |
 | CHA — Presence | Force of personality throws off an attacker's aim and timing. |
 
-**Guard Stat must differ from your weapon stat, cast stat, and Wandslinger stat if applicable — all locked together at character creation.** This is a permanent choice; a character who later swaps weapons never retroactively breaks anything.
+**Locked in at the start of a fight, based on your full loadout at that moment — no recalculating turn to turn.** Mid-combat, it only ever changes as a direct consequence of changing what's equipped: producing or stowing an item is always a full action (see Item Slots), and if that change alters which stats are excluded, Guard Stat recalculates immediately using the new exclusions. This can move it up (freeing a stat by putting a weapon away) or down (conflicting with a newly-equipped weapon) — it's never a choice to game, since every equipment change costs a full Round regardless of which direction it moves. If it moves down, current Guard drops to match the new max immediately, floor 0.
 
-**One remaining constraint:** the Heavy/Medium armor CON requirement stays tied to actual CON specifically, regardless of Guard Stat choice. A DEX-Guard character with poor CON is still locked out of Heavy armor.
+**One remaining constraint:** the Heavy/Medium armor CON requirement stays tied to actual CON specifically, regardless of Guard Stat. A character with poor CON is still locked out of Heavy armor even if CON isn't their Guard Stat.
 
 ### Status Effects
 
@@ -2088,7 +2092,7 @@ One canonical definition per term, alphabetical.
 
 **Guard** — the damage buffer every character has. = 4 + Guard Stat bonus + archetype bonus + armor + shield, floor 1. Restores fully after a Turn of rest.
 
-**Guard Stat** — the stat chosen at character creation to calculate Guard. Must differ from weapon stat, cast stat, and Wandslinger stat.
+**Guard Stat** — calculated automatically: your highest-bonus stat, excluding cast stat and the governing stat of every equipped weapon. Locked for the duration of a fight; recalculates immediately if a mid-combat equipment change (always a full action) alters the exclusions.
 
 **Initiative** — 2d10 + DEX + weapon modifier − armor penalty, rolled once per fight.
 

@@ -38,26 +38,24 @@ At 0 Guard with Wound slots exhausted, roll a d6 — 1–3 dies, 4+ faints and r
 
 Your parries/luck/adrenaline buffer. All normal damage hits Guard first.
 
-**Formula:** `Guard = 4 + CON bonus + Wayfarer bonus (+2) + armor`, floor of 1. (CON is the default — see Guard Stat below for choosing a different stat.)
+**Formula:** `Guard = 4 + CON bonus + Wayfarer bonus (+2) + armor`, floor of 1. (CON is the default only when nothing excludes it — see Guard Stat below for the actual automatic calculation.)
 
 Fully restored after a Turn (10 minutes) spent resting. Guard cannot go below 0 during a fight.
 
-### Guard Stat (chosen at character creation)
+### Guard Stat (calculated automatically)
 
-At creation, pick any one of the six stats to plug into the Guard formula in place of CON: `Guard = 4 + [chosen stat bonus] + Wayfarer bonus (+2) + armor`.
+Guard Stat is not chosen once and locked — it's calculated automatically: **your highest-bonus stat, excluding your cast stat (including a Wandslinger casting stat, if taken) and the governing stat of every weapon currently equipped in a hand slot.** `Guard = 4 + [Guard Stat bonus] + Wayfarer bonus (+2) + armor`. CON is never a cast stat or a weapon stat, so it's always eligible.
 
-| Guard Stat | Concept |
+| Guard Stat (if it lands there) | Concept |
 |---|---|
 | CON — Endurance | Classic tank: physically tough, shrugs off blows. |
-| DEX — Reflexes | Dodges and weaves; full hits become glancing ones. |
-| STR — Brute Force | Physically blocks and overpowers incoming attacks. |
-| INT — Tactics | Reads the fight, positions so blows land where they hurt least. |
 | WIS — Awareness | Danger sense; flinches away before the worst lands. |
+| INT — Tactics | Reads the fight, positions so blows land where they hurt least. |
 | CHA — Presence | Force of personality throws off an attacker's aim and timing. |
 
-**Guard Stat must differ from your weapon stat, cast stat, and Wandslinger stat if applicable — all locked together at character creation.** This is a permanent choice; a character who later swaps weapons never retroactively breaks anything.
+**Locked in at the start of a fight, based on your full loadout at that moment — no recalculating turn to turn.** Mid-combat, it only ever changes as a direct consequence of changing what's equipped: producing or stowing an item is always a full action (see Item Slots), and if that change alters which stats are excluded, Guard Stat recalculates immediately using the new exclusions. This can move it up (freeing a stat by putting a weapon away) or down (conflicting with a newly-equipped weapon) — it's never a choice to game, since every equipment change costs a full Round regardless of which direction it moves. If it moves down, current Guard drops to match the new max immediately, floor 0.
 
-**One remaining constraint:** the Heavy/Medium armor CON requirement stays tied to actual CON specifically, regardless of Guard Stat choice. A DEX-Guard character with poor CON is still locked out of Heavy armor.
+**One remaining constraint:** the Heavy/Medium armor CON requirement stays tied to actual CON specifically, regardless of Guard Stat. A character with poor CON is still locked out of Heavy armor even if CON isn't their Guard Stat.
 
 ### Status Effects
 

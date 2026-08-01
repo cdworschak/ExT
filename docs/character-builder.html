@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Builder — Eberron × The Electrum Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="topbar">
+  <span class="topbar-brand">EBERRON <span>×</span> THE ELECTRUM ARCHIVE</span>
+  <div class="topbar-links">
+    <a href="index.html">Home</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="character-creation.html">Character Creation</a>
+    <a href="backgrounds.html">Backgrounds</a>
+    <a href="archetypes.html">Archetypes</a>
+    <a href="magic.html">Magic</a>
+    <a href="combat.html">Combat</a>
+    <a href="inventory.html">Inventory &amp; Items</a>
+    <a href="exploration.html">Exploration</a>
+    <a href="enemy-design.html">Enemy Design</a>
+    <a href="advancement.html">Advancement</a>
+    <a href="glossary.html">Glossary</a>
+    <a href="character-builder.html" class="active">Builder</a>
+  </div>
+  <div class="site-search">
+    <input type="text" id="site-search-input" placeholder="Search... (press /)" autocomplete="off">
+    <div class="search-results" id="site-search-results"></div>
+  </div>
+</nav>
+
+<main>
+  <header class="page-header">
+    <p class="page-eyebrow">Character Builder</p>
+    <h1 class="page-title">Build a Character</h1>
+    <p class="page-intro">Follows the same sequence as <a href="character-creation.html">Character Creation</a>. Nothing here overrides the rules pages — if anything looks off, the rules pages are correct.</p>
+    <div class="builder-row">
+      <button id="randomize-btn" class="builder-btn">🎲 Randomize Everything</button>
+    </div>
+  </header>
+
+  <div id="step1" class="builder-step">
+    <h3>1. Background</h3>
+    <div class="builder-row">
+      <select id="bg-select" class="builder-select">
+        <option value="">— choose a Background —</option>
+      </select>
+    </div>
+    <div id="bg-detail" class="builder-note"></div>
+  </div>
+
+  <div id="step2" class="builder-step locked">
+    <h3>2. Archetype</h3>
+    <div class="builder-row">
+      <select id="arch-select" class="builder-select">
+        <option value="">— choose an Archetype —</option>
+        <option value="Wayfarer">Wayfarer</option>
+        <option value="Agent">Agent</option>
+        <option value="Shardbound">Syberist — Shardbound (INT)</option>
+        <option value="Flamesworn">Syberist — Flamesworn (CHA)</option>
+        <option value="Wildspoken">Syberist — Wildspoken (WIS)</option>
+        <option value="Artificer">Syberist — Artificer (INT)</option>
+      </select>
+    </div>
+    <div id="wandslinger-row" class="builder-row" style="display:none;">
+      <label><input type="checkbox" id="wandslinger-check"> Take Wandslinger</label>
+      <select id="wandslinger-stat" class="builder-select" style="display:none;">
+        <option value="INT">INT (a proper wand)</option>
+        <option value="WIS">WIS</option>
+        <option value="CHA">CHA</option>
+      </select>
+      <span id="wandslinger-note" class="builder-note"></span>
+    </div>
+    <div id="arch-detail" class="builder-note"></div>
+  </div>
+
+  <div id="step3" class="builder-step locked">
+    <h3>3. Roll Stats</h3>
+    <div class="builder-row">
+      <button id="roll-btn" class="builder-btn">Roll 3d6 ×6</button>
+      <span id="roll-result" class="builder-note"></span>
+    </div>
+    <div id="mercy-row" class="builder-row" style="display:none;">
+      <span class="builder-error">No stat came up positive — Mercy applies.</span>
+      <button id="mercy-2x1" class="builder-btn">Raise two stats to +1 each</button>
+      <button id="mercy-1x2" class="builder-btn">Raise one stat to +2</button>
+    </div>
+  </div>
+
+  <div id="step4" class="builder-step locked">
+    <h3>4. Assign Stats</h3>
+    <p class="builder-note">Assign each rolled bonus to a stat. Each value used exactly once.</p>
+    <div class="stat-grid" id="assign-grid"></div>
+    <div id="assign-status" class="builder-note"></div>
+  </div>
+
+  <div id="step5" class="builder-step locked">
+    <h3>5. Weapon &amp; Armor</h3>
+    <div class="builder-row">
+      <select id="weapon-select" class="builder-select">
+        <option value="">— choose a weapon —</option>
+      </select>
+      <select id="armor-select" class="builder-select">
+        <option value="">— choose armor —</option>
+      </select>
+    </div>
+    <div id="weapon-error" class="builder-error"></div>
+  </div>
+
+  <div id="step6" class="builder-step locked">
+    <h3>6. Guard Stat (automatic)</h3>
+    <p class="builder-note">Not a choice — your highest-bonus stat, excluding your cast stat and every equipped weapon's governing stat.</p>
+    <div id="guard-display" class="builder-note"></div>
+  </div>
+
+  <div id="step7" class="builder-step locked">
+    <h3>7. Starting Wealth</h3>
+    <p class="builder-note">200gp flexible. Suggested: casters put 100–150gp into refined shards (10gp each); martial builds spend mostly on gear.</p>
+    <div class="builder-row">
+      <label>Refined shards purchased: <input type="number" id="shard-input" value="0" min="0" max="20" style="width:60px; background:var(--ink-3); border:1px solid var(--line); color:var(--text); padding:0.3rem;"></label>
+      <button id="max-shards-btn" class="builder-btn">Max Affordable</button>
+      <span id="shard-cap-note" class="builder-note"></span>
+    </div>
+  </div>
+
+  <div id="output"></div>
+</main>
+
+<script>
+const BACKGROUNDS = [
+  {n:'Valenar Blademarked',s:["DEX", "STR"],t:'Ancestral Duel (call on a war-spirit for Advantage on one attack, 1/session), Horse-Kin (Advantage on attack rolls while mounted — narrative access to a war-mount when the story calls for it, no separate stat block needed)',g:'a clan sigil, a woven cord marking readiness to ride to war.'},
+  {n:'Aereni Deathward',s:["WIS"],t:'Speak with the Undying (Advantage communicating with or interpreting guidance from ancestor spirits, or a real standing connection to a specific Undying Court elder), Patience of Centuries (Advantage resisting fear or despair facing death, undeath, or the passage of time)',g:'ancestral mask, funerary incense.'},
+  {n:'Aereni Tomb-Keeper',s:["INT"],t:'Keeper of Names (Advantage recalling or researching historical and genealogical lore, especially Undying Court records), Ward-Sworn (Advantage detecting or resisting tampering with a sacred or warded site)',g:'sealed scroll case, funerary wax seal-kit, a small idol of a specific ancestor.'},
+  {n:'Aereni Exile',s:["WIS"],t:'Cast Out (Advantage resisting despair when isolated, rejected, or cut off from support), Marked for Return (the Undying Court considers your exile unfinished business; GM\'s call on how and when that surfaces)',g:'no ancestral mask — deliberately absent; forged travel papers; a single relic refused to give up when cast out.'},
+  {n:'Valenar Warband Scout',s:["DEX"],t:'Outrider (Advantage tracking or navigating open terrain, especially plains and borderlands), Read the Land (Advantage spotting ambushes or hidden forces before they spring)',g:'riding gear, a warband token.'},
+  {n:'Sharn-Raised Elf',s:["CHA"],t:'Codeswitcher (pass as native in any Sharn district), Skywalk (no penalty on skybridges/heights)',g:'forged residency papers, grapple line. No ancestral talent — deliberately cut off from tradition.'},
+  {n:'Sharn Cutpurse',s:["DEX"],t:'Quick Fingers (Advantage on fast, precise hand-work under time pressure — lockpicking, disarming, a quick draw), Knows a Guy (one fence/fixer contact)',g:'lockpicks, stashed bolt-hole key.'},
+  {n:'Karrnathi Line Soldier',s:["CON"],t:'Drilled (Advantage forming up/holding a line), Grim Discipline (resist fear from undead)',g:'dog tags, a unit patch.'},
+  {n:'Brelish House Factor',s:["CHA"],t:'Contract Sense (spot a bad deal), Letter of Credit (real line of credit with one House)',g:'fine clothes, ledger.'},
+  {n:'Jorasco-Marked Healer',s:["WIS"],t:'Least Mark of Healing (see Archetypes → Dragonmarks), Bedside Manner (Advantage on medicine/first-aid checks)',g:'warded rod, satchel of remedies.'},
+  {n:'Aundairian Magewright',s:["INT"],t:'Trained Hand (Advantage operating or diagnosing minor magical infrastructure), Arcanix Credentials (a real academic reference from Arcanix or a lesser Aundairian college)',g:'scribing toolkit, letter of academic standing, minor non-combat enchanted trinkets.'},
+  {n:'Cyran Survivor',s:["CON"],t:'Carried the Mourning (Advantage resisting fear or despair facing mass loss, catastrophe, or overwhelming scale), Nothing Left to Lose (once per session, push a check past its normal limit at real personal cost, GM\'s call)',g:'a keepsake from a nation that no longer exists, forged New Cyre residency papers, nothing of monetary value.'},
+  {n:'Thrane Templar',s:["WIS"],t:'Flame-Sworn (Advantage resisting or detecting corruption, undeath, or fiendish influence), Church Authority (real standing within the Church hierarchy)',g:'a symbol of the Silver Flame worn openly, formal writ of standing from a specific cathedral.'},
+  {n:'Lhazaar Waverunner',s:["DEX"],t:'Sea Legs (Advantage keeping balance aboard a moving vessel, or navigating by stars/coastline), Letter of Marque (a real or convincingly forged privateer\'s commission, granting legal cover and a fleet contact)',g:'a boarding hook, the commission itself.'},
+  {n:'Riedran Outsider',s:["WIS"],t:'Trained Discipline (Advantage resisting mind-affecting effects), Foreign Eyes (Advantage spotting things "out of place" in Khorvaire specifically)',g:'nothing overtly Riedran, forged local papers, one hidden token of home.'},
+  {n:'Khoravar Go-Between',s:["CHA"],t:'Bridge-Born (fluent in Khoravar Cant, Common, and Elvish; Advantage building trust between distrustful communities), Steady Ground (if the Off-Balance Wound Complication comes up, Advantage on the DEX check it imposes; if Staggered Back comes up instead, you choose which adjacent zone you\'re thrown into)',g:'forged travel papers, a keepsake marking ties to a found community.'},
+  {n:'Lyrandar Windrider',s:["DEX"],t:'Storm Sense (Advantage reading weather, navigating rough seas, keeping footing on an unstable deck), House of the Sea and Sky (standing credit/berth aboard any Lyrandar vessel or airship)',g:'House signet, navigator\'s tools, a weathered logbook.'},
+  {n:'Medani Warder',s:["WIS"],t:'Ward-Sense (Advantage noticing an ambush, hidden threat, or a lie told to someone under your protection before it lands), Sworn to a Charge (once per session, act out of turn to intervene when a specific protected person is about to be harmed)',g:'House signet, an openly-worn warding charm, a client contract.'},
+  {n:'Mror Shard-Miner',s:["CON"],t:'Shard-Sense (detect dragonshard deposits nearby), Tunnel-Steady (no penalty fighting underground)',g:'pick, dark-lantern.'},
+  {n:'Kundarak Vault-Warden',s:["WIS"],t:'Ward-Reader (spot magical locks/traps), House Kundarak reference letter',g:'lockbreaker tools.'},
+  {n:'Mror Clan Duelist',s:["STR"],t:'Honor-Bound (Advantage in formal duels or honor challenges), Blood Feud (name a specific rival clan or individual at creation; Advantage on all attacks against them and resisting their intimidation or manipulation; any Reaction Check with other members of that clan or group is made at Disadvantage — the feud\'s reputation precedes you)',g:'clan sigil worn openly, a dueling scar earned in a formal challenge.'},
+  {n:'Mror Deep Delver',s:["WIS"],t:'Ruin-Sense (Advantage predicting structural collapse or safely navigating unstable ancient architecture), Steady in the Dark (Advantage resisting fear or panic isolated underground with no light)',g:'rope and pitons, a fragment of unidentified pre-Dhakaani script.'},
+  {n:'Sharn-Settled Dwarf',s:["CHA"],t:'City Trained (Advantage navigating bureaucracy, permits, city guard interactions), Clanless by Choice (Advantage resisting social pressure tied to clan obligations)',g:'forged Sharn residency papers, a clan token no longer worn openly.'},
+  {n:'Zil Broker',s:["INT"],t:'Whisper Network (once per session, learn a rumor or relevant fact from a contact without seeking one out), Always Listening (Advantage on overheard-info checks)',g:'coded ledger, messenger bird.'},
+  {n:'Korranberg Scholar',s:["INT"],t:'Cataloguer\'s Mind (Advantage recalling or locating information within a library or archive), Peer Reviewed (a real academic reputation — Advantage invoking scholarly credentials)',g:'a Korranberg Library membership token, a partial research index.'},
+  {n:'Zil Trickster',s:["DEX"],t:'Sleight (Advantage on close-quarters misdirection — palming, planting, lifting unnoticed), Vanish in a Crowd (Advantage disappearing into a crowded space)',g:'forged minor documents, a plain outfit that changes character with small adjustments.'},
+  {n:'Talenta Plains Rider',s:["DEX"],t:'Beast-Bond (mount won\'t panic/flee), Open Sky (never lost outdoors)',g:'a beast-taming charm, tribal markings.'},
+  {n:'Talenta Dinosaur Handler',s:["WIS"],t:'Herd-Sense (Advantage calming, training, or reading the mood of a large beast), Tracker\'s Eye (Advantage following tracks or signs of passage in wild terrain)',g:'handler\'s goad, dried feed rations, a beast-taming manual.'},
+  {n:'Khorvaire-Settled Halfling',s:["CHA"],t:'City Charm (Advantage on first impressions with strangers), Small and Overlooked (Advantage avoiding notice in a crowd or being underestimated in a negotiation)',g:'forged city residency papers, no riding gear — deliberately settled.'},
+  {n:'Eldeen Shifter',s:["DEX", "STR"],t:'Flex (once per encounter: Advantage on a melee attack as claws briefly extend, or move one extra zone as a speed burst), Wildsense (Advantage noticing natural dangers, tracking prey, or sensing weather changes)',g:'trap kit, a woven charm from the Towering Wood.'},
+  {n:'Gatekeeper Shifter',s:["WIS"],t:'Ward the Threshold (Advantage detecting aberrant or planar-touched creatures and influence), Old Oath (real standing with Gatekeeper circles in the Eldeen Reaches)',g:'a warding totem, dried herbs used in Gatekeeper rites.'},
+  {n:'Droaam Shifter',s:["CON"],t:'Hard Ground (Advantage resisting intimidation or coercion), Known to the Daughters (a real, wary reputation within Droaam\'s power structure)',g:'a token marking safe passage through a specific Droaam territory, a scavenged trophy.'},
+  {n:'Kalashtar Dreamwarden',s:["WIS"],t:'Dreamward (sense psychic intrusion)',g:'meditation focus.'},
+  {n:'Recently-Arrived Kalashtar',s:["CON"],t:'Survived the Crossing (Advantage resisting fear or despair when pursued, hunted, or facing capture), Still Listening for Riedra (Advantage noticing signs of Inspired agents or Riedran influence)',g:'forged Khorvaire papers, nothing marking Riedran origin.'},
+  {n:'Fainmalar-Born Kalashtar',s:["CHA"],t:'Never Knew the Cage (no inherited fear response tied to Riedra), Community Roots (real standing within a specific Khorvaire kalashtar enclave)',g:'a community token, ordinary local dress.'},
+  {n:'Stage-Trained Changeling',s:["CHA"],t:'Unremarkable (retcon that an NPC recognized you, 1/session), Second Face (a prepared alternate identity, papers included)',g:'—'},
+  {n:'Changeling Infiltrator',s:["CHA"],t:'Cold Read (Advantage picking up a stranger\'s mannerisms quickly enough to convincingly mimic them), Deep Cover (a maintained false identity with real standing somewhere specific)',g:'a second set of identity papers, notes on the person being impersonated.'},
+  {n:'Changeling Community-Raised',s:["WIS"],t:'Many Faces, One Self (Advantage resisting effects that would alter, erase, or impersonate your identity or memory of self), Hidden Kin (a real connection to a changeling enclave most outsiders don\'t know exists)',g:'a token only recognizable to other Community-Raised changelings, no false papers.'},
+  {n:'Cyre-Built Warforged',s:["CON", "STR"],t:'Battle-Worn (when you\'d roll on the Scar table, roll twice and take the better result)',g:'repair tools, sunrod.'},
+  {n:'Post-War Wandering Warforged',s:["WIS"],t:'No Orders Left (Advantage resisting despair or purposelessness), Read the Room (Advantage sensing when a space or situation is genuinely hostile to warforged, and adjusting before it becomes a problem)',g:'no unit markings — deliberately removed; a personal item picked up on the road.'},
+  {n:'House Cannith Warforged',s:["INT"],t:'Factory-Trained (Advantage operating, repairing, or diagnosing Cannith-made constructs and devices), Still Property (a real, uncomfortable legal tie to House Cannith — GM\'s call on how this surfaces)',g:'visible Cannith unit markings, official papers of standing.'},
+  {n:'Droaam Half-Orc Mercenary',s:["STR"],t:'Bad Reputation (intimidation Advantage), Contract Killer (at the start of a genuine paid job, name the contract\'s actual target — GM confirms it\'s a legitimate professional engagement, not a personal grudge or a target you\'d have gone after anyway. Advantage on all attack rolls against that specific creature for the duration of the contract)',g:'—'},
+  {n:'Gatekeeper Orc',s:["WIS"],t:'Ward Against the Deep (Advantage detecting aberrant creatures or planar corruption), Binding Rite (once per session, a real if temporary ritual to weaken or contain an aberrant threat)',g:'a warding stake, herbs for a binding rite, a totem marking a guarded site.'},
+  {n:'Ghaash\'kala Orc',s:["CON"],t:'Labyrinth-Sworn (Advantage resisting fiendish corruption or temptation), Marked by the Wastes (Advantage recognizing fiendish influence or Demon Wastes-touched creatures)',g:'ash-marked wraps, no possessions beyond what\'s needed for the duty.'},
+  {n:'Dhakaani Loremarked Goblin',s:["STR", "INT"],t:'Old Empire (read pre-Sundering script), ancestral weapon training',g:'—'},
+  {n:'Darguun Hobgoblin Soldier',s:["STR"],t:'Drilled to War (Advantage forming up, holding a line, or coordinating with other trained soldiers), Mercenary Standing (a real reputation and contact within Darguun\'s mercenary companies)',g:'a mercenary company\'s token, service marks earned in the field.'},
+  {n:'Bugbear Outrider',s:["DEX"],t:'Unseen Until Close (Advantage remaining unnoticed despite size), Sudden Reach (Advantage on the first strike in an ambush specifically)',g:'dark wraps for concealment, a trophy from a successful ambush.'}
+];
+
+const TIER_PRICE = {Light: 10, Medium: 25, Heavy: 60};
+const WEAPONS = [
+  {name:"Dagger", tier:"Light", die:"1d4", ranged:false},
+  {name:"Handaxe", tier:"Light", die:"1d4", ranged:false},
+  {name:"Sickle", tier:"Light", die:"1d4", ranged:false},
+  {name:"Club", tier:"Medium", die:"1d6", ranged:false},
+  {name:"Spear", tier:"Medium", die:"1d6", ranged:false},
+  {name:"Staff", tier:"Medium", die:"1d6", ranged:false},
+  {name:"Sword", tier:"Heavy", die:"1d8", ranged:false},
+  {name:"Axe", tier:"Heavy", die:"1d8", ranged:false},
+  {name:"Mace", tier:"Heavy", die:"1d8", ranged:false},
+  {name:"Glaive", tier:"Heavy", die:"1d8", ranged:false},
+  {name:"Sling", tier:"Light", die:"1d4", ranged:true},
+  {name:"Darts", tier:"Light", die:"1d4", ranged:true},
+  {name:"Shortbow", tier:"Medium", die:"1d6", ranged:true},
+  {name:"Hand Crossbow", tier:"Medium", die:"1d6", ranged:true},
+  {name:"Crossbow", tier:"Heavy", die:"1d8", ranged:true},
+].map(w => ({...w, cost: TIER_PRICE[w.tier]}));
+const ARMORS = [
+  {name:"None", guard:0, req:null, slots:0, cost:0},
+  {name:"Light", guard:1, req:null, slots:1, cost:15},
+  {name:"Medium", guard:2, req:"CON >= 0", slots:1, cost:50},
+  {name:"Heavy", guard:3, req:"CON >= 1 and Wayfarer", slots:2, cost:120},
+];
+const STATS = ["STR","DEX","CON","INT","WIS","CHA"];
+const ARCH_INFO = {
+  "Wayfarer": {weaponStat:null, castStat:null, note:"Weapon stat: your choice (STR or DEX, matching your weapon). Grit starts at 2."},
+  "Agent": {weaponStat:null, castStat:null, note:"Weapon stat: your choice (STR or DEX). Leverage starts at 2."},
+  "Shardbound": {weaponStat:null, castStat:"INT", note:"Cast stat: INT. May also carry a weapon on STR or DEX independently."},
+  "Flamesworn": {weaponStat:null, castStat:"CHA", note:"Cast stat: CHA. May also carry a weapon on STR or DEX independently."},
+  "Wildspoken": {weaponStat:null, castStat:"WIS", note:"Cast stat: WIS. May also carry a weapon on STR or DEX independently."},
+  "Artificer": {weaponStat:null, castStat:"INT", note:"Cast stat: INT. May also carry a weapon on STR or DEX independently."},
+};
+
+function bonusFor(sum){
+  if(sum<=6) return -2;
+  if(sum<=9) return -1;
+  if(sum<=11) return 0;
+  if(sum<=14) return 1;
+  return 2;
+}
+function d6(){ return Math.floor(Math.random()*6)+1; }
+function roll3d6(){ return d6()+d6()+d6(); }
+
+let state = { bg:null, arch:null, castStat:null, rolls:[], assign:{}, mercyApplied:false, guardStat:null, weaponStat:null, weapon:null, armor:null, shards:0 };
+
+// Step 1: Background
+const bgSelect = document.getElementById('bg-select');
+BACKGROUNDS.forEach((b,i)=>{
+  const opt = document.createElement('option');
+  opt.value = i; opt.textContent = b.n;
+  bgSelect.appendChild(opt);
+});
+bgSelect.addEventListener('change', ()=>{
+  if(bgSelect.value===''){ return; }
+  state.bg = BACKGROUNDS[bgSelect.value];
+  document.getElementById('bg-detail').innerHTML =
+    `<strong>${state.bg.s.map(s=>'+1 '+s).join('/')}.</strong> Talents: ${state.bg.t}<br>Gear: ${state.bg.g}`;
+  document.getElementById('step1').classList.add('done');
+  document.getElementById('step2').classList.remove('locked');
+  render();
+});
+
+// Step 2: Archetype
+const archSelect = document.getElementById('arch-select');
+archSelect.addEventListener('change', ()=>{
+  if(archSelect.value===''){ return; }
+  state.arch = archSelect.value;
+  const info = ARCH_INFO[state.arch];
+  document.getElementById('arch-detail').innerHTML = info.note;
+
+  const wRow = document.getElementById('wandslinger-row');
+  const canWandslinger = state.arch === 'Wayfarer' || state.arch === 'Agent';
+  wRow.style.display = canWandslinger ? 'flex' : 'none';
+  if(!canWandslinger){
+    document.getElementById('wandslinger-check').checked = false;
+    document.getElementById('wandslinger-stat').style.display = 'none';
+    document.getElementById('wandslinger-note').textContent = '';
+  }
+  state.castStat = canWandslinger && document.getElementById('wandslinger-check').checked
+    ? document.getElementById('wandslinger-stat').value
+    : info.castStat;
+
+  document.getElementById('step2').classList.add('done');
+  document.getElementById('step3').classList.remove('locked');
+  render();
+});
+
+document.getElementById('wandslinger-check').addEventListener('change', (e)=>{
+  const statSel = document.getElementById('wandslinger-stat');
+  const note = document.getElementById('wandslinger-note');
+  statSel.style.display = e.target.checked ? 'inline-block' : 'none';
+  if(e.target.checked){
+    state.castStat = statSel.value;
+    note.textContent = state.arch === 'Agent'
+      ? 'Taken instead of one Skill choice. Grants Spark-tier casting.'
+      : 'Taken in exchange for one Advanced Maneuver. Grants Spark-tier casting.';
+  } else {
+    state.castStat = ARCH_INFO[state.arch].castStat;
+    note.textContent = '';
+  }
+  render();
+});
+document.getElementById('wandslinger-stat').addEventListener('change', (e)=>{
+  if(document.getElementById('wandslinger-check').checked){
+    state.castStat = e.target.value;
+    render();
+  }
+});
+
+// Step 3: Roll stats
+document.getElementById('roll-btn').addEventListener('click', ()=>{
+  state.rolls = [];
+  for(let i=0;i<6;i++) state.rolls.push(roll3d6());
+  document.getElementById('roll-result').textContent = 'Rolled: ' + state.rolls.join(', ') +
+    ' → bonuses: ' + state.rolls.map(r=>{const b=bonusFor(r); return (b>=0?'+':'')+b;}).join(', ');
+  const anyPositive = state.rolls.some(r=>bonusFor(r)>0);
+  document.getElementById('mercy-row').style.display = anyPositive ? 'none' : 'flex';
+  state.mercyApplied = false;
+  document.getElementById('step3').classList.add('done');
+  document.getElementById('step4').classList.remove('locked');
+  buildAssignGrid();
+  render();
+});
+document.getElementById('mercy-2x1').addEventListener('click', ()=>{
+  state.rolls[0] = 12; state.rolls[1] = 12; // forces +1 bonus each (12-14 range)
+  state.mercyApplied = true;
+  document.getElementById('mercy-row').style.display='none';
+  document.getElementById('roll-result').textContent = 'Mercy applied: two stats raised to +1 each.';
+  buildAssignGrid();
+});
+document.getElementById('mercy-1x2').addEventListener('click', ()=>{
+  state.rolls[0] = 15; // forces +2 bonus
+  state.mercyApplied = true;
+  document.getElementById('mercy-row').style.display='none';
+  document.getElementById('roll-result').textContent = 'Mercy applied: one stat raised to +2.';
+  buildAssignGrid();
+});
+
+// Step 4: Assign
+function buildAssignGrid(){
+  const grid = document.getElementById('assign-grid');
+  grid.innerHTML = '';
+  STATS.forEach(stat=>{
+    const box = document.createElement('div');
+    box.className = 'stat-box';
+    const sel = document.createElement('select');
+    sel.innerHTML = '<option value="">—</option>' + state.rolls.map((r,i)=>`<option value="${i}">${r} (${bonusFor(r)>=0?'+':''}${bonusFor(r)})</option>`).join('');
+    sel.addEventListener('change', ()=>{ state.assign[stat] = sel.value; checkAssignDone(); render(); });
+    box.innerHTML = `<div class="stat-box-label">${stat}</div>`;
+    box.appendChild(sel);
+    grid.appendChild(box);
+  });
+}
+function checkAssignDone(){
+  const used = Object.values(state.assign).filter(v=>v!=='');
+  const unique = new Set(used);
+  const status = document.getElementById('assign-status');
+  if(used.length===6 && unique.size===6){
+    status.textContent = 'All stats assigned.';
+    document.getElementById('step4').classList.add('done');
+    document.getElementById('step5').classList.remove('locked');
+    buildWeaponOptions();
+  } else if(used.length===6 && unique.size<6){
+    status.innerHTML = '<span class="builder-error">Each rolled value must be used exactly once — you have a duplicate.</span>';
+  } else {
+    status.textContent = `${used.length}/6 assigned.`;
+  }
+}
+function finalBonus(stat){
+  if(!(stat in state.assign) || state.assign[stat]==='') return null;
+  let b = bonusFor(state.rolls[state.assign[stat]]);
+  if(state.bg && state.bg.s.includes(stat)) b += 1;
+  return b;
+}
+
+// Step 5: Weapon & Armor
+function buildWeaponOptions(){
+  const sel = document.getElementById('weapon-select');
+  sel.innerHTML = '<option value="">— choose a weapon —</option>' +
+    WEAPONS.map((w,i)=>`<option value="${i}">${w.name} (${w.tier}${w.ranged?', ranged':''}, ${w.die})</option>`).join('');
+  const asel = document.getElementById('armor-select');
+  asel.innerHTML = ARMORS.map((a,i)=>`<option value="${i}">${a.name}${a.guard?' (+'+a.guard+' Guard)':''}</option>`).join('');
+}
+function checkWeaponReq(){
+  const werr = document.getElementById('weapon-error');
+  if(state.weapon===null){ werr.textContent=''; return; }
+  const w = WEAPONS[state.weapon];
+  const strB = finalBonus('STR'), dexB = finalBonus('DEX');
+  const stat = w.ranged ? 'DEX' : 'STR';
+  const bonus = w.ranged ? dexB : strB;
+  let ok = true, req = '';
+  if(w.tier==='Medium'){ req = `${stat} >= 0`; ok = bonus>=0; }
+  if(w.tier==='Heavy'){ req = `${stat} >= +1`; ok = bonus>=1; }
+  if(!ok){
+    werr.textContent = `This weapon needs ${req} — your ${stat} is ${bonus>=0?'+':''}${bonus}.`;
+  } else {
+    werr.textContent = '';
+    state.weaponStat = stat;
+  }
+}
+
+// Step 6: Guard Stat, calculated automatically
+document.getElementById('weapon-select').addEventListener('change', (e)=>{
+  state.weapon = e.target.value===''? null : parseInt(e.target.value);
+  checkWeaponReq();
+  maybeAdvanceStep6();
+  render();
+});
+document.getElementById('armor-select').addEventListener('change', (e)=>{
+  state.armor = e.target.value===''? null : parseInt(e.target.value);
+  maybeAdvanceStep6();
+  render();
+});
+function calculateGuardStat(){
+  if(state.weaponStat===null) return null;
+  const excluded = new Set([state.castStat, state.weaponStat].filter(Boolean));
+  const eligible = STATS.filter(s=>!excluded.has(s));
+  let best = eligible[0];
+  eligible.forEach(s=>{ if(finalBonus(s) > finalBonus(best)) best = s; });
+  return best;
+}
+function showGuardStat(){
+  state.guardStat = calculateGuardStat();
+  const disp = document.getElementById('guard-display');
+  if(!state.guardStat){ disp.textContent = ''; return; }
+  const excluded = [state.castStat, state.weaponStat].filter(Boolean).join(', ');
+  disp.innerHTML = `<strong>${state.guardStat}</strong> (${finalBonus(state.guardStat)>=0?'+':''}${finalBonus(state.guardStat)}) — excluded: ${excluded}`;
+  document.getElementById('step6').classList.add('done');
+  document.getElementById('step7').classList.remove('locked');
+}
+
+function maybeAdvanceStep6(){
+  if(state.weapon!==null && state.armor!==null){
+    document.getElementById('step5').classList.add('done');
+    document.getElementById('step6').classList.remove('locked');
+    showGuardStat();
+    updateShardCap();
+  }
+}
+
+function updateShardCap(){
+  if(state.weapon===null || state.armor===null) return;
+  const spent = WEAPONS[state.weapon].cost + ARMORS[state.armor].cost;
+  const maxAffordable = Math.max(0, Math.floor((200 - spent) / 10));
+  const input = document.getElementById('shard-input');
+  input.max = maxAffordable;
+  const note = document.getElementById('shard-cap-note');
+  note.textContent = `up to ${maxAffordable} affordable (200gp − ${spent}gp gear)`;
+  if(state.shards > maxAffordable){
+    state.shards = maxAffordable;
+    input.value = maxAffordable;
+  }
+}
+document.getElementById('shard-input').addEventListener('input', (e)=>{
+  let v = parseInt(e.target.value)||0;
+  const cap = parseInt(e.target.max);
+  if(v > cap){ v = cap; e.target.value = cap; }
+  state.shards = v;
+  render();
+});
+document.getElementById('max-shards-btn').addEventListener('click', ()=>{
+  const input = document.getElementById('shard-input');
+  input.value = input.max;
+  state.shards = parseInt(input.max)||0;
+  render();
+});
+
+document.getElementById('randomize-btn').addEventListener('click', ()=>{
+  // 1. Random Background
+  const bgIdx = Math.floor(Math.random()*BACKGROUNDS.length);
+  bgSelect.value = bgIdx;
+  bgSelect.dispatchEvent(new Event('change'));
+
+  // 2. Random Archetype
+  const archOptions = ['Wayfarer','Agent','Shardbound','Flamesworn','Wildspoken','Artificer'];
+  archSelect.value = archOptions[Math.floor(Math.random()*archOptions.length)];
+  archSelect.dispatchEvent(new Event('change'));
+
+  // 2b. Random chance of Wandslinger, only relevant for Wayfarer/Agent
+  if(state.arch==='Wayfarer' || state.arch==='Agent'){
+    const takeIt = Math.random() < 0.3;
+    document.getElementById('wandslinger-check').checked = takeIt;
+    if(takeIt){
+      const wandStats = ['INT','WIS','CHA'];
+      document.getElementById('wandslinger-stat').value = wandStats[Math.floor(Math.random()*wandStats.length)];
+    }
+    document.getElementById('wandslinger-check').dispatchEvent(new Event('change'));
+  }
+
+  // 3. Roll stats
+  document.getElementById('roll-btn').click();
+  // resolve Mercy automatically if it triggered
+  if(document.getElementById('mercy-row').style.display !== 'none'){
+    document.getElementById('mercy-2x1').click();
+  }
+
+  // 4. Random assignment: shuffle rolled indices across the 6 stats
+  const order = [0,1,2,3,4,5].sort(()=>Math.random()-0.5);
+  STATS.forEach((stat,i)=>{
+    state.assign[stat] = String(order[i]);
+  });
+  buildAssignGrid();
+  // reflect the random assignment in the actual <select> elements
+  const selects = document.querySelectorAll('#assign-grid select');
+  selects.forEach((sel,i)=>{ sel.value = order[i]; });
+  checkAssignDone();
+
+  // 5. Random weapon the character actually qualifies for (Guard Stat then follows automatically)
+  const qualifying = WEAPONS.map((w,i)=>({w,i})).filter(({w})=>{
+    const bonus = w.ranged ? finalBonus('DEX') : finalBonus('STR');
+    if(w.tier==='Medium') return bonus>=0;
+    if(w.tier==='Heavy') return bonus>=1;
+    return true;
+  });
+  const pick = qualifying.length ? qualifying[Math.floor(Math.random()*qualifying.length)] : {i:0};
+  document.getElementById('weapon-select').value = pick.i;
+  document.getElementById('weapon-select').dispatchEvent(new Event('change'));
+
+  // 6. Random armor
+  document.getElementById('armor-select').value = Math.floor(Math.random()*ARMORS.length);
+  document.getElementById('armor-select').dispatchEvent(new Event('change'));
+
+  // 7. Reasonable shard amount depending on archetype
+  const isCaster = ['Shardbound','Flamesworn','Wildspoken','Artificer'].includes(state.arch);
+  document.getElementById('shard-input').value = isCaster ? (10 + Math.floor(Math.random()*6)) : Math.floor(Math.random()*5);
+  document.getElementById('shard-input').dispatchEvent(new Event('input'));
+
+  render();
+});
+
+
+function render(){
+  if(!(state.bg && state.arch && Object.keys(state.assign).length===6 && state.guardStat && state.weapon!==null && state.armor!==null)) {
+    document.getElementById('output').innerHTML = '';
+    return;
+  }
+  const armor = ARMORS[state.armor];
+  const guardBonus = finalBonus(state.guardStat);
+  const wayfarerBonus = state.arch==='Wayfarer' ? 2 : 0;
+  const guard = 4 + guardBonus + wayfarerBonus + armor.guard;
+  const gold = 200 - state.shards*10 - WEAPONS[state.weapon].cost - armor.cost;
+  const statLines = STATS.map(s=>`${s} ${finalBonus(s)>=0?'+':''}${finalBonus(s)}`).join(' &nbsp; ');
+  const wandslingerOn = (state.arch==='Wayfarer' || state.arch==='Agent') && document.getElementById('wandslinger-check').checked;
+
+  document.getElementById('output').innerHTML = `
+  <div class="char-sheet">
+    <h2>${state.bg.n} — ${state.arch}</h2>
+    <div class="builder-row">
+      <button id="copy-btn" class="builder-btn">📋 Copy to Clipboard</button>
+      <span id="copy-status" class="builder-note"></span>
+    </div>
+    <div class="char-sheet-grid">
+      <dl>
+        <dt>Stats</dt><dd>${statLines}</dd>
+        <dt>Guard</dt><dd>${guard} (4 + ${state.guardStat} ${guardBonus>=0?'+':''}${guardBonus}${wayfarerBonus?' + 2 Wayfarer':''} + ${armor.guard} armor)</dd>
+        <dt>Wound Slots</dt><dd>1</dd>
+        <dt>Weapon</dt><dd>${WEAPONS[state.weapon].name} (${WEAPONS[state.weapon].tier}, ${WEAPONS[state.weapon].die}) — ${WEAPONS[state.weapon].cost}gp</dd>
+        <dt>Armor</dt><dd>${armor.name}${armor.cost?` — ${armor.cost}gp`:''}</dd>
+        ${wandslingerOn ? `<dt>Wandslinger</dt><dd>Spark-tier casting, ${state.castStat}</dd>` : ''}
+      </dl>
+      <dl>
+        <dt>Talents (from Background)</dt><dd>${state.bg.t}</dd>
+        <dt>Gear</dt><dd>${state.bg.g}</dd>
+        <dt>Refined Shards</dt><dd>${state.shards} (${state.shards*10}gp)</dd>
+        <dt>Remaining Gold</dt><dd>${gold<0?'<span style="color:var(--khyber)">':''}${gold}gp${gold<0?' — over budget, reduce shards or gear</span>':''} (200 − ${WEAPONS[state.weapon].cost} weapon − ${armor.cost} armor − ${state.shards*10} shards)</dd>
+      </dl>
+    </div>
+    <textarea id="sheet-text" style="position:absolute; left:-9999px;"></textarea>
+  </div>`;
+
+  const sheetText = [
+    `${state.bg.n} — ${state.arch}`,
+    ``,
+    `Stats: ${statLines.replace(/&nbsp;/g,' ')}`,
+    `Guard: ${guard} (4 + ${state.guardStat} ${guardBonus>=0?'+':''}${guardBonus}${wayfarerBonus?' + 2 Wayfarer':''} + ${armor.guard} armor)`,
+    `Wound Slots: 1`,
+    `Weapon: ${WEAPONS[state.weapon].name} (${WEAPONS[state.weapon].tier}, ${WEAPONS[state.weapon].die}) \u2014 ${WEAPONS[state.weapon].cost}gp`,
+    `Armor: ${armor.name}${armor.cost?` \u2014 ${armor.cost}gp`:''}`,
+    wandslingerOn ? `Wandslinger: Spark-tier casting, ${state.castStat}` : null,
+    ``,
+    `Talents (from Background): ${state.bg.t}`,
+    `Gear: ${state.bg.g}`,
+    `Refined Shards: ${state.shards} (${state.shards*10}gp)`,
+    `Remaining Gold: ${gold}gp (200 \u2212 ${WEAPONS[state.weapon].cost} weapon \u2212 ${armor.cost} armor \u2212 ${state.shards*10} shards)`,
+  ].filter(l=>l!==null).join('\n');
+
+  document.getElementById('copy-btn').addEventListener('click', async ()=>{
+    const status = document.getElementById('copy-status');
+    try{
+      await navigator.clipboard.writeText(sheetText);
+      status.textContent = 'Copied!';
+    }catch(err){
+      const ta = document.getElementById('sheet-text');
+      ta.value = sheetText;
+      ta.style.position = 'static';
+      ta.style.left = '0';
+      ta.select();
+      document.execCommand('copy');
+      ta.style.position = 'absolute';
+      ta.style.left = '-9999px';
+      status.textContent = 'Copied!';
+    }
+    setTimeout(()=>{ status.textContent=''; }, 2000);
+  });
+}
+</script>
+<script src="search.js"></script>
+</body>
+</html>

@@ -2,7 +2,9 @@
 
 ### Item Slots
 
-Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slots hold what's actively wielded (weapons, shields); body slots hold worn gear for easy access in combat (armor, secondary weapons, focuses); backpack slots hold everything else. To carry more, hire someone, or buy a cart or pack animal. **Retrieving an item from a backpack slot during combat costs an action** — an Agent's Many Pockets removes this cost.
+Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slots hold what's actively wielded (weapons, shields); body slots hold worn gear for easy access in combat (armor, secondary weapons, focuses); backpack slots hold everything else. To carry more, hire someone, or buy a cart or pack animal.
+
+**Using something already in hand costs your normal action for the turn** — attacking, drinking a held potion, activating a held gadget, all the same, no different from anything else you might do with your action. **Producing or stowing an item is also a full action, not an add-on** — drawing a new weapon, swapping what's in a hand slot, retrieving something from a body slot, or from a backpack slot (Agent's Many Pockets removes the cost for backpack retrieval specifically). Since a turn only has one action, producing something and using it both happen in the same turn only if it was already in hand; otherwise it's draw this turn, use it next.
 
 - **Shards and coin are abstracted resources, not slot items** — tracked as numbers on the character sheet, never occupying a slot regardless of quantity.
 - **A slot holds one distinct item, or a reasonable stack of a single consumable type** — a quiver of arrows, several days of rations, a handful of torches.

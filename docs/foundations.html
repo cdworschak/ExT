@@ -25,6 +25,7 @@
     <a href="enemy-design.html">Enemy Design</a>
     <a href="advancement.html">Advancement</a>
     <a href="glossary.html">Glossary</a>
+    <a href="character-builder.html">Builder</a>
   </div>
   <div class="site-search">
     <input type="text" id="site-search-input" placeholder="Search... (press /)" autocomplete="off">
@@ -85,23 +86,21 @@
   </div>
 
   <h2 id="guard-stat"><strong><a href="glossary.html#guard-stat">Guard Stat</a></strong></h2>
-  <p>Every character has a damage buffer called <strong><a href="glossary.html#guard">Guard</a></strong> (full explanation on <a href="combat.html">Combat</a>). At creation, you pick which of the six stats feeds it:</p>
+  <p>Every character has a damage buffer called <strong><a href="glossary.html#guard">Guard</a></strong> (full explanation on <a href="combat.html">Combat</a>). It's not chosen — it's calculated automatically: your highest-bonus stat, excluding your cast stat (and Wandslinger stat, if taken) and the governing stat of every weapon currently equipped in a hand slot. CON is never a cast or weapon stat, so it's always eligible.</p>
   <table>
-  <tr><th>Guard Stat</th><th>Concept</th></tr>
+  <tr><th>Guard Stat (if it lands there)</th><th>Concept</th></tr>
   <tr><td>CON — Endurance</td><td>Classic tank: physically tough, shrugs off blows</td></tr>
-  <tr><td>DEX — Reflexes</td><td>Dodges and weaves; full hits become glancing ones</td></tr>
-  <tr><td>STR — Brute Force</td><td>Physically blocks and overpowers incoming attacks</td></tr>
   <tr><td>INT — Tactics</td><td>Reads the fight, positions so blows land where they hurt least</td></tr>
   <tr><td>WIS — Awareness</td><td>Danger sense; flinches away before the worst lands</td></tr>
   <tr><td>CHA — Presence</td><td>Force of personality throws off an attacker's aim and timing</td></tr>
   </table>
-  <p><strong>Guard Stat must differ from your weapon stat, cast stat, and Wandslinger stat if applicable — all locked together at character creation.</strong> This is a permanent choice; a character who later swaps weapons never retroactively breaks anything. One exception: the Heavy/Medium armor CON requirement stays tied to your actual CON regardless of Guard Stat choice — a DEX-Guard character with poor CON is still locked out of Heavy armor.</p>
+  <p><strong>Locked in at the start of a fight based on your full loadout — no recalculating turn to turn.</strong> Mid-combat it only changes as a direct consequence of changing what's equipped (always a full action): freeing a stat moves it up, conflicting with a new weapon moves it down, and if it moves down, current Guard drops to match the new max immediately, floor 0. One exception: the Heavy/Medium armor CON requirement stays tied to actual CON regardless of Guard Stat — poor CON locks out Heavy armor even if CON isn't your Guard Stat.</p>
 
   <h2 id="whats-in-this-document">What's in This Document</h2>
   <p>A brief abstract and one concrete example of every other section — enough to orient yourself before diving into the full page for whichever part you actually need.</p>
 
   <h3>Character Creation</h3>
-  <p>The full step-by-step build sequence, from choosing a <strong><a href="glossary.html#background">Background</a></strong> through starting wealth, plus guidance on what makes each choice strong or weak, and a full worked example. <em>Example: your <strong><a href="glossary.html#guard-stat">Guard Stat</a></strong> must differ from your weapon stat and cast stat — locked in at creation, never revisited.</em> <a href="character-creation.html">Full page →</a></p>
+  <p>The full step-by-step build sequence, from choosing a <strong><a href="glossary.html#background">Background</a></strong> through starting wealth, plus guidance on what makes each choice strong or weak, and a full worked example. <em>Example: your <strong><a href="glossary.html#guard-stat">Guard Stat</a></strong> is calculated automatically from your weapon and cast stat, not chosen — pick your weapon carefully, since it directly decides your Guard pool.</em> <a href="character-creation.html">Full page →</a></p>
 
   <h3>Backgrounds</h3>
   <p>Race and culture fused into one character-creation choice — 45 options, each granting a stat bonus, two Talents, and narrative-only gear. Also covers Languages and Talents &amp; Expertise. <em>Example: a Valenar Blademarked elf gets +1 DEX/STR, a war-spirit combat <strong><a href="glossary.html#talent">Talent</a></strong>, and a clan sigil — never a free weapon or mount with hidden stats.</em> <a href="backgrounds.html">Full page →</a></p>
