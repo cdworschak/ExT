@@ -61,7 +61,7 @@ Windrider and Medani Warder are career-tied (working for a House), distinct from
 ### Dwarves
 
 - **Mror Shard-Miner** — +1 CON. Talents: *Shard-Sense* (detect dragonshard deposits nearby), *Tunnel-Steady* (no penalty fighting underground). Gear: pick, dark-lantern.
-- **Kundarak Vault-Warden** — +1 WIS. Talents: *Ward-Reader* (spot magical locks/traps), House Kundarak reference letter. Gear: lockbreaker tools.
+- **Kundarak Vault-Warden** — +1 WIS. Talents: *Ward-Reader* (Advantage spotting magical locks, traps, or wards), *House Standing* (real credit or access at any Kundarak vault or bank). Gear: lockbreaker tools.
 - **Mror Clan Duelist** — +1 STR. Talents: *Honor-Bound* (Advantage in formal duels or honor challenges, real social weight attached to refusing one), *Blood Feud* (name a specific rival clan or individual you hold a standing grudge with, established at character creation. Advantage on all attack rolls against them, and Advantage resisting their attempts to intimidate or manipulate you. Any Reaction Check with other members of that clan or group is made at Disadvantage — the feud's reputation precedes you). Gear: clan sigil worn openly, a dueling scar earned in a formal challenge.
 - **Mror Deep Delver** — +1 WIS. Talents: *Ruin-Sense* (Advantage predicting structural collapse or safely navigating unstable ancient architecture), *Steady in the Dark* (Advantage resisting fear or panic when isolated underground with no light). Gear: rope and pitons, a fragment of unidentified pre-Dhakaani script.
 - **Sharn-Settled Dwarf** — +1 CHA. Talents: *City Trained* (Advantage navigating bureaucracy, permits, or city guard interactions), *Clanless by Choice* (Advantage resisting social pressure or guilt-tripping tied to clan obligations). Gear: forged Sharn residency papers, a clan token no longer worn openly.
@@ -92,30 +92,70 @@ Windrider and Medani Warder are career-tied (working for a House), distinct from
 
 **Kalashtar:**
 **Kalashtar**, sharing one race-wide trait from their bonded quori spirit — two souls in one body, true for all three Backgrounds below: Advantage on WIS-based checks resisting mind-affecting effects (fear, charm, possession, anything preying on your state of mind), and at-will telepathic communication with any creature within Near range that shares a language you know — silent, can't be overheard, doesn't require line of sight, but still requires an actual common tongue.
-- **Kalashtar Dreamwarden** — +1 WIS. Talents: *Dreamward* (sense psychic intrusion). Gear: meditation focus.
+- **Kalashtar Dreamwarden** — +1 WIS. Talents: *Dreamward* (Advantage sensing psychic intrusion), *Dream Council Standing* (real standing within a specific kalashtar dream-council or enclave). Gear: meditation focus.
 - **Recently-Arrived Kalashtar** — +1 CON. Talents: *Survived the Crossing* (Advantage resisting fear or despair specifically when pursued, hunted, or facing capture), *Still Listening for Riedra* (Advantage noticing signs of Inspired agents or Riedran influence specifically). Gear: forged Khorvaire papers, nothing that would mark Riedran origin if searched.
-- **Adar-Born Kalashtar** — +1 CHA. Talents: *Never Knew the Cage* (no inherited fear response tied to Riedra — Advantage on checks where that fear would otherwise apply), *Community Roots* (real standing within a specific Khorvaire kalashtar enclave). Gear: a community token, ordinary local dress.
+- **Khorvaire-Born Kalashtar** — +1 CHA. Talents: *Never Knew the Cage* (no inherited fear response tied to Riedra — Advantage on checks where that fear would otherwise apply), *Community Roots* (real standing within a specific Khorvaire kalashtar enclave). Gear: a community token, ordinary local dress.
 
 **Changelings**, sharing one race-wide trait, true for all three Backgrounds below: every changeling can alter facial features, voice, and build to resemble another humanoid of similar size at will, no check needed. Changelings carry a different, quieter kind of prejudice — most people who learn what a changeling actually is respond with suspicion rather than fear, since the ability to convincingly become anyone means no changeling is ever fully trusted once they're known for what they are.
-- **Stage-Trained Changeling** — +1 CHA. Talents: *Unremarkable* (retcon that an NPC recognized you, 1/session), *Second Face* (a prepared alternate identity, papers included).
+- **Stage-Trained Changeling** — +1 CHA. Talents: *Unremarkable* (retcon that an NPC recognized you, 1/session), *Second Face* (a prepared alternate identity, papers included). Gear: theater props, a well-worn stage mask.
 - **Changeling Infiltrator** — +1 CHA. Talents: *Cold Read* (Advantage picking up a stranger's mannerisms and speech patterns quickly enough to convincingly mimic them after brief observation), *Deep Cover* (a maintained false identity with real standing somewhere specific). Gear: a second set of identity papers, notes on the person being impersonated.
 - **Changeling Community-Raised** — +1 WIS. Talents: *Many Faces, One Self* (Advantage resisting effects that would alter, erase, or impersonate your identity or memory of self specifically), *Hidden Kin* (a real connection to a changeling enclave most outsiders don't know exists). Gear: a token only recognizable to other Community-Raised changelings, no false papers.
 
 **Warforged:**
 **Warforged**, sharing one race-wide trait, true for all three Backgrounds below: a construct, doesn't eat, breathe, or sleep normally.
-- **Cyre-Built Warforged** — +1 CON/STR. Talents: *Battle-Worn* (when you'd roll on the Scar table, roll twice and take the better result). Gear: repair tools, sunrod.
+- **Cyre-Built Warforged** — +1 CON/STR. Talents: *Battle-Worn* (when you'd roll on the Scar table, roll twice and take the better result), *Cyre's Last* (real, bittersweet recognition among Cyran survivors and other Cyre-forged warforged). Gear: repair tools, sunrod.
 - **Post-War Wandering Warforged** — +1 WIS. Talents: *No Orders Left* (Advantage resisting despair or purposelessness), *Read the Room* (Advantage sensing when a space or situation is genuinely hostile to warforged, and adjusting before it becomes a problem). Gear: no unit markings; a personal item picked up somewhere on the road, not issued.
 - **House Cannith Warforged** — +1 INT. Talents: *Factory-Trained* (Advantage operating, repairing, or diagnosing Cannith-made constructs and devices specifically), *Still Property* (a real, uncomfortable legal tie to House Cannith — GM's call on how this surfaces). Gear: visible Cannith unit markings, official (if restrictive) papers of standing.
 
 ### Orcs
-- **Droaam Half-Orc Mercenary** — +1 STR. Talents: *Bad Reputation* (intimidation Advantage), *Contract Killer* (at the start of a genuine paid job, name the contract's actual target — GM confirms it's a legitimate professional engagement, not a personal grudge or a target you'd have gone after anyway. Advantage on all attack rolls against that specific creature for the duration of the contract).
+- **Droaam Half-Orc Mercenary** — +1 STR. Talents: *Bad Reputation* (intimidation Advantage), *Contract Killer* (at the start of a genuine paid job, name the contract's actual target — GM confirms it's a legitimate professional engagement, not a personal grudge or a target you'd have gone after anyway. Advantage on all attack rolls against that specific creature for the duration of the contract). Gear: a scarred trophy from a past contract, a mercenary company's token.
 - **Gatekeeper Orc** — +1 WIS. Talents: *Ward Against the Deep* (Advantage detecting aberrant creatures or planar corruption), *Binding Rite* (once per session, a real ritual to weaken or contain an aberrant threat — GM's call on scope). Gear: a warding stake, herbs for a binding rite, a totem marking a specific guarded site.
 - **Ghaash'kala Orc** — +1 CON. Talents: *Labyrinth-Sworn* (Advantage resisting fiendish corruption or temptation), *Marked by the Wastes* (Advantage recognizing fiendish influence or Demon Wastes-touched creatures before others notice). Gear: ash-marked wraps, no possessions beyond what's needed for the duty.
 
 ### Goblinoids
-- **Dhakaani Loremarked Goblin** — +1 STR/INT. Talents: *Old Empire* (read pre-Sundering script), ancestral weapon training.
+- **Dhakaani Loremarked Goblin** — +1 STR/INT. Talents: *Old Empire* (read pre-Sundering script), *Ancestral Drill* (Advantage with a specific ancestral weapon style passed down since before the Sundering). Gear: a fragment of pre-Sundering script, a clan tattoo marking lineage.
 - **Darguun Hobgoblin Soldier** — +1 STR. Talents: *Drilled to War* (Advantage forming up, holding a line, or coordinating with other trained soldiers), *Mercenary Standing* (a real reputation and contact within Darguun's mercenary companies). Gear: a mercenary company's token, service marks earned in the field.
 - **Bugbear Outrider** — +1 DEX. Talents: *Unseen Until Close* (Advantage remaining unnoticed despite size), *Sudden Reach* (Advantage on the first strike in an ambush specifically). Gear: dark wraps for concealment, a trophy from a successful ambush.
+
+### Building Your Own Background
+
+The 64 Backgrounds above follow one pattern, if you want to build another.
+
+```
+NAME
+  [Origin/Culture/House] + [Role/Identity].
+       │
+       ▼
+STAT BONUS
+  +1 to one stat. +1 to two stats only for a genuine
+  racial/body-plan trait.
+       │
+       ▼
+TWO TALENTS
+  One combat- or adventuring-relevant.
+  One flavor-relevant — identity, standing, or culture.
+  Both narrow and specific: a named danger, a named skill,
+  a named edge.
+       │
+       ▼
+GEAR
+  Narrative only. 2–3 items. Weapon and armor stay a
+  separate Character Creation choice.
+       │
+       ▼
+RACE-WIDE TRAIT? (if applicable)
+  An inherent trait shared by every Background of that
+  race gets stated once, above the whole group.
+```
+
+**Worked example — Sharn Cutpurse:**
+
+**Name:** Sharn + Cutpurse.
+**Stat bonus:** +1 DEX.
+**Talent 1 (combat/adventuring):** *Quick Fingers* — Advantage on fast, precise hand-work under time pressure: lockpicking, disarming, a quick draw.
+**Talent 2 (flavor):** *Knows a Guy* — one fence or fixer contact.
+**Gear:** lockpicks, a stashed bolt-hole key.
+**Race-wide trait:** none.
 
 ---
 

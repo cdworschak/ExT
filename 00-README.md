@@ -5,7 +5,7 @@ This split now mirrors the master document after its full rewrite into clean, ma
 | File | Sections |
 |---|---|
 | `01-foundations.md` | Setting Terminology, Core Resolution, Magic Baseline, Spell Names |
-| `02-backgrounds.md` | Background Creation Procedure, all 45 Backgrounds |
+| `02-backgrounds.md` | Background Creation Procedure, all 64 Backgrounds |
 | `03-archetypes-dragonmarks-languages.md` | Archetypes, Dragonmarks, Talents & Expertise, Languages |
 | `04-character-creation.md` | Character Creation flowchart + Choice Guidance |
 | `05-combat-procedure.md` | Combat Procedure (Quick Reference) |

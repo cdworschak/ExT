@@ -22,29 +22,43 @@ Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slo
 | Heavy | 1d8 | 4.5 | −1 |
 | Massive (monster-scale only) | 1d10 | 5.5 | −3 |
 
-| Tier | Weapon | Notes |
-|---|---|---|
-| Light | Dagger | Thrown |
-| Light | Handaxe | Thrown |
-| Light | Sickle | — |
-| Medium | Club | — |
-| Medium | Spear | Versatile, Thrown (Heavy die two-handed) |
-| Medium | Staff | Versatile |
-| Heavy | Sword | Two-handed |
-| Heavy | Axe | Thrown, Two-handed |
-| Heavy | Mace | Two-handed |
-| Heavy | Glaive | Two-handed |
-| Light (ranged) | Sling | Ammo |
-| Light (ranged) | Darts | Thrown |
-| Medium (ranged) | Shortbow | Ammo |
-| Medium (ranged) | Hand Crossbow | Ammo |
-| Heavy (ranged) | Crossbow | Ammo |
+**Named weapons below are flavor and diegetic color only — every weapon at a given tier is mechanically identical (same die, same requirement, same cost). The Diegetic Note column has no mechanical effect; it's how the weapon reads to other people in the world.**
+
+| Tier | Weapon | Tag | Diegetic Note |
+|---|---|---|---|
+| Light | Dagger | Thrown, Finesse | Easy to hide, easy to explain away — "everyone carries a knife" |
+| Light | Handaxe | Thrown | A tool first, a weapon second — nobody blinks at a woodsman carrying one |
+| Light | Sickle | Finesse | Reads as farm equipment, not a weapon, right up until it isn't |
+| Light | Karrnathi Shortblade | Finesse | Standard sidearm for Karrnath's officers — compact, functional, no ornamentation |
+| Light | Brelish Trench Knife | Finesse | Cheap, brutal, close-quarters — a weapon born from years of siege warfare |
+| Medium | Club | — | The most ordinary weapon there is — nobody reads much into a club |
+| Medium | Spear | Versatile, Thrown (Heavy die two-handed) | The classic look of a soldier or guard, not a criminal |
+| Medium | Staff | Two-handed | Doubles as a walking aid or traveler's tool — easy to carry openly anywhere |
+| Medium | Brelish Levy Spear | Versatile, Thrown (Heavy die two-handed) | Mass-produced for Breland's wartime conscripts — the single most common weapon of the whole war |
+| Medium | Karrnathi Cavalry Saber | Finesse | Standard issue for Karrnath's mounted regiments — recognizable curve, recognizable reputation |
+| Medium | Aundairian Rapier | Finesse | Aundair's officer corps favored precision over brute force — this blade reflects that |
+| Heavy | Sword | Two-handed | A generic blade, no particular origin — could have come from anywhere |
+| Heavy | Axe | Thrown, Two-handed | Reads as a lumberjack's tool until the moment it's thrown |
+| Heavy | Mace | Two-handed | Blunt and utilitarian — favored by those who fight without pretense |
+| Heavy | Glaive | Two-handed | Impossible to conceal, impossible to mistake for a civilian's tool |
+| Heavy | Karrnathi Longsword | Two-handed | Standard issue for Karrnath's line regiments — recognizable to anyone who served against them |
+| Heavy | Karrnathi Warhammer | Two-handed | Grim, iron-black, standard issue for Karrnath's line infantry — built to break armor, not impress anyone |
+| Heavy | Thrane Vigil Pike | Two-handed | Carried by Silver Flame shield-walls — disciplined formation fighting, not individual glory |
+| Heavy | Thrane Templar Mace | Two-handed | Associated with Silver Flame militants — unmistakable in origin |
+| Heavy | Cyran Relic Blade | Two-handed | Predates the Mournland — carrying one openly is a quiet, heavy statement in the wrong company |
+| Light (ranged) | Sling | Ammo | Cheap, common, and easy to explain — every shepherd owns one |
+| Light (ranged) | Darts | Thrown | Looks like a game piece until it's in someone's throat |
+| Medium (ranged) | Shortbow | Ammo | The unmistakable silhouette of a hunter, ranger, or soldier |
+| Medium (ranged) | Hand Crossbow | Ammo | Small enough to conceal — the weapon of choice for people who don't want to be seen coming |
+| Medium (ranged) | Brelish Levy Crossbow | Ammo | Cheap, mass-produced, handed to conscripts who'd never held a weapon before the war |
+| Heavy (ranged) | Crossbow | Ammo | Slow to reload, impossible to mistake for anything but a dedicated hunter's or soldier's weapon |
+| Heavy (ranged) | Aundairian Siege Crossbow | Ammo | Aundair leaned on battle magic over massed infantry — this is what their few dedicated marksmen carried |
 
 **Heavy weapons are inherently Two-handed. All ranged weapons are Two-handed too, at any tier.** Weapon-and-shield is a melee-exclusive combination (Light/Medium melee only).
 
 **Shield: +1 Guard, occupies a hand slot, −1 Initiative. Tower Shield: +2 Guard, occupies a hand slot, −3 Initiative.**
 
-**Melee vs. ranged is a separate axis from which stat governs the weapon.** A DEX-based melee weapon (a finesse rapier, a dagger) is subject to melee's Two-handed rules and can pair with a Shield. Only genuinely ranged weapons (bows, crossbows) are inherently Two-handed.
+**Melee vs. ranged is a separate axis from which stat governs the weapon.** A DEX-based melee weapon (a finesse rapier, a dagger) is subject to melee's Two-handed rules and can pair with a Shield. **Finesse applies to light, bladed weapons designed for precision and speed over raw force — not blunt weapons (clubs, maces, hammers) and not polearms (spears, staves, pikes), regardless of tier.** A weapon needs to be individually marked Finesse to use DEX; Light or Medium tier alone doesn't qualify it, and Heavy weapons are never Finesse. Only genuinely ranged weapons (bows, crossbows) are inherently Two-handed.
 
 **Casting stat and weapon stat are always separate.** A Syberist's cast stat is used only for spellcasting; a physical weapon they also carry uses STR or DEX independently.
 
@@ -78,6 +92,20 @@ Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slo
 | **Mobility tax** | none | −1 on Agility-type checks | −1 Agility checks, moving to an adjacent zone costs your whole action |
 | **Availability** | buyable anywhere | buyable anywhere | requires a House Cannith commission or military contact |
 | **Usage/maintenance** | d6 after combat, 1–3 marks a use | same, repair cost scales with purchase price | same, largest shards-sink given Heavy's higher base cost |
+
+**Named armor below is flavor only — every piece at a given tier is mechanically identical.**
+
+| Tier | Armor | Diegetic Note |
+|---|---|---|
+| Light | Padded Coat | Passes for ordinary travel wear — nobody clocks it as armor on sight |
+| Light | Leathers | The default look of "adventurer" in most people's minds |
+| Light | Traveler's Wrap | Layered cloth and hidden padding — looks like nothing more than road clothes |
+| Medium | Reinforced Brigandine | Clearly armor, clearly worn by someone expecting trouble |
+| Medium | Chainshirt | The telltale sound gives away a quiet approach |
+| Medium | Scale Coat | Distinctly militia-issue — marks its wearer as affiliated with someone's official force |
+| Heavy | Breastplate | Formal enough to read as House or military standing, not just readiness for a fight |
+| Heavy | Full Plate | Impossible to hide, impossible to mistake for anything but a warrior expecting a real fight |
+| Heavy | Banded Mail | Heavy, loud, and unmistakably built for a real, sustained fight |
 
 ### Pricing
 
