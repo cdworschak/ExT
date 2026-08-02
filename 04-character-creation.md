@@ -154,11 +154,11 @@
 
 **Worked example — building Tavin:**
 
-1. **Background.** Jorasco-Marked Healer — +1 WIS, the Least Mark of Healing, Bedside Manner.
+1. **Background.** Jorasco Marked — +1 WIS, the Mark of Healing, House Duty.
 2. **Archetype.** Syberist, Flamesworn tradition (CHA cast stat).
 3. **Roll stats.** 3d6 ×6, six independent rolls: 14, 11, 10, 9, 8, 13. Looked up: +1, 0, 0, −1, −1, +1. At least one is positive, so no Mercy needed.
 4. **Assign freely.** These six bonuses can go to any stat, in any order. CHA is Tavin's cast stat, so the highest roll (+1) goes there. DEX gets the other +1, since it governs the weapon. The two 0s go to WIS and INT; the two −1s land on CON and STR.
-5. **Apply Background.** Jorasco-Marked Healer's +1 WIS lands on top of the just-assigned WIS 0, making it +1.
+5. **Apply Background.** Jorasco Marked's +1 WIS lands on top of the just-assigned WIS 0, making it +1.
 6–7. **Weapon & Armor.** DEX +1 qualifies for Medium. A warded rod (Medium, DEX) and Light armor.
 8. **Guard Stat, automatic.** Excludes CHA (cast stat) and DEX (weapon stat). Of what's left — WIS +1, INT 0, CON −1 — WIS is highest, so Guard Stat lands there on its own.
 9–10. **Guard & Wounds.** Guard = 4 + WIS(+1) + Light armor(+1) = 6. One Wound slot, as every character starts with.

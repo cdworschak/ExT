@@ -112,7 +112,9 @@ Three concept archetypes on the same Agent chassis, differentiated by what kind 
 
 ## Dragonmarks
 
-Only House-lineage Backgrounds can take a mark: Cannith, Lyrandar, Kundarak, Sivis, Vadalis, Tharashk, Deneith, Ghallanda, Jorasco, Orien, Medani, Phiarlan/Thuranni. One fixed effect, no dust cost, usable a limited number of times per session/rest (start with 1–2 uses).
+**Two distinct kinds of House-lineage Background exist for each House: Agent (works for the House, no Mark) and Marked (carries the House's Least Mark).** Most people connected to a House, even by blood, never manifest a mark — Agent Backgrounds are the common case. Only a Background specifically named "[House] Marked" grants one; a career-tied Agent Background never does, regardless of which House it's tied to. One fixed effect per Mark, no dust cost, usable a limited number of times per session/rest (start with 1–2 uses).
+
+**Being Marked carries real House Duty, true for every Marked Background:** the House can call on you for tasks you can't easily refuse, and Excoriation — being cast out, marked but disowned — is a genuine, heavy consequence for defying them seriously, not a minor setback. Less personal freedom, offset by real power.
 
 ### Mark Progression
 

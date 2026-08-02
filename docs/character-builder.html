@@ -175,15 +175,26 @@ const BACKGROUNDS = [
   {n:'Aereni Exile',s:["WIS"],t:'Cast Out (Advantage resisting despair when isolated, rejected, or cut off from support), Marked for Return (the Undying Court considers your exile unfinished business; GM\'s call on how and when that surfaces)',g:'no ancestral mask — deliberately absent; forged travel papers; a single relic refused to give up when cast out.'},
   {n:'Valenar Warband Scout',s:["DEX"],t:'Outrider (Advantage tracking or navigating open terrain, especially plains and borderlands), Read the Land (Advantage spotting ambushes or hidden forces before they spring)',g:'riding gear, a warband token.'},
   {n:'Sharn-Raised Elf',s:["CHA"],t:'Codeswitcher (pass as native in any Sharn district), Skywalk (no penalty on skybridges/heights)',g:'forged residency papers, grapple line. No ancestral talent — deliberately cut off from tradition.'},
+  {n:'Phiarlan Performer (Agent)',s:["DEX"],t:'Two Faces (Advantage maintaining a cover identity as a performer while actually working intelligence in the west), House Backing (a genuine, deniable Phiarlan contact for information)',g:'a performer\'s kit, a stage name that isn\'t your own.'},
+  {n:'Phiarlan Marked',s:["DEX"],t:'Mark of Shadow (once per session, become very difficult to notice or recall for a short time), House Duty (see Dragonmarks above)',g:'the House signet, kept hidden rather than displayed.'},
+  {n:'Thuranni Blade (Agent)',s:["DEX"],t:'Marked for the Work (Advantage identifying a target\'s weaknesses, routine, or the fastest way to reach them unseen), Eastern Discipline (a real, cold contact within Thuranni\'s eastern network)',g:'a concealed blade built for a single clean strike, a client\'s payment token, no name attached.'},
+  {n:'Thuranni Marked',s:["DEX"],t:'Mark of Shadow (once per session, become very difficult to notice or recall for a short time), House Duty (see Dragonmarks above)',g:'the House signet, kept hidden rather than displayed.'},
   {n:'Sharn Cutpurse',s:["DEX"],t:'Quick Fingers (Advantage on fast, precise hand-work under time pressure — lockpicking, disarming, a quick draw), Knows a Guy (one fence/fixer contact)',g:'lockpicks, stashed bolt-hole key.'},
   {n:'Karrnathi Line Soldier',s:["CON"],t:'Drilled (Advantage forming up/holding a line), Grim Discipline (resist fear from undead)',g:'dog tags, a unit patch.'},
   {n:'Brelish House Factor',s:["CHA"],t:'Contract Sense (spot a bad deal), Letter of Credit (real line of credit with one House)',g:'fine clothes, ledger.'},
-  {n:'Jorasco-Marked Healer',s:["WIS"],t:'Least Mark of Healing (see Archetypes → Dragonmarks), Bedside Manner (Advantage on medicine/first-aid checks)',g:'warded rod, satchel of remedies.'},
   {n:'Aundairian Magewright',s:["INT"],t:'Trained Hand (Advantage operating or diagnosing minor magical infrastructure), Arcanix Credentials (a real academic reference from Arcanix or a lesser Aundairian college)',g:'scribing toolkit, letter of academic standing, minor non-combat enchanted trinkets.'},
   {n:'Cyran Survivor',s:["CON"],t:'Carried the Mourning (Advantage resisting fear or despair facing mass loss, catastrophe, or overwhelming scale), Nothing Left to Lose (once per session, push a check past its normal limit at real personal cost, GM\'s call)',g:'a keepsake from a nation that no longer exists, forged New Cyre residency papers, nothing of monetary value.'},
   {n:'Thrane Templar',s:["WIS"],t:'Flame-Sworn (Advantage resisting or detecting corruption, undeath, or fiendish influence), Church Authority (real standing within the Church hierarchy)',g:'a symbol of the Silver Flame worn openly, formal writ of standing from a specific cathedral.'},
   {n:'Lhazaar Waverunner',s:["DEX"],t:'Sea Legs (Advantage keeping balance aboard a moving vessel, or navigating by stars/coastline), Letter of Marque (a real or convincingly forged privateer\'s commission, granting legal cover and a fleet contact)',g:'a boarding hook, the commission itself.'},
   {n:'Riedran Outsider',s:["WIS"],t:'Trained Discipline (Advantage resisting mind-affecting effects), Foreign Eyes (Advantage spotting things "out of place" in Khorvaire specifically)',g:'nothing overtly Riedran, forged local papers, one hidden token of home.'},
+  {n:'Vadalis Handler (Agent)',s:["WIS"],t:'Magebred Eye (Advantage judging a creature\'s temperament, health, or magebred quality at a glance), Stable Standing (real credit toward acquiring a mount or guard animal through House channels)',g:'handling gear, a magebred animal\'s lead or tack.'},
+  {n:'Vadalis Marked',s:["WIS"],t:'Mark of Handling (at will, sense a non-hostile animal\'s mood or temperament; once per session, calm or command one directly), House Duty (see Dragonmarks above)',g:'the House signet, a magebred animal companion\'s tack.'},
+  {n:'Tharashk Prospector (Agent)',s:["WIS"],t:'Dragonshard Sense (Advantage locating dragonshard deposits or judging a raw shard\'s quality), Shadow Marches Contact (a real bounty-hunting or prospecting contact back in the Marches)',g:'prospecting tools, a rough hand-drawn claim map.'},
+  {n:'Tharashk Marked',s:["WIS"],t:'Mark of Finding (once per session, know the general direction of a specific person, creature, or item you\'ve seen before), House Duty (see Dragonmarks above)',g:'the House signet, a well-worn tracking kit.'},
+  {n:'Deneith Blademark (Agent)',s:["STR"],t:'Contract Discipline (Advantage holding a defensive position or protecting a specific charge under pressure), Marshal Standing (real, junior standing as a Sentinel Marshal)',g:'a Blademarks company token, a written mercenary contract.'},
+  {n:'Deneith Marked',s:["STR"],t:'Mark of Sentinel (once per session, interpose yourself as the target of an attack meant for an ally sharing your zone), House Duty (see Dragonmarks above)',g:'the House signet, formal Blademarks officer\'s papers.'},
+  {n:'Orien Courier (Agent)',s:["DEX"],t:'Rail Rhythm (Advantage keeping pace, timing, or footing during fast travel), Route Standing (real, discounted passage on Orien\'s rail and caravan lines)',g:'a courier\'s satchel, a rail line schedule.'},
+  {n:'Orien Marked',s:["DEX"],t:'Mark of Passage (once per session, instantly know the safest and fastest route to a known destination), House Duty (see Dragonmarks above)',g:'the House signet, unrestricted rail passage papers.'},
   {n:'Khoravar Go-Between',s:["CHA"],t:'Bridge-Born (fluent in Khoravar Cant, Common, and Elvish; Advantage building trust between distrustful communities), Steady Ground (if the Off-Balance Wound Complication comes up, Advantage on the DEX check it imposes; if Staggered Back comes up instead, you choose which adjacent zone you\'re thrown into)',g:'forged travel papers, a keepsake marking ties to a found community.'},
   {n:'Lyrandar Windrider',s:["DEX"],t:'Storm Sense (Advantage reading weather, navigating rough seas, keeping footing on an unstable deck), House of the Sea and Sky (standing credit/berth aboard any Lyrandar vessel or airship)',g:'House signet, navigator\'s tools, a weathered logbook.'},
   {n:'Medani Warder',s:["WIS"],t:'Ward-Sense (Advantage noticing an ambush, hidden threat, or a lie told to someone under your protection before it lands), Sworn to a Charge (once per session, act out of turn to intervene when a specific protected person is about to be harmed)',g:'House signet, an openly-worn warding charm, a client contract.'},
@@ -195,15 +206,21 @@ const BACKGROUNDS = [
   {n:'Zil Broker',s:["INT"],t:'Whisper Network (once per session, learn a rumor or relevant fact from a contact without seeking one out), Always Listening (Advantage on overheard-info checks)',g:'coded ledger, messenger bird.'},
   {n:'Korranberg Scholar',s:["INT"],t:'Cataloguer\'s Mind (Advantage recalling or locating information within a library or archive), Peer Reviewed (a real academic reputation — Advantage invoking scholarly credentials)',g:'a Korranberg Library membership token, a partial research index.'},
   {n:'Zil Trickster',s:["DEX"],t:'Sleight (Advantage on close-quarters misdirection — palming, planting, lifting unnoticed), Vanish in a Crowd (Advantage disappearing into a crowded space)',g:'forged minor documents, a plain outfit that changes character with small adjustments.'},
+  {n:'Sivis Notary (Agent)',s:["INT"],t:'Bound Neutral (Advantage on checks where being trusted as an unbiased witness or messenger matters), Speaking Stone Access (real, limited use of the House\'s message-station network)',g:'a scrivener\'s kit, a House Sivis seal marking a document as formally witnessed.'},
+  {n:'Sivis Marked',s:["INT"],t:'Mark of Scribing (a spoken or written message sent through House Sivis channels arrives without distortion, interception, or loss, once per session), House Duty (see Dragonmarks above)',g:'the House signet, formal papers of standing.'},
   {n:'Talenta Plains Rider',s:["DEX"],t:'Beast-Bond (mount won\'t panic/flee), Open Sky (never lost outdoors)',g:'a beast-taming charm, tribal markings.'},
   {n:'Talenta Dinosaur Handler',s:["WIS"],t:'Herd-Sense (Advantage calming, training, or reading the mood of a large beast), Tracker\'s Eye (Advantage following tracks or signs of passage in wild terrain)',g:'handler\'s goad, dried feed rations, a beast-taming manual.'},
   {n:'Khorvaire-Settled Halfling',s:["CHA"],t:'City Charm (Advantage on first impressions with strangers), Small and Overlooked (Advantage avoiding notice in a crowd or being underestimated in a negotiation)',g:'forged city residency papers, no riding gear — deliberately settled.'},
-  {n:'Eldeen Shifter',s:["DEX", "STR"],t:'Flex (once per encounter: Advantage on a melee attack as claws briefly extend, or move one extra zone as a speed burst), Wildsense (Advantage noticing natural dangers, tracking prey, or sensing weather changes)',g:'trap kit, a woven charm from the Towering Wood.'},
+  {n:'Jorasco Chirurgeon (Agent)',s:["WIS"],t:'Trained Hands (Advantage on mundane medicine, diagnosis, or first-aid work), House Discount (real, standing credit at any Jorasco healinghouse)',g:'a physician\'s satchel, a House Jorasco apprentice\'s letter.'},
+  {n:'Jorasco Marked',s:["WIS"],t:'Mark of Healing (stabilize a dying creature or mend a minor injury, 1–2/session, no dust cost), House Duty (see Dragonmarks above)',g:'the House signet, a warded rod.'},
+  {n:'Ghallanda Innkeeper (Agent)',s:["CHA"],t:'Reads the Room (Advantage sensing a stranger\'s intent or trouble brewing in a public space), Guild Standing (real credit or a bed at any Ghallanda inn or outfitter)',g:'an innkeeper\'s ledger, a House Ghallanda badge.'},
+  {n:'Ghallanda Marked',s:["CHA"],t:'Mark of Hospitality (at will, sense whether food or drink is tainted or poisoned; once per session, conjure a simple meal or a small safe resting space), House Duty (see Dragonmarks above)',g:'the House signet, a keyring to more than one Ghallanda safehouse.'},
+  {n:'Eldeen Shifter',s:["DEX", "STR"],t:'Reaches-Born (Advantage on checks drawing on standing or knowledge specific to the Eldeen Reaches\' wilderness communities), Wildsense (Advantage noticing natural dangers, tracking prey, or sensing weather changes)',g:'trap kit, a woven charm from the Towering Wood.'},
   {n:'Gatekeeper Shifter',s:["WIS"],t:'Ward the Threshold (Advantage detecting aberrant or planar-touched creatures and influence), Old Oath (real standing with Gatekeeper circles in the Eldeen Reaches)',g:'a warding totem, dried herbs used in Gatekeeper rites.'},
-  {n:'Droaam Shifter',s:["CON"],t:'Hard Ground (Advantage resisting intimidation or coercion), Known to the Daughters (a real, wary reputation within Droaam\'s power structure)',g:'a token marking safe passage through a specific Droaam territory, a scavenged trophy.'},
+  {n:'Sharn Shifter',s:["CON"],t:'Rough Trade (Advantage on work that trades on physical presence — enforcing, bouncing, muscle-for-hire — and reading when a room\'s about to turn violent), Fringe Standing (a real, if grudging, network among Sharn\'s lower-district enforcers and mercenary crews)',g:'brass knuckles or similar improvised weapon, a battered City Watch citation (paid off, not earned).'},
   {n:'Kalashtar Dreamwarden',s:["WIS"],t:'Dreamward (sense psychic intrusion)',g:'meditation focus.'},
   {n:'Recently-Arrived Kalashtar',s:["CON"],t:'Survived the Crossing (Advantage resisting fear or despair when pursued, hunted, or facing capture), Still Listening for Riedra (Advantage noticing signs of Inspired agents or Riedran influence)',g:'forged Khorvaire papers, nothing marking Riedran origin.'},
-  {n:'Fainmalar-Born Kalashtar',s:["CHA"],t:'Never Knew the Cage (no inherited fear response tied to Riedra), Community Roots (real standing within a specific Khorvaire kalashtar enclave)',g:'a community token, ordinary local dress.'},
+  {n:'Adar-Born Kalashtar',s:["CHA"],t:'Never Knew the Cage (no inherited fear response tied to Riedra), Community Roots (real standing within a specific Khorvaire kalashtar enclave)',g:'a community token, ordinary local dress.'},
   {n:'Stage-Trained Changeling',s:["CHA"],t:'Unremarkable (retcon that an NPC recognized you, 1/session), Second Face (a prepared alternate identity, papers included)',g:'—'},
   {n:'Changeling Infiltrator',s:["CHA"],t:'Cold Read (Advantage picking up a stranger\'s mannerisms quickly enough to convincingly mimic them), Deep Cover (a maintained false identity with real standing somewhere specific)',g:'a second set of identity papers, notes on the person being impersonated.'},
   {n:'Changeling Community-Raised',s:["WIS"],t:'Many Faces, One Self (Advantage resisting effects that would alter, erase, or impersonate your identity or memory of self), Hidden Kin (a real connection to a changeling enclave most outsiders don\'t know exists)',g:'a token only recognizable to other Community-Raised changelings, no false papers.'},
@@ -250,6 +267,17 @@ const ARMORS = [
   {name:"Heavy", guard:3, req:"CON >= 1 and Wayfarer", slots:2, cost:120, init:-2},
 ];
 const STATS = ["STR","DEX","CON","INT","WIS","CHA"];
+const HOUSE_MARKS = {
+  'Jorasco Marked': {mark: 'Mark of Healing', house: 'Jorasco', effect: 'stabilize a dying creature or mend a minor injury, 1\u20132/session, no dust cost'},
+  'Sivis Marked': {mark: 'Mark of Scribing', house: 'Sivis', effect: 'a spoken or written message sent through House Sivis channels arrives without distortion, interception, or loss, once per session'},
+  'Vadalis Marked': {mark: 'Mark of Handling', house: 'Vadalis', effect: 'at will, sense a non-hostile animal\u2019s mood or temperament; once per session, calm or command one directly'},
+  'Tharashk Marked': {mark: 'Mark of Finding', house: 'Tharashk', effect: 'once per session, know the general direction of a specific person, creature, or item you\u2019ve seen before'},
+  'Deneith Marked': {mark: 'Mark of Sentinel', house: 'Deneith', effect: 'once per session, interpose yourself as the target of an attack meant for an ally sharing your zone'},
+  'Ghallanda Marked': {mark: 'Mark of Hospitality', house: 'Ghallanda', effect: 'at will, sense whether food or drink is tainted or poisoned; once per session, conjure a simple meal or a small safe resting space'},
+  'Orien Marked': {mark: 'Mark of Passage', house: 'Orien', effect: 'once per session, instantly know the safest and fastest route to a known destination'},
+  'Phiarlan Marked': {mark: 'Mark of Shadow', house: 'Phiarlan', effect: 'once per session, become very difficult to notice or recall for a short time'},
+  'Thuranni Marked': {mark: 'Mark of Shadow', house: 'Thuranni', effect: 'once per session, become very difficult to notice or recall for a short time'},
+};
 const ARCH_INFO = {
   "Wayfarer": {weaponStat:null, castStat:null, note:"Weapon stat: your choice (STR or DEX, matching your weapon). Grit starts at 2."},
   "Agent": {weaponStat:null, castStat:null, note:"Weapon stat: your choice (STR or DEX). Leverage starts at 2."},
@@ -285,7 +313,7 @@ function bonusFor(sum){
 function d6(){ return Math.floor(Math.random()*6)+1; }
 function roll3d6(){ return d6()+d6()+d6(); }
 
-let state = { bg:null, arch:null, castStat:null, rolls:[], assign:{}, mercyApplied:false, guardStat:null, weaponStat:null, weapon:null, armor:null, shield:null, shards:0, skill:null, spellName:null, maneuverGivenUp:null };
+let state = { bg:null, arch:null, castStat:null, rolls:[], assign:{}, mercyApplied:false, guardStat:null, weaponStat:null, weapon:null, armor:null, shield:null, shards:0, skill:null, spellName:null, maneuverGivenUp:null, dragonmark:null };
 
 // Step 1: Background
 const bgSelect = document.getElementById('bg-select');
@@ -297,8 +325,13 @@ BACKGROUNDS.forEach((b,i)=>{
 bgSelect.addEventListener('change', ()=>{
   if(bgSelect.value===''){ return; }
   state.bg = BACKGROUNDS[bgSelect.value];
+  const mark = HOUSE_MARKS[state.bg.n];
+  const markLine = mark
+    ? `<br><strong>House-lineage: ${mark.mark} (${mark.house}), Least tier</strong> — ${mark.effect}. Free, no shard cost. Automatic, not a separate choice.`
+    : '';
   document.getElementById('bg-detail').innerHTML =
-    `<strong>${state.bg.s.map(s=>'+1 '+s).join('/')}.</strong> Talents: ${state.bg.t}<br>Gear: ${state.bg.g}`;
+    `<strong>${state.bg.s.map(s=>'+1 '+s).join('/')}.</strong> Talents: ${state.bg.t}<br>Gear: ${state.bg.g}${markLine}`;
+  state.dragonmark = mark ? mark.mark : null;
   document.getElementById('step1').classList.add('done');
   document.getElementById('step2').classList.remove('locked');
   render();
@@ -739,6 +772,7 @@ function render(){
         ${wandslingerOn ? `<dt>Wandslinger</dt><dd>Spark-tier casting, ${state.castStat}${state.maneuverGivenUp?` (gave up ${state.maneuverGivenUp})`:''}</dd>` : ''}
         ${state.skill ? `<dt>Skill</dt><dd>${state.skill}</dd>` : ''}
         ${state.spellName ? `<dt>Starting Spell Name</dt><dd>${state.spellName}</dd>` : ''}
+        ${state.dragonmark ? `<dt>Dragonmark</dt><dd>${state.dragonmark}, Least tier</dd>` : ''}
       </dl>
       <dl>
         <dt>Talents (from Background)</dt><dd>${state.bg.t}</dd>
@@ -763,6 +797,7 @@ function render(){
     wandslingerOn ? `Wandslinger: Spark-tier casting, ${state.castStat}${state.maneuverGivenUp?` (gave up ${state.maneuverGivenUp})`:''}` : null,
     state.skill ? `Skill: ${state.skill}` : null,
     state.spellName ? `Starting Spell Name: ${state.spellName}` : null,
+    state.dragonmark ? `Dragonmark: ${state.dragonmark}, Least tier` : null,
     ``,
     `Talents (from Background): ${state.bg.t}`,
     `Gear: ${state.bg.g}`,

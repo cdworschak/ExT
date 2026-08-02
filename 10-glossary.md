@@ -38,7 +38,7 @@ One canonical definition per term, alphabetical.
 
 **Guard** — the damage buffer every character has. = 4 + Guard Stat bonus + archetype bonus + armor + shield, floor 1. Restores fully after a Turn of rest.
 
-**Guard Stat** — calculated automatically: your highest-bonus stat, excluding cast stat and the governing stat of every equipped weapon. Locked for the duration of a fight; recalculates immediately if a mid-combat equipment change (always a full action) alters the exclusions.
+**Guard Stat** — calculated automatically: your highest-bonus stat, excluding cast stat and the governing stat of every equipped weapon. Stable by default, but recalculates immediately if a mid-combat equipment change (always a full action) alters the exclusions.
 
 **Initiative** — 2d10 + DEX + weapon modifier − armor penalty, rolled once per fight.
 
