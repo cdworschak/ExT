@@ -46,6 +46,8 @@ Guard Stat isn't listed here deliberately — every stat is a *potential* Guard 
 
 **Two levers only:** Target shift, for baseline difficulty tiers, and Advantage/Disadvantage, for situational swings within an otherwise-normal check.
 
+**Shorthand: T+N/T−N.** Written elsewhere in this document as a compact way to cite a specific shift. **T+N lowers the Target number by N (easier); T−N raises the Target number by N (harder)** — the sign tracks whether it's good or bad for whoever's rolling, not the direction the Target number itself moves, so T−2 means Target 14, not Target 10. T+2 matches the +2 row below, T−2 matches the −2 row.
+
 | Shift | Target | Success rate (vs bonus 0) | Suggested use |
 |---|---|---|---|
 | +3 | 9 | 72% | Weak tier / a serious scenario advantage |
@@ -116,6 +118,8 @@ Roll 3d10, keep the best two dice for Advantage or the worst two for Disadvantag
 ## Magic Baseline: Possession, Not Consumption
 
 Casting means possessing enough shards to pay a tier's cost.
+
+**Casting requires a hand holding shards or dust.** This follows the same rule as any other item (see Item Slots): producing them into an empty hand is a full action, and once readied there, they stay readied indefinitely — the same as a weapon, until that hand is needed for something else. A caster with at least one hand already free can produce shards and cast normally. A caster whose hands are both occupied — weapon and shield, or dual-wielding — needs a full Round to stow one item before shards can even be produced, and another full Round to produce them before casting is possible. Getting a caster's hands free is the real cost here, not the shards themselves.
 
 Syberists cast via Name-Crafting — spells are cast by learning the names of spell spirits that inhabit Khyber, Syrania, or the space between planes, generated via random tables (Form/Adjective/Noun combined via a Template) and costed by potency tier.
 
@@ -1298,7 +1302,7 @@ Tavin: CHA +1 (cast), WIS +1 (Guard Stat, calculated), Guard 6, one Wound slot, 
 
 Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slots hold what's actively wielded (weapons, shields); body slots hold worn gear for easy access in combat (armor, secondary weapons, focuses); backpack slots hold everything else. To carry more, hire someone, or buy a cart or pack animal.
 
-**Using something already in hand costs your normal action for the turn** — attacking, drinking a held potion, activating a held gadget, all the same, no different from anything else you might do with your action. **Producing or stowing an item is also a full action, not an add-on** — drawing a new weapon, swapping what's in a hand slot, retrieving something from a body slot, or from a backpack slot (Agent's Many Pockets removes the cost for backpack retrieval specifically). Since a turn only has one action, producing something and using it both happen in the same turn only if it was already in hand; otherwise it's draw this turn, use it next.
+**Using something already in hand costs your normal action for the turn** — attacking, drinking a held potion, activating a held gadget, all the same, no different from anything else you might do with your action. **Producing or stowing an item is also a full action, not an add-on** — drawing a new weapon, swapping what's in a hand slot, retrieving something from a body slot, or from a backpack slot (Agent's Many Pockets removes the cost for backpack retrieval specifically). Since a turn only has one action, producing something and using it both happen in the same turn only if it was already in hand; otherwise it's draw this turn, use it next. This applies to shards and dust too — a caster needs a hand holding them to cast; see Magic Baseline.
 
 - **Shards and coin are abstracted resources, not slot items** — tracked as numbers on the character sheet, never occupying a slot regardless of quantity.
 - **A slot holds one distinct item, or a reasonable stack of a single consumable type** — a quiver of arrows, several days of rations, a handful of torches.
@@ -1383,7 +1387,7 @@ Ten item slots total: **2 hand slots, 2 body slots, 6 backpack slots.** Hand slo
 | **Requirement** | none | CON bonus ≥ 0 | CON bonus ≥ +1 and Wayfarer's +2 Guard bonus |
 | **Initiative penalty** | — | −1 | −2 |
 | **Slot cost** | 1 body slot | 1 body slot | 2 body slots |
-| **Mobility tax** | none | −1 on Agility-type checks | −1 Agility checks, moving to an adjacent zone costs your whole action |
+| **Mobility tax** | none | T−1 on Agility-type checks | T−2 on movement-related checks |
 | **Availability** | buyable anywhere | buyable anywhere | requires a House Cannith commission or military contact |
 | **Usage/maintenance** | d6 after combat, 1–3 marks a use | same, repair cost scales with purchase price | same, largest shards-sink given Heavy's higher base cost |
 
@@ -2171,10 +2175,10 @@ Layered on top of the universal table above — every Wayfarer has both, gated b
 | Light | Basic | 1 Grit | **Fleet Strike** — move to an adjacent zone after attacking, no Disengage check |
 | Light | Advanced | 2 Grit | **Second Strike** — on a hit, a bonus attack at Disadvantage |
 | Medium | Basic | 1 Grit | **Steady Guard** — forgo your attack; impose Disadvantage on one attack against you this Round |
-| Medium | Advanced | 2 Grit | **Guarded Strike** — on a hit, the target's next attack against you must beat a Target 2 higher than normal |
+| Medium | Advanced | 2 Grit | **Guarded Strike** — on a hit, the target's next attack against you takes T−2 |
 | Heavy | Basic | 1 Grit | **Momentum** — spent per use: if your last attack this fight hit, this attack deals +2 damage |
 | Heavy | Advanced | 2 Grit | **Sunder** — a hit permanently reduces the target's Guard by 2 |
-| Shield | Basic | 1 Grit | **Shield Bash** — Light-tier damage (1d4+STR) on a hit, plus the target's next attack against you must beat a Target 1 higher than normal |
+| Shield | Basic | 1 Grit | **Shield Bash** — Light-tier damage (1d4+STR) on a hit, plus the target's next attack against you takes T−1 |
 | Shield | Advanced | 2 Grit | **Shield** — the existing universal-table maneuver |
 | Ranged | Basic | 1 Grit | **Steady Aim** — ignore range Disadvantage or a cover penalty for this shot |
 | Ranged | Advanced | 2 Grit | **Split Fire** — the existing universal-table maneuver |
