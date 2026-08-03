@@ -693,6 +693,32 @@ Available only to Agent and Wayfarer. Hard-capped at Cantrip/Spark tier, never M
 
 Both options use whichever mental stat fits the concept — INT, WIS, or CHA, GM/player's call — matching how every other cast stat in this document is always a mental stat, never physical.
 
+### Beastbound Wayfarer (Wayfarer-only companion option)
+
+**Playtest note: this option needs table time before it's considered fully balanced.** The structure below is the current best guess, not a finished result.
+
+A companion joins the fight alongside the PC. It starts at Guard 3, 1 Wound slot, a Light-tier attack governed by one stat chosen at creation to match its nature (STR or DEX), and no active ability.
+
+**Split-action rule:** each Round, the player chooses one — PC or companion — to take that Round's action. The chosen one acts; the other holds position.
+
+**5 Bond Points total: 1 at creation, 1 at each milestone (levels 2, 4, 6, 8).**
+
+| Point spent on... | PC gives up | Companion gains |
+|---|---|---|
+| Guard *(repeatable, up to 3×)* | −2 Guard | +2 Guard |
+| Toughness | −1 Wound slot (minimum 1 for the PC) | +1 Wound slot (maximum 2) |
+| Stat | −1 to the PC's matching stat | +1 to the companion's governing stat, same stat only |
+| Grit *(one-time, permanent)* | −1 max Grit, permanently | A fixed, simple ability, free to use every time it's the one chosen to act |
+| Weapon tier | PC's weapon capped one tier lower | Companion's attack rises one tier, Light to Medium |
+
+**Team-up.** A Beastbound Wayfarer who has unlocked the Grit row can spend 3 Grit from their current pool, once per encounter, to have the companion act alongside the PC's action that Round.
+
+**Worked examples, level 8 baseline before any points spent: Guard 14, 3 Wound slots, Grit 6, Medium weapon.**
+
+- **The Lone Hunter (0 points spent).** PC: Guard 14, 3 Wound slots, Grit 6, Medium weapon. Companion: Guard 3, 1 Wound slot, Light attack, no active ability, no team-up access.
+- **The Beast-Bonded Guardian (2 points: Toughness, Weapon tier).** PC: Guard 14, 2 Wound slots, Grit 6, Light weapon. Companion: Guard 3, 2 Wound slots, Medium attack, no active ability, no team-up access.
+- **The Fragile Beastmaster (5 points: Guard ×3, Toughness, Grit).** PC: Guard 12, 2 Wound slots, Grit 5 max. Companion: Guard 9, 2 Wound slots, Light attack, has its fixed ability, has team-up access.
+
 ### Leverage (Agent's dedicated resource)
 
 Leverage is Agent's own resource, kept separate from shards — mundane preparation (a contact, a stashed item, a favor already called in), not magic.
@@ -2198,6 +2224,36 @@ Layered on top of the universal table above — every Wayfarer has both, gated b
 **Applies identically to unarmed strikes.** Main fist keeps the Medium baseline (Iron Palm, 1d6+STR); off-hand fist must be Light (1d4+STR).
 
 **Why this matters beyond one character:** a Wayfarer's build determines what kind of tank/controller they are — CHA-invested plays like a battlefield-controlling bodyguard, WIS/INT-invested plays like a squad tactician, a pure-STR build plays like a straightforward damage soak.
+
+### Beastbound Wayfarer
+
+**A Wayfarer-only choice, taken at creation.** This design has not yet been playtested — treat the numbers below as a first pass, not a finished, balanced feature.
+
+A companion fights alongside a Beastbound Wayfarer as a genuinely separate body, built through Bond Points spent over the course of a campaign.
+
+**Companion base stats:** Guard 3, 1 Wound slot, Light-tier attack, governed by one stat chosen at creation matching its nature (STR or DEX). Holds position on Rounds it doesn't act.
+
+**5 Bond Points total: 1 at creation, 1 per milestone (levels 2, 4, 6, 8).**
+
+| Point spent on... | PC gives up | Companion gains |
+|---|---|---|
+| Guard *(repeatable, up to 3×)* | −2 Guard | +2 Guard |
+| Toughness | −1 Wound slot (minimum 1 for the PC) | +1 Wound slot (max 2) |
+| Stat | −1 to the PC's matching stat | +1 to the companion's governing stat (same stat only) |
+| Grit *(one-time, permanent)* | −1 max Grit, permanently | One fixed, simple ability, usable free whenever the companion acts under the split-action rule |
+| Weapon tier | PC's own weapon capped one tier lower | Companion's attack upgrades one tier (Light → Medium) |
+
+**Split-action rule:** each Round, the player chooses one — PC or companion — to take that Round's action. This is the party's existing one-action-per-Round budget, split between two bodies instead of locked to one.
+
+**Team-up:** requires the Grit row already unlocked. Once per encounter, spend 3 Grit from the PC's current pool to have the companion act alongside the PC's action this Round, overriding the split-action rule for that Round.
+
+**Worked examples, level 8 baseline (0 points spent): Guard 14, 3 Wound slots, Grit 6, Medium weapon.**
+
+**"The Lone Hunter" (0 points spent):** PC unchanged — Guard 14, 3 Wound slots, Grit 6, Medium weapon. Companion stays at Guard 3, 1 Wound, Light, no active ability, no team-up available.
+
+**"The Beast-Bonded Guardian" (2 points — Toughness, Weapon tier):** PC: Guard 14, 2 Wound slots, Grit 6, weapon capped Light. Companion: Guard 3, 2 Wound slots, Medium attack, no active ability yet.
+
+**"The Fragile Beastmaster" (all 5 — Guard ×3, Toughness, Grit):** PC: Guard 12, 2 Wound slots, Grit 5 max. Companion: Guard 9, 2 Wound slots, Light attack, has its fixed ability and can act independently most Rounds. Team-up available once per fight.
 
 ---
 
