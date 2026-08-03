@@ -16,7 +16,9 @@ Eberron is the setting this ruleset runs; The Electrum Archive is the mechanical
 
 ## Core Resolution: 2d10 vs Target 12
 
-Roll **2d10 + stat bonus**, succeed on **12 or higher**.
+**PCs are assumed to be competent in their own right, based on their Background and Archetype.** Only roll if there's a genuine risk of failure involved. If a character could do something and has the time and resources to do it, let them do it — no roll needed.
+
+**The core resolution system is (2d10 + stat) vs Target.** Target starts at 12, but can be adjusted per the NPC's own target number, or the scene's target number. This represents the general level of risk a whole moment carries, or an NPC represents, or an aspect of either.
 
 **What a stat actually represents.** Every check happens because something's genuinely at stake, and the stat you roll is the part of your character being tested in that moment — acting on the world, or holding up against something acting on you.
 
@@ -42,7 +44,23 @@ Roll **2d10 + stat bonus**, succeed on **12 or higher**.
 
 Guard Stat isn't listed here deliberately — every stat is a *potential* Guard Stat, calculated automatically from whichever one ends up highest and eligible (see Guard Stat below), so it's not a fixed use tied to any one stat the way these are.
 
-Situational difficulty is represented by shifting the Target number or granting Advantage/Disadvantage. Stat bonus, weapon tier, and Guard stay fixed; only the target and the dice pool move.
+**Two levers only:** Target shift, for baseline difficulty tiers, and Advantage/Disadvantage, for situational swings within an otherwise-normal check.
+
+| Shift | Target | Success rate (vs bonus 0) | Suggested use |
+|---|---|---|---|
+| +3 | 9 | 72% | Weak tier / a serious scenario advantage |
+| +2 | 10 | 64% | A clear but not overwhelming edge |
+| +1 | 11 | 55% | A minor, single-factor advantage |
+| 0 | 12 | 45% | Standard tier — the default |
+| −1 | 13 | 36% | A minor complication |
+| −2 | 14 | 28% | A real handicap |
+| −3 | 15 | 21% | Strong tier / "this is genuinely hard" |
+
+**Advantage/Disadvantage and Target shifts represent different kinds of change, not interchangeable ways to say the same thing.** Advantage is temporary — tied to a specific moment or a resource only one character has right then: a moment of surprise, a Talent triggering, terrain someone specifically exploited. It doesn't require rethinking the encounter, just recognizing this one roll is different. A Target shift is a baseline — hard to move without changing the whole scene or the nature of the NPC involved, though it can still move. It's not won mid-fight by a clever action; it's set in advance, as preparation, leveling the playing field in a lasting way for the whole encounter or moment, not just one roll.
+
+**Guidance on picking a shift:** reach for ±1 or ±2 when only one or two factors are actually in play. Save ±3 for situations genuinely matching one of the three named tiers, or where multiple stacking factors would have justified a combined total — shift once by the combined total rather than stacking multiple separate shifts.
+
+**A roll should only ever add the character's own stat bonus.** External difficulty lives in the target number or in Adv/Disadv, never as a second flat modifier bolted onto the dice total.
 
 A given roll has Advantage, Disadvantage, or neither. If a roll would qualify for both from different sources, it resolves as neither — roll normally.
 
@@ -1732,12 +1750,12 @@ Before combat starts, the GM determines if a side is surprised. If so, that side
 
 ## Morale
 
-**Base Morale 7** for an average group of mooks (2d6 roll-under-or-equal to pass). **+2 while a named leader/boss is present and alive** — losing the leader removes the bonus immediately.
+**Roll 2d10 vs Target 12 to hold.** Target drops to 10 while a named leader/boss is present and alive — losing the leader raises it back to 12 immediately. Ported from OSE's 2d6-roll-under Morale; Target 12 is the default for an average group, not a fixed value — see Enemy Design for when and how to deviate from it.
 
 **Checks fire once each, at these triggers:**
 - The group's first casualty.
 - The group reaching 50% losses.
-- A named leader/boss going down — checked immediately, using Morale without the leader bonus.
+- A named leader/boss going down — checked immediately, at Target 12, the leader bonus already gone.
 
 **On a failed check:** the remaining group breaks and flees — real movement away from the fight, not an instant vanish. A GM can allow a broken group to surrender or negotiate instead.
 
@@ -2121,23 +2139,9 @@ Formula: bonus actions = 1 + (milestones ÷ 2), rounded down.
 
 ### Scenario Target Modifiers
 
-**Two levers only:**
-- **Target shift** — for baseline difficulty tiers.
-- **Advantage/Disadvantage** — for situational swings within an otherwise-normal check.
+**The full Target-shift table lives in Core Resolution, at the top of this document — the same two levers (Target shift, Advantage/Disadvantage) apply everywhere, not just to enemies.**
 
-| Shift | Target | Success rate (vs bonus 0) | Suggested use |
-|---|---|---|---|
-| +3 | 9 | 72% | Weak tier / a serious scenario advantage |
-| +2 | 10 | 64% | A clear but not overwhelming edge |
-| +1 | 11 | 55% | A minor, single-factor advantage |
-| 0 | 12 | 45% | Standard tier — the default |
-| −1 | 13 | 36% | A minor complication |
-| −2 | 14 | 28% | A real handicap |
-| −3 | 15 | 21% | Strong tier / "this is genuinely hard" |
-
-**Guidance on picking a shift:** reach for ±1 or ±2 when only one or two factors are actually in play. Save ±3 for situations genuinely matching one of the three named tiers, or where multiple stacking factors would have justified a combined total — shift once by the combined total rather than stacking multiple separate shifts.
-
-**A roll should only ever add the character's own stat bonus.** External difficulty lives in the target number or in Adv/Disadv, never as a second flat modifier bolted onto the dice total.
+**Morale's Target 12 is a default, not a fixed value — use that same table to design a specific group's steadiness.** A disciplined or fanatical unit (Karrnathi line infantry, Silver Flame zealots) can hold at Target 9 or lower using the +3 row. A green, poorly-paid, or genuinely terrified group (raw conscripts, monsters way out of their depth) can break at Target 15 or higher using the −3 row. Set it once per enemy group at design time, the same way HP or attack bonus gets set — not something rolled fresh each encounter.
 
 ---
 

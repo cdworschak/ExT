@@ -512,6 +512,14 @@ document.getElementById('mercy-1x2').addEventListener('click', ()=>{
 });
 
 // Step 4: Assign
+const STAT_FEEDS = {
+  STR: "Melee wpn \u00b7 Hold the Line",
+  DEX: "Ranged wpn \u00b7 Initiative \u00b7 Disengage",
+  CON: "Armor req \u00b7 Overcast \u00b7 2nd Wind",
+  INT: "Languages \u00b7 Search \u00b7 2 cast stats",
+  WIS: "Surprise \u00b7 Listen \u00b7 2 uses",
+  CHA: "Reaction Check \u00b7 1 cast stat",
+};
 function buildAssignGrid(){
   const grid = document.getElementById('assign-grid');
   grid.innerHTML = '';
@@ -524,6 +532,10 @@ function buildAssignGrid(){
     sel.addEventListener('change', ()=>{ state.assign[stat] = sel.value; checkAssignDone(); updateAssignLabels(); recalculateDownstream(); render(); });
     box.innerHTML = `<div class="stat-box-label">${stat}</div>`;
     box.appendChild(sel);
+    const feeds = document.createElement('div');
+    feeds.className = 'stat-box-feeds';
+    feeds.textContent = STAT_FEEDS[stat];
+    box.appendChild(feeds);
     grid.appendChild(box);
   });
   updateAssignLabels();
