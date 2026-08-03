@@ -502,10 +502,6 @@ Race and nation/culture are inseparable in Eberron, so each Background does doub
 - **Aereni Exile** — +1 WIS. Talents: *Cast Out* (Advantage resisting despair specifically when isolated, rejected, or cut off from support), *Marked for Return* (the Undying Court considers your exile unfinished business; GM's call on how and when that surfaces). Gear: no ancestral mask; forged travel papers; a single relic refused to give up when cast out.
 - **Valenar Warband Scout** — +1 DEX. Talents: *Outrider* (Advantage tracking or navigating open terrain, especially plains and borderlands), *Read the Land* (Advantage spotting ambushes or hidden forces before they spring). Gear: riding gear, a warband token.
 - **Sharn-Raised Elf** — +1 CHA. Talents: *Codeswitcher* (pass as native in any Sharn district), *Skywalk* (no penalty on skybridges/heights). Gear: forged residency papers, grapple line. No ancestral talent.
-- **Phiarlan Performer** (Agent) — +1 DEX. Talents: *Two Faces* (Advantage maintaining a cover identity as a performer while actually working intelligence in the west), *House Backing* (a genuine, deniable Phiarlan contact for information). Gear: a performer's kit, a stage name that isn't your own.
-- **Phiarlan Marked** — +1 DEX. Talents: *Mark of Shadow* (once per session, become very difficult to notice or recall for a short time), *House Duty* (see Dragonmarks). Gear: the House signet, kept hidden rather than displayed.
-- **Thuranni Blade** (Agent) — +1 DEX. Talents: *Marked for the Work* (Advantage identifying a target's weaknesses, routine, or the fastest way to reach them unseen), *Eastern Discipline* (a real, cold contact within Thuranni's eastern network — the schism from Phiarlan runs deep). Gear: a concealed blade built for a single clean strike, a client's payment token, no name attached.
-- **Thuranni Marked** — +1 DEX. Talents: *Mark of Shadow* (once per session, become very difficult to notice or recall for a short time), *House Duty* (see Dragonmarks). Gear: the House signet, kept hidden rather than displayed.
 
 ### Humans
 - **Sharn Cutpurse** — +1 DEX. Talents: *Quick Fingers* (Advantage on fast, precise hand-work under time pressure — lockpicking, disarming, a quick draw), *Knows a Guy* (one fence/fixer contact). Gear: lockpicks, stashed bolt-hole key.
@@ -516,29 +512,16 @@ Race and nation/culture are inseparable in Eberron, so each Background does doub
 - **Thrane Templar** — +1 WIS. Talents: *Flame-Sworn* (Advantage resisting or detecting corruption, undeath, or fiendish influence), *Church Authority* (real standing within the Church hierarchy; can call on local Flame-affiliated resources in most Thrane-influenced territory). Gear: a symbol of the Silver Flame worn openly, formal writ of standing from a specific cathedral or chapter.
 - **Lhazaar Waverunner** — +1 DEX. Talents: *Sea Legs* (Advantage keeping balance or functioning aboard a moving vessel, or navigating by stars/coastline), *Letter of Marque* (a real or convincingly forged privateer's commission from a specific Prince, granting legal cover and a fleet contact). Gear: a boarding hook, the commission itself.
 - **Riedran Outsider** — +1 WIS. Talents: *Trained Discipline* (Advantage resisting mind-affecting effects), *Foreign Eyes* (Advantage spotting things "out of place" in Khorvaire specifically). Gear: nothing overtly Riedran, forged local papers, one hidden token of home.
-- **Vadalis Handler** (Agent) — +1 WIS. Talents: *Magebred Eye* (Advantage judging a creature's temperament, health, or magebred quality at a glance), *Stable Standing* (real credit toward acquiring a mount or guard animal through House channels). Gear: handling gear, a magebred animal's lead or tack.
-- **Vadalis Marked** — +1 WIS. Talents: *Mark of Handling* (at will, sense a non-hostile animal's mood or temperament; once per session, calm or command one directly), *House Duty* (see Dragonmarks). Gear: the House signet, a magebred animal companion's tack.
-- **Tharashk Prospector** (Agent) — +1 WIS. Talents: *Dragonshard Sense* (Advantage locating dragonshard deposits or judging a raw shard's quality), *Shadow Marches Contact* (a real bounty-hunting or prospecting contact back in the Marches). Gear: prospecting tools, a rough hand-drawn claim map.
-- **Tharashk Marked** — +1 WIS. Talents: *Mark of Finding* (once per session, know the general direction of a specific person, creature, or item you've seen before), *House Duty* (see Dragonmarks). Gear: the House signet, a well-worn tracking kit.
-- **Deneith Blademark** (Agent) — +1 STR. Talents: *Contract Discipline* (Advantage holding a defensive position or protecting a specific charge under pressure), *Marshal Standing* (real, junior standing as a Sentinel Marshal — some cross-border legal authority). Gear: a Blademarks company token, a written mercenary contract.
-- **Deneith Marked** — +1 STR. Talents: *Mark of Sentinel* (once per session, interpose yourself as the target of an attack meant for an ally sharing your zone), *House Duty* (see Dragonmarks). Gear: the House signet, formal Blademarks officer's papers.
-- **Orien Courier** (Agent) — +1 DEX. Talents: *Rail Rhythm* (Advantage keeping pace, timing, or footing during fast travel), *Route Standing* (real, discounted passage on Orien's rail and caravan lines). Gear: a courier's satchel, a rail line schedule.
-- **Orien Marked** — +1 DEX. Talents: *Mark of Passage* (once per session, instantly know the safest and fastest route to a known destination), *House Duty* (see Dragonmarks). Gear: the House signet, unrestricted rail passage papers.
 
 ### Half-Elves (Khoravar)
 
 Khoravar ("Children of Khorvaire") are a genuine third culture — most are children of Khoravar, generations removed from any elven ancestor. They have their own creole (Khoravar Cant, a Common/Elvish pidgin), and two Houses (Lyrandar and Medani) are predominantly Khoravar-blooded, giving the culture real institutional weight. Both elven traditions reject them — the Undying Court has never admitted a half-elf, and Valenar don't believe a Khoravar can channel an ancestral spirit.
 
 - **Khoravar Go-Between** — +1 CHA. Talents: *Bridge-Born* (fluent in Khoravar Cant, Common, and Elvish; Advantage on checks building trust between communities that distrust each other), *Steady Ground* (if the Off-Balance Wound Complication comes up, Advantage on the DEX check it imposes; if Staggered Back comes up instead, you choose which adjacent zone you're thrown into rather than the GM deciding). Gear: forged travel papers, a keepsake marking ties to a found community rather than a blood family.
-- **Lyrandar Windrider** — +1 DEX. Talents: *Storm Sense* (Advantage reading incoming weather, navigating rough seas, keeping footing on an unstable deck), *House of the Sea and Sky* (standing credit/berth aboard any Lyrandar vessel or airship). Gear: House signet, navigator's tools, a weathered logbook.
-- **Medani Warder** — +1 WIS. Talents: *Ward-Sense* (Advantage noticing an ambush, hidden threat, or a lie told to someone under your protection before it lands), *Sworn to a Charge* (once per session, act out of turn to intervene when a specific person you're retained to protect is about to be harmed). Gear: House signet, an openly-worn warding charm, a client contract or standing retainer.
-
-Windrider and Medani Warder are career-tied (working for a House), distinct from a Dragonmarked Heir (chosen by the mark itself) — see Dragonmarks for the Heir template.
 
 ### Dwarves
 
 - **Mror Shard-Miner** — +1 CON. Talents: *Shard-Sense* (detect dragonshard deposits nearby), *Tunnel-Steady* (no penalty fighting underground). Gear: pick, dark-lantern.
-- **Kundarak Vault-Warden** — +1 WIS. Talents: *Ward-Reader* (Advantage spotting magical locks, traps, or wards), *House Standing* (real credit or access at any Kundarak vault or bank). Gear: lockbreaker tools.
 - **Mror Clan Duelist** — +1 STR. Talents: *Honor-Bound* (Advantage in formal duels or honor challenges, real social weight attached to refusing one), *Blood Feud* (name a specific rival clan or individual you hold a standing grudge with, established at character creation. Advantage on all attack rolls against them, and Advantage resisting their attempts to intimidate or manipulate you. Any Reaction Check with other members of that clan or group is made at Disadvantage — the feud's reputation precedes you). Gear: clan sigil worn openly, a dueling scar earned in a formal challenge.
 - **Mror Deep Delver** — +1 WIS. Talents: *Ruin-Sense* (Advantage predicting structural collapse or safely navigating unstable ancient architecture), *Steady in the Dark* (Advantage resisting fear or panic when isolated underground with no light). Gear: rope and pitons, a fragment of unidentified pre-Dhakaani script.
 - **Sharn-Settled Dwarf** — +1 CHA. Talents: *City Trained* (Advantage navigating bureaucracy, permits, or city guard interactions), *Clanless by Choice* (Advantage resisting social pressure or guilt-tripping tied to clan obligations). Gear: forged Sharn residency papers, a clan token no longer worn openly.
@@ -547,17 +530,11 @@ Windrider and Medani Warder are career-tied (working for a House), distinct from
 - **Zil Broker** — +1 INT. Talents: *Whisper Network* (a standing web of informants — once per session, learn a rumor or relevant fact from a contact without needing to seek one out), *Always Listening* (advantage on overheard-info checks). Gear: coded ledger, messenger bird.
 - **Korranberg Scholar** — +1 INT. Talents: *Cataloguer's Mind* (Advantage recalling or locating information within a library, archive, or the Korranberg Library network specifically), *Peer Reviewed* (a real academic reputation — Advantage on checks invoking scholarly credentials). Gear: a Korranberg Library membership token, a partial index of a personal research project.
 - **Zil Trickster** — +1 DEX. Talents: *Sleight* (Advantage on close-quarters misdirection — palming, planting, or lifting something unnoticed), *Vanish in a Crowd* (Advantage disappearing into a crowded space after drawing attention). Gear: a set of forged minor documents, a deceptively plain outfit that changes character with small adjustments.
-- **Sivis Notary** (Agent) — +1 INT. Talents: *Bound Neutral* (Advantage on checks where being trusted as an unbiased witness or messenger matters), *Speaking Stone Access* (real, limited use of the House's message-station network). Gear: a scrivener's kit, a House Sivis seal marking a document as formally witnessed.
-- **Sivis Marked** — +1 INT. Talents: *Mark of Scribing* (a spoken or written message sent through House Sivis channels arrives without distortion, interception, or loss, once per session), *House Duty* (see Dragonmarks). Gear: the House signet, formal papers of standing.
 
 ### Halflings
 - **Talenta Plains Rider** — +1 DEX. Talents: *Beast-Bond* (mount won't panic/flee), *Open Sky* (never lost outdoors). Gear: a beast-taming charm, tribal markings.
 - **Talenta Dinosaur Handler** — +1 WIS. Talents: *Herd-Sense* (Advantage calming, training, or reading the mood of a large beast, not limited to a personal mount), *Tracker's Eye* (Advantage following tracks or signs of passage in wild terrain). Gear: handler's goad, dried feed rations, a beast-taming manual passed down in the clan.
 - **Khorvaire-Settled Halfling** — +1 CHA. Talents: *City Charm* (Advantage on first impressions with strangers), *Small and Overlooked* (Advantage avoiding notice in a crowd or being underestimated in a negotiation). Gear: forged city residency papers, no riding gear.
-- **Jorasco Chirurgeon** (Agent) — +1 WIS. Talents: *Trained Hands* (Advantage on mundane medicine, diagnosis, or first-aid work), *House Discount* (real, standing credit at any Jorasco healinghouse). Gear: a physician's satchel, a House Jorasco apprentice's letter.
-- **Jorasco Marked** — +1 WIS. Talents: *Mark of Healing* (stabilize a dying creature or mend a minor injury, 1–2/session, no dust cost), *House Duty* (see Dragonmarks). Gear: the House signet, a warded rod.
-- **Ghallanda Innkeeper** (Agent) — +1 CHA. Talents: *Reads the Room* (Advantage sensing a stranger's intent or trouble brewing in a public space), *Guild Standing* (real credit or a bed at any Ghallanda inn or outfitter). Gear: an innkeeper's ledger, a House Ghallanda badge.
-- **Ghallanda Marked** — +1 CHA. Talents: *Mark of Hospitality* (at will, sense whether food or drink is tainted or poisoned; once per session, conjure a simple meal or a small safe resting space), *House Duty* (see Dragonmarks). Gear: the House signet, a keyring to more than one Ghallanda safehouse.
 
 ### Shifters, Kalashtar, Changelings, Warforged
 
@@ -579,10 +556,9 @@ Windrider and Medani Warder are career-tied (working for a House), distinct from
 - **Changeling Community-Raised** — +1 WIS. Talents: *Many Faces, One Self* (Advantage resisting effects that would alter, erase, or impersonate your identity or memory of self specifically), *Hidden Kin* (a real connection to a changeling enclave most outsiders don't know exists). Gear: a token only recognizable to other Community-Raised changelings, no false papers.
 
 **Warforged:**
-**Warforged**, sharing one race-wide trait, true for all three Backgrounds below: a construct, doesn't eat, breathe, or sleep normally.
+**Warforged**, sharing one race-wide trait, true for both Backgrounds below: a construct, doesn't eat, breathe, or sleep normally.
 - **Cyre-Built Warforged** — +1 CON/STR. Talents: *Battle-Worn* (when you'd roll on the Scar table, roll twice and take the better result), *Cyre's Last* (real, bittersweet recognition among Cyran survivors and other Cyre-forged warforged). Gear: repair tools, sunrod.
 - **Post-War Wandering Warforged** — +1 WIS. Talents: *No Orders Left* (Advantage resisting despair or purposelessness), *Read the Room* (Advantage sensing when a space or situation is genuinely hostile to warforged, and adjusting before it becomes a problem). Gear: no unit markings; a personal item picked up somewhere on the road, not issued.
-- **House Cannith Warforged** — +1 INT. Talents: *Factory-Trained* (Advantage operating, repairing, or diagnosing Cannith-made constructs and devices specifically), *Still Property* (a real, uncomfortable legal tie to House Cannith — GM's call on how this surfaces). Gear: visible Cannith unit markings, official (if restrictive) papers of standing.
 
 ### Orcs
 - **Droaam Half-Orc Mercenary** — +1 STR. Talents: *Bad Reputation* (intimidation Advantage), *Contract Killer* (at the start of a genuine paid job, name the contract's actual target — GM confirms it's a legitimate professional engagement, not a personal grudge or a target you'd have gone after anyway. Advantage on all attack rolls against that specific creature for the duration of the contract). Gear: a scarred trophy from a past contract, a mercenary company's token.
@@ -748,7 +724,7 @@ Three concept archetypes on the same Agent chassis, differentiated by what kind 
 
 ---
 
-## Dragonmarks
+## Dragonmarked Houses
 
 **Two distinct kinds of House-lineage Background exist for each House: Agent (works for the House, no Mark) and Marked (carries the House's Least Mark).** Most people connected to a House, even by blood, never manifest a mark — Agent Backgrounds are the common case. Only a Background specifically named "[House] Marked" grants one; a career-tied Agent Background never does, regardless of which House it's tied to. One fixed effect per Mark, no dust cost, usable a limited number of times per session/rest (start with 1–2 uses).
 
@@ -780,7 +756,37 @@ Three concept archetypes on the same Agent chassis, differentiated by what kind 
 | Greater | Rebuild something destroyed entirely, given a few hours and the pieces — genuinely beyond mundane possibility | Cures any non-magical affliction instantly; once per session, prevents a Death's Door roll from happening at all if reached in time |
 | Siberys | A living creation — imbue something with genuine, if narrow, agency, GM-placed only | Restore the recently dead — a real resurrection, unique per campaign |
 
-**Scaling principle for the other 10 Houses, built the same way:** Least→Lesser mirrors Spark→Minor's jump (better reliability, a second use, still narrow in scope). Lesser→Greater mirrors Minor→Major's jump (genuinely impossible without magic, rare, likely campaign-specific). Greater→Siberys mirrors Major→Mythic's jump (unique, GM-placed, never a standing player choice).
+**Scaling principle, used to build every House's progression below:** Least→Lesser mirrors Spark→Minor's jump (better reliability, a second use, still narrow in scope). Lesser→Greater mirrors Minor→Major's jump (genuinely impossible without magic, rare, likely campaign-specific). Greater→Siberys mirrors Major→Mythic's jump (unique, GM-placed, never a standing player choice).
+
+| Tier | Ghallanda (Hospitality) | Medani (Detection) | Orien (Passage) |
+|---|---|---|---|
+| Least | At will sense tainted food/drink; once per session conjure a simple meal or safe rest | At will sense danger/poison; once per session sense a lie | Once per session, instantly know the safest/fastest route to a destination |
+| Lesser | The conjured meal or rest is now genuinely restorative — heals a Wound or clears exhaustion outright, and a second use per session | Lie detection becomes at will too, not just once per session | Once per session, instantly travel a short distance along the known route, not just know it |
+| Greater | Conjure a full warded sanctuary — a room or building, immune to intrusion, lasting a whole scene | Sense danger, poison, and lies across a wide area, always active, not just nearby | Teleport a group across real distance instantly, given time to prepare |
+| Siberys | A legendary hearth or waystation that exists permanently once created, GM-placed | Nothing in a whole region can hide a lie or danger from you, GM-placed | Open a permanent gate between two fixed points, GM-placed |
+
+| Tier | Phiarlan/Thuranni (Shadow) | Sivis (Scribing) | Tharashk (Finding) |
+|---|---|---|---|
+| Least | Once per session, become very difficult to notice or recall briefly | Once per session, a message through Sivis channels arrives without distortion or loss | Once per session, know the general direction of a known person, creature, or item |
+| Lesser | The effect lasts a full scene and extends to two allies, second use per session | Can reach anyone, anywhere, even without an existing Sivis station nearby, second use | Know the exact location, not just direction, second use per session |
+| Greater | Become genuinely untraceable for a full scene — unfindable by mundane or common magical means | Real-time two-way communication across any distance, for a scene | Locate anyone or anything from a genuine description alone, even never having seen it |
+| Siberys | Erase yourself from memory and record for a period — a legendary vanishing act, GM-placed | Broadcast a message the whole region hears at once, unstoppable, GM-placed | Track anything, anywhere in the world, unerringly, GM-placed |
+
+| Tier | Vadalis (Handling) | Lyrandar (Storm) | Kundarak (Warding) |
+|---|---|---|---|
+| Least | At will sense an animal's mood; once per session calm or command one | Calm or stir local weather in a small area, once per session | Sense the presence and rough strength of any lock/trap/ward in a room, at will |
+| Lesser | Command several animals at once, and they'll follow even against instinct, second use per session | The weather-shift is now stronger and more reliable — affects a full zone instead of a small area, and a second use per session | Disarm or bypass a sensed lock/trap/ward outright, no roll needed, once per session |
+| Greater | Command a genuinely dangerous or exotic magebred creature to fight alongside you for a scene | Command genuinely dangerous weather — a real storm, not just a shift — over a wide area, given time to build it | Ward an entire structure against intrusion for a scene — nothing gets in undetected |
+| Siberys | A permanent bond with a legendary magebred creature — a true magical companion, GM-placed | Command the sky itself over a region for a sustained period — campaign-altering, GM-placed only | A ward that never fails, ever, for a specific place — legendary, GM-placed only |
+
+**Deneith (Sentinel)**
+
+| Tier | Effect |
+|---|---|
+| Least | Once per session, interpose yourself as the target of an attack meant for an ally sharing your zone |
+| Lesser | The interposed attack automatically misses instead of just being redirected, once per session |
+| Greater | Interpose against any number of attacks in a single Round, not just one, for a full scene |
+| Siberys | Become genuinely unkillable while protecting a specific person, for one defining moment — GM-placed only |
 
 ### Least Marks (all 12 Houses)
 
@@ -794,8 +800,65 @@ Three concept archetypes on the same Agent chassis, differentiated by what kind 
 - **Mark of Sentinel (Deneith)** — once per session, interpose yourself as the target of an attack meant for an ally sharing your zone.
 - **Mark of Hospitality (Ghallanda)** — at will, sense whether food or drink is tainted or poisoned; once per session, conjure a simple meal or a small safe resting space.
 - **Mark of Passage (Orien)** — once per session, instantly know the safest and fastest route to a known destination.
-- **Mark of Detection (Medani)** — at will, sense the presence of danger, poison, or an active lie within a small area.
+- **Mark of Detection (Medani)** — at will, sense the presence of danger or poison within a small area; once per session, sense whether someone is actively lying to you.
 - **Mark of Shadow (Phiarlan/Thuranni)** — once per session, become very difficult to notice or recall for a short time.
+
+### The Houses, Background by Background
+
+Every House-lineage Background lives here, organized by House rather than scattered across the race lists above — Agent first (career-tied, no Mark), then Marked (carries the House's Least Mark, plus House Duty).
+
+**Cannith** (Human, also built by warforged)
+- **House Cannith Warforged** (Agent) — +1 INT. Talents: *Factory-Trained* (Advantage operating, repairing, or diagnosing Cannith-made constructs and devices specifically), *Still Property* (a real, uncomfortable legal tie to House Cannith — GM's call on how this surfaces). Gear: visible Cannith unit markings, official (if restrictive) papers of standing.
+- **Cannith Artificer** (Agent) — +1 INT. Talents: *Forge-Trained* (Advantage diagnosing, repairing, or improvising with mundane or magical devices), *House Credit* (real standing or discount at any Cannith foundry or workshop). Gear: a crafting toolkit, Cannith apprentice papers.
+- **Cannith Marked** — +1 INT. Talents: *Mark of Making* (repair or jury-rig a broken item to working order, 1/session, no tools needed), *House Duty* (see above). Gear: the House signet, a personal creation-in-progress.
+
+**Deneith** (Human)
+- **Deneith Blademark** (Agent) — +1 STR. Talents: *Contract Discipline* (Advantage holding a defensive position or protecting a specific charge under pressure), *Marshal Standing* (real, junior standing as a Sentinel Marshal — some cross-border legal authority). Gear: a Blademarks company token, a written mercenary contract.
+- **Deneith Marked** — +1 STR. Talents: *Mark of Sentinel* (once per session, interpose yourself as the target of an attack meant for an ally sharing your zone), *House Duty* (see above). Gear: the House signet, formal Blademarks officer's papers.
+
+**Ghallanda** (Halfling)
+- **Ghallanda Innkeeper** (Agent) — +1 CHA. Talents: *Reads the Room* (Advantage sensing a stranger's intent or trouble brewing in a public space), *Guild Standing* (real credit or a bed at any Ghallanda inn or outfitter). Gear: an innkeeper's ledger, a House Ghallanda badge.
+- **Ghallanda Marked** — +1 CHA. Talents: *Mark of Hospitality* (at will, sense whether food or drink is tainted or poisoned; once per session, conjure a simple meal or a small safe resting space), *House Duty* (see above). Gear: the House signet, a keyring to more than one Ghallanda safehouse.
+
+**Jorasco** (Halfling)
+- **Jorasco Chirurgeon** (Agent) — +1 WIS. Talents: *Trained Hands* (Advantage on mundane medicine, diagnosis, or first-aid work), *House Discount* (real, standing credit at any Jorasco healinghouse). Gear: a physician's satchel, a House Jorasco apprentice's letter.
+- **Jorasco Marked** — +1 WIS. Talents: *Mark of Healing* (stabilize a dying creature or mend a minor injury, 1–2/session, no dust cost), *House Duty* (see above). Gear: the House signet, a warded rod.
+
+**Kundarak** (Dwarf)
+- **Kundarak Vault-Warden** (Agent) — +1 WIS. Talents: *Ward-Reader* (Advantage spotting magical locks, traps, or wards), *House Standing* (real credit or access at any Kundarak vault or bank). Gear: lockbreaker tools.
+- **Kundarak Marked** — +1 WIS. Talents: *Mark of Warding* (sense the presence and rough strength of any lock/trap/ward in a room, at will), *House Duty* (see above). Gear: the House signet, a bank-issued vault key.
+
+**Lyrandar** (Half-Elf, Khoravar)
+- **Lyrandar Windrider** (Agent) — +1 DEX. Talents: *Storm Sense* (Advantage reading incoming weather, navigating rough seas, keeping footing on an unstable deck), *House of the Sea and Sky* (standing credit/berth aboard any Lyrandar vessel or airship). Gear: House signet, navigator's tools, a weathered logbook.
+- **Lyrandar Marked** — +1 DEX. Talents: *Mark of Storm* (calm or stir local weather in a small area, once per session), *House Duty* (see above). Gear: the House signet, a weathered logbook.
+
+**Medani** (Half-Elf, Khoravar)
+- **Medani Warder** (Agent) — +1 WIS. Talents: *Ward-Sense* (Advantage noticing an ambush, hidden threat, or a lie told to someone under your protection before it lands), *Sworn to a Charge* (once per session, act out of turn to intervene when a specific person you're retained to protect is about to be harmed). Gear: House signet, an openly-worn warding charm, a client contract or standing retainer.
+- **Medani Marked** — +1 WIS. Talents: *Mark of Detection* (at will, sense the presence of danger or poison within a small area; once per session, sense whether someone is actively lying to you), *House Duty* (see above). Gear: the House signet, an openly-worn warding charm.
+
+**Orien** (Human)
+- **Orien Courier** (Agent) — +1 DEX. Talents: *Rail Rhythm* (Advantage keeping pace, timing, or footing during fast travel), *Route Standing* (real, discounted passage on Orien's rail and caravan lines). Gear: a courier's satchel, a rail line schedule.
+- **Orien Marked** — +1 DEX. Talents: *Mark of Passage* (once per session, instantly know the safest and fastest route to a known destination), *House Duty* (see above). Gear: the House signet, unrestricted rail passage papers.
+
+**Phiarlan** (Elf)
+- **Phiarlan Performer** (Agent) — +1 DEX. Talents: *Two Faces* (Advantage maintaining a cover identity as a performer while actually working intelligence in the west), *House Backing* (a genuine, deniable Phiarlan contact for information). Gear: a performer's kit, a stage name that isn't your own.
+- **Phiarlan Marked** — +1 DEX. Talents: *Mark of Shadow* (once per session, become very difficult to notice or recall for a short time), *House Duty* (see above). Gear: the House signet, kept hidden rather than displayed.
+
+**Sivis** (Gnome)
+- **Sivis Notary** (Agent) — +1 INT. Talents: *Bound Neutral* (Advantage on checks where being trusted as an unbiased witness or messenger matters), *Speaking Stone Access* (real, limited use of the House's message-station network). Gear: a scrivener's kit, a House Sivis seal marking a document as formally witnessed.
+- **Sivis Marked** — +1 INT. Talents: *Mark of Scribing* (a spoken or written message sent through House Sivis channels arrives without distortion, interception, or loss, once per session), *House Duty* (see above). Gear: the House signet, formal papers of standing.
+
+**Tharashk** (mixed — human, half-orc, and orc together in the Shadow Marches)
+- **Tharashk Prospector** (Agent) — +1 WIS. Talents: *Dragonshard Sense* (Advantage locating dragonshard deposits or judging a raw shard's quality), *Shadow Marches Contact* (a real bounty-hunting or prospecting contact back in the Marches). Gear: prospecting tools, a rough hand-drawn claim map.
+- **Tharashk Marked** — +1 WIS. Talents: *Mark of Finding* (once per session, know the general direction of a specific person, creature, or item you've seen before), *House Duty* (see above). Gear: the House signet, a well-worn tracking kit.
+
+**Thuranni** (Elf)
+- **Thuranni Blade** (Agent) — +1 DEX. Talents: *Marked for the Work* (Advantage identifying a target's weaknesses, routine, or the fastest way to reach them unseen), *Eastern Discipline* (a real, cold contact within Thuranni's eastern network — the schism from Phiarlan runs deep). Gear: a concealed blade built for a single clean strike, a client's payment token, no name attached.
+- **Thuranni Marked** — +1 DEX. Talents: *Mark of Shadow* (once per session, become very difficult to notice or recall for a short time), *House Duty* (see above). Gear: the House signet, kept hidden rather than displayed.
+
+**Vadalis** (Human)
+- **Vadalis Handler** (Agent) — +1 WIS. Talents: *Magebred Eye* (Advantage judging a creature's temperament, health, or magebred quality at a glance), *Stable Standing* (real credit toward acquiring a mount or guard animal through House channels). Gear: handling gear, a magebred animal's lead or tack.
+- **Vadalis Marked** — +1 WIS. Talents: *Mark of Handling* (at will, sense a non-hostile animal's mood or temperament; once per session, calm or command one directly), *House Duty* (see above). Gear: the House signet, a magebred animal companion's tack.
 
 ### Dragonmarked Heir (a template, not tied to any one race)
 
@@ -1556,7 +1619,45 @@ If a character is deprived of crucial needs (rest, food, water), they gain Disad
 
 ## Zones & Range
 
-The battlefield is divided into a handful of zones; creatures move between adjacent zones, and creatures in the same zone can fight with melee weapons. Zones are centered on the characters, not fixed geography — theater-of-mind, not a grid.
+**Melee, Near, and Far are the GM's framework for adjudicating positioning within a real, shared scene.** The scene comes first — the tavern, the rafters, the street outside — tracked collectively at the table like any theater-of-the-mind moment. What "Far" represents flexes with the scene: a hundred yards on an open field, or just "through the door" in a cramped tavern.
+
+**Each character reads Melee/Near/Far relative to themselves.** Two people can both be Far from a melee cluster while being nowhere near each other. A character with a bow reads more of a room as Near than a melee-only character standing in the same spot, since their reach extends further. Real-world logic governs each reading; the framework keeps that logic consistent at the table.
+
+**Disengaging tracks the shared fiction.** A melee-capable hostile close enough, in the group's shared imagination, to threaten you triggers a Disengage check on your way out — whether you just closed to attack them, or they moved in on you. This marks the line between an ongoing melee's give-and-take and the moment someone actually runs, which shifts the scene into a chase.
+
+**Multi-target and zone-based abilities (Cleave, Rally, "allies in your zone") use the acting character's own reading.**
+
+**The GM has final say**, using this framework to keep the call fast and consistent. Gaps get adjudicated at the table, like any theater-of-the-mind scene.
+
+```
+                    THE TAVERN
+
+    [ Nix, rafters ]
+          |
+          |  (Near to Nix — she can shoot them;
+          |   Far to melee-only Bandit 1 — he can't reach)
+          v
+    [ Bandit 2, door ] ---- Near ---- [ Kessia, outside ]
+          |
+        Near
+          |
+          v
+    [ Rivet, bar ] ---- Melee ---- [ Bandit 1, bar ]
+
+
+  From Rivet:    Bandit 1 = Melee | Nix = Near | Bandit 2 = Near | Kessia = Far
+  From Bandit 2: Rivet = Near | Bandit 1 = Near | Nix = Near | Kessia = Near
+  From Nix:      Bandit 1 = Near (in range) | Bandit 2 = Near (in range) |
+                 (but if neither bandit has a ranged weapon, Nix reads as Far to them)
+```
+
+**Worked example — the tavern.** Rivet fights Bandit 1 at the bar. Nix watches from the rafters, bow drawn. Bandit 2 guards the door. Kessia just fled outside.
+
+From Rivet: Bandit 1 is Melee. Nix and Bandit 2 are Near. Kessia is Far — she's left the building.
+From Bandit 2: everyone is Near, Kessia included — she's standing right outside the door he's guarding.
+From Nix: both bandits are Near, since her bow reaches them. If neither bandit carries a ranged weapon, they read Nix as Far — nothing in their hands reaches the rafters.
+
+Same moment, three different readings, all correct at once.
 
 **This encounter's zone line:** three zones — Melee, Near, Far — arranged linearly.
 
@@ -1577,17 +1678,9 @@ One zone of movement per Round, maximum.
 
 Moving out of a zone while sharing it with a melee (non-ranged) hostile requires a successful DEX check (2d10+DEX vs 12). Fail, and that creature gets a free attack before the mover actually leaves. Ranged hostiles never trigger this.
 
-**Worked example — Rivet retreats from an active melee, 5 attempts:**
+**Worked example — Rivet retreats from an active melee:**
 
-Setup: Rivet (Guard 4/10, already carrying one Wound) is fighting two Blade-bandits in the Ditch and decides to fall back to the Road.
-
-| Attempt | Roll | Outcome |
-|---|---|---|
-| 1 | 14 vs 12 | Success — clean escape, no cost |
-| 2 | 4 vs 12 | Fail → free attack rolled 8 vs 12 → missed |
-| 3 | 15 vs 12 | Success — clean escape |
-| 4 | 10 vs 12 | Fail → free attack rolled 9 vs 12 → missed |
-| 5 | 6 vs 12 | Fail → free attack rolled 14 vs 12 → hit, 2 damage to Guard |
+Rivet (Guard 4/10, already carrying one Wound) is fighting two Blade-bandits in the Ditch and decides to fall back to the Road. Rolls the Disengage check: 4 vs 12, fails. The nearer bandit gets a free attack — rolled 14 vs 12, a hit, 2 damage to Guard. Rivet still reaches the Road; the failed check cost a parting shot, not the retreat itself.
 
 Failing the check doesn't trap the character — it only costs a parting shot. The DEX check gates whether the melee hostile gets one free swing on the way out, not whether the retreat itself succeeds.
 
@@ -2280,4 +2373,4 @@ One canonical definition per term, alphabetical.
 
 **Wound Complication** — the d6 side-effect table rolled when a Wound opens.
 
-**Zone** — the abstracted positioning unit: Melee, Near, Far.
+**Zone** — the abstracted positioning unit: Melee, Near, Far. Read relative to each character individually, not a shared line — see Zones & Range.

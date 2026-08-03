@@ -153,20 +153,88 @@
   <p><strong>Combat Mending</strong> (in combat, costs an action + shards per tier): restores <strong><a href="glossary.html#guard">Guard</a></strong>, up to current max — Minor 1d8+stat, Moderate 2d8+stat, Major 2d8+stat, Mythic 4d8+stat, same dice as damage at each tier. <strong>Moderate tier and above also clears Reeling or Rattled</strong> from the target. Can't close a <strong><a href="glossary.html#wound">Wound</a></strong> under any circumstances. <strong>Field Dressing</strong> (out of combat, a full Exploration <strong><a href="glossary.html#turn">Turn</a></strong>): closes one Wound.</p>
 
   <h2 id="zones">Zones &amp; Range</h2>
+  <p><strong>Melee, Near, and Far are the GM's framework for adjudicating positioning within a real, shared scene.</strong> The scene comes first — the tavern, the rafters, the street outside — tracked collectively at the table like any theater-of-the-mind moment. What "Far" represents flexes with the scene: a hundred yards on an open field, or just "through the door" in a cramped tavern.</p>
+  <p><strong>Each character reads Melee/Near/Far relative to themselves.</strong> Two people can both be Far from a melee cluster while being nowhere near each other. A character with a bow reads more of a room as Near than a melee-only character standing in the same spot, since their reach extends further. Real-world logic governs each reading; the framework keeps that logic consistent at the table.</p>
+  <p><strong>Disengaging tracks the shared fiction.</strong> A melee-capable hostile close enough, in the group's shared imagination, to threaten you triggers a Disengage check on your way out — whether you just closed to attack them, or they moved in on you. This marks the line between an ongoing melee's give-and-take and the moment someone actually runs, which shifts the scene into a chase.</p>
+  <p><strong>Multi-target and zone-based abilities (Cleave, Rally, "allies in your zone") use the acting character's own reading.</strong></p>
+  <p><strong>The GM has final say</strong>, using this framework to keep the call fast and consistent. Gaps get adjudicated at the table, like any theater-of-the-mind scene.</p>
+
+  <div class="diagram-wrap">
+<svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The tavern scene: Nix in the rafters, Rivet and Bandit 1 fighting at the bar, Bandit 2 at the door, Kessia fled outside">
+<defs>
+  <marker id="arrow-zone" markerWidth="8" markerHeight="8" refX="5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#a8a2b3"/></marker>
+</defs>
+
+<!-- Tavern interior -->
+<rect x="20" y="20" width="440" height="340" rx="4" fill="#1d1c23" stroke="#35323f" stroke-width="1.5"/>
+<text x="35" y="42" font-family="Oswald, sans-serif" font-size="13" letter-spacing="1" fill="#6f6a7d">THE TAVERN</text>
+
+<!-- Rafters area -->
+<rect x="35" y="55" width="410" height="70" rx="3" fill="#26242e" stroke="#35323f" stroke-width="1"/>
+<text x="45" y="72" font-family="Oswald, sans-serif" font-size="11" letter-spacing="1" fill="#6f6a7d">RAFTERS</text>
+
+<!-- Nix -->
+<circle cx="120" cy="100" r="9" fill="#7fd4c1"/>
+<text x="140" y="105" font-family="Source Serif 4, Georgia, serif" font-size="14" font-weight="600" fill="#e8e4da">Nix</text>
+<text x="140" y="120" font-family="Source Serif 4, Georgia, serif" font-size="11" fill="#a8a2b3">bow drawn, overlooking the room</text>
+
+<!-- Bar area -->
+<rect x="35" y="200" width="200" height="90" rx="3" fill="#26242e" stroke="#35323f" stroke-width="1"/>
+<text x="45" y="217" font-family="Oswald, sans-serif" font-size="11" letter-spacing="1" fill="#6f6a7d">THE BAR</text>
+
+<!-- Rivet + Bandit 1 -->
+<circle cx="90" cy="255" r="9" fill="#7fd4c1"/>
+<text x="106" y="250" font-family="Source Serif 4, Georgia, serif" font-size="13" font-weight="600" fill="#e8e4da">Rivet</text>
+<circle cx="180" cy="255" r="9" fill="#a683c4"/>
+<text x="150" y="278" font-family="Source Serif 4, Georgia, serif" font-size="13" font-weight="600" fill="#e8e4da">Bandit 1</text>
+<line x1="99" y1="255" x2="171" y2="255" stroke="#d9b872" stroke-width="1.5" stroke-dasharray="3,3"/>
+<text x="105" y="245" font-family="Oswald, sans-serif" font-size="10" letter-spacing="1" fill="#d9b872">MELEE</text>
+
+<!-- Door area -->
+<rect x="255" y="200" width="190" height="90" rx="3" fill="#26242e" stroke="#35323f" stroke-width="1"/>
+<text x="265" y="217" font-family="Oswald, sans-serif" font-size="11" letter-spacing="1" fill="#6f6a7d">THE DOOR</text>
+
+<!-- Bandit 2 -->
+<circle cx="340" cy="255" r="9" fill="#a683c4"/>
+<text x="356" y="250" font-family="Source Serif 4, Georgia, serif" font-size="13" font-weight="600" fill="#e8e4da">Bandit 2</text>
+<text x="270" y="278" font-family="Source Serif 4, Georgia, serif" font-size="11" fill="#a8a2b3">guarding the door</text>
+
+<!-- Outside -->
+<rect x="490" y="200" width="190" height="90" rx="4" fill="#1d1c23" stroke="#35323f" stroke-width="1.5" stroke-dasharray="4,3"/>
+<text x="500" y="217" font-family="Oswald, sans-serif" font-size="13" letter-spacing="1" fill="#6f6a7d">OUTSIDE</text>
+
+<!-- Kessia -->
+<circle cx="585" cy="255" r="9" fill="#7fd4c1"/>
+<text x="600" y="260" font-family="Source Serif 4, Georgia, serif" font-size="13" font-weight="600" fill="#e8e4da">Kessia</text>
+<text x="500" y="278" font-family="Source Serif 4, Georgia, serif" font-size="11" fill="#a8a2b3">just fled the building</text>
+
+<!-- door threshold connector -->
+<line x1="445" y1="245" x2="490" y2="245" stroke="#a8a2b3" stroke-width="1" stroke-dasharray="2,3"/>
+
+<!-- Nix's reach lines to both bandits (bow range) -->
+<line x1="120" y1="109" x2="180" y2="246" stroke="#7fd4c1" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+<line x1="120" y1="109" x2="340" y2="246" stroke="#7fd4c1" stroke-width="1" stroke-dasharray="2,2" opacity="0.5"/>
+<!-- legend -->
+<text x="35" y="330" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#7fd4c1">Dashed teal: Nix's bow reaches both bandits, so she reads them as Near. Unarmed, they'd read her as Far.</text>
+<text x="35" y="348" font-family="Source Serif 4, Georgia, serif" font-size="10.5" fill="#6f6a7d">Positions are real; Melee/Near/Far is each character's own reading of them — see the worked example below.</text>
+</svg>
+</div>
+
+  <div class="worked-example">
+  <span class="worked-example-label">Worked Example — The Tavern</span>
+  <p>Rivet fights Bandit 1 at the bar. Nix watches from the rafters, bow drawn. Bandit 2 guards the door. Kessia just fled outside.</p>
+  <p>From Rivet: Bandit 1 is Melee. Nix and Bandit 2 are Near. Kessia is Far — she's left the building.<br>
+  From Bandit 2: everyone is Near, Kessia included — she's standing right outside the door he's guarding.<br>
+  From Nix: both bandits are Near, since her bow reaches them. If neither bandit carries a ranged weapon, they read Nix as Far — nothing in their hands reaches the rafters.</p>
+  <p>Same moment, three different readings, all correct at once.</p>
+  </div>
+
   <p>Three zones: Melee, Near, Far. <strong>Move (0–1 zone) and Act are both available the same Round.</strong> Melee weapons hit same <strong><a href="glossary.html#zone">zone</a></strong> only; ranged/thrown hit same zone + 1 adjacent.</p>
   <p><strong>Disengaging:</strong> leaving a zone with a live melee hostile requires a DEX check (2d10+DEX vs 12) or they get a free attack first.</p>
 
   <div class="worked-example">
-  <span class="worked-example-label">Worked Example — Rivet Retreats, 5 Attempts</span>
-  <p>Rivet (<strong><a href="glossary.html#guard">Guard</a></strong> 4/10, already carrying one <strong><a href="glossary.html#wound">Wound</a></strong>) is fighting two Blade-bandits in the Ditch and decides to fall back to the Road.</p>
-  <table>
-  <tr><th>Attempt</th><th>Roll</th><th>Outcome</th></tr>
-  <tr><td>1</td><td>14 vs 12</td><td>Success — clean escape, no cost</td></tr>
-  <tr><td>2</td><td>4 vs 12</td><td>Fail → free attack rolled 8 vs 12 → missed</td></tr>
-  <tr><td>3</td><td>15 vs 12</td><td>Success — clean escape</td></tr>
-  <tr><td>4</td><td>10 vs 12</td><td>Fail → free attack rolled 9 vs 12 → missed</td></tr>
-  <tr><td>5</td><td>6 vs 12</td><td>Fail → free attack rolled 14 vs 12 → hit, 2 damage to Guard</td></tr>
-  </table>
+  <span class="worked-example-label">Worked Example — Rivet Retreats</span>
+  <p>Rivet (<strong><a href="glossary.html#guard">Guard</a></strong> 4/10, already carrying one <strong><a href="glossary.html#wound">Wound</a></strong>) is fighting two Blade-bandits in the Ditch and decides to fall back to the Road. Rolls the Disengage check: 4 vs 12, fails. The nearer bandit gets a free attack — rolled 14 vs 12, a hit, 2 damage to Guard. Rivet still reaches the Road; the failed check cost a parting shot, not the retreat itself.</p>
   <p>Failing the check doesn't trap the character — it only costs a parting shot. The DEX check gates whether the melee hostile gets one free swing on the way out, not whether the retreat itself succeeds.</p>
   </div>
 
